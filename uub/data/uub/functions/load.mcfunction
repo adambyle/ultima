@@ -3,11 +3,14 @@ scoreboard objectives add q dummy
 scoreboard objectives add gid dummy
 scoreboard objectives add action trigger
 scoreboard objectives add pn dummy
+scoreboard objectives add tether dummy
 scoreboard objectives add qdeath deathCount
+scoreboard objectives add qkill playerKillCount
 
 scoreboard players add gid q 1
 scoreboard players operation @a gid = gid q
 scoreboard players set @a qdeath 0
+scoreboard players set @a qkill 0
 
 scoreboard players set game q 0
 execute unless score mode q matches 1.. positioned -3 22 0 run function uub:settings/mode

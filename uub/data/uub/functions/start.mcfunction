@@ -1,9 +1,6 @@
 scoreboard players set pn q 0
 execute as @a[team=play] run scoreboard players add pn q 1
 
-##
-scoreboard players set pn q 2
-
 scoreboard players set invalid n 0
 execute if score mode q matches 1 unless score pn q matches 3..4 run scoreboard players set invalid n 1
 execute if score mode q matches 2 unless score pn q matches 2 run scoreboard players set invalid n 2
