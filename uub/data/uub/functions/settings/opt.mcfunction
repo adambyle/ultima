@@ -8,4 +8,5 @@ execute as @p run team join spect @s[tag=player]
 execute as @p run team join play @s[tag=!player]
 
 setblock ~ ~ ~ polished_blackstone_pressure_plate[powered=false]
-tp @p 0 21 0
+execute as @p at @s run playsound block.note_block.bell master @s
+execute as @p at @s run tp @s 0 21 0 ~35 ~

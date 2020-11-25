@@ -14,3 +14,8 @@ execute as @a at @s run playsound block.note_block.pling master @s ~ ~ ~ 16 1.5
 execute as @a at @s run playsound block.note_block.pling master @s ~ ~ ~ 16 2
 
 effect clear @a
+
+execute as @e[type=armor_stand] run data remove entity @s CustomNameVisible
+
+team modify play collisionRule always
+team modify play friendlyFire true
