@@ -10,3 +10,8 @@ execute as @a[scores={taken=1..},tag=alive] run scoreboard players operation @s 
 
 scoreboard players set @a dealt 0
 scoreboard players set @a taken 0
+
+scoreboard players set i n 0
+execute as @a[team=play] run scoreboard players add i n 1
+execute unless score i n = pn q run tellraw @a {"text": "The game was forced to reset as a player left!","color": "red"}
+execute unless score i n = pn q run function uub:load

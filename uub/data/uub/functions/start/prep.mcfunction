@@ -1,10 +1,16 @@
-tag @a remove alive
+execute if score mode q matches 1 run tag @a[team=play] remove alive
+execute if score mode q matches 2 run tag @r[limit=2,team=play] remove alive
+execute if score mode q matches 3 run tag @r[limit=4,team=play] remove alive
 tag @a[team=play,limit=4,sort=random] add alive
 scoreboard players set game q 1
 
 scoreboard players reset * pn
 scoreboard players reset i n
 execute as @a[team=play] run function uub:start/pnassign
+
+scoreboard players reset * queue
+scoreboard players reset i n
+execute as @a[team=play,tag=!alive] run function uub:start/queueassign
 
 gamemode spectator @a[tag=!alive]
 execute as @a run function uub:tp

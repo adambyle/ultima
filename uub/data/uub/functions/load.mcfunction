@@ -9,6 +9,7 @@ scoreboard objectives add qkill playerKillCount
 scoreboard objectives add last dummy
 scoreboard objectives add taken custom:damage_taken
 scoreboard objectives add dealt custom:damage_dealt
+scoreboard objectives add queue dummy
 
 scoreboard players add gid q 1
 scoreboard players operation @a gid = gid q
@@ -16,6 +17,7 @@ scoreboard players set @a qdeath 0
 scoreboard players set @a qkill 0
 scoreboard players set @a taken 0
 scoreboard players set @a dealt 0
+scoreboard players set @a queue 0
 
 scoreboard players set game q 0
 execute unless score mode q matches 1.. positioned -3 22 0 run function uub:settings/mode

@@ -3,7 +3,6 @@ tag @r[scores={qkill=1..}] add killtag
 scoreboard players remove @a[tag=killtag] qkill 1
 
 tellraw @a ""
-execute if entity @a[tag=killtag] run tellraw @a [{"selector": "@a[tag=killtag]","color": "blue"},{"text": " was at ","color": "gray"},{"score": {"name": "@r[tag=killtag]","objective": "hp"},"color": "dark_red"},{"text": " HP.","color": "gray"}]
 
 tag @a remove player
 tag @s[tag=!alive] add player
