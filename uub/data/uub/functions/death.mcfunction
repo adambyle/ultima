@@ -8,3 +8,6 @@ execute if score mode q matches 1 run function uub:death/classic
 execute if score mode q matches 2 run function uub:death/duels
 
 scoreboard players reset @s pn
+scoreboard players set @s kills 0
+
+function uub:tp
