@@ -9,4 +9,5 @@ replaceitem entity @s hotbar.2 crossbow{Unbreakable:1b}
 replaceitem entity @s inventory.0 arrow 32
 replaceitem entity @s weapon.offhand shield{Unbreakable:1b}
 replaceitem entity @s hotbar.8 potion{Potion:"strong_healing"}
-effect give @a instant_health 1 3 true
+
+effect give @s instant_health 1 3 true

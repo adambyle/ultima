@@ -14,8 +14,7 @@ execute as @a[team=play,tag=!alive] run function uub:start/queueassign
 
 gamemode spectator @a[tag=!alive]
 execute as @a run function uub:tp
-execute if score map q matches 1 as @a[team=play] run function uub:items/default
-execute if score map q matches 2 as @a[team=play] run function uub:items/woods
+execute as @a[team=play] run function uub:items
 
 execute as @a at @s run playsound block.note_block.pling master @s ~ ~ ~ 16 1.5 
 execute as @a at @s run playsound block.note_block.pling master @s ~ ~ ~ 16 2
