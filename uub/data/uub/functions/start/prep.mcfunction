@@ -25,3 +25,5 @@ execute as @e[type=armor_stand] run data remove entity @s CustomNameVisible
 
 team modify play collisionRule always
 team modify play friendlyFire true
+
+scoreboard objectives setdisplay sidebar

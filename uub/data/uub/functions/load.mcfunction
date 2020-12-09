@@ -50,3 +50,6 @@ schedule clear uub:event/duels
 execute as @e[type=armor_stand] run data merge entity @s {CustomNameVisible:1b}
 
 difficulty peaceful
+
+schedule clear uub:tick/second
+function uub:tick/second

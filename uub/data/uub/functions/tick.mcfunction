@@ -12,3 +12,5 @@ kill @e[type=item]
 
 execute as @a[scores={qdeath=2}] run function uub:tp
 scoreboard players set @a[scores={qdeath=2}] qdeath 0
+
+execute positioned 0 20 0 as @a[gamemode=spectator,distance=..5] run function uub:tp

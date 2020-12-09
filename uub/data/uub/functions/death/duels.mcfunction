@@ -17,4 +17,4 @@ execute if entity @a[tag=alive] run tag @a[scores={queue=1}] add respawn
 execute if entity @a[tag=alive] run tellraw @a [{"text": "Next challenger: ","color": "gray"},{"selector": "@a[tag=respawn]","color": "blue"}]
 execute if entity @a[tag=alive] run title @a[tag=respawn] title {"text": "Respawning...","color": "red"}
 
-tellraw @s [{"text": "Need a break? Don't leave and break the game. ","color": "gold"},{"text": "Opt out.","color": "yellow","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 5"}}]
+tellraw @a [{"text": "Need a break? Don't leave and break the game. ","color": "gold"},{"text": "Opt out.","color": "yellow","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 5"}}]
