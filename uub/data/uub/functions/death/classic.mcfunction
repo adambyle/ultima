@@ -37,4 +37,5 @@ scoreboard players set alive n 0
 execute as @a[tag=alive] run scoreboard players add alive n 1
 execute if score alive n matches 1 run tellraw @a [{"selector": "@a[tag=alive]"},{"text": " wins!","color": "gray"}]
 execute if score alive n matches 1 as @a[tag=alive] run function uub:victory
-tellraw @s [{"text": "Need a break? Don't leave and break the game. ","color": "gold"},{"text": "Opt out.","color": "yellow","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 5"}}]
+tellraw @a[team=play] [{"text": "If you need to leave or take a break, ","color": "gold"},{"text": "opt out.","color": "yellow","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 5"}}]
+tellraw @a[team=spect] [{"text": "Want to join the fun? ","color": "green"},{"text": "Opt in.","color": "yellow","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 6"}}]
