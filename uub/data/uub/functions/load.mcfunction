@@ -7,7 +7,7 @@ scoreboard objectives add tether dummy
 scoreboard objectives add qdeath deathCount
 scoreboard objectives add qkill playerKillCount
 scoreboard objectives add queue dummy
-scoreboard objectives add kills dummy
+scoreboard objectives add kills dummy "Score"
 scoreboard objectives add rot dummy
 
 scoreboard players add gid q 1
