@@ -8,6 +8,7 @@ scoreboard objectives add qdeath deathCount
 scoreboard objectives add qkill playerKillCount
 scoreboard objectives add queue dummy
 scoreboard objectives add kills dummy "Score"
+scoreboard objectives add hp dummy {"text": "HP","color": "dark_red"}
 scoreboard objectives add rot dummy
 
 scoreboard players add gid q 1
@@ -20,7 +21,7 @@ scoreboard players set @a rot 0
 
 scoreboard players set game q 0
 execute unless score mode q matches 1.. positioned -3 22 0 run function uub:settings/mode
-execute unless score map q matches 1.. positioned 3 22 0 run function uub:settings/map
+execute unless score map q matches 1.. unless score randmap q matches 1.. positioned 3 22 0 run function uub:settings/map
 
 team add spect {"text": "Spectating","color": "blue"}
 team modify spect collisionRule never
@@ -35,6 +36,8 @@ team modify play friendlyFire false
 team modify play seeFriendlyInvisibles false
 
 team join play @a[team=]
+
+tag @a remove low
 
 tp @a 0 21 0
 clear @a
@@ -53,3 +56,7 @@ difficulty peaceful
 
 schedule clear uub:tick/second
 function uub:tick/second
+
+execute if score randmap q matches 1.. run scoreboard players add randmap q 1
+execute if score randmap q matches 3.. run scoreboard players set randmap q 1
+execute if score randmap q matches 1.. run scoreboard players set map q 0

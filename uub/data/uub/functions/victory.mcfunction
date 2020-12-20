@@ -1,5 +1,6 @@
-title @a times 5 30 5
+title @a reset
 title @a title [{"selector": "@s"},{"text": " wins!","color": "white"}]
+title @a times 5 25 5
 execute at @s run playsound entity.wither.spawn master @s ~ ~ ~ 8
 execute as @a[tag=!alive] at @s run playsound entity.wither.hurt master @s ~ ~ ~ 8
 schedule function uub:load 2s

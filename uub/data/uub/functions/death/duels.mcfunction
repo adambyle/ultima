@@ -1,6 +1,7 @@
 execute if entity @a[tag=alive] run tellraw @a ""
 execute if entity @a[tag=alive] run tellraw @a [{"selector": "@a[tag=alive]"},{"text": " won at ","color": "gray"},{"score": {"name": "@r[tag=alive]","objective": "hp"},"color": "dark_red"},{"text": " HP.","color": "gray"}]
 
+title @a reset
 title @s times 5 30 5
 scoreboard players set game q 3
 schedule function uub:event/duels 2s replace
