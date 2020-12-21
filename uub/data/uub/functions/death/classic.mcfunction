@@ -22,8 +22,6 @@ execute if score @s tether matches 0 run scoreboard players add @r[tag=random] k
 execute if score @s tether matches 0 run scoreboard players operation @s tether = @r[tag=random] pn
 execute if score @s tether matches 0 run function uub:respawn
 
-tag @a remove player
-tag @s add player
 tag @a remove respawn
 tag @a remove respawn_one
 execute as @a[team=play,tag=!alive] if score @s tether = @r[tag=player] pn run tag @s add respawn

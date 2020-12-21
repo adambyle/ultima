@@ -1,3 +1,10 @@
+title @a reset
+title @a times 0 20 5
+execute if score randmap q matches 1..3 run title @a subtitle {"text": "By Adam Byle","color": "gold"}
+execute if score randmap q matches 1 run title @a title {"text": "Manor","color": "yellow"}
+execute if score randmap q matches 2 run title @a title {"text": "Woodlands","color": "yellow"}
+execute if score randmap q matches 3 run title @a title {"text": "Dungeon","color": "yellow"}
+
 tag @a remove alive
 execute if score mode q matches 1 run tag @a[team=play] add alive
 execute if score mode q matches 2 run tag @r[limit=2,team=play] add alive
@@ -27,3 +34,8 @@ team modify play collisionRule always
 team modify play friendlyFire true
 
 scoreboard objectives setdisplay sidebar
+scoreboard players reset * kills
+scoreboard players set @a kills 0
+scoreboard players set @a tether 0
+scoreboard players set @a timer -1
+execute if score mode q matches 3 run scoreboard objectives setdisplay sidebar kills

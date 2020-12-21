@@ -12,30 +12,26 @@ tag @r[tag=alive,tag=!killtag] add random
 execute at @a[tag=killtag] run particle totem_of_undying ~ ~1 ~ 0 0 0 0.7 50
 execute as @a[tag=killtag] at @s run playsound entity.player.levelup master @s
 
-execute if entity @e[tag=killtag,scores={qdeath=1..}] run function uub:death/simul
-execute unless entity @e[tag=killtag,scores={qdeath=1..}] run function uub:death/msg
+function uub:death/msg
 
+execute if score @r[tag=killtag] tether = @s pn run scoreboard players add @a[tag=killtag] kills 2
+execute as @s[tag=!fresh] run scoreboard players add @a[tag=killtag] kills 1
+execute as @a if score @s tether = @r[tag=player] pn run scoreboard players set @s tether 0
 scoreboard players set @s tether 0
 scoreboard players operation @s tether = @r[tag=killtag] pn
-scoreboard players add @r[tag=killtag] kills 1
-execute if score @s tether matches 0 run scoreboard players add @r[tag=random] kills 1
-execute if score @s tether matches 0 run scoreboard players operation @s tether = @r[tag=random] pn
-execute if score @s tether matches 0 run function uub:respawn
 
-tag @a remove player
-tag @s add player
+function uub:start/queueassign
+
 tag @a remove respawn
-tag @a remove respawn_one
-execute as @a[team=play,tag=!alive] if score @s tether = @r[tag=player] pn run tag @s add respawn
-tag @r[tag=respawn] add respawn_one
-execute as @a[tag=respawn] run function uub:respawn
-tag @a[tag=respawn_one] remove respawn
-execute if entity @a[tag=respawn_one] unless entity @a[tag=respawn] run tellraw @a [{"selector": "@a[tag=respawn_one]"},{"text": " respawned.","color": "gray"}]
-execute if entity @a[tag=respawn] run tellraw @a [{"selector": "@a[tag=respawn]"},{"text": " and ","color": "gray"},{"selector": "@a[tag=respawn_one]"},{"text": " respawned.","color": "gray"}]
+tag @a[scores={queue=1},team=play] add respawn
+execute as @a[tag=respawn] run function uub:start/swapin
+title @a[tag=respawn] reset
+title @a[tag=respawn] times 5 25 5
+title @a[tag=respawn] title {"text": "Respawning!","color": "red"}
+tellraw @a [{"selector": "@a[tag=respawn]"},{"text": " will respawn.","color": "gray"}]
+execute as @a[tag=respawn] at @s run playsound entity.elder_guardian.curse master @s ~ ~ ~ 2 2
 
-scoreboard players set alive n 0
-execute as @a[tag=alive] run scoreboard players add alive n 1
-execute if score alive n matches 1 run tellraw @a [{"selector": "@a[tag=alive]"},{"text": " wins!","color": "gray"}]
-execute if score alive n matches 1 as @a[tag=alive] run function uub:victory
+execute as @a[tag=killtag,scores={kills=3..}] run tellraw @a [{"selector": "@a[tag=alive]"},{"text": " wins!","color": "gray"}]
+execute as @a[tag=killtag,scores={kills=3..}] run function uub:victory
 tellraw @a[team=play] [{"text": "If you need to leave or take a break, ","color": "gold"},{"text": "opt out.","color": "yellow","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 5"}}]
 tellraw @a[team=spect] [{"text": "Want to join the fun? ","color": "green"},{"text": "Opt in.","color": "yellow","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 6"}}]

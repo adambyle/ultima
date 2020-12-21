@@ -10,6 +10,7 @@ scoreboard objectives add queue dummy
 scoreboard objectives add kills dummy "Score"
 scoreboard objectives add hp dummy {"text": "HP","color": "dark_red"}
 scoreboard objectives add rot dummy
+scoreboard objectives add timer dummy
 
 scoreboard players add gid q 1
 scoreboard players operation @a gid = gid q
@@ -18,6 +19,7 @@ scoreboard players set @a qkill 0
 scoreboard players set @a queue 0
 scoreboard players set @a kills 0
 scoreboard players set @a rot 0
+scoreboard players set @a rot -1
 
 scoreboard players set game q 0
 execute unless score mode q matches 1.. positioned -3 22 0 run function uub:settings/mode
@@ -38,6 +40,7 @@ team modify play seeFriendlyInvisibles false
 team join play @a[team=]
 
 tag @a remove low
+tag @a remove fresh
 
 tp @a 0 21 0
 clear @a
@@ -60,3 +63,4 @@ function uub:tick/second
 execute if score randmap q matches 1.. run scoreboard players add randmap q 1
 execute if score randmap q matches 3.. run scoreboard players set randmap q 1
 execute if score randmap q matches 1.. run scoreboard players set map q 0
+scoreboard objectives setdisplay sidebar

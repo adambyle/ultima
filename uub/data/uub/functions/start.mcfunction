@@ -1,10 +1,7 @@
-scoreboard players operation map q = randmap q
+execute if score randmap q matches 1.. run scoreboard players operation map q = randmap q
 
 scoreboard players set pn q 0
 execute as @a[team=play] run scoreboard players add pn q 1
-
-##
-scoreboard players set pn q 2
 
 scoreboard players set invalid n 0
 execute if score mode q matches 1 unless score pn q matches 3..4 run scoreboard players set invalid n 1
@@ -32,10 +29,3 @@ execute if score invalid n matches 0 as @a at @s run playsound block.note_block.
 execute if score invalid n matches 0 as @a at @s run playsound block.note_block.pling master @s ~ ~ ~ 16 1
 execute if score invalid n matches 0 run scoreboard players set game q -1
 execute if score invalid n matches 0 run schedule function uub:start/prep 1s
-
-title @a reset
-title @a times 0 20 5
-execute if score randmap q matches 1..3 run title @a subtitle {"text": "By Adam Byle","color": "gold"}
-execute if score randmap q matches 1 run title @a title {"text": "Manor","color": "yellow"}
-execute if score randmap q matches 2 run title @a title {"text": "Woodlands","color": "yellow"}
-execute if score randmap q matches 3 run title @a title {"text": "Dungeon","color": "yellow"}
