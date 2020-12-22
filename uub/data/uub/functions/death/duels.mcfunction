@@ -20,12 +20,12 @@ execute if entity @a[tag=alive] as @a[tag=respawn] at @s run playsound entity.el
 execute if entity @a[tag=alive] unless score randmap q matches 1.. run title @a[tag=respawn] title {"text": "Respawning...","color": "red"}
 
 tellraw @a[team=play] [{"text": "If you need to leave or take a break, ","color": "gold"},{"text": "opt out.","color": "yellow","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 5"}}]
-tellraw @a[team=spect] [{"text": "Want to join the fun? ","color": "green"},{"text": "Opt in.","color": "yellow","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 6"}}]
+tellraw @a[team=spect] [{"text": "Want to join the fun? ","color": "gold"},{"text": "Opt in.","color": "yellow","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 6"}}]
 
 execute if score randmap q matches 1 run title @a reset
 execute if score randmap q matches 1 run title @a times 0 20 5
 execute if score randmap q matches 1.. run scoreboard players add randmap q 1
-execute if score randmap q matches 3.. run scoreboard players set randmap q 1
+execute if score randmap q matches 4.. run scoreboard players set randmap q 1
 execute if score randmap q matches 1.. run scoreboard players operation map q = randmap q
 execute if score randmap q matches 1.. run title @a subtitle {"text": "Next up","color": "gold"}
 execute if score randmap q matches 1 run title @a title {"text": "Manor","color": "yellow"}

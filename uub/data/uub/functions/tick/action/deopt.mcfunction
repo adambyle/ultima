@@ -11,6 +11,6 @@ team join spect
 gamemode spectator
 function uub:tp
 scoreboard players remove pn q 1
-tellraw @a [{"selector": "@s","color": "blue"},{"text": " opted out mid-game","color": "blue"}]
+tellraw @a [{"selector": "@s","color": "blue"},{"text": " has opted out mid-game.","color": "blue"}]
 execute if score pn q matches ..1 run tellraw @a {"text": "There are not enough players to continue.","color": "red"}
 execute if score pn q matches ..1 run function uub:load

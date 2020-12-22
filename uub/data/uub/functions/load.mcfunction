@@ -9,6 +9,7 @@ scoreboard objectives add qkill playerKillCount
 scoreboard objectives add queue dummy
 scoreboard objectives add kills dummy "Score"
 scoreboard objectives add hp dummy {"text": "HP","color": "dark_red"}
+scoreboard objectives add dmg custom:damage_dealt
 scoreboard objectives add rot dummy
 scoreboard objectives add timer dummy
 
@@ -17,7 +18,7 @@ scoreboard players operation @a gid = gid q
 scoreboard players set @a qdeath 0
 scoreboard players set @a qkill 0
 scoreboard players set @a queue 0
-scoreboard players set @a kills 0
+scoreboard players reset @a kills
 scoreboard players set @a rot 0
 scoreboard players set @a rot -1
 
@@ -53,14 +54,18 @@ effect give @a instant_health 1 3 true
 schedule clear uub:start/prep
 schedule clear uub:event/duels
 
-execute as @e[type=armor_stand] run data merge entity @s {CustomNameVisible:1b}
+execute as @e[tag=text] run data merge entity @s {CustomNameVisible:1b}
+execute at @e[tag=dungeon_potion] run data remove block ~ ~ ~ Items
 
 difficulty peaceful
 
 schedule clear uub:tick/second
+schedule clear uub:event/dungeon_potion
 function uub:tick/second
 
 execute if score randmap q matches 1.. run scoreboard players add randmap q 1
-execute if score randmap q matches 3.. run scoreboard players set randmap q 1
+execute if score randmap q matches 4.. run scoreboard players set randmap q 1
 execute if score randmap q matches 1.. run scoreboard players set map q 0
 scoreboard objectives setdisplay sidebar
+
+gamerule sendCommandFeedback false
