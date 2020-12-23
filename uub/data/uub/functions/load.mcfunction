@@ -44,6 +44,9 @@ tag @a remove low
 tag @a remove fresh
 
 tp @a 0 21 0
+spawnpoint @a 0 21 0
+kill @a
+scoreboard players reset * qdeath
 clear @a
 effect clear @a
 gamemode adventure @a

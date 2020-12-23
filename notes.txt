@@ -1,0 +1,7 @@
+planned features:
+
+glowing markers appear when a player will respawn
+orderable hotbar
+boss rush mode
+woodlands map: arrow refill stations
+awards

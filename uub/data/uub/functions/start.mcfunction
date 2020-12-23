@@ -16,11 +16,11 @@ execute if score invalid n matches 6 run tellraw @s [{"text": "Can't start! ","c
 
 execute if score invalid n matches 1 if score pn q matches 2 run tellraw @s [{"text": "Can't start! ","color": "dark_red"},{"text": "You need at least 3 players to play Classic mode.","color": "gray"}]
 execute if score invalid n matches 1 if score pn q matches 5.. run tellraw @s [{"text": "Can't start! ","color": "dark_red"},{"text": "No more than 4 players can play Classic mode.","color": "gray"}]
-execute if score invalid n matches 3 if score pn q matches 2 run tellraw @s [{"text": "Can't start! ","color": "dark_red"},{"text": "You need at least 3 players to play Ultimate Brawl mode.","color": "gray"}]
+execute if score invalid n matches 3 if score pn q matches 2 run tellraw @s [{"text": "Can't start! ","color": "dark_red"},{"text": "You need at least 3 players to play Brawl mode.","color": "gray"}]
 
 execute if score invalid n matches 1..4 if score pn q matches 2 run tellraw @s [{"text": "Click here to play Duels mode instead.","color": "aqua","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 2"}}]
 execute if score invalid n matches 1..4 if score pn q matches 3..4 run tellraw @s [{"text": "Click here to play Classic mode instead.","color": "aqua","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 1"}}]
-execute if score invalid n matches 1..4 if score pn q matches 5..8 run tellraw @s [{"text": "Click here to play Ultimate Brawl mode instead.","color": "aqua","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 3"}}]
+execute if score invalid n matches 1..4 if score pn q matches 5..8 run tellraw @s [{"text": "Click here to play Brawl mode instead.","color": "aqua","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 3"}}]
 
 execute if score invalid n matches 1.. run tp @s 0 21 0
 execute if score invalid n matches 1.. run setblock 0 21 3 polished_blackstone_pressure_plate[powered=false]

@@ -1,5 +1,6 @@
 gamemode spectator
 execute as @a run function uub:items/refill
+function uub:items
 tag @s remove alive
 
 scoreboard players set @s qdeath 2

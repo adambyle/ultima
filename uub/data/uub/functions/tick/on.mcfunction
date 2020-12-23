@@ -27,12 +27,12 @@ tag @a[scores={hp=12..},tag=low] remove low
 scoreboard players remove @a[scores={timer=1..},team=play] timer 1
 execute as @a[scores={timer=0},team=play] run function uub:respawn
 
-execute unless score sudden_death q matches 1 if score mode q matches 3 run effect give @a[team=play,scores={kills=2}] glowing 1 0 true
-execute unless score sudden_death q matches 1 if score mode q matches 3 run effect clear @a[team=play,scores={kills=..1}] glowing
-execute unless score sudden_death q matches 1 if score mode q matches 3 run effect clear @a[team=play,scores={kills=3}] glowing
-execute if score sudden_death q matches 1 run effect give @a[team=play] glowing
+execute unless score sudden_death q matches 1 if score mode q matches 3 run effect give @a[team=play,scores={kills=3..}] glowing 1 0 true
+execute unless score sudden_death q matches 1 if score mode q matches 3 run effect clear @a[team=play,scores={kills=..2}] glowing
 
 execute if score map q matches 3 run effect clear @a[scores={dmg=1..}] invisibility
+execute if score map q matches 3 run effect clear @a[scores={dmg=1..}] speed
+execute if score map q matches 3 run effect clear @a[scores={dmg=1..}] resistance
 execute if score map q matches 3 run scoreboard players set @a dmg 0
 execute if score map q matches 3 as @a[nbt={ActiveEffects:[{Id:14b}]}] run clear @s #uub:dungeon_armor
 execute if score map q matches 3 as @a[nbt=!{ActiveEffects:[{Id:14b}]},nbt=!{Inventory:[{id:"minecraft:iron_chestplate"}]}] run function uub:items/refill/dungeon_armor
