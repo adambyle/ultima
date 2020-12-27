@@ -1,4 +1,7 @@
 title @a reset
+
+function uub:stat/win
+
 title @a title [{"selector": "@s"},{"text": " wins!","color": "white"}]
 title @a times 5 25 5
 execute at @s run playsound entity.wither.spawn master @s ~ ~ ~ 8

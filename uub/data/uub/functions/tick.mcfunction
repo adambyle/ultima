@@ -8,7 +8,7 @@ scoreboard players enable @a action
 scoreboard players set @a action 0
 
 kill @e[type=#arrows,nbt={inGround:1b}]
-kill @e[type=item]
+kill @e[type=item,tag=!nokill]
 
 execute as @a[scores={qdeath=2}] run function uub:tp
 scoreboard players set @a[scores={qdeath=2}] qdeath 0

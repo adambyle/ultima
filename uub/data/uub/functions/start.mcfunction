@@ -10,6 +10,8 @@ execute if score mode q matches 3 unless score pn q matches 3..8 run scoreboard 
 execute if score map q matches 4.. run scoreboard players set invalid n 5
 execute if score pn q matches ..1 run scoreboard players set invalid n 6
 
+execute if score bypass debug matches 1 run scoreboard players set invalid n 0
+
 execute if score invalid n matches 1.. run tellraw @s ""
 execute if score invalid n matches 5 run tellraw @s [{"text": "Can't start! ","color": "dark_red"},{"text": "The map you have selected cannot yet be played.","color": "gray"}]
 execute if score invalid n matches 6 run tellraw @s [{"text": "Can't start! ","color": "dark_red"},{"text": "You need at least 2 players to play this game.","color": "gray"}]
@@ -32,9 +34,9 @@ execute if score invalid n matches 0 run schedule function uub:start/prep 1s
 
 execute if score invalid n matches 0 run title @a reset
 execute if score invalid n matches 0 run title @a times 0 20 5
-execute if score invalid n matches 0 if score randmap q matches 1..3 run title @a subtitle {"text": "By Adam Byle","color": "gold"}
-execute if score invalid n matches 0 if score randmap q matches 1 run title @a title {"text": "Manor","color": "yellow"}
-execute if score invalid n matches 0 if score randmap q matches 2 run title @a title {"text": "Woodlands","color": "yellow"}
-execute if score invalid n matches 0 if score randmap q matches 3 run title @a title {"text": "Dungeon","color": "yellow"}
+execute if score invalid n matches 0 if score randmap q matches 1..4 run title @a subtitle {"text": "By Adam Byle","color": "gold"}
+execute if score invalid n matches 0 if score randmap q matches 1.. run function uub:settings/announce_map
 
-schedule function uub:event/dungeon_potion 15s
+execute if score map q matches 3 run schedule function uub:event/dungeon_potion 15s
+
+function uub:event/lighting

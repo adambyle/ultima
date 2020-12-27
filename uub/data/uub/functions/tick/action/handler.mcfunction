@@ -7,3 +7,4 @@ execute unless entity @s[team=spect] if score @s action matches 6 run title @s a
 execute if score game q matches 0 if score @s action matches 1..3 run function uub:tick/action/mode_start
 execute if score game q matches 1.. if entity @s[team=play] if score @s action matches 5 run function uub:tick/action/deopt
 execute if score game q matches 1.. if score @s action matches 6 if entity @s[team=spect] run function uub:tick/action/opt
+execute if score @s action matches 7 run function uub:stat/get_overall
