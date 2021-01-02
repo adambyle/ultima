@@ -41,4 +41,7 @@ execute positioned 46 27 42 unless entity @a[team=play,tag=alive,distance=..2] r
 execute positioned 46 27 42 unless entity @a[team=play,tag=alive,distance=..6] run schedule clear uub:event/woodlands_arrows
 execute positioned 46 27 42 unless entity @a[team=play,tag=alive,distance=..6] run scoreboard players set arrow_refill n 0
 
-execute if score map q matches 4 as @a[team=play,tag=alive,nbt=!{Inventory:[{id:"minecraft:netherite_ingot"}]},tag=!used_netherite] run function uub:event/abyss_netherite
+execute unless score game q matches 2 if score map q matches 4 as @a[team=play,tag=alive,nbt=!{Inventory:[{id:"minecraft:netherite_ingot"}]},tag=!used_netherite] run function uub:event/abyss_netherite
+
+effect clear @a[scores={kills=3..},nbt={ActiveEffects:[{Id:14b}]}] glowing
+execute if score mode q matches 3 run effect give @a[scores={kills=3..},nbt=!{ActiveEffects:[{Id:14b}]}] glowing 1 0 true

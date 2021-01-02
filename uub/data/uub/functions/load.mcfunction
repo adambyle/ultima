@@ -1,3 +1,5 @@
+kill @a
+
 execute if score all debug matches 1 run tellraw @a {"text": "ATTENTION: DEBUG MODE IS ON! GAME MAY NOT WORK PROPERLY!","bold": true,"color": "yellow"}
 execute if score all debug matches 1 run tellraw @a [{"text": "Unless otherwise instructed, tell the server operator to ","color": "yellow"},{"text": "turn off debug mode.","underlined": true,"clickEvent": {"action": "run_command","value": "/function uub:debug/off"}}]
 
@@ -18,8 +20,8 @@ scoreboard objectives add timer dummy
 scoreboard objectives add debug dummy
 scoreboard objectives add event_timer dummy
 
-scoreboard objectives add s.kills playerKillCount
-scoreboard objectives add s.deaths deathCount
+scoreboard objectives add s.kills dummy
+scoreboard objectives add s.deaths dummy
 scoreboard objectives add s.duels.win dummy
 scoreboard objectives add s.classic.win dummy
 scoreboard objectives add s.brawl.win dummy
@@ -70,14 +72,10 @@ tag @a remove fresh
 
 tp @a 0 21 0
 spawnpoint @a 0 21 0
-kill @a
 scoreboard players reset * qdeath
 clear @a
 effect clear @a
 gamemode adventure @a
-effect give @a resistance 99999 4 true
-effect give @a invisibility 99999 0 true
-effect give @a instant_health 1 3 true
 
 schedule clear uub:start/prep
 schedule clear uub:event/duels
@@ -101,3 +99,8 @@ data modify entity @e[tag=version,limit=1] CustomName set value '{"text":"Ultima
 
 execute if score played_game n matches 1 run tellraw @a [{"text": "Interested in your performance? ","color": "aqua"},{"text": "Click here!","color": "white","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 7"}}]
 scoreboard players set played_game n 0
+
+schedule clear uub:tick/load
+function uub:tick/load
+schedule function uub:tick/load 1t append
+schedule function uub:tick/load 3s append

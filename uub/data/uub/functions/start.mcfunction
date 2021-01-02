@@ -7,7 +7,7 @@ scoreboard players set invalid n 0
 execute if score mode q matches 1 unless score pn q matches 3..4 run scoreboard players set invalid n 1
 execute if score mode q matches 2 unless score pn q matches 2.. run scoreboard players set invalid n 2
 execute if score mode q matches 3 unless score pn q matches 3..8 run scoreboard players set invalid n 3
-execute if score map q matches 4.. run scoreboard players set invalid n 5
+execute if score map q matches 5.. run scoreboard players set invalid n 5
 execute if score pn q matches ..1 run scoreboard players set invalid n 6
 
 execute if score bypass debug matches 1 run scoreboard players set invalid n 0
@@ -40,3 +40,5 @@ execute if score invalid n matches 0 if score randmap q matches 1.. run function
 execute if score map q matches 3 run schedule function uub:event/dungeon_potion 15s
 
 function uub:event/lighting
+
+schedule clear uub:tick/load

@@ -1,23 +1,22 @@
-tag @a remove killtag
-tag @r[scores={qkill=1..}] add killtag
-scoreboard players remove @a[tag=killtag] qkill 1
-tag @a[tag=killtag] remove fresh
-
-tellraw @a ""
-
 tag @a remove player
 tag @s add player
-tag @a remove random
-tag @r[tag=alive,tag=!killtag] add random
+
+tag @a remove killtag
+execute at @s run tag @a[scores={qkill=1..},sort=nearest,limit=1,tag=!player] add killtag
+scoreboard players remove @a[tag=killtag] qkill 1
+tag @a[tag=killtag] remove fresh
+execute unless score noplay debug matches 1 run scoreboard players add @a[tag=killtag] s.kills 1
+
+tellraw @a ""
 
 execute at @a[tag=killtag] run particle totem_of_undying ~ ~1 ~ 0 0 0 0.7 50
 execute as @a[tag=killtag] at @s run playsound entity.player.levelup master @s
 
-function uub:death/msg
+function uub:death/msg/brawl
 
 execute if score @r[tag=killtag] tether = @s[tag=!fresh] pn run scoreboard players add @a[tag=killtag] kills 3
 execute as @s[tag=!fresh] unless score @r[tag=killtag] tether = @s[tag=!fresh] pn run scoreboard players add @a[tag=killtag] kills 2
-execute as @s[tag=fresh] run scoreboard players add @a[tag=killtag] kills 2
+execute as @s[tag=fresh] run scoreboard players add @a[tag=killtag] kills 1
 execute as @a if score @s tether = @r[tag=player] pn run scoreboard players set @s tether 0
 scoreboard players set @s tether 0
 scoreboard players operation @s tether = @r[tag=killtag] pn
