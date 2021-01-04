@@ -1,5 +1,17 @@
 # changelog
 
+## January 4, 2021 (Second push)
+
+**Additions:**
+* When a player dies or opts out, any splash potions or arrows in the air belonging to them are destroyed
+* You are notified who hit you when the attacker is either six blocks or more away or invisible
+* When you hit someone six blocks or more away, you are told their health
+* Map selection interface in a chest
+
+**Changes:**
+* Removed map button that cycled through the options
+    * This does not have anything to do with the "Cycle Map" map selection
+
 ## January 4, 2021
 
 **Additions:**

@@ -15,9 +15,11 @@ scoreboard objectives add queue dummy
 scoreboard objectives add kills dummy "Score"
 scoreboard objectives add hp dummy {"text": "HP","color": "dark_red"}
 scoreboard objectives add dmg custom:damage_dealt
+scoreboard objectives add took_dmg custom:damage_taken
 scoreboard objectives add rot dummy
 scoreboard objectives add timer dummy
 scoreboard objectives add debug dummy
+scoreboard objectives add dmg_source dummy
 scoreboard objectives add event_timer dummy
 
 scoreboard objectives add s.kills dummy
@@ -40,18 +42,20 @@ scoreboard objectives add s.win dummy
 scoreboard objectives add s.play dummy
 
 scoreboard players add gid q 1
-scoreboard players operation @a gid = gid q
-scoreboard players set @a qdeath 0
-scoreboard players set @a qkill 0
-scoreboard players set @a queue 0
-scoreboard players reset @a kills
-scoreboard players set @a event_timer -1
-scoreboard players set @a rot -1
+scoreboard players operation * gid = gid q
+scoreboard players set * qdeath 0
+scoreboard players set * qkill 0
+scoreboard players set * queue 0
+scoreboard players reset * kills
+scoreboard players reset * took_dmg
+scoreboard players reset * dmg_source
+scoreboard players set * event_timer -1
+scoreboard players set * rot -1
 
 scoreboard players set game q 0
 scoreboard players set arrow_refill n 0
 execute unless score mode q matches 1.. positioned -3 22 0 run function uub:settings/mode
-execute unless score map q matches 1.. unless score randmap q matches 1.. positioned 3 22 0 run function uub:settings/map
+execute unless score map q matches 1.. unless score randmap q matches 1.. run function uub:settings/map
 
 team add spect {"text": "Spectating","color": "blue"}
 team modify spect collisionRule never

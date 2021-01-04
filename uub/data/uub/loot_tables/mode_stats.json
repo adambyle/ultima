@@ -8,7 +8,7 @@
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {"text": "Gamemode Stats","bold": true,"italic": false,"color": "dark_green"}
+                            "name": {"text": "Gamemode Stats","bold": true,"italic": false,"color": "yellow"}
                         },
                         {
                             "function": "set_lore",

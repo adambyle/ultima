@@ -31,7 +31,6 @@ execute if score map q matches 4 as @a[scores={event_timer=0},team=play] run fun
 execute if score map q matches 3 run effect clear @a[scores={dmg=1..}] invisibility
 execute if score map q matches 3 run effect clear @a[scores={dmg=1..}] speed
 execute if score map q matches 3 run effect clear @a[scores={dmg=1..}] resistance
-execute if score map q matches 3 run scoreboard players set @a dmg 0
 execute if score map q matches 3 as @a[nbt={ActiveEffects:[{Id:14b}]}] run clear @s #uub:dungeon_armor
 execute if score map q matches 3 as @a[nbt=!{ActiveEffects:[{Id:14b}]},nbt=!{Inventory:[{id:"minecraft:iron_chestplate"}]}] run function uub:items/refill/dungeon_armor
 
@@ -45,3 +44,14 @@ execute unless score game q matches 2 if score map q matches 4 as @a[team=play,t
 
 effect clear @a[scores={kills=3..},nbt={ActiveEffects:[{Id:14b}]}] glowing
 execute if score mode q matches 3 run effect give @a[scores={kills=3..},nbt=!{ActiveEffects:[{Id:14b}]}] glowing 1 0 true
+
+execute as @e[type=#arrows] unless score @s pn matches 1.. run scoreboard players operation @s pn = @p[team=play,tag=alive] pn
+execute as @e[type=potion] unless score @s pn matches 1.. run scoreboard players operation @s pn = @p[team=play,tag=alive] pn
+scoreboard players set @a n 0
+execute as @a[team=play,tag=alive] at @s if entity @e[type=!player,scores={pn=1..},sort=nearest,distance=..6,limit=1] run scoreboard players set @s n 1
+execute as @a[team=play,tag=alive] at @s run scoreboard players operation @s dmg_source = @e[type=!player,scores={pn=1..},sort=nearest,distance=..6,limit=1] pn
+execute as @a[team=play,tag=alive] at @s run function uub:death/rm_dmg_source
+execute as @a[scores={took_dmg=1..},nbt=!{ActiveEffects:[{Id:19b}]},nbt=!{ActiveEffects:[{Id:20b}]}] run function uub:death/dmg_source
+scoreboard players set @a dmg 0
+scoreboard players set @a took_dmg 0
+scoreboard players set @a[scores={n=0}] dmg_source 0

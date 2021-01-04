@@ -1,6 +1,8 @@
 tag @a remove player
 tag @s add player
 execute as @a[team=play] if score @s queue > @r[tag=player] queue run scoreboard players remove @s queue 1
+execute as @e[type=potion] if score @s pn = @r[tag=player] pn run kill @s
+execute as @e[type=#arrows] if score @s pn = @r[tag=player] pn run kill @s
 scoreboard players set @s queue 0
 execute if entity @s[tag=alive] as @a[scores={queue=1},team=play] run function uub:start/swapin
 execute if score mode q matches 1 as @a[team=play] if score @s pn = @r[tag=player] tether run scoreboard players remove @s kills 1

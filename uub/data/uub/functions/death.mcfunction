@@ -14,3 +14,8 @@ execute if score mode q matches 1 run scoreboard players set @s kills 0
 execute if score mode q matches 3 run scoreboard players remove @s kills 1
 scoreboard players set @a[scores={kills=..0}] kills 0
 execute unless score noplay debug matches 1 run scoreboard players add @s s.deaths 1
+
+tag @a remove player
+tag @s add player
+execute as @e[type=#arrows] if score @s pn = @r[tag=player] pn run kill @s
+execute as @e[type=potion] if score @s pn = @r[tag=player] pn run kill @s

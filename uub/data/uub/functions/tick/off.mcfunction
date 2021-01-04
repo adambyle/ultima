@@ -1,7 +1,6 @@
 execute as @a unless score @s gid = gid q run function uub:load
 execute positioned 45 31 -3 if block ~ ~ ~ polished_blackstone_pressure_plate[powered=true] as @p run function uub:start/ready
 execute positioned 43 31 -9 if block ~ ~ ~ polished_blackstone_button[powered=true] run function uub:settings/mode
-execute positioned 43 31 -12 if block ~ ~ ~ polished_blackstone_button[powered=true] run function uub:settings/map
 
 execute as @a[tag=team_play,nbt=!{EnderItems:[{id:"minecraft:lime_terracotta"}]},tag=menu.main] run function uub:settings/opt
 execute as @a[tag=team_spect,nbt=!{EnderItems:[{id:"minecraft:blue_terracotta"}]},tag=menu.main] run function uub:settings/opt
@@ -32,6 +31,20 @@ execute as @a[nbt=!{EnderItems:[{id:"minecraft:iron_sword"}]},tag=menu.stat.mode
 execute as @a[nbt=!{EnderItems:[{id:"minecraft:golden_helmet"}]},tag=menu.stat.mode] run function uub:settings/get_stats/modes
 execute as @a[nbt=!{EnderItems:[{id:"minecraft:diamond"}]},tag=menu.stat.mode] run function uub:settings/get_stats/modes
 execute as @a[nbt=!{EnderItems:[{id:"minecraft:wither_skeleton_skull"}]},tag=menu.stat.mode] run function uub:settings/get_stats/modes
+
+execute unless data block 43 31 -12 {Items:[{id:"minecraft:player_head"}]} run function uub:settings/map
+execute unless data block 43 31 -12 {Items:[{id:"minecraft:smooth_quartz"}]} run function uub:settings/map
+execute unless data block 43 31 -12 {Items:[{id:"minecraft:spruce_sapling"}]} run function uub:settings/map
+execute unless data block 43 31 -12 {Items:[{id:"minecraft:stone_bricks"}]} run function uub:settings/map
+execute unless data block 43 31 -12 {Items:[{id:"minecraft:blackstone"}]} run function uub:settings/map
+execute unless data block 43 31 -12 {Items:[{id:"minecraft:diamond_block"}]} run function uub:settings/map
+execute unless data block 43 31 -12 {Items:[{id:"minecraft:dead_bush"}]} run function uub:settings/map
+execute unless data block 43 31 -12 {Items:[{id:"minecraft:emerald"}]} run function uub:settings/map
+execute unless data block 43 31 -12 {Items:[{id:"minecraft:bell"}]} run function uub:settings/map
+execute unless data block 43 31 -12 {Items:[{id:"minecraft:blue_ice"}]} run function uub:settings/map
+execute unless data block 43 31 -12 {Items:[{id:"minecraft:crimson_fungus"}]} run function uub:settings/map
+execute unless data block 43 31 -12 {Items:[{id:"minecraft:nether_star"}]} run function uub:settings/map
+execute unless data block 43 31 -12 {Items:[{id:"minecraft:end_stone"}]} run function uub:settings/map
 
 setblock 43 31 -8 potted_cactus
 setblock 47 31 -13 potted_cactus
