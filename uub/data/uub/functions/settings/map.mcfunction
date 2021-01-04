@@ -14,4 +14,4 @@ execute if score map q matches 1..4 run data modify entity @e[tag=msw,limit=1] C
 execute if score map q matches 0 run scoreboard players set randmap q 1
 execute if score map q matches 1.. run scoreboard players set randmap q 0
 
-setblock ~ ~ ~ polished_blackstone_button[powered=false,facing=west]
+setblock ~ ~ ~ polished_blackstone_button[powered=false,facing=west,face=floor]

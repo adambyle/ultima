@@ -65,13 +65,36 @@ team modify play collisionRule never
 team modify play friendlyFire false
 team modify play seeFriendlyInvisibles false
 
+team add off {"text": "Waiting","color": "red"}
+team modify off color white
+team modify off collisionRule never
+team modify off friendlyFire false
+team modify off seeFriendlyInvisibles false
+
+tag @a[team=play] add team_play
+tag @a[team=spect] add team_spect
+
+team join play @a[team=off]
 team join play @a[team=]
+team join play @a[tag=!team_play,tag=!team_spect]
+
+tag @a remove team_play
+tag @a remove team_spect
+tag @a[team=play] add team_play
+tag @a[team=spect] add team_spect
+
+replaceitem entity @s[tag=team_play] enderchest.10 lime_terracotta{display:{Name:'{"text": "Opted in","color": "green","bold": true,"italic": false}',Lore:['{"text": "Click to opt out.","color": "gray"}']}}
+replaceitem entity @s[tag=team_spect] enderchest.10 blue_terracotta{display:{Name:'{"text": "Opted out","color": "blue","bold": true,"italic": false}',Lore:['{"text": "Click to opt in.","color": "gray"}']}}
+
+team leave @a
+team join off @a
 
 tag @a remove low
 tag @a remove fresh
 
-tp @a 0 21 0
-spawnpoint @a 0 21 0
+tp @a 45 30 -11
+setworldspawn 45 30 -11
+spawnpoint @a 45 30 -11 0
 scoreboard players reset * qdeath
 clear @a
 effect clear @a
@@ -95,12 +118,22 @@ scoreboard objectives setdisplay sidebar
 
 execute unless score feedback debug matches 1 run gamerule sendCommandFeedback false
 
-data modify entity @e[tag=version,limit=1] CustomName set value '{"text":"Ultima: Ultimate Brawl 1.1","color":"gold"}'
+replaceitem entity @a[tag=team_play] armor.chest leather_chestplate{display:{color:65293}}
+replaceitem entity @a[tag=team_spect] armor.chest leather_chestplate{display:{color:4607}}
 
-execute if score played_game n matches 1 run tellraw @a [{"text": "Interested in your performance? ","color": "aqua"},{"text": "Click here!","color": "white","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 7"}}]
-scoreboard players set played_game n 0
+tag @a remove menu.stat.map
+tag @a remove menu.stat.mode
+tag @a remove menu.stat
+tag @a add menu.main
+execute as @a run function uub:settings/main_menu
 
-schedule clear uub:tick/load
-function uub:tick/load
-schedule function uub:tick/load 1t append
-schedule function uub:tick/load 3s append
+time set noon
+tag @a remove ready
+tag @a remove left_game
+tag @a remove can_win
+
+bossbar add gamestart {"text": "Game starting","color": "blue"}
+bossbar set gamestart color blue
+bossbar set gamestart players @a
+bossbar set gamestart visible false
+bossbar set gamestart max 15

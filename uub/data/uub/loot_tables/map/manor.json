@@ -1,0 +1,32 @@
+{
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "smooth_quartz",
+                    "functions": [
+                        {
+                            "function": "set_name",
+                            "name": {"text": "Manor","bold": true,"italic": false,"color": "white"}
+                        },
+                        {
+                            "function": "set_lore",
+                            "entity": "this",
+                            "lore": [
+                                [{"text": "Wins: ","color": "gold"},{"score": {"name": "@s","objective": "s.manor.win"},"color": "white","italic": false}],
+                                [{"text": "Plays: ","color": "gold"},{"score": {"name": "@s","objective": "s.manor.play"},"color": "white","italic": false}],
+                                [{"text": "Win rate: ","color": "gold"},{"score": {"name": "whole","objective": "n"},"color": "white","italic": false},{"text": ".","color": "white","italic": false},{"score": {"name": "decim","objective": "n"},"color": "white","italic": false},{"text": "%","color": "white","italic": false}]
+                            ]
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{HideFlags:63}"
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

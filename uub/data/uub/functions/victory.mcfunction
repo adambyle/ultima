@@ -1,6 +1,6 @@
 title @a reset
 
-function uub:stat/win
+execute as @s[tag=can_win] run function uub:stat/win
 
 title @a title [{"selector": "@s"},{"text": " wins!","color": "white"}]
 title @a times 5 25 5
@@ -16,4 +16,4 @@ execute at @a[tag=alive] run summon firework_rocket ~ ~4 ~ {LifeTime:5,Fireworks
 execute at @a[tag=alive] run summon firework_rocket ~ ~4 ~ {LifeTime:10,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Flight:2,Explosions:[{Type:0,Flicker:0,Trail:0,Colors:[I;4312372]}]}}}}
 execute at @a[tag=alive] run summon firework_rocket ~ ~4 ~ {LifeTime:15,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Flight:2,Explosions:[{Type:0,Flicker:0,Trail:0,Colors:[I;4312372]}]}}}}
 
-execute as @a[team=play] run function uub:stat/play
+execute as @a[team=play,tag=can_win] run function uub:stat/play

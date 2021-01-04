@@ -1,3 +1,8 @@
+team leave @a
+team join play @a[tag=team_play]
+team join spect @a[tag=team_spect]
+tag @a[team=play] add can_win
+
 scoreboard players set played_game n 1
 
 tag @a remove alive

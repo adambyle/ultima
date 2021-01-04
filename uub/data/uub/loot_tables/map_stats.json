@@ -1,0 +1,34 @@
+{
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "grass_block",
+                    "functions": [
+                        {
+                            "function": "set_name",
+                            "name": {"text": "Map Stats","bold": true,"italic": false,"color": "dark_green"}
+                        },
+                        {
+                            "function": "set_lore",
+                            "entity": "this",
+                            "lore": [
+                                {"text": "Click to view your statistics for each map.","color": "gray"},
+                                [{"text": "Most played map: ","color": "gold"},{"selector": "@e[tag=temp1]","color": "white","italic": false}],
+                                [{"text": "Least played map: ","color": "gold"},{"selector": "@e[tag=temp2]","color": "white","italic": false}],
+                                [{"text": "Best map: ","color": "gold"},{"selector": "@e[tag=temp3]","color": "white","italic": false}],
+                                [{"text": "Worst map: ","color": "gold"},{"selector": "@e[tag=temp4]","color": "white","italic": false}]
+                            ]
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{HideFlags:63}"
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}
