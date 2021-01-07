@@ -10,3 +10,5 @@ execute if entity @a[tag=killtag] if entity @s[tag=fresh] run tellraw @a[tag=kil
 execute unless entity @a[tag=killtag] run tellraw @a[tag=!player] [{"selector": "@s","color": "dark_red"},{"text": " died.","color": "gray"},{"text": " (+1)","color": "dark_gray"}]
 execute unless entity @a[tag=killtag] run tellraw @a[tag=player,scores={kills=1..}] [{"selector": "@s","color": "dark_red"},{"text": " died.","color": "gray"},{"text": " (-1)","color": "dark_gray"}]
 execute unless entity @a[tag=killtag] run tellraw @a[tag=player,scores={kills=0}] [{"selector": "@s","color": "dark_red"},{"text": " died.","color": "gray"}]
+
+execute if entity @a[tag=killtag] run function uub:death/msg/special

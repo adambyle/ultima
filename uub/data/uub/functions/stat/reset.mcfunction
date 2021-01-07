@@ -7,6 +7,7 @@ scoreboard players reset @s s.manor.win
 scoreboard players reset @s s.woodlands.win
 scoreboard players reset @s s.dungeon.win
 scoreboard players reset @s s.abyss.win
+scoreboard players reset @s s.citadel.win
 scoreboard players reset @s s.duels.play
 scoreboard players reset @s s.classic.play
 scoreboard players reset @s s.brawl.play
@@ -14,5 +15,6 @@ scoreboard players reset @s s.manor.play
 scoreboard players reset @s s.woodlands.play
 scoreboard players reset @s s.dungeon.play
 scoreboard players reset @s s.abyss.play
+scoreboard players reset @s s.citadel.play
 scoreboard players reset @s s.win
 scoreboard players reset @s s.play

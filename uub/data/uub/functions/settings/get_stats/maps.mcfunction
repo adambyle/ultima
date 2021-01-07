@@ -1,5 +1,8 @@
 clear @s grass_block
-clear @s smooth_quartz
+clear @a trident
+clear @a snow_block
+
+clear @s dark_oak_planks
 clear @s spruce_sapling
 clear @s stone_bricks
 clear @s blackstone
@@ -13,10 +16,7 @@ clear @s nether_star
 clear @s end_stone
 execute at @s[tag=!menu.stat.map] run playsound block.grass.break master @s
 
-replaceitem entity @s enderchest.10 air
-replaceitem entity @s enderchest.12 air
-replaceitem entity @s enderchest.14 air
-replaceitem entity @s enderchest.16 air
+function uub:settings/clear_ender_chest
 
 tag @a remove player
 tag @s add player
@@ -89,7 +89,28 @@ scoreboard players operation decim n -= mwhle n
 
 loot replace entity @s enderchest.8 loot uub:map/abyss
 
-replaceitem entity @s enderchest.14 diamond_block{display:{Name:'{"text": "Citadel","color": "white","bold": true,"italic": false}',Lore:['{"text": "Map coming soon.","color": "gray"}']}}
+scoreboard players operation plays n = @s s.citadel.play
+execute if score plays n matches 0 run scoreboard players set plays n 1
+scoreboard players operation wins n = @s s.citadel.win
+scoreboard players set c n 10000
+scoreboard players operation wins n *= c n
+scoreboard players operation wins n /= plays n
+
+scoreboard players operation whole n = wins n
+scoreboard players operation decim n = wins n
+scoreboard players set c n 100
+scoreboard players operation whole n /= c n
+scoreboard players operation mwhle n = whole n
+scoreboard players operation mwhle n *= c n
+scoreboard players operation decim n -= mwhle n
+
+loot replace entity @s enderchest.14 loot uub:map/citadel
+
+replaceitem entity @s enderchest.0 snow_block{display:{Name:'{"text": "Unnamed Map","color": "white","bold": true,"italic": false}',Lore:['{"text": "Featuring Tucker Lawson!","color": "dark_purple"}','{"text": "Map coming soon.","color": "gray"}']}}
+replaceitem entity @s enderchest.1 trident{display:{Name:'{"text": "Unnamed Map","color": "white","bold": true,"italic": false}',Lore:['{"text": "Featuring Brayden Smith!","color": "dark_purple"}','{"text": "Map coming soon.","color": "gray"}']},HideFlags:63}
+replaceitem entity @s enderchest.2 grass_block{display:{Name:'{"text": "Dracula\'s Castle","color": "white","bold": true,"italic": false}',Lore:['{"text": "Featuring Reed Aldridge!","color": "dark_purple"}','{"text": "Map coming soon.","color": "gray"}']},HideFlags:63}
+replaceitem entity @s enderchest.3 grass_block{display:{Name:'{"text": "Unnamed Map","color": "white","bold": true,"italic": false}',Lore:['{"text": "Featuring Jonathan Deiss!","color": "dark_purple"}','{"text": "Map coming soon.","color": "gray"}']},HideFlags:63}
+
 replaceitem entity @s enderchest.15 dead_bush{display:{Name:'{"text": "Wasteland","color": "white","bold": true,"italic": false}',Lore:['{"text": "Map coming soon.","color": "gray"}']}}
 replaceitem entity @s enderchest.16 emerald{display:{Name:'{"text": "Town Square","color": "white","bold": true,"italic": false}',Lore:['{"text": "Map coming soon.","color": "gray"}']}}
 replaceitem entity @s enderchest.17 bell{display:{Name:'{"text": "Last Stand","color": "white","bold": true,"italic": false}',Lore:['{"text": "Map coming soon.","color": "gray"}']}}
@@ -98,7 +119,7 @@ replaceitem entity @s enderchest.24 crimson_fungus{display:{Name:'{"text": "Shro
 replaceitem entity @s enderchest.25 nether_star{display:{Name:'{"text": "Hellscape","color": "white","bold": true,"italic": false}',Lore:['{"text": "Map coming soon.","color": "gray"}']}}
 replaceitem entity @s enderchest.26 end_stone{display:{Name:'{"text": "Frontier","color": "white","bold": true,"italic": false}',Lore:['{"text": "Map coming soon.","color": "gray"}']}}
 
-replaceitem entity @s enderchest.10 barrier{display:{Name:'{"text": "Back","bold": true,"italic": false,"color": "red"}',Lore:['{"text": "Go back to Statistics.","color": "gray"}']},HideFlags:63}
+replaceitem entity @s enderchest.13 barrier{display:{Name:'{"text": "Back","bold": true,"italic": false,"color": "red"}',Lore:['{"text": "Go back to Statistics.","color": "gray"}']},HideFlags:63}
 
 tag @s remove menu.stat
 tag @s add menu.stat.map

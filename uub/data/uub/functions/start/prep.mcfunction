@@ -3,8 +3,6 @@ team join play @a[tag=team_play]
 team join spect @a[tag=team_spect]
 tag @a[team=play] add can_win
 
-scoreboard players set played_game n 1
-
 tag @a remove alive
 execute if score mode q matches 1 run tag @a[team=play] add alive
 execute if score mode q matches 2 run tag @r[limit=2,team=play] add alive
@@ -39,3 +37,5 @@ scoreboard players set @a[team=play] kills 0
 scoreboard players set @a tether 0
 scoreboard players set @a timer -1
 execute if score mode q matches 3 run scoreboard objectives setdisplay sidebar kills
+
+execute if score map q matches 5 run scoreboard players set event_timer n 20

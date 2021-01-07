@@ -1,5 +1,38 @@
 # changelog
 
+## January 7, 2021
+
+**Additions:**
+* Awards
+    * 8 categorical triumphs that are assigned to three randomly chosen players
+    * Due to the way it is currently coded, players rarely get Awards (this will be changed)
+* Special death messages that describe other events that influenced the death (paired with Awards)
+* New map: "Citadel"
+
+**Changes:**
+* Players that leave the game by opting out cannot join back
+* If a player leaves the game by opting out, it is assumed they lost the game (the statistics are incremented accordingly)
+* Players that have left a game by opting out cannot rejoin the same game by opting in
+* Projectiles that go out of the upper boundary bounce back at equal speed
+    * It used to be that they kept flying, this made ender pearls problematic
+    * Arrows deal more damage if deflected
+* Arrows in the "Abyss" map are no longer tipped with Harming I
+* The goal in Brawl mode is static, always 5 (used to depend on player number)
+* When the game resets (i.e. after a game) the server reloads, to automatically add in new code
+* Removed the in-chat stats interface
+
+**Bug fixes:**
+* "X hit you" and "X is at Y HP" notifications occur at inappropriate times
+* In duels mode, cycle map does not work correctly
+* The Splash Potion of Harming that players spawn with in the "Dungeon" map cannot be cleared during item refill
+* Splash Potions of Healing that players collect in the "Dungeon" map are cleared on item refill
+* Statistics for the "Manor" map and Classic mode are not calculated and displayed correctly (but are recorded just fine)
+* If a player opts out during the ready sequence, and all opted-in players are ready, the game does not start, and the timer must be waited out
+* The game is considered "played" right after the start button is pressed, this should be determined after the game ends
+* If a player runs the ready sequence outside of the pressure plate (through function manipulation) it creates pressure plates and buttons in odd places
+* If the game prompts you to start the game in another gamemode, following through causes the game to start in an unusual way, often omitting players and messing up statistics
+* Opting into a game does not give you your items and does not add you to the leaderboard
+
 ## January 4, 2021 (Second push)
 
 **Additions:**

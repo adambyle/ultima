@@ -2,21 +2,7 @@ clear @s globe_banner_pattern
 clear @s barrier
 execute at @s[tag=!menu.stat] run playsound ui.loom.take_result master @s
 
-replaceitem entity @s enderchest.10 air
-replaceitem entity @s enderchest.16 air
-replaceitem entity @s enderchest.12 air
-replaceitem entity @s enderchest.5 air
-replaceitem entity @s enderchest.6 air
-replaceitem entity @s enderchest.7 air
-replaceitem entity @s enderchest.8 air
-replaceitem entity @s enderchest.13 air
-replaceitem entity @s enderchest.14 air
-replaceitem entity @s enderchest.15 air
-replaceitem entity @s enderchest.17 air
-replaceitem entity @s enderchest.23 air
-replaceitem entity @s enderchest.24 air
-replaceitem entity @s enderchest.25 air
-replaceitem entity @s enderchest.26 air
+function uub:settings/clear_ender_chest
 
 tag @a remove player
 tag @s add player
@@ -61,7 +47,7 @@ loot replace entity @s enderchest.12 loot uub:overall_stats
 scoreboard players set map_max n 1
 scoreboard players set map_min n 1
 
-scoreboard players operation max n = plays n
+scoreboard players operation max n = @s s.manor.play
 scoreboard players operation min n = max n
 
 scoreboard players operation plays n = @s s.woodlands.play
@@ -82,17 +68,26 @@ execute if score plays n > max n run scoreboard players operation max n = plays 
 execute if score plays n < min n run scoreboard players set map_min n 4
 execute if score plays n < min n run scoreboard players operation min n = plays n
 
+scoreboard players operation plays n = @s s.citadel.play
+execute if score plays n > max n run scoreboard players set map_max n 5
+execute if score plays n > max n run scoreboard players operation max n = plays n
+execute if score plays n < min n run scoreboard players set map_min n 5
+execute if score plays n < min n run scoreboard players operation min n = plays n
+
 execute if score map_max n matches 1 run summon armor_stand 45 20 -10 {CustomName:'"Manor"',Tags:["temp1"]}
 execute if score map_max n matches 2 run summon armor_stand 45 20 -10 {CustomName:'"Woodlands"',Tags:["temp1"]}
 execute if score map_max n matches 3 run summon armor_stand 45 20 -10 {CustomName:'"Dungeon"',Tags:["temp1"]}
 execute if score map_max n matches 4 run summon armor_stand 45 20 -10 {CustomName:'"Abyss"',Tags:["temp1"]}
+execute if score map_max n matches 5 run summon armor_stand 45 20 -10 {CustomName:'"Citadel"',Tags:["temp1"]}
 execute if score map_min n matches 1 run summon armor_stand 45 20 -10 {CustomName:'"Manor"',Tags:["temp2"]}
 execute if score map_min n matches 2 run summon armor_stand 45 20 -10 {CustomName:'"Woodlands"',Tags:["temp2"]}
 execute if score map_min n matches 3 run summon armor_stand 45 20 -10 {CustomName:'"Dungeon"',Tags:["temp2"]}
 execute if score map_min n matches 4 run summon armor_stand 45 20 -10 {CustomName:'"Abyss"',Tags:["temp2"]}
+execute if score map_min n matches 5 run summon armor_stand 45 20 -10 {CustomName:'"Citadel"',Tags:["temp2"]}
 
 scoreboard players set map_max n 1
 scoreboard players set map_min n 1
+scoreboard players set c n 100
 
 scoreboard players operation wins n = @s s.manor.win
 scoreboard players operation wins n *= c n
@@ -135,14 +130,27 @@ execute if score rat n > max n run scoreboard players operation max n = rat n
 execute if score rat n < min n run scoreboard players set map_min n 4
 execute if score rat n < min n run scoreboard players operation min n = rat n
 
+scoreboard players operation wins n = @s s.citadel.win
+scoreboard players operation wins n *= c n
+scoreboard players operation plays n = @s s.citadel.play
+execute if score plays n matches 0 run scoreboard players set plays n 1
+scoreboard players operation rat n = wins n
+scoreboard players operation rat n /= plays n
+execute if score rat n > max n run scoreboard players set map_max n 5
+execute if score rat n > max n run scoreboard players operation max n = rat n
+execute if score rat n < min n run scoreboard players set map_min n 5
+execute if score rat n < min n run scoreboard players operation min n = rat n
+
 execute if score map_max n matches 1 run summon armor_stand 45 20 -10 {CustomName:'"Manor"',Tags:["temp3"]}
 execute if score map_max n matches 2 run summon armor_stand 45 20 -10 {CustomName:'"Woodlands"',Tags:["temp3"]}
 execute if score map_max n matches 3 run summon armor_stand 45 20 -10 {CustomName:'"Dungeon"',Tags:["temp3"]}
 execute if score map_max n matches 4 run summon armor_stand 45 20 -10 {CustomName:'"Abyss"',Tags:["temp3"]}
+execute if score map_max n matches 5 run summon armor_stand 45 20 -10 {CustomName:'"Citadel"',Tags:["temp3"]}
 execute if score map_min n matches 1 run summon armor_stand 45 20 -10 {CustomName:'"Manor"',Tags:["temp4"]}
 execute if score map_min n matches 2 run summon armor_stand 45 20 -10 {CustomName:'"Woodlands"',Tags:["temp4"]}
 execute if score map_min n matches 3 run summon armor_stand 45 20 -10 {CustomName:'"Dungeon"',Tags:["temp4"]}
 execute if score map_min n matches 4 run summon armor_stand 45 20 -10 {CustomName:'"Abyss"',Tags:["temp4"]}
+execute if score map_min n matches 5 run summon armor_stand 45 20 -10 {CustomName:'"Citadel"',Tags:["temp4"]}
 
 loot replace entity @s enderchest.14 loot uub:map_stats
 
@@ -154,7 +162,7 @@ kill @e[tag=temp4]
 scoreboard players set map_max n 1
 scoreboard players set map_min n 1
 
-scoreboard players operation max n = plays n
+scoreboard players operation max n = @s s.classic.play
 scoreboard players operation min n = max n
 
 scoreboard players operation plays n = @s s.duels.play
@@ -178,6 +186,7 @@ execute if score map_min n matches 3 run summon armor_stand 45 20 -10 {CustomNam
 
 scoreboard players set map_max n 1
 scoreboard players set map_min n 1
+scoreboard players set c n 100
 
 scoreboard players operation wins n = @s s.classic.win
 scoreboard players operation wins n *= c n
@@ -224,3 +233,8 @@ tag @s remove menu.stat.map
 tag @s remove menu.stat.mode
 tag @s remove menu.main
 tag @s add menu.stat
+
+kill @e[tag=temp1]
+kill @e[tag=temp2]
+kill @e[tag=temp3]
+kill @e[tag=temp4]

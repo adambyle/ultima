@@ -5,10 +5,7 @@ clear @s golden_helmet
 clear @s wither_skeleton_skull
 execute at @s[tag=!menu.stat.mode] run playsound block.smithing_table.use master @s
 
-replaceitem entity @s enderchest.10 air
-replaceitem entity @s enderchest.12 air
-replaceitem entity @s enderchest.14 air
-replaceitem entity @s enderchest.16 air
+function uub:settings/clear_ender_chest
 
 tag @a remove player
 tag @s add player

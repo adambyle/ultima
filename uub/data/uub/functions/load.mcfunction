@@ -1,4 +1,9 @@
 kill @a
+kill @e[tag=!text,tag=!nokill]
+kill @e[type=item]
+
+tag @a remove played_last_game
+tag @a[team=play] add played_last_game
 
 execute if score all debug matches 1 run tellraw @a {"text": "ATTENTION: DEBUG MODE IS ON! GAME MAY NOT WORK PROPERLY!","bold": true,"color": "yellow"}
 execute if score all debug matches 1 run tellraw @a [{"text": "Unless otherwise instructed, tell the server operator to ","color": "yellow"},{"text": "turn off debug mode.","underlined": true,"clickEvent": {"action": "run_command","value": "/function uub:debug/off"}}]
@@ -19,8 +24,19 @@ scoreboard objectives add took_dmg custom:damage_taken
 scoreboard objectives add rot dummy
 scoreboard objectives add timer dummy
 scoreboard objectives add debug dummy
+scoreboard objectives add last_attacker dummy
 scoreboard objectives add dmg_source dummy
 scoreboard objectives add event_timer dummy
+
+scoreboard objectives add a.kills dummy
+scoreboard objectives add a.deaths dummy
+scoreboard objectives add a.avenge dummy
+scoreboard objectives add a.not_underdog dummy
+scoreboard objectives add a.steal dummy
+scoreboard objectives add a.leader_kill dummy
+scoreboard objectives add a.low_kill dummy
+scoreboard objectives add a.damage_taken custom:damage_taken
+scoreboard objectives add a.melee_dealt custom:damage_dealt
 
 scoreboard objectives add s.kills dummy
 scoreboard objectives add s.deaths dummy
@@ -31,6 +47,7 @@ scoreboard objectives add s.manor.win dummy
 scoreboard objectives add s.woodlands.win dummy
 scoreboard objectives add s.dungeon.win dummy
 scoreboard objectives add s.abyss.win dummy
+scoreboard objectives add s.citadel.win dummy
 scoreboard objectives add s.duels.play dummy
 scoreboard objectives add s.classic.play dummy
 scoreboard objectives add s.brawl.play dummy
@@ -38,19 +55,22 @@ scoreboard objectives add s.manor.play dummy
 scoreboard objectives add s.woodlands.play dummy
 scoreboard objectives add s.dungeon.play dummy
 scoreboard objectives add s.abyss.play dummy
+scoreboard objectives add s.citadel.play dummy
 scoreboard objectives add s.win dummy
 scoreboard objectives add s.play dummy
 
 scoreboard players add gid q 1
-scoreboard players operation * gid = gid q
-scoreboard players set * qdeath 0
-scoreboard players set * qkill 0
-scoreboard players set * queue 0
-scoreboard players reset * kills
-scoreboard players reset * took_dmg
-scoreboard players reset * dmg_source
-scoreboard players set * event_timer -1
-scoreboard players set * rot -1
+scoreboard players operation @a gid = gid q
+scoreboard players set @a qdeath 0
+scoreboard players set @a qkill 0
+scoreboard players set @a queue 0
+scoreboard players set @a kills 0
+scoreboard players set @a took_dmg 0
+scoreboard players set @a dmg 0
+scoreboard players set @a dmg_source 0
+scoreboard players set @a last_attacker 0
+scoreboard players set @a event_timer -1
+scoreboard players set @a rot -1
 
 scoreboard players set game q 0
 scoreboard players set arrow_refill n 0
@@ -75,12 +95,11 @@ team modify off collisionRule never
 team modify off friendlyFire false
 team modify off seeFriendlyInvisibles false
 
-tag @a[team=play] add team_play
-tag @a[team=spect] add team_spect
-
 team join play @a[team=off]
 team join play @a[team=]
-team join play @a[tag=!team_play,tag=!team_spect]
+
+tag @a[team=play] add team_play
+tag @a[team=spect] add team_spect
 
 tag @a remove team_play
 tag @a remove team_spect
@@ -96,9 +115,11 @@ team join off @a
 tag @a remove low
 tag @a remove fresh
 
-tp @a 45 30 -11
 setworldspawn 45 30 -11
-spawnpoint @a 45 30 -11 0
+execute if score played_game n matches 1 run tp @a 45 30 -11 180 0
+execute if score played_game n matches 1 run spawnpoint @a 45 30 -11 180
+execute if score played_game n matches 0 run tp @a 45 30 -11 0 0
+execute if score played_game n matches 0 run spawnpoint @a 45 30 -11 0
 scoreboard players reset * qdeath
 clear @a
 effect clear @a
@@ -106,6 +127,7 @@ gamemode adventure @a
 
 schedule clear uub:start/prep
 schedule clear uub:event/duels
+schedule clear uub:start/timer
 
 execute as @e[tag=text] run data merge entity @s {CustomNameVisible:1b}
 execute at @e[tag=dungeon_potion] run data remove block ~ ~ ~ Items
@@ -114,10 +136,12 @@ difficulty peaceful
 
 schedule clear uub:event/dungeon_potion
 schedule clear uub:event/woodlands_smoke
+schedule clear uub:event/citadel_rune_noise
 schedule clear uub:event/woodlands_arrows
 function uub:event/woodlands_smoke
+function uub:event/citadel_rune_noise
 
-execute if score randmap q matches 1.. run function uub:settings/next_map
+execute if score randmap q matches 1.. if score played_game n matches 1 run function uub:settings/next_map
 scoreboard objectives setdisplay sidebar
 
 execute unless score feedback debug matches 1 run gamerule sendCommandFeedback false
@@ -141,3 +165,22 @@ bossbar set gamestart color blue
 bossbar set gamestart players @a
 bossbar set gamestart visible false
 bossbar set gamestart max 15
+
+execute as @e[tag=award] run data modify entity @s Invisible set value 1b
+execute as @e[tag=award] run data modify entity @s ArmorItems set value []
+execute as @e[tag=award] run data modify entity @s CustomNameVisible set value 0b
+execute as @e[tag=award_plaque] run data modify entity @s CustomNameVisible set value 0b
+execute as @e[tag=award_nameplate] run data modify entity @s CustomNameVisible set value 0b
+execute as @e[tag=award_description] run data modify entity @s CustomNameVisible set value 0b
+execute if score played_game n matches 1 unless score mode q matches 2 run function uub:awards
+scoreboard players set played_game n 0
+
+scoreboard players set @a a.kills 0
+scoreboard players set @a a.deaths 0
+scoreboard players set @a a.avenge 0
+scoreboard players set @a a.not_underdog 0
+scoreboard players set @a a.steal 0
+scoreboard players set @a a.leader_kill 0
+scoreboard players set @a a.low_kill 0
+scoreboard players set @a a.damage_taken 0
+scoreboard players set @a a.melee_dealt 0

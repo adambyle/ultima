@@ -26,5 +26,11 @@ execute if score map q matches 4 run tp @s[scores={pn=4}] 34 25 122 -135 0
 execute if score map q matches 4 run tp @s[gamemode=spectator] 45 28 111
 execute if score map q matches 4 run tp @s[gamemode=spectator] 45 28 111 facing entity @r[tag=alive]
 
+execute if score map q matches 5 run tp @s[scores={pn=1}] 65 21 3 -45 0
+execute if score map q matches 5 run tp @s[scores={pn=2}] 89 21 27 135 0
+execute if score map q matches 5 run tp @s[scores={pn=3}] 89 21 3 45 0
+execute if score map q matches 5 run tp @s[scores={pn=4}] 65 21 27 -135 0
+execute if score map q matches 5 run tp @s[gamemode=spectator] 75 32 15
+execute if score map q matches 5 run tp @s[gamemode=spectator] 75 32 15 facing entity @r[tag=alive]
 
 scoreboard players set @s qdeath 0

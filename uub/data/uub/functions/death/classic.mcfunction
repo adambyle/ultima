@@ -17,6 +17,7 @@ execute as @a[tag=killtag] at @s run playsound entity.player.levelup master @s
 
 execute if entity @a[tag=killtag,scores={qdeath=1..}] run function uub:death/simul
 execute unless entity @a[tag=killtag,scores={qdeath=1..}] run function uub:death/msg/classic
+execute if entity @a[tag=killtag] run function uub:death/special
 
 scoreboard players set @s tether 0
 scoreboard players operation @s tether = @r[tag=killtag] pn
@@ -38,5 +39,5 @@ scoreboard players set alive n 0
 execute as @a[tag=alive] run scoreboard players add alive n 1
 execute if score alive n matches 1 run tellraw @a [{"selector": "@a[tag=alive]"},{"text": " wins!","color": "gray"}]
 execute if score alive n matches 1 as @a[tag=alive] run function uub:victory
-tellraw @a[team=play] [{"text": "If you need to leave or take a break, ","color": "gold"},{"text": "opt out.","color": "yellow","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 5"}}]
-tellraw @a[team=spect] [{"text": "Want to join the fun? ","color": "gold"},{"text": "Opt in.","color": "yellow","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 6"}}]
+tellraw @a[team=play,tag=!left_game] [{"text": "If you need to leave or take a break, ","color": "gold"},{"text": "opt out.","color": "yellow","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 5"}}]
+tellraw @a[team=spect,tag=!left_game] [{"text": "Want to join the fun? ","color": "gold"},{"text": "Opt in.","color": "yellow","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 6"}}]

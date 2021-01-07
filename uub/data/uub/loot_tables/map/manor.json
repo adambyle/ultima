@@ -4,7 +4,7 @@
             "entries": [
                 {
                     "type": "item",
-                    "name": "smooth_quartz",
+                    "name": "dark_oak_planks",
                     "functions": [
                         {
                             "function": "set_name",

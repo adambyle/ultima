@@ -5,13 +5,13 @@ execute as @a[tag=team_play,tag=ready] run scoreboard players add pn q 1
 
 scoreboard players set goal q 1
 scoreboard players operation goal q += pn q
-execute if score goal q matches ..4 run scoreboard players set goal q 5
+scoreboard players set goal q 5
 
 scoreboard players set invalid n 0
 execute if score mode q matches 1 unless score pn q matches 3..4 run scoreboard players set invalid n 1
 execute if score mode q matches 2 unless score pn q matches 2.. run scoreboard players set invalid n 2
 execute if score mode q matches 3 unless score pn q matches 3..8 run scoreboard players set invalid n 3
-execute if score map q matches 5.. run scoreboard players set invalid n 5
+execute if score map q matches 6.. run scoreboard players set invalid n 5
 execute if score pn q matches ..1 run scoreboard players set invalid n 6
 
 execute if score bypass debug matches 1 run scoreboard players set invalid n 0
@@ -30,7 +30,7 @@ execute if score invalid n matches 1..4 if score pn q matches 5..8 run tellraw @
 
 execute if score invalid n matches 1.. run tp @s 45 30 -11
 
-execute if score invalid n matches 0 run tellraw @a[tag=!ready] {"text": "You were not ready by the time the game started, so you were opted out.","color": "gray"}
+execute if score invalid n matches 0 run tellraw @a[tag=!ready,tag=team_play] {"text": "You were not ready by the time the game started, so you were opted out.","color": "gray"}
 execute if score invalid n matches 0 run replaceitem entity @a[tag=!ready] enderchest.10 blue_terracotta{display:{Name:'{"text": "Opted out","color": "blue","bold": true,"italic": false}',Lore:['{"text": "Click to opt in.","color": "gray"}']}}
 execute if score invalid n matches 0 run tag @a[tag=!ready] remove team_play
 execute if score invalid n matches 0 run tag @a[tag=!team_play] add team_spect
@@ -42,7 +42,9 @@ execute if score invalid n matches 0 run schedule function uub:start/prep 1s
 
 execute if score invalid n matches 0 run title @a reset
 execute if score invalid n matches 0 run title @a times 0 20 5
-execute if score invalid n matches 0 if score randmap q matches 1..4 run title @a subtitle {"text": "By Adam Byle","color": "gold"}
+execute if score invalid n matches 0 if score randmap q matches 1..12 run title @a subtitle {"text": "By Adam Byle","color": "gold"}
+execute if score invalid n matches 0 if score randmap q matches 13 run title @a subtitle {"text": "By Tucker Lawson","color": "gold"}
+execute if score invalid n matches 0 if score randmap q matches 14 run title @a subtitle {"text": "By Brayden Smith","color": "gold"}
 execute if score invalid n matches 0 if score randmap q matches 1.. run function uub:settings/announce_map
 
 execute if score map q matches 3 run schedule function uub:event/dungeon_potion 15s

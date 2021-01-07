@@ -1,5 +1,5 @@
 tp @s 45 30 -11 0 0
-setblock ~ ~ ~ polished_blackstone_pressure_plate[powered=false]
+setblock 45 31 -3 polished_blackstone_pressure_plate[powered=false]
 execute unless entity @s[tag=ready] unless entity @s[tag=team_spect] as @a at @s run playsound block.note_block.snare master @s
 execute unless entity @s[tag=ready] unless entity @s[tag=team_spect] run tellraw @a [{"selector": "@s","color": "red"},{"text": " is ready to play!","color": "white"}]
 execute unless entity @a[tag=ready,tag=team_play] as @a at @s run playsound block.note_block.pling master @s ~ ~ ~ 16 0.5
