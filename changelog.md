@@ -1,5 +1,27 @@
 # changelog
 
+## January 8, 2021
+
+**Additions:**
+* Players spectating a game have a link in chat to go to the lobby
+* Players that opt out of a game go to the lobby by default
+    * In the lobby, players can interact with the ender chest, but not the game settings
+    * Stepping on the pressure plate at this point will make you a spectator again
+* Three new guests maps, featuring Tucker Lawson, Brayden Smith, and Reed Aldridge
+* Players that stand still (without moving their camera or body) for ten seconds are automatically opted out for being AFK
+
+**Changes:**
+* Players do not keep their items after death, and instead get a complete item reset on death (this makes no functional difference)
+* Players that are not opted in cannot start the game countdown
+* Firework rockets now ricochet off the ceiling
+
+**Bug fixes:**
+* When both players kill each other at the same time in Duels mode, the game is softlocked
+* Map-based events do not reset on a new round in Duels mode
+* Ricocheted projectiles have integer motion values, decreasing accuracy
+* In the "Abyss" map, on item refills, players get additional arrows (it should replace the ones that were already there)
+* Players that opt in or out do not have their choices saved if the world is reloaded before the game starts
+
 ## January 7, 2021
 
 **Additions:**

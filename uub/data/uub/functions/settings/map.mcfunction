@@ -1,3 +1,4 @@
+clear @a paper
 clear @a player_head
 clear @a dark_oak_planks
 clear @a spruce_sapling
@@ -13,12 +14,16 @@ clear @a nether_star
 clear @a end_stone
 
 clear @a grass_block
-clear @a snow_block
+clear @a polished_blackstone_bricks
+clear @a polished_andesite
+clear @a snow
 clear @a trident
 
 scoreboard players set selected n -1
 
+execute unless data block 43 31 -12 {Items:[{id:"minecraft:paper"}]} run scoreboard players set selected n -1
 execute unless data block 43 31 -12 {Items:[{id:"minecraft:player_head"}]} run scoreboard players set selected n 0
+
 execute unless data block 43 31 -12 {Items:[{id:"minecraft:dark_oak_planks"}]} run scoreboard players set selected n 1
 execute unless data block 43 31 -12 {Items:[{id:"minecraft:spruce_sapling"}]} run scoreboard players set selected n 2
 execute unless data block 43 31 -12 {Items:[{id:"minecraft:stone_bricks"}]} run scoreboard players set selected n 3
@@ -32,10 +37,17 @@ execute unless data block 43 31 -12 {Items:[{id:"minecraft:crimson_fungus"}]} ru
 execute unless data block 43 31 -12 {Items:[{id:"minecraft:nether_star"}]} run scoreboard players set selected n -1
 execute unless data block 43 31 -12 {Items:[{id:"minecraft:end_stone"}]} run scoreboard players set selected n -1
 
+execute unless data block 43 31 -12 {Items:[{id:"minecraft:polished_andesite"}]} run scoreboard players set selected n 13
+execute unless data block 43 31 -12 {Items:[{id:"minecraft:polished_blackstone_bricks"}]} run scoreboard players set selected n 14
+execute unless data block 43 31 -12 {Items:[{id:"minecraft:snow"}]} run scoreboard players set selected n 15
+execute unless data block 43 31 -12 {Items:[{id:"minecraft:trident"}]} run scoreboard players set selected n -1
+
 execute if score selected n = map q run scoreboard players set selected n -1
 execute if score selected n matches 0.. run scoreboard players operation map q = selected n
 
-replaceitem block 43 31 -12 container.13 minecraft:player_head{SkullOwner:{Id:[I;-1199508408,588661428,-1958851602,905805244],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTBkMmEzY2U0OTk5ZmVkMzMwZDNhNWQwYTllMjE4ZTM3ZjRmNTc3MTk4MDg2NTczOTZkODMyMjM5ZTEyIn19fQ=="}]}},display:{Name:'{"text": "Cycle Maps","bold": true,"italic": false,"color": "white"}',Lore:['{"text": "Click to select.","color": "aqua"}']}} 1
+replaceitem block 43 31 -12 container.13 minecraft:player_head{SkullOwner:{Id:[I;-1199508408,588661428,-1958851602,905805244],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTBkMmEzY2U0OTk5ZmVkMzMwZDNhNWQwYTllMjE4ZTM3ZjRmNTc3MTk4MDg2NTczOTZkODMyMjM5ZTEyIn19fQ=="}]}},display:{Name:'{"text": "Cycle Map","bold": true,"italic": false,"color": "white"}',Lore:['{"text": "Click to select.","color": "aqua"}']}} 1
+replaceitem block 43 31 -12 container.22 minecraft:paper{display:{Name:'{"text": "Vote Map","bold": true,"italic": false,"color": "white"}',Lore:['{"text": "Coming soon.","color": "gray"}']}}
+
 replaceitem block 43 31 -12 container.5 minecraft:dark_oak_planks{display:{Name:'{"text": "Manor","bold": true,"italic": false,"color": "white"}',Lore:['{"text": "Click to select.","color": "aqua"}']}} 1
 replaceitem block 43 31 -12 container.6 minecraft:spruce_sapling{display:{Name:'{"text": "Woodlands","bold": true,"italic": false,"color": "white"}',Lore:['{"text": "Click to select.","color": "aqua"}']}} 1
 replaceitem block 43 31 -12 container.7 minecraft:stone_bricks{display:{Name:'{"text": "Dungeon","bold": true,"italic": false,"color": "white"}',Lore:['{"text": "Click to select.","color": "aqua"}']}} 1
@@ -49,10 +61,10 @@ replaceitem block 43 31 -12 container.24 crimson_fungus{display:{Name:'{"text": 
 replaceitem block 43 31 -12 container.25 nether_star{display:{Name:'{"text": "Hellscape","color": "white","bold": true,"italic": false}',Lore:['{"text": "Map coming soon.","color": "gray"}']}}
 replaceitem block 43 31 -12 container.26 end_stone{display:{Name:'{"text": "Frontier","color": "white","bold": true,"italic": false}',Lore:['{"text": "Map coming soon.","color": "gray"}']}}
 
-replaceitem block 43 31 -12 container.0 snow_block{display:{Name:'{"text": "Unnamed Map","color": "white","bold": true,"italic": false}',Lore:['{"text": "Featuring Tucker Lawson!","color": "dark_purple"}','{"text": "Map coming soon.","color": "gray"}']}}
-replaceitem block 43 31 -12 container.1 trident{display:{Name:'{"text": "Unnamed Map","color": "white","bold": true,"italic": false}',Lore:['{"text": "Featuring Brayden Smith!","color": "dark_purple"}','{"text": "Map coming soon.","color": "gray"}']},HideFlags:63}
-replaceitem block 43 31 -12 container.2 grass_block{display:{Name:'{"text": "Dracula\'s Castle","color": "white","bold": true,"italic": false}',Lore:['{"text": "Featuring Reed Aldridge!","color": "dark_purple"}','{"text": "Map coming soon.","color": "gray"}']},HideFlags:63}
-replaceitem block 43 31 -12 container.3 grass_block{display:{Name:'{"text": "Unnamed Map","color": "white","bold": true,"italic": false}',Lore:['{"text": "Featuring Jonathan Deiss!","color": "dark_purple"}','{"text": "Map coming soon.","color": "gray"}']},HideFlags:63}
+replaceitem block 43 31 -12 container.0 polished_andesite{display:{Name:'{"text": "Reflection","color": "white","bold": true,"italic": false}',Lore:['{"text": "Featuring Jonathan Deiss!","color": "dark_purple"}','{"text": "Click to select.","color": "aqua"}']},HideFlags:63}
+replaceitem block 43 31 -12 container.1 polished_blackstone_bricks{display:{Name:'{"text": "Dracula\'s Castle","color": "white","bold": true,"italic": false}',Lore:['{"text": "Featuring Reed Aldridge!","color": "dark_purple"}','{"text": "Click to select.","color": "aqua"}']},HideFlags:63}
+replaceitem block 43 31 -12 container.2 snow{display:{Name:'{"text": "Avanto","color": "white","bold": true,"italic": false}',Lore:['{"text": "Featuring Tucker Lawson!","color": "dark_purple"}','{"text": "Click to select.","color": "aqua"}']}}
+replaceitem block 43 31 -12 container.3 trident{display:{Name:'{"text": "Unnamed Map","color": "white","bold": true,"italic": false}',Lore:['{"text": "Featuring Brayden Smith!","color": "dark_purple"}','{"text": "Map coming soon.","color": "gray"}']},HideFlags:63}
 
 execute if score map q matches 0 run data modify block 43 31 -12 Items[{Slot:13b}].tag.display.Lore[0] set value '{"text": "Selected.","color": "green"}'
 execute if score map q matches 1 run data modify block 43 31 -12 Items[{Slot:5b}].tag.display.Lore[0] set value '{"text": "Selected.","color": "green"}'
@@ -68,25 +80,39 @@ execute if score map q matches 10 run data modify block 43 31 -12 Items[{Slot:24
 execute if score map q matches 11 run data modify block 43 31 -12 Items[{Slot:25b}].tag.display.Lore[0] set value '{"text": "Selected.","color": "green"}'
 execute if score map q matches 12 run data modify block 43 31 -12 Items[{Slot:26b}].tag.display.Lore[0] set value '{"text": "Selected.","color": "green"}'
 
-execute if score map q matches 0 run data modify entity @e[tag=mnm,limit=1] CustomName set value '{"text":"[Cycle Maps]","color":"gold"}'
+execute if score map q matches 13 run data modify block 43 31 -12 Items[{Slot:0b}].tag.display.Lore[1] set value '{"text": "Selected.","color": "green"}'
+execute if score map q matches 14 run data modify block 43 31 -12 Items[{Slot:1b}].tag.display.Lore[1] set value '{"text": "Selected.","color": "green"}'
+execute if score map q matches 15 run data modify block 43 31 -12 Items[{Slot:2b}].tag.display.Lore[1] set value '{"text": "Selected.","color": "green"}'
+
+execute if score map q matches -1 run data modify entity @e[tag=mnm,limit=1] CustomName set value '{"text":"[Vote Maps]","color":"gold"}'
+execute if score map q matches 0 run data modify entity @e[tag=mnm,limit=1] CustomName set value '{"text":"[Cycle Map]","color":"gold"}'
 execute if score map q matches 1 run data modify entity @e[tag=mnm,limit=1] CustomName set value '{"text":"Manor","color":"dark_purple"}'
 execute if score map q matches 2 run data modify entity @e[tag=mnm,limit=1] CustomName set value '{"text":"Woodlands","color":"dark_purple"}'
 execute if score map q matches 3 run data modify entity @e[tag=mnm,limit=1] CustomName set value '{"text":"Dungeon","color":"dark_purple"}'
 execute if score map q matches 4 run data modify entity @e[tag=mnm,limit=1] CustomName set value '{"text":"Abyss","color":"dark_purple"}'
 execute if score map q matches 5 run data modify entity @e[tag=mnm,limit=1] CustomName set value '{"text":"Citadel","color":"dark_purple"}'
+execute if score map q matches 13 run data modify entity @e[tag=mnm,limit=1] CustomName set value '{"text":"Reflection","color":"dark_purple"}'
+execute if score map q matches 14 run data modify entity @e[tag=mnm,limit=1] CustomName set value '{"text":"Dracula\'s Castle","color":"dark_purple"}'
+execute if score map q matches 15 run data modify entity @e[tag=mnm,limit=1] CustomName set value '{"text":"Avanto","color":"dark_purple"}'
 
-execute if score selected n matches 0.. if score map q matches 0 run tellraw @a [{"text": "Selected map: ","color": "gray"},{"text":"[Cycle Maps]","color":"gold"}]
+execute if score selected n matches 0.. if score map q matches -2 run tellraw @a [{"text": "Selected map: ","color": "gray"},{"text":"[Vote Maps]","color":"gold"}]
+execute if score selected n matches 0.. if score map q matches 0 run tellraw @a [{"text": "Selected map: ","color": "gray"},{"text":"[Cycle Map]","color":"gold"}]
 execute if score selected n matches 0.. if score map q matches 1 run tellraw @a [{"text": "Selected map: ","color": "gray"},{"text":"Manor","color":"dark_purple"}]
 execute if score selected n matches 0.. if score map q matches 2 run tellraw @a [{"text": "Selected map: ","color": "gray"},{"text":"Woodlands","color":"dark_purple"}]
 execute if score selected n matches 0.. if score map q matches 3 run tellraw @a [{"text": "Selected map: ","color": "gray"},{"text":"Dungeon","color":"dark_purple"}]
 execute if score selected n matches 0.. if score map q matches 4 run tellraw @a [{"text": "Selected map: ","color": "gray"},{"text":"Abyss","color":"dark_purple"}]
 execute if score selected n matches 0.. if score map q matches 5 run tellraw @a [{"text": "Selected map: ","color": "gray"},{"text":"Citadel","color":"dark_purple"}]
+execute if score selected n matches 0.. if score map q matches 13 run tellraw @a [{"text": "Selected map: ","color": "gray"},{"text":"Reflection","color":"dark_purple"}]
+execute if score selected n matches 0.. if score map q matches 14 run tellraw @a [{"text": "Selected map: ","color": "gray"},{"text":"Dracula's Castle","color":"dark_purple"}]
+execute if score selected n matches 0.. if score map q matches 15 run tellraw @a [{"text": "Selected map: ","color": "gray"},{"text":"Avanto","color":"dark_purple"}]
 execute if score selected n matches 0.. as @a at @s run playsound entity.item_frame.break master @s
 
 execute if score map q matches 0 run data modify entity @e[tag=msw,limit=1] CustomName set value '""'
 execute if score map q matches 1..12 run data modify entity @e[tag=msw,limit=1] CustomName set value '{"text":"by Adam Byle","color":"light_purple"}'
-execute if score map q matches 13 run data modify entity @e[tag=msw,limit=1] CustomName set value '{"text":"by Tucker Lawson","color":"light_purple"}'
-execute if score map q matches 14 run data modify entity @e[tag=msw,limit=1] CustomName set value '{"text":"by Brayden Smith","color":"light_purple"}'
+execute if score map q matches 13 run data modify entity @e[tag=msw,limit=1] CustomName set value '{"text":"by Jonathan Deiss","color":"light_purple"}'
+execute if score map q matches 14 run data modify entity @e[tag=msw,limit=1] CustomName set value '{"text":"by Reed Aldridge","color":"light_purple"}'
+execute if score map q matches 15 run data modify entity @e[tag=msw,limit=1] CustomName set value '{"text":"by Tucker Lawson","color":"light_purple"}'
 
-execute if score map q matches 0 run scoreboard players set randmap q 1
+execute if score map q matches -2 run scoreboard players set randmap q -1
+execute if score map q matches 0 run scoreboard players set randmap q 13
 execute if score map q matches 1.. run scoreboard players set randmap q 0

@@ -63,7 +63,7 @@ loot replace entity @s enderchest.15 loot uub:mode/brawl
 
 replaceitem entity @s enderchest.16 wither_skeleton_skull{display:{Name:'{"text": "Boss Rush","color": "white","bold": true,"italic": false}',Lore:['{"text": "Gamemode coming soon.","color": "gray"}']}}
 
-replaceitem entity @s enderchest.10 barrier{display:{Name:'{"text": "Back","bold": true,"italic": false,"color": "red"}',Lore:['{"text": "Go back to Statistics.","color": "gray"}']},HideFlags:63}
+replaceitem entity @s enderchest.10 structure_void{display:{Name:'{"text": "Back","bold": true,"italic": false,"color": "red"}',Lore:['{"text": "Go back to Statistics.","color": "gray"}']},HideFlags:63}
 
 tag @s remove menu.stat
 tag @s add menu.stat.mode

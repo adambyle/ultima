@@ -1,5 +1,5 @@
 gamemode spectator
-execute as @a run function uub:items/refill
+execute as @a[team=play] run function uub:items/refill
 function uub:items
 tag @s remove alive
 
@@ -23,3 +23,6 @@ execute as @e[type=trident] if score @s pn = @r[tag=player] pn run kill @s
 execute as @a if score @s last_attacker = @r[tag=player] pn run scoreboard players set @s last_attacker 0
 
 scoreboard players reset @s pn
+
+tellraw @a[team=play,tag=!left_game] [{"text": "If you need to leave or take a break, ","color": "gold"},{"text": "click here to opt out.","color": "yellow","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 5"}}]
+tellraw @a[team=spect,gamemode=spectator] [{"text": "If you want to return to the lobby, ","color": "gold"},{"text": "click here.","color": "yellow","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 7"}}]

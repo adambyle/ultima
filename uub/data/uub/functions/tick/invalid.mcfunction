@@ -1,4 +1,4 @@
 gamemode spectator
 team join spect @s
-function uub:tp
+tp @s 45 30 -12 0 0
 scoreboard players operation @s gid = gid q

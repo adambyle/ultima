@@ -22,9 +22,6 @@ execute if entity @a[tag=alive] run tellraw @a [{"text": "Next challenger: ","co
 execute if entity @a[tag=alive] as @a[tag=respawn] at @s run playsound entity.elder_guardian.curse master @s ~ ~ ~ 2 2
 execute if entity @a[tag=alive] unless score randmap q matches 1.. run title @a[tag=respawn] title {"text": "Respawning...","color": "red"}
 
-tellraw @a[team=play,tag=!left_game] [{"text": "If you need to leave or take a break, ","color": "gold"},{"text": "opt out.","color": "yellow","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 5"}}]
-tellraw @a[team=spect,tag=!left_game] [{"text": "Want to join the fun? ","color": "gold"},{"text": "Opt in.","color": "yellow","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 6"}}]
-
 scoreboard players set @a qkill 0
 
 execute if score randmap q matches 1.. run title @a reset
@@ -34,3 +31,5 @@ execute if score randmap q matches 1.. run scoreboard players operation map q = 
 execute if score randmap q matches 1.. run title @a subtitle {"text": "Next up","color": "gold"}
 execute if score randmap q matches 1.. run function uub:settings/announce_map
 execute if score randmap q matches 1.. run function uub:event/lighting
+
+scoreboard players set @a qdeath 0

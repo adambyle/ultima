@@ -27,6 +27,12 @@ scoreboard objectives add debug dummy
 scoreboard objectives add last_attacker dummy
 scoreboard objectives add dmg_source dummy
 scoreboard objectives add event_timer dummy
+scoreboard objectives add afk dummy
+scoreboard objectives add pos_x dummy
+scoreboard objectives add pos_y dummy
+scoreboard objectives add pos_z dummy
+scoreboard objectives add rx dummy
+scoreboard objectives add ry dummy
 
 scoreboard objectives add a.kills dummy
 scoreboard objectives add a.deaths dummy
@@ -48,6 +54,9 @@ scoreboard objectives add s.woodlands.win dummy
 scoreboard objectives add s.dungeon.win dummy
 scoreboard objectives add s.abyss.win dummy
 scoreboard objectives add s.citadel.win dummy
+scoreboard objectives add s.reflect.win dummy
+scoreboard objectives add s.avanto.win dummy
+scoreboard objectives add s.dracula.win dummy
 scoreboard objectives add s.duels.play dummy
 scoreboard objectives add s.classic.play dummy
 scoreboard objectives add s.brawl.play dummy
@@ -56,6 +65,9 @@ scoreboard objectives add s.woodlands.play dummy
 scoreboard objectives add s.dungeon.play dummy
 scoreboard objectives add s.abyss.play dummy
 scoreboard objectives add s.citadel.play dummy
+scoreboard objectives add s.dracula.play dummy
+scoreboard objectives add s.reflect.play dummy
+scoreboard objectives add s.avanto.play dummy
 scoreboard objectives add s.win dummy
 scoreboard objectives add s.play dummy
 
@@ -71,6 +83,7 @@ scoreboard players set @a dmg_source 0
 scoreboard players set @a last_attacker 0
 scoreboard players set @a event_timer -1
 scoreboard players set @a rot -1
+scoreboard players set @a afk 0
 
 scoreboard players set game q 0
 scoreboard players set arrow_refill n 0
@@ -95,16 +108,9 @@ team modify off collisionRule never
 team modify off friendlyFire false
 team modify off seeFriendlyInvisibles false
 
-team join play @a[team=off]
-team join play @a[team=]
-
-tag @a[team=play] add team_play
-tag @a[team=spect] add team_spect
-
-tag @a remove team_play
-tag @a remove team_spect
-tag @a[team=play] add team_play
-tag @a[team=spect] add team_spect
+tag @a[team=play] remove team_spect
+tag @a[team=spect] remove team_play
+tag @a[tag=!team_play,tag=!team_spect] add team_play
 
 replaceitem entity @s[tag=team_play] enderchest.10 lime_terracotta{display:{Name:'{"text": "Opted in","color": "green","bold": true,"italic": false}',Lore:['{"text": "Click to opt out.","color": "gray"}']}}
 replaceitem entity @s[tag=team_spect] enderchest.10 blue_terracotta{display:{Name:'{"text": "Opted out","color": "blue","bold": true,"italic": false}',Lore:['{"text": "Click to opt in.","color": "gray"}']}}
@@ -114,6 +120,7 @@ team join off @a
 
 tag @a remove low
 tag @a remove fresh
+tag @a remove high
 
 setworldspawn 45 30 -11
 execute if score played_game n matches 1 run tp @a 45 30 -11 180 0
@@ -129,7 +136,6 @@ schedule clear uub:start/prep
 schedule clear uub:event/duels
 schedule clear uub:start/timer
 
-execute as @e[tag=text] run data merge entity @s {CustomNameVisible:1b}
 execute at @e[tag=dungeon_potion] run data remove block ~ ~ ~ Items
 
 difficulty peaceful
@@ -184,3 +190,6 @@ scoreboard players set @a a.leader_kill 0
 scoreboard players set @a a.low_kill 0
 scoreboard players set @a a.damage_taken 0
 scoreboard players set @a a.melee_dealt 0
+
+data remove block 43 31 -12 Lock
+setblock 43 31 -9 polished_blackstone_button[face=floor,facing=west]

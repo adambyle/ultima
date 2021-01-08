@@ -11,7 +11,7 @@ scoreboard players set invalid n 0
 execute if score mode q matches 1 unless score pn q matches 3..4 run scoreboard players set invalid n 1
 execute if score mode q matches 2 unless score pn q matches 2.. run scoreboard players set invalid n 2
 execute if score mode q matches 3 unless score pn q matches 3..8 run scoreboard players set invalid n 3
-execute if score map q matches 6.. run scoreboard players set invalid n 5
+execute unless score map q matches 1..6 unless score map q matches 13..15 run scoreboard players set invalid n 5
 execute if score pn q matches ..1 run scoreboard players set invalid n 6
 
 execute if score bypass debug matches 1 run scoreboard players set invalid n 0
@@ -43,8 +43,9 @@ execute if score invalid n matches 0 run schedule function uub:start/prep 1s
 execute if score invalid n matches 0 run title @a reset
 execute if score invalid n matches 0 run title @a times 0 20 5
 execute if score invalid n matches 0 if score randmap q matches 1..12 run title @a subtitle {"text": "By Adam Byle","color": "gold"}
-execute if score invalid n matches 0 if score randmap q matches 13 run title @a subtitle {"text": "By Tucker Lawson","color": "gold"}
-execute if score invalid n matches 0 if score randmap q matches 14 run title @a subtitle {"text": "By Brayden Smith","color": "gold"}
+execute if score invalid n matches 0 if score randmap q matches 13 run title @a subtitle {"text": "By Jonathan Deiss","color": "gold"}
+execute if score invalid n matches 0 if score randmap q matches 14 run title @a subtitle {"text": "By Reed Aldridge","color": "gold"}
+execute if score invalid n matches 0 if score randmap q matches 15 run title @a subtitle {"text": "By Tucker Lawson","color": "gold"}
 execute if score invalid n matches 0 if score randmap q matches 1.. run function uub:settings/announce_map
 
 execute if score map q matches 3 run schedule function uub:event/dungeon_potion 15s

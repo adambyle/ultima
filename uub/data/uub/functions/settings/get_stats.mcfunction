@@ -1,5 +1,5 @@
 clear @s globe_banner_pattern
-clear @s barrier
+clear @s structure_void
 execute at @s[tag=!menu.stat] run playsound ui.loom.take_result master @s
 
 function uub:settings/clear_ender_chest
@@ -74,16 +74,40 @@ execute if score plays n > max n run scoreboard players operation max n = plays 
 execute if score plays n < min n run scoreboard players set map_min n 5
 execute if score plays n < min n run scoreboard players operation min n = plays n
 
+scoreboard players operation plays n = @s s.reflect.play
+execute if score plays n > max n run scoreboard players set map_max n 13
+execute if score plays n > max n run scoreboard players operation max n = plays n
+execute if score plays n < min n run scoreboard players set map_min n 13
+execute if score plays n < min n run scoreboard players operation min n = plays n
+
+scoreboard players operation plays n = @s s.dracula.play
+execute if score plays n > max n run scoreboard players set map_max n 14
+execute if score plays n > max n run scoreboard players operation max n = plays n
+execute if score plays n < min n run scoreboard players set map_min n 14
+execute if score plays n < min n run scoreboard players operation min n = plays n
+
+scoreboard players operation plays n = @s s.avanto.play
+execute if score plays n > max n run scoreboard players set map_max n 15
+execute if score plays n > max n run scoreboard players operation max n = plays n
+execute if score plays n < min n run scoreboard players set map_min n 15
+execute if score plays n < min n run scoreboard players operation min n = plays n
+
 execute if score map_max n matches 1 run summon armor_stand 45 20 -10 {CustomName:'"Manor"',Tags:["temp1"]}
 execute if score map_max n matches 2 run summon armor_stand 45 20 -10 {CustomName:'"Woodlands"',Tags:["temp1"]}
 execute if score map_max n matches 3 run summon armor_stand 45 20 -10 {CustomName:'"Dungeon"',Tags:["temp1"]}
 execute if score map_max n matches 4 run summon armor_stand 45 20 -10 {CustomName:'"Abyss"',Tags:["temp1"]}
 execute if score map_max n matches 5 run summon armor_stand 45 20 -10 {CustomName:'"Citadel"',Tags:["temp1"]}
+execute if score map_max n matches 13 run summon armor_stand 45 20 -10 {CustomName:'"Reflection"',Tags:["temp1"]}
+execute if score map_max n matches 14 run summon armor_stand 45 20 -10 {CustomName:'"Dracula\'s Castle"',Tags:["temp1"]}
+execute if score map_max n matches 15 run summon armor_stand 45 20 -10 {CustomName:'"Avanto"',Tags:["temp1"]}
 execute if score map_min n matches 1 run summon armor_stand 45 20 -10 {CustomName:'"Manor"',Tags:["temp2"]}
 execute if score map_min n matches 2 run summon armor_stand 45 20 -10 {CustomName:'"Woodlands"',Tags:["temp2"]}
 execute if score map_min n matches 3 run summon armor_stand 45 20 -10 {CustomName:'"Dungeon"',Tags:["temp2"]}
 execute if score map_min n matches 4 run summon armor_stand 45 20 -10 {CustomName:'"Abyss"',Tags:["temp2"]}
 execute if score map_min n matches 5 run summon armor_stand 45 20 -10 {CustomName:'"Citadel"',Tags:["temp2"]}
+execute if score map_min n matches 13 run summon armor_stand 45 20 -10 {CustomName:'"Reflection"',Tags:["temp2"]}
+execute if score map_min n matches 14 run summon armor_stand 45 20 -10 {CustomName:'"Dracula\'s Castle"',Tags:["temp2"]}
+execute if score map_min n matches 15 run summon armor_stand 45 20 -10 {CustomName:'"Avanto"',Tags:["temp2"]}
 
 scoreboard players set map_max n 1
 scoreboard players set map_min n 1
@@ -141,16 +165,55 @@ execute if score rat n > max n run scoreboard players operation max n = rat n
 execute if score rat n < min n run scoreboard players set map_min n 5
 execute if score rat n < min n run scoreboard players operation min n = rat n
 
+scoreboard players operation wins n = @s s.reflect.win
+scoreboard players operation wins n *= c n
+scoreboard players operation plays n = @s s.reflect.play
+execute if score plays n matches 0 run scoreboard players set plays n 1
+scoreboard players operation rat n = wins n
+scoreboard players operation rat n /= plays n
+execute if score rat n > max n run scoreboard players set map_max n 13
+execute if score rat n > max n run scoreboard players operation max n = rat n
+execute if score rat n < min n run scoreboard players set map_min n 13
+execute if score rat n < min n run scoreboard players operation min n = rat n
+
+scoreboard players operation wins n = @s s.dracula.win
+scoreboard players operation wins n *= c n
+scoreboard players operation plays n = @s s.dracula.play
+execute if score plays n matches 0 run scoreboard players set plays n 1
+scoreboard players operation rat n = wins n
+scoreboard players operation rat n /= plays n
+execute if score rat n > max n run scoreboard players set map_max n 14
+execute if score rat n > max n run scoreboard players operation max n = rat n
+execute if score rat n < min n run scoreboard players set map_min n 14
+execute if score rat n < min n run scoreboard players operation min n = rat n
+
+scoreboard players operation wins n = @s s.avanto.win
+scoreboard players operation wins n *= c n
+scoreboard players operation plays n = @s s.avanto.play
+execute if score plays n matches 0 run scoreboard players set plays n 1
+scoreboard players operation rat n = wins n
+scoreboard players operation rat n /= plays n
+execute if score rat n > max n run scoreboard players set map_max n 15
+execute if score rat n > max n run scoreboard players operation max n = rat n
+execute if score rat n < min n run scoreboard players set map_min n 15
+execute if score rat n < min n run scoreboard players operation min n = rat n
+
 execute if score map_max n matches 1 run summon armor_stand 45 20 -10 {CustomName:'"Manor"',Tags:["temp3"]}
 execute if score map_max n matches 2 run summon armor_stand 45 20 -10 {CustomName:'"Woodlands"',Tags:["temp3"]}
 execute if score map_max n matches 3 run summon armor_stand 45 20 -10 {CustomName:'"Dungeon"',Tags:["temp3"]}
 execute if score map_max n matches 4 run summon armor_stand 45 20 -10 {CustomName:'"Abyss"',Tags:["temp3"]}
 execute if score map_max n matches 5 run summon armor_stand 45 20 -10 {CustomName:'"Citadel"',Tags:["temp3"]}
+execute if score map_max n matches 13 run summon armor_stand 45 20 -10 {CustomName:'"Reflection"',Tags:["temp3"]}
+execute if score map_max n matches 14 run summon armor_stand 45 20 -10 {CustomName:'"Dracula\'s Castle"',Tags:["temp3"]}
+execute if score map_max n matches 15 run summon armor_stand 45 20 -10 {CustomName:'"Avanto"',Tags:["temp3"]}
 execute if score map_min n matches 1 run summon armor_stand 45 20 -10 {CustomName:'"Manor"',Tags:["temp4"]}
 execute if score map_min n matches 2 run summon armor_stand 45 20 -10 {CustomName:'"Woodlands"',Tags:["temp4"]}
 execute if score map_min n matches 3 run summon armor_stand 45 20 -10 {CustomName:'"Dungeon"',Tags:["temp4"]}
 execute if score map_min n matches 4 run summon armor_stand 45 20 -10 {CustomName:'"Abyss"',Tags:["temp4"]}
 execute if score map_min n matches 5 run summon armor_stand 45 20 -10 {CustomName:'"Citadel"',Tags:["temp4"]}
+execute if score map_min n matches 13 run summon armor_stand 45 20 -10 {CustomName:'"Reflection"',Tags:["temp4"]}
+execute if score map_min n matches 14 run summon armor_stand 45 20 -10 {CustomName:'"Dracula\'s Castle"',Tags:["temp4"]}
+execute if score map_min n matches 15 run summon armor_stand 45 20 -10 {CustomName:'"Avanto"',Tags:["temp4"]}
 
 loot replace entity @s enderchest.14 loot uub:map_stats
 
@@ -227,7 +290,7 @@ execute if score map_min n matches 3 run summon armor_stand 45 20 -10 {CustomNam
 
 loot replace entity @s enderchest.16 loot uub:mode_stats
 
-replaceitem entity @s enderchest.10 barrier{display:{Name:'{"text": "Back","bold": true,"italic": false,"color": "red"}',Lore:['{"text": "Go back to Player Settings.","color": "gray"}']},HideFlags:63}
+replaceitem entity @s enderchest.10 structure_void{display:{Name:'{"text": "Back","bold": true,"italic": false,"color": "red"}',Lore:['{"text": "Go back to Player Settings.","color": "gray"}']},HideFlags:63}
 
 tag @s remove menu.stat.map
 tag @s remove menu.stat.mode

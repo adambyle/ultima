@@ -38,5 +38,3 @@ execute as @a[tag=respawn] at @s run playsound entity.elder_guardian.curse maste
 execute as @a[tag=killtag] if score @s kills >= goal q as @a if score @s kills < goal q run tag @s remove alive
 execute as @a[tag=killtag] if score @s kills >= goal q run tellraw @a [{"selector": "@a[tag=alive]"},{"text": " wins!","color": "gray"}]
 execute as @a[tag=killtag] if score @s kills >= goal q run function uub:victory
-tellraw @a[team=play,tag=!left_game] [{"text": "If you need to leave or take a break, ","color": "gold"},{"text": "opt out.","color": "yellow","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 5"}}]
-tellraw @a[team=spect,tag=!left_game] [{"text": "Want to join the fun? ","color": "gold"},{"text": "Opt in.","color": "yellow","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 6"}}]

@@ -11,7 +11,7 @@ tag @s remove menu.stat
 tag @s remove menu.hotbar
 tag @s add menu.main
 
-clear @s barrier
+clear @s structure_void
 clear @s diamond_sword
 clear @s globe_banner_pattern
 clear @s blue_terracotta

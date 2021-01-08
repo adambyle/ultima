@@ -5,8 +5,6 @@ execute as @e[tag=award_description] run data modify entity @s CustomNameVisible
 
 tag @a remove receiving
 tag @r[tag=played_last_game,limit=3] add receiving
-tellraw @a ""
-tellraw @a [{"text": "Awards have been given to select contestants: ","color": "yellow"},{"selector": "@a[tag=receiving]","color": "gold"}]
 
 tag @a remove 1
 tag @a remove 2

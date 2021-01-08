@@ -17,16 +17,11 @@ scoreboard players reset * queue
 scoreboard players reset i n
 execute as @a[team=play,tag=!alive] run function uub:start/queueassign
 
-gamemode spectator @a[tag=!alive]
-execute as @a run function uub:tp
+execute as @a[team=play] run function uub:tp
 execute as @a[team=play] run function uub:items
 
 execute as @a at @s run playsound block.note_block.pling master @s ~ ~ ~ 16 1.5 
 execute as @a at @s run playsound block.note_block.pling master @s ~ ~ ~ 16 2
-
-effect clear @a
-
-execute as @e[tag=text] run data remove entity @s CustomNameVisible
 
 team modify play collisionRule always
 team modify play friendlyFire true
@@ -39,3 +34,19 @@ scoreboard players set @a timer -1
 execute if score mode q matches 3 run scoreboard objectives setdisplay sidebar kills
 
 execute if score map q matches 5 run scoreboard players set event_timer n 20
+execute if score map q matches 14 run scoreboard players set thunder event_timer 40
+execute if score map q matches 14 run scoreboard players set event_timer n 200
+execute if score map q matches 15 run scoreboard players set event_timer n 100
+execute if score map q matches 15 run scoreboard players set @a event_timer -200
+
+execute as @e[tag=award] run data modify entity @s Invisible set value 1b
+execute as @e[tag=award] run data modify entity @s ArmorItems set value []
+execute as @e[tag=award] run data modify entity @s CustomNameVisible set value 0b
+execute as @e[tag=award_plaque] run data modify entity @s CustomNameVisible set value 0b
+execute as @e[tag=award_nameplate] run data modify entity @s CustomNameVisible set value 0b
+execute as @e[tag=award_description] run data modify entity @s CustomNameVisible set value 0b
+
+data modify block 43 31 -12 Lock set value "locked"
+setblock 43 31 -9 air
+
+schedule function uub:start/opt_prompt 50t
