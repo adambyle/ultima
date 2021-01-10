@@ -1,24 +1,9 @@
-clear @s grass_block
-clear @a trident
-clear @a snow
-clear @a polished_blackstone_bricks
-clear @a polished_andesite
+function uub:settings/clear_map_icons
 
-clear @s dark_oak_planks
-clear @s spruce_sapling
-clear @s stone_bricks
-clear @s blackstone
-clear @s diamond_block
-clear @s dead_bush
-clear @s emerald
-clear @s bell
-clear @s blue_ice
-clear @s crimson_fungus
-clear @s nether_star
-clear @s end_stone
 execute at @s[tag=!menu.stat.map] run playsound block.grass.break master @s
 
 function uub:settings/clear_ender_chest
+function uub:settings/vote/list_maps
 
 tag @a remove player
 tag @s add player
@@ -158,16 +143,6 @@ scoreboard players operation mwhle n *= c n
 scoreboard players operation decim n -= mwhle n
 
 loot replace entity @s enderchest.2 loot uub:map/avanto
-
-replaceitem entity @s enderchest.3 trident{display:{Name:'{"text": "Unnamed Map","color": "white","bold": true,"italic": false}',Lore:['{"text": "Featuring Brayden Smith!","color": "dark_purple"}','{"text": "Map coming soon.","color": "gray"}']},HideFlags:63}
-
-replaceitem entity @s enderchest.15 dead_bush{display:{Name:'{"text": "Wasteland","color": "white","bold": true,"italic": false}',Lore:['{"text": "Map coming soon.","color": "gray"}']}}
-replaceitem entity @s enderchest.16 emerald{display:{Name:'{"text": "Town Square","color": "white","bold": true,"italic": false}',Lore:['{"text": "Map coming soon.","color": "gray"}']}}
-replaceitem entity @s enderchest.17 bell{display:{Name:'{"text": "Last Stand","color": "white","bold": true,"italic": false}',Lore:['{"text": "Map coming soon.","color": "gray"}']}}
-replaceitem entity @s enderchest.23 blue_ice{display:{Name:'{"text": "Permafrost","color": "white","bold": true,"italic": false}',Lore:['{"text": "Map coming soon.","color": "gray"}']}}
-replaceitem entity @s enderchest.24 crimson_fungus{display:{Name:'{"text": "Shroom","color": "white","bold": true,"italic": false}',Lore:['{"text": "Map coming soon.","color": "gray"}']}}
-replaceitem entity @s enderchest.25 nether_star{display:{Name:'{"text": "Hellscape","color": "white","bold": true,"italic": false}',Lore:['{"text": "Map coming soon.","color": "gray"}']}}
-replaceitem entity @s enderchest.26 end_stone{display:{Name:'{"text": "Frontier","color": "white","bold": true,"italic": false}',Lore:['{"text": "Map coming soon.","color": "gray"}']}}
 
 replaceitem entity @s enderchest.13 structure_void{display:{Name:'{"text": "Back","bold": true,"italic": false,"color": "red"}',Lore:['{"text": "Go back to Statistics.","color": "gray"}']},HideFlags:63}
 

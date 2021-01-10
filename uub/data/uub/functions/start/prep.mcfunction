@@ -24,7 +24,7 @@ execute as @a at @s run playsound block.note_block.pling master @s ~ ~ ~ 16 1.5
 execute as @a at @s run playsound block.note_block.pling master @s ~ ~ ~ 16 2
 
 team modify play collisionRule always
-team modify play friendlyFire true
+execute unless score mode q matches 4 run team modify play friendlyFire true
 
 scoreboard objectives setdisplay sidebar
 scoreboard players reset * kills

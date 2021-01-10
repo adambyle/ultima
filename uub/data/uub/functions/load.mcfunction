@@ -1,3 +1,5 @@
+#declare storage uub:map_vote Map voting
+
 kill @a
 kill @e[tag=!text,tag=!nokill]
 kill @e[type=item]
@@ -28,11 +30,10 @@ scoreboard objectives add last_attacker dummy
 scoreboard objectives add dmg_source dummy
 scoreboard objectives add event_timer dummy
 scoreboard objectives add afk dummy
-scoreboard objectives add pos_x dummy
-scoreboard objectives add pos_y dummy
-scoreboard objectives add pos_z dummy
 scoreboard objectives add rx dummy
 scoreboard objectives add ry dummy
+scoreboard objectives add downvote dummy
+scoreboard objectives add upvote dummy
 
 scoreboard objectives add a.kills dummy
 scoreboard objectives add a.deaths dummy
@@ -90,6 +91,9 @@ scoreboard players set arrow_refill n 0
 execute unless score mode q matches 1.. positioned -3 22 0 run function uub:settings/mode
 execute unless score map q matches 1.. unless score randmap q matches 1.. run function uub:settings/map
 
+execute as @a unless score @s downvote matches 1.. run scoreboard players set @s downvote 0
+execute as @a unless score @s upvote matches 1.. run scoreboard players set @s upvote 0
+
 team add spect {"text": "Spectating","color": "blue"}
 team modify spect collisionRule never
 team modify spect color blue
@@ -102,18 +106,22 @@ team modify play collisionRule never
 team modify play friendlyFire false
 team modify play seeFriendlyInvisibles false
 
-team add off {"text": "Waiting","color": "red"}
+team add off {"text": "Waiting","color": "white"}
 team modify off color white
 team modify off collisionRule never
 team modify off friendlyFire false
 team modify off seeFriendlyInvisibles false
 
+team add boss {"text": "Boss","color": "red"}
+team modify boss color red
+team modify boss collisionRule never
+team modify boss friendlyFire false
+team modify boss seeFriendlyInvisibles false
+team modify boss prefix {"text": "[BOSS] ","color": "dark_red"}
+
 tag @a[team=play] remove team_spect
 tag @a[team=spect] remove team_play
 tag @a[tag=!team_play,tag=!team_spect] add team_play
-
-replaceitem entity @s[tag=team_play] enderchest.10 lime_terracotta{display:{Name:'{"text": "Opted in","color": "green","bold": true,"italic": false}',Lore:['{"text": "Click to opt out.","color": "gray"}']}}
-replaceitem entity @s[tag=team_spect] enderchest.10 blue_terracotta{display:{Name:'{"text": "Opted out","color": "blue","bold": true,"italic": false}',Lore:['{"text": "Click to opt in.","color": "gray"}']}}
 
 team leave @a
 team join off @a
@@ -158,6 +166,10 @@ replaceitem entity @a[tag=team_spect] armor.chest leather_chestplate{display:{co
 tag @a remove menu.stat.map
 tag @a remove menu.stat.mode
 tag @a remove menu.stat
+tag @a remove menu.vote
+tag @a remove menu.vote.best
+tag @a remove menu.vote.worst
+tag @a remove menu.hotbar
 tag @a add menu.main
 execute as @a run function uub:settings/main_menu
 
@@ -193,3 +205,8 @@ scoreboard players set @a a.melee_dealt 0
 
 data remove block 43 31 -12 Lock
 setblock 43 31 -9 polished_blackstone_button[face=floor,facing=west]
+
+bossbar add boss ""
+bossbar set boss color red
+bossbar set boss players @a
+bossbar set boss visible false

@@ -13,17 +13,19 @@ tag @s remove alive
 tag @s remove respawn
 team leave @s
 team join spect
+tag @s remove team_play
+tag @s add team_spect
 tp @s 45 30 -12 0 0
 function uub:stat/play
 scoreboard players remove pn q 1
 tellraw @a [{"selector": "@s","color": "blue"},{"text": " has opted out mid-game.","color": "blue"}]
-#execute if score pn q matches 2 unless score mode q matches 2 run tellraw @a {"text": "There are not enough players to continue.","color": "red"}
-#execute if score pn q matches ..1 run tellraw @a {"text": "There are not enough players to continue.","color": "red"}
-#execute if score pn q matches 2 unless score mode q matches 2 run function uub:load/reload
-#execute if score pn q matches ..1 run function uub:load/reload
+execute if score pn q matches 2 unless score mode q matches 2 run tellraw @a {"text": "There are not enough players to continue.","color": "red"}
+execute if score pn q matches ..1 run tellraw @a {"text": "There are not enough players to continue.","color": "red"}
+execute if score pn q matches 2 unless score mode q matches 2 run function uub:load/reload
+execute if score pn q matches ..1 run function uub:load/reload
 scoreboard players reset @s kills
 tag @s remove can_win
 tag @s add left_game
-replaceitem entity @s enderchest.10 blue_terracotta{display:{Name:'{"text": "Opted out","color": "blue","bold": true,"italic": false}',Lore:['{"text": "Click to opt in.","color": "gray"}']}}
+function uub:settings/main_menu
 clear
 effect clear @s

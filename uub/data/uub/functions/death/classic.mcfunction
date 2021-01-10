@@ -37,5 +37,4 @@ execute if entity @a[tag=respawn] run tellraw @a [{"selector": "@a[tag=respawn]"
 
 scoreboard players set alive n 0
 execute as @a[tag=alive] run scoreboard players add alive n 1
-execute if score alive n matches 1 run tellraw @a [{"selector": "@a[tag=alive]"},{"text": " wins!","color": "gray"}]
 execute if score alive n matches 1 as @a[tag=alive] run function uub:victory

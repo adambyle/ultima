@@ -6,4 +6,4 @@ replaceitem entity @s armor.feet leather_boots{Unbreakable:1b}
 replaceitem entity @s hotbar.1 bow{Unbreakable:1b,Enchantments:[{id:"punch",lvl:1}]}
 replaceitem entity @s inventory.0 arrow 16
 replaceitem entity @s hotbar.8 golden_apple
-effect give @a instant_health 1 3 true
+effect give @s instant_health 1 3 true

@@ -4,19 +4,18 @@
             "entries": [
                 {
                     "type": "item",
-                    "name": "grass_block",
+                    "name": "green_wool",
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {"text": "Map Stats","bold": true,"italic": false,"color": "dark_green"}
+                            "name": {"text": "Upvote","bold": true,"italic": false,"color": "dark_green"}
                         },
                         {
                             "function": "set_lore",
                             "entity": "this",
                             "lore": [
-                                {"text": "Click to view your statistics for each map.","color": "gray"},
-                                [{"text": "Best map: ","color": "gold"},{"selector": "@e[tag=temp3]","color": "white","italic": false}],
-                                [{"text": "Worst map: ","color": "gold"},{"selector": "@e[tag=temp4]","color": "white","italic": false}]
+                                {"text": "Click to choose the map you want to play most.","color": "gray"},
+                                [{"text": "Currently: ","color": "white"},{"selector": "@e[tag=temp5]","color": "dark_green","italic": false}]
                             ]
                         },
                         {

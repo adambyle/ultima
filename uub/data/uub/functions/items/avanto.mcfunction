@@ -8,3 +8,4 @@ replaceitem entity @s inventory.0 tipped_arrow{Potion:"minecraft:strong_slowness
 replaceitem entity @s hotbar.8 potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:8b,Duration:200,Amplifier:4b}],display:{Name:'{"text": "Potion of Leaping","italic": false}'}}
 attribute @s generic.armor base set 8
 execute if score map q matches 15 run scoreboard players set @s event_timer -200
+effect give @s instant_health 1 3 true

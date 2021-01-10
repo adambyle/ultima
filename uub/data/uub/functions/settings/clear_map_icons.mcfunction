@@ -1,0 +1,21 @@
+clear @a filled_map
+clear @a magenta_glazed_terracotta
+clear @a player_head
+clear @a dark_oak_planks
+clear @a spruce_sapling
+clear @a stone_bricks
+clear @a blackstone
+clear @a diamond_block
+clear @a dead_bush
+clear @a emerald
+clear @a bell
+clear @a blue_ice
+clear @a crimson_fungus
+clear @a nether_star
+clear @a end_stone
+
+clear @a grass_block
+clear @a polished_blackstone_bricks
+clear @a polished_andesite
+clear @a snow
+clear @a trident

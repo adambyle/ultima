@@ -8,3 +8,4 @@ replaceitem entity @s armor.legs golden_leggings{Unbreakable:1b,Enchantments:[{i
 replaceitem entity @s armor.feet golden_boots{Unbreakable:1b,Enchantments:[{id:"projectile_protection",lvl:4}]}
 replaceitem entity @s weapon.offhand shield{Unbreakable:1b}
 replaceitem entity @s hotbar.8 ender_pearl
+effect give @s instant_health 1 3 true

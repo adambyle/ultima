@@ -4,19 +4,19 @@
             "entries": [
                 {
                     "type": "item",
-                    "name": "grass_block",
+                    "name": "filled_map",
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {"text": "Map Stats","bold": true,"italic": false,"color": "dark_green"}
+                            "name": {"text": "Map Preferences","bold": true,"italic": false,"color": "dark_aqua"}
                         },
                         {
                             "function": "set_lore",
                             "entity": "this",
                             "lore": [
-                                {"text": "Click to view your statistics for each map.","color": "gray"},
-                                [{"text": "Best map: ","color": "gold"},{"selector": "@e[tag=temp3]","color": "white","italic": false}],
-                                [{"text": "Worst map: ","color": "gold"},{"selector": "@e[tag=temp4]","color": "white","italic": false}]
+                                {"text": "Click to choose your most and least favorite maps.","color": "gray"},
+                                [{"text": "Upvoted: ","color": "white"},{"selector": "@e[tag=temp5]","color": "dark_green","italic": false}],
+                                [{"text": "Downvoted: ","color": "white"},{"selector": "@e[tag=temp6]","color": "dark_red","italic": false}]
                             ]
                         },
                         {

@@ -36,5 +36,4 @@ execute if score pn n matches 5.. run tellraw @a [{"selector": "@a[tag=respawn]"
 execute as @a[tag=respawn] at @s run playsound entity.elder_guardian.curse master @s ~ ~ ~ 2 2
 
 execute as @a[tag=killtag] if score @s kills >= goal q as @a if score @s kills < goal q run tag @s remove alive
-execute as @a[tag=killtag] if score @s kills >= goal q run tellraw @a [{"selector": "@a[tag=alive]"},{"text": " wins!","color": "gray"}]
 execute as @a[tag=killtag] if score @s kills >= goal q run function uub:victory

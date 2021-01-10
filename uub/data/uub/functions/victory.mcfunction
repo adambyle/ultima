@@ -2,8 +2,8 @@ title @a reset
 
 execute unless score noplay debug matches 1 as @s[tag=can_win] run function uub:stat/win
 
-title @a title [{"selector": "@s"},{"text": " wins!","color": "white"}]
 title @a times 5 25 5
+title @a title [{"selector": "@s"},{"text": " wins!","color": "white"}]
 execute at @s run playsound entity.wither.spawn master @s ~ ~ ~ 8
 execute as @a[tag=!alive] at @s run playsound entity.wither.hurt master @s ~ ~ ~ 8
 schedule function uub:load/reload 2s

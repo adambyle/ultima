@@ -4,7 +4,7 @@ execute as @a[team=play,tag=alive] run function uub:items/lost
 
 execute as @a[scores={qdeath=2}] run function uub:tp
 scoreboard players set @a[scores={qdeath=2}] qdeath 0
-execute as @a[scores={qdeath=1},tag=alive,team=play] run function uub:death
+execute as @a[scores={qdeath=1},tag=alive,team=play] if score game q matches 1 run function uub:death
 
 execute if score mode q matches 1 as @a[team=play,tag=!alive] run function uub:tick/tether
 
@@ -121,3 +121,5 @@ execute positioned 45 31 -3 if block ~ ~ ~ polished_blackstone_pressure_plate[po
 execute positioned 45 31 -3 if block ~ ~ ~ polished_blackstone_pressure_plate[powered=true] as @p[team=spect] run setblock ~ ~ ~ polished_blackstone_pressure_plate[powered=false]
 
 execute as @a[team=play,tag=alive] run function uub:tick/afk_test
+
+execute as @a[team=spect,gamemode=adventure] at @s if entity @a[team=play,tag=alive,distance=..6] run function uub:tick/action/tplobby
