@@ -1,8 +1,9 @@
-scoreboard players add mode q 1
-execute if score mode q matches 4 run scoreboard players set mode q 1
+scoreboard players add #flag game_mode 1
 
-execute if score mode q matches 1 run data modify entity @e[tag=gsw,limit=1] CustomName set value '{"text":"Classic","color":"aqua","italic":true}'
-execute if score mode q matches 2 run data modify entity @e[tag=gsw,limit=1] CustomName set value '{"text":"Duels","color":"aqua","italic":true}'
-execute if score mode q matches 3 run data modify entity @e[tag=gsw,limit=1] CustomName set value '{"text":"Brawl","color":"aqua","italic":true}'
+execute if score #flag game_mode > #ultimate game_mode run scoreboard players set #flag game_mode 0
 
-setblock ~ ~ ~ polished_blackstone_button[powered=false,facing=west,face=floor]
+execute if score #flag game_mode = #duels game_mode run data modify entity @e[tag=text_display.mode_name,limit=1] CustomName set value '{"text": "Duels","color": "aqua","italic": true}'
+execute if score #flag game_mode = #royale game_mode run data modify entity @e[tag=text_display.mode_name,limit=1] CustomName set value '{"text": "Royale","color": "aqua","italic": true}'
+execute if score #flag game_mode = #brawl game_mode run data modify entity @e[tag=text_display.mode_name,limit=1] CustomName set value '{"text": "Brawl","color": "aqua","italic": true}'
+execute if score #flag game_mode = #boss game_mode run data modify entity @e[tag=text_display.mode_name,limit=1] CustomName set value '{"text": "Boss Rush","color": "aqua","italic": true}'
+execute if score #flag game_mode = #ultimate game_mode run data modify entity @e[tag=text_display.mode_name,limit=1] CustomName set value '{"text": "Ultimate [Coming soon]","color": "dark_aqua","italic": true}'

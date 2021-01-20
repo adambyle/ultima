@@ -1,0 +1,32 @@
+execute unless score #maps menu = #map.featured menu run data remove block 43 31 -12 Items
+scoreboard players operation #maps menu = #map.featured menu
+
+scoreboard players set #selected map 0
+
+clear @a polished_andesite
+clear @a chiseled_polished_blackstone
+clear @a snowball
+clear @a gold_block
+
+execute if data block 43 31 -12 Items[0] run function uub:settings/map/featured_test
+
+replaceitem block 43 31 -12 container.5 polished_andesite{display:{Name:'{"text":"Reflection","color":"white","italic":false,"bold":true}',Lore:['"Featuring Jonathan Deiss!"']}}
+replaceitem block 43 31 -12 container.6 chiseled_polished_blackstone{display:{Name:'{"text":"Dracula\'s Castle","color":"white","italic":false,"bold":true}',Lore:['"Featuring Reed Aldridge!"']}}
+replaceitem block 43 31 -12 container.7 snowball{display:{Name:'{"text":"Avanto","color":"white","italic":false,"bold":true}',Lore:['"Featuring Tucker Lawson!"']}}
+replaceitem block 43 31 -12 container.11 structure_void{display:{Name:'{"text":"Back","color":"dark_red","italic":false,"bold":true}',Lore:['{"text":"Back to Map Selection...","color":"gray"}']}}
+
+execute if score #flag map = #select map if score #server map matches 13 run data modify block 43 31 -12 Items[{Slot:5b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
+execute if score #flag map = #select map if score #server map matches 14 run data modify block 43 31 -12 Items[{Slot:6b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
+execute if score #flag map = #select map if score #server map matches 15 run data modify block 43 31 -12 Items[{Slot:7b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
+execute if score #flag map = #select map if score #server map matches 16 run data modify block 43 31 -12 Items[{Slot:8b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
+execute if score #flag map = #select map if score #server map matches 17 run data modify block 43 31 -12 Items[{Slot:14b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
+execute if score #flag map = #select map if score #server map matches 18 run data modify block 43 31 -12 Items[{Slot:15b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
+execute if score #flag map = #select map if score #server map matches 19 run data modify block 43 31 -12 Items[{Slot:16b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
+execute if score #flag map = #select map if score #server map matches 20 run data modify block 43 31 -12 Items[{Slot:17b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
+execute if score #flag map = #select map if score #server map matches 21 run data modify block 43 31 -12 Items[{Slot:23b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
+execute if score #flag map = #select map if score #server map matches 22 run data modify block 43 31 -12 Items[{Slot:24b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
+execute if score #flag map = #select map if score #server map matches 23 run data modify block 43 31 -12 Items[{Slot:25b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
+execute if score #flag map = #select map if score #server map matches 24 run data modify block 43 31 -12 Items[{Slot:26b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
+
+execute if score #selected map matches 1.. unless score #selected map = #server map if score #flag map = #select map run function uub:settings/map/default/select
+execute if score #selected map matches 1.. unless score #flag map = #select map run function uub:settings/map/default/select

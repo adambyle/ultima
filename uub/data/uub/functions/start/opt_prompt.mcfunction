@@ -1,2 +1,0 @@
-tellraw @a[team=play,tag=!left_game] [{"text": "If you need to leave or take a break, ","color": "gold"},{"text": "click here to opt out.","color": "yellow","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 5"}}]
-tellraw @a[team=spect,gamemode=spectator] [{"text": "If you want to return to the lobby, ","color": "gold"},{"text": "click here.","color": "yellow","underlined": true,"clickEvent": {"action": "run_command","value": "/trigger action set 7"}}]

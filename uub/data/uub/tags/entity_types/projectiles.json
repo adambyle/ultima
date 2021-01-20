@@ -1,8 +1,7 @@
 {
     "values": [
-        "#impact_projectiles",
-        "potion",
-        "ender_pearl",
-        "firework_rocket"
+        "#minecraft:impact_projectiles",
+        "firework_rocket",
+        "potion"
     ]
 }

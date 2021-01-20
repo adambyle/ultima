@@ -1,27 +1,19 @@
-gamemode spectator
-execute as @a[team=play] run function uub:items/refill
-function uub:items
+# Reset data and determine who the killer is
 tag @s remove alive
+tag @a remove killer
+tag @a remove respawn
+scoreboard players set @s queue 0
+scoreboard players set @s pn 0
+scoreboard players set @s bool.die 0
+execute at @s run tag @p[scores={bool.kill=1..}] add killer
+scoreboard players remove @a[tag=killer] bool.kill 1
 
-scoreboard players set @s qdeath 2
+gamemode spectator
+function uub:tp
 
-execute if score mode q matches 1 run function uub:death/classic
-execute if score mode q matches 2 run function uub:death/duels
-execute if score mode q matches 3 run function uub:death/brawl
+execute if score #flag game_mode = #duels game_mode run function uub:death/duels
+execute if score #flag game_mode = #royale game_mode run function uub:death/royale
+execute if score #flag game_mode = #brawl game_mode run function uub:death/brawl
+execute if score #flag game_mode = #boss game_mode run function uub:death/boss
 
-execute if score mode q matches 1 run scoreboard players set @s kills 0
-execute if score mode q matches 3 run scoreboard players remove @s kills 1
-scoreboard players set @a[scores={kills=..0}] kills 0
-execute unless score noplay debug matches 1 run scoreboard players add @s s.deaths 1
-scoreboard players add @s a.deaths 1
-
-tag @a remove player
-tag @s add player
-execute as @e[type=#arrows] if score @s pn = @r[tag=player] pn run kill @s
-execute as @e[type=potion] if score @s pn = @r[tag=player] pn run kill @s
-execute as @e[type=trident] if score @s pn = @r[tag=player] pn run kill @s
-execute as @a if score @s last_attacker = @r[tag=player] pn run scoreboard players set @s last_attacker 0
-
-scoreboard players reset @s pn
-
-function uub:start/opt_prompt
+execute unless score #flag game_mode > #brawl game_mode run effect give @a instant_health 1 3 true

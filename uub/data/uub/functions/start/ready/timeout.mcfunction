@@ -1,0 +1,5 @@
+bossbar set uub:game_start visible false
+schedule clear uub:start/ready/timer
+execute as @a[tag=player,scores={ready=0}] run function uub:start/ready/deopt
+tellraw @a {"text": "The game is starting!","color": "red"}
+function uub:start
