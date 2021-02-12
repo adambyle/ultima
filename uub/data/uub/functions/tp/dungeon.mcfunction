@@ -4,3 +4,5 @@ tp @s[scores={pn=3}] 57 26 67 45 0
 tp @s[scores={pn=4}] 33 26 91 -135 0
 tp @s[gamemode=spectator,tag=!lobby] 45 26 79
 tp @s[gamemode=spectator,tag=!lobby] 45 26 79 facing entity @r[tag=alive]
+tp @s[team=boss] 45 21 79
+tp @s[team=boss] 45 21 79 facing entity @r[tag=alive]

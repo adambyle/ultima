@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{Unbreakable:true}"
+                            "tag": "{Unbreakable:true,Enchantments:[{id:\"sharpness\",lvl:3},{id:\"sweeping\",lvl:3}]}"
                         }
                     ]
                 }

@@ -1,7 +1,8 @@
-gamemode adventure
-function uub:spawn/assign_pn
-function uub:tp
-execute at @s run playsound item.totem.use master @a ~ ~ ~ 2 0.7
-tag @s add alive
-tag @s add fresh
-scoreboard players set @s timer -1
+execute unless score #flag game_mode = #boss game_mode run tellraw @a [{"selector": "@s","color": "dark_green"},{"text": " will respawn.","color": "gray"}]
+scoreboard players set @s tether -1
+title @s reset
+title @s times 5 70 5
+title @s title {"text": "Respawning...","color": "red"}
+execute at @s run playsound entity.elder_guardian.curse master @s ~ ~ ~ 1 2
+function uub:spawn/assign_queue
+schedule function uub:spawn/next 4s append

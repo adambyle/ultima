@@ -1,0 +1,26 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "spruce_leaves",
+                    "functions": [
+                        {
+                            "function": "set_name",
+                            "name": {"text": "Woodlands","bold": true,"italic": false}
+                        },
+                        {
+
+                            "function": "set_lore",
+                            "lore": [
+                                {"text": "Click to vote for this map.","color": "gray"}
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -3,27 +3,17 @@ scoreboard players operation #maps menu = #map.default menu
 
 scoreboard players set #selected map 0
 
-clear @a dark_oak_planks
-clear @a spruce_leaves
-clear @a stone_bricks
-clear @a blackstone
-clear @a gold_block
-clear @a dead_bush
-clear @a emerald
-clear @a bell
-clear @a packed_ice
-clear @a crimson_fungus
-clear @a nether_wart_block
-clear @a end_stone
+clear @a #uub:map_icons
 clear @a grass_block
 
 execute if data block 43 31 -12 Items[0] run function uub:settings/map/default_test
 
-replaceitem block 43 31 -12 container.5 dark_oak_planks{display:{Name:'{"text":"Manor","color":"white","italic":false,"bold":true}'}}
-replaceitem block 43 31 -12 container.6 spruce_leaves{display:{Name:'{"text":"Woodlands","color":"white","italic":false,"bold":true}'}}
-replaceitem block 43 31 -12 container.7 stone_bricks{display:{Name:'{"text":"Dungeon","color":"white","italic":false,"bold":true}'}}
-replaceitem block 43 31 -12 container.8 blackstone{display:{Name:'{"text":"Abyss","color":"white","italic":false,"bold":true}'}}
-replaceitem block 43 31 -12 container.14 gold_block{display:{Name:'{"text":"Citadel","color":"white","italic":false,"bold":true}'}}
+loot replace block 43 31 -12 container.5 loot uub:map_icon/manor
+loot replace block 43 31 -12 container.6 loot uub:map_icon/woodlands
+loot replace block 43 31 -12 container.7 loot uub:map_icon/dungeon
+loot replace block 43 31 -12 container.8 loot uub:map_icon/abyss
+loot replace block 43 31 -12 container.14 loot uub:map_icon/citadel
+data remove block 43 31 -12 Items[].tag.display.Lore[0]
 replaceitem block 43 31 -12 container.15 dead_bush{display:{Name:'{"text":"Wasteland","color":"white","italic":false,"bold":true}',Lore:['{"text": "Coming soon...","color": "gray"}']}}
 replaceitem block 43 31 -12 container.16 emerald{display:{Name:'{"text":"Town Square","color":"white","italic":false,"bold":true}',Lore:['{"text": "Coming soon...","color": "gray"}']}}
 replaceitem block 43 31 -12 container.17 bell{display:{Name:'{"text":"Last Stand","color":"white","italic":false,"bold":true}',Lore:['{"text": "Coming soon...","color": "gray"}']}}

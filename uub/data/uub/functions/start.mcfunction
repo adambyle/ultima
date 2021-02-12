@@ -1,8 +1,14 @@
+# If vote mode, set the map
+execute if score #flag map = #vote map run function uub:data/choose_map
+
 function uub:data/set_map_data
 
 # Determine players, setup game
 execute if score #flag game_mode < #boss game_mode run function uub:start/mode/not_boss_rush
 execute if score #flag game_mode = #boss game_mode run function uub:start/mode/boss_rush
+
+# Map specific start functions
+execute if score #server map matches 2 run function uub:start/map/woodlands
 
 # Count the total players
 scoreboard players set #server pn 0
@@ -18,3 +24,7 @@ execute if score #flag map > #select map run title @a title {"storage": "uub:map
 execute as @a at @s run playsound block.note_block.pling master @s ~ ~ ~ 4 0.75
 execute as @a at @s run playsound block.note_block.pling master @s ~ ~ ~ 4 1
 schedule function uub:start/start 1s
+
+clear @a
+
+scoreboard players set #flag game_state 2

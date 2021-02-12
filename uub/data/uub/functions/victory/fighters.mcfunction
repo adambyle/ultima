@@ -1,4 +1,4 @@
-execute at @s run playsound entity.ender_dragon.death master @s ~ ~ ~ 4 1.5
+execute at @s run playsound entity.ender_dragon.death master @a ~ ~ ~ 4 1.5
 scoreboard players set #flag game_state 2
 title @a reset
 title @a times 5 70 5
@@ -16,3 +16,8 @@ schedule function uub:load 10s
 bossbar set uub:boss value 0
 
 scoreboard players set #timeout game_state 150
+
+scoreboard objectives setdisplay belowName
+scoreboard objectives setdisplay list
+
+function uub:data/generate_voted_maps

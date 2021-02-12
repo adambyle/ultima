@@ -3,6 +3,8 @@ execute if score #server pn matches 3.. run tellraw @a [{"text": "Next fighter: 
 schedule function uub:spawn/duels 4s
 
 title @a reset
-title @a times 0 30 10
+title @a times 0 70 10
 title @a subtitle "Next up"
 execute if score #flag map > #select map run title @a title {"storage": "uub:map_data","nbt": "Name","color": "green"}
+
+scoreboard players add @a[tag=alive] score 1

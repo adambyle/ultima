@@ -1,8 +1,4 @@
 tag @r[tag=player,limit=4] add alive
-execute as @a[tag=player,tag=!alive] run function uub:spawn/assign_queue
-scoreboard players set @a[tag=player] score 0
-execute if score #flag game_mode = #royale game_mode run tag @a[tag=!alive] remove player
-
-scoreboard objectives setdisplay belowName health
-scoreboard objectives setdisplay list health
-scoreboard objectives setdisplay sidebar score
+execute if score #flag game_mode = #brawl game_mode as @a[tag=player,tag=!alive] run function uub:spawn/assign_queue
+execute if score #flag game_mode = #royale game_mode as @a[tag=!alive] run function uub:start/mode/multi/kick
+scoreboard objectives modify score displayname {"text": "Score","color": "blue"}

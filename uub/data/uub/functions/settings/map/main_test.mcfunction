@@ -1,4 +1,4 @@
-execute unless data block 43 31 -12 Items[{id:"minecraft:paper"}] run scoreboard players operation #flag map = #vote map
+execute unless data block 43 31 -12 Items[{id:"minecraft:jukebox"}] run scoreboard players operation #flag map = #vote map
 execute unless data block 43 31 -12 Items[{id:"minecraft:player_head"}] run scoreboard players operation #flag map = #random map
 execute unless data block 43 31 -12 Items[{id:"minecraft:magenta_glazed_terracotta"}] run scoreboard players operation #flag map = #cycle map
 

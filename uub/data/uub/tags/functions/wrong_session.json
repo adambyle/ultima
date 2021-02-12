@@ -1,6 +1,7 @@
 {
     "values": [
         "uub:data/player/clean",
-        "uub:spectate"
+        "uub:spectate",
+        "uub:tick/opt_prompt"
     ]
 }

@@ -1,11 +1,11 @@
-execute as @s[team=!boss] run function uub:spawn/assign_pn
-
 tag @s[team=!boss] add alive
+tag @s add fresh
 clear @s
 effect clear @s
 effect give @s instant_health 1 3 true
 gamemode adventure
 
+function uub:spawn/assign_pn
 function uub:data/player/reset_waits
 
 execute if score #server map matches 1 run function uub:spawn/maps/manor
@@ -18,4 +18,4 @@ execute if score #server map matches 14 run function uub:spawn/maps/dracula
 execute if score #server map matches 15 run function uub:spawn/maps/avanto
 
 function uub:tp
-execute as @a at @s run playsound item.totem.use master @s ~ ~ ~ 2 0.7
+execute at @s run playsound item.totem.use master @s ~ ~ ~ 2 0.7

@@ -29,6 +29,7 @@
 #declare objective ready Equal to 1 if players are ready
 #declare objective queue Point in waiting list to join game
 #declare objective action Trigger action
+#declare objective event Event counters for maps and modes
 #declare objective dmg Damage taken trigger
 #declare objective menu Menu id for map selection and ender chest interface
 #declare objective menu.map Map id for menu interface
@@ -53,7 +54,23 @@ scoreboard objectives add queue dummy
 scoreboard objectives add menu dummy
 scoreboard objectives add ready dummy
 scoreboard objectives add action trigger
+scoreboard objectives add event dummy
 scoreboard objectives add dmg minecraft.custom:minecraft.damage_taken
+
+scoreboard objectives add y.ready dummy
+
+scoreboard objectives add z.manor.sword dummy
+scoreboard objectives add z.manor.axe dummy
+scoreboard objectives add z.manor.bow dummy
+scoreboard objectives add z.manor.crossbow dummy
+scoreboard objectives add z.manor.shield dummy
+scoreboard objectives add z.manor.potion dummy
+scoreboard objectives add z.manor.arrows dummy
+
+scoreboard objectives add z.woods.sword dummy
+scoreboard objectives add z.woods.bow dummy
+scoreboard objectives add z.woods.gapple dummy
+scoreboard objectives add z.woods.arrows dummy
 
 #declare score_holder #flag Determines how the scoreboard objective holds and modifies data
 #declare score_holder #server Variables pertaining to the entire server
@@ -68,8 +85,8 @@ scoreboard players set #vote map 3
 scoreboard players set #duels game_mode 0
 scoreboard players set #royale game_mode 1
 scoreboard players set #brawl game_mode 2
-scoreboard players set #boss game_mode 3
-scoreboard players set #ultimate game_mode 4
+scoreboard players set #boss game_mode 4
+scoreboard players set #ultimate game_mode 3
 
 scoreboard players set #main menu 0
 scoreboard players set #stats menu 1
@@ -92,11 +109,11 @@ scoreboard players set #max_fandom map 15
 #declare tag player Players that are playing this game
 #declare tag alive Players that are alive
 #declare tag spectator Players that are not participating
-#declare tag in_lobby Players that are not participating and are in the lobby
 #declare tag low_health Players on low health
 #declare tag root The player executing the function
 #declare tag killer Player that is responsible for getting the kill
 #declare tag respawn Players to respawn due to a player's death
+#declare tag afk Players that are currently away from keyboard
 
 # Entity tags
 #declare tag text_display Armor stands that are used to display text
@@ -106,6 +123,7 @@ scoreboard players set #max_fandom map 15
 #declare tag static_item Items that are not meant to be killed
 #declare tag tp_marker Positions for player teleportation
 #declare tag loot_table_handler Pig that handles loot tables
+#declare tag vote_station Location for player voting
 
 #declare storage uub:map_data Names and numbers for the current map
 #declare storage uub:hotbar Hotbar item configuration
@@ -116,5 +134,4 @@ scoreboard players set #max_fandom map 15
 #alias vector map_switcher 43 31 -12
 #alias vector sign 45 35 -23
 #alias entity dead @a[tag=player,tag=!alive]
-#alias entity watching @a[tag=spectator,tag=!in_lobby]
 #alias entity root_player @r[tag=root]

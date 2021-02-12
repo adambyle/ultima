@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{Unbreakable:true,Enchantments:[{id:\"quick_charge\",lvl:1}]}"
+                            "tag": "{Unbreakable:true,Enchantments:[{id:\"quick_charge\",lvl:3},{id:\"piercing\",lvl:2}]}"
                         }
                     ]
                 }
