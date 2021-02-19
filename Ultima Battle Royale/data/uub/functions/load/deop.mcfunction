@@ -1,0 +1,1 @@
+deop @a[name=!"beegyfleeg"]

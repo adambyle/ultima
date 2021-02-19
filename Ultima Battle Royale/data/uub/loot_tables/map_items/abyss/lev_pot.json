@@ -1,0 +1,20 @@
+{
+    "type": "generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "potion",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:25b,Duration:60,Amplifier:4b}],display:{Name:'{\"text\": \"Potion of Levitation\",\"italic\": false}'}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
