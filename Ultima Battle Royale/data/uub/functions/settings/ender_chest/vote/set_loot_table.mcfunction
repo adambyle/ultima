@@ -1,0 +1,8 @@
+execute if score #temp map matches 1 run data modify entity @e[tag=loot_table_handler,limit=1] DeathLootTable set value "uub:map_icon/manor"
+execute if score #temp map matches 2 run data modify entity @e[tag=loot_table_handler,limit=1] DeathLootTable set value "uub:map_icon/woodlands"
+execute if score #temp map matches 3 run data modify entity @e[tag=loot_table_handler,limit=1] DeathLootTable set value "uub:map_icon/dungeon"
+execute if score #temp map matches 4 run data modify entity @e[tag=loot_table_handler,limit=1] DeathLootTable set value "uub:map_icon/abyss"
+execute if score #temp map matches 5 run data modify entity @e[tag=loot_table_handler,limit=1] DeathLootTable set value "uub:map_icon/citadel"
+execute if score #temp map matches 13 run data modify entity @e[tag=loot_table_handler,limit=1] DeathLootTable set value "uub:map_icon/reflection"
+execute if score #temp map matches 14 run data modify entity @e[tag=loot_table_handler,limit=1] DeathLootTable set value "uub:map_icon/dracula"
+execute if score #temp map matches 15 run data modify entity @e[tag=loot_table_handler,limit=1] DeathLootTable set value "uub:map_icon/avanto"
