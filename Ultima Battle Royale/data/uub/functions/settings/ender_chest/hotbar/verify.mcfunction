@@ -6,3 +6,4 @@ execute if score #server map matches 5 run function uub:settings/ender_chest/hot
 execute if score #server map matches 13 run function uub:settings/ender_chest/hotbar/verify/reflection
 execute if score #server map matches 14 run function uub:settings/ender_chest/hotbar/verify/dracula
 execute if score #server map matches 15 run function uub:settings/ender_chest/hotbar/verify/avanto
+execute if score #server map matches 16 run function uub:settings/ender_chest/hotbar/verify/boxing

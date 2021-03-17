@@ -6,3 +6,4 @@ execute if score #temp map matches 5 run data modify entity @e[tag=loot_table_ha
 execute if score #temp map matches 13 run data modify entity @e[tag=loot_table_handler,limit=1] DeathLootTable set value "uub:map_icon/reflection"
 execute if score #temp map matches 14 run data modify entity @e[tag=loot_table_handler,limit=1] DeathLootTable set value "uub:map_icon/dracula"
 execute if score #temp map matches 15 run data modify entity @e[tag=loot_table_handler,limit=1] DeathLootTable set value "uub:map_icon/avanto"
+execute if score #temp map matches 16 run data modify entity @e[tag=loot_table_handler,limit=1] DeathLootTable set value "uub:map_icon/boxing"

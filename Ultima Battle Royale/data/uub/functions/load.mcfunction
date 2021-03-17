@@ -13,6 +13,4 @@ bossbar set uub:game_start players @a
 scoreboard players add #server game_id 1
 scoreboard players operation @a game_id = #server game_id
 
-defaultgamemode spectator
-
 function uub:load/deop

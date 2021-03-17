@@ -2,6 +2,8 @@
     "values": [
         "#minecraft:impact_projectiles",
         "firework_rocket",
-        "potion"
+        "potion",
+        "ender_pearl",
+        "fishing_bobber"
     ]
 }

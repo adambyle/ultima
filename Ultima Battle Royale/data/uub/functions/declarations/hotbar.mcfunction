@@ -22,6 +22,7 @@ scoreboard objectives add z.abyss.arrows dummy
 scoreboard objectives add z.abyss.ingot dummy
 scoreboard objectives add z.abyss.bow dummy
 scoreboard objectives add z.abyss.potion dummy
+scoreboard objectives add z.abyss.rod dummy
 
 scoreboard objectives add z.citadel.sword dummy
 scoreboard objectives add z.citadel.axe dummy
@@ -40,8 +41,12 @@ scoreboard objectives add z.dracula.bow dummy
 scoreboard objectives add z.dracula.arrows dummy
 scoreboard objectives add z.dracula.weak dummy
 scoreboard objectives add z.dracula.harm dummy
+scoreboard objectives add z.dracula.tri dummy
 
 scoreboard objectives add z.avanto.sword dummy
 scoreboard objectives add z.avanto.bow dummy
 scoreboard objectives add z.avanto.arrows dummy
 scoreboard objectives add z.avanto.jump dummy
+
+scoreboard objectives add z.boxing.potion dummy
+scoreboard objectives add z.boxing.ball dummy

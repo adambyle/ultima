@@ -21,8 +21,10 @@
 #declare objective bool.die Test to see if this player has died
 #declare objective bool.kill Test to see if this player has killed
 #declare objective tether Player id of the player who killed you
+#declare objective respawn Time until respawn
 #declare objective ready Equal to 1 if players are ready
 #declare objective queue Point in waiting list to join game
+#declare objective chest_type The type of loot found in the chest
 #declare objective action Trigger action
 #declare objective event Event counters for maps and modes
 #declare objective afk Time until AFK occurs
@@ -48,10 +50,14 @@ scoreboard objectives add tether dummy
 scoreboard objectives add queue dummy
 scoreboard objectives add menu dummy
 scoreboard objectives add ready dummy
+scoreboard objectives add respawn dummy
 scoreboard objectives add action trigger
 scoreboard objectives add event dummy
+scoreboard objectives add chest_type dummy
 scoreboard objectives add afk dummy
 scoreboard objectives add dmg minecraft.custom:minecraft.damage_taken
+
+scoreboard objectives add x.damage custom:damage_dealt
 
 scoreboard objectives add y.ready dummy
 scoreboard objectives add y.afk dummy
@@ -98,7 +104,14 @@ scoreboard players set #map.default menu 1
 scoreboard players set #map.featured menu 2
 
 scoreboard players set #max_default map 5
-scoreboard players set #max_fandom map 15
+scoreboard players set #max_fandom map 16
+
+scoreboard players set #empty chest_type 0
+scoreboard players set #common chest_type 1
+scoreboard players set #uncommon chest_type 2
+scoreboard players set #rare chest_type 3
+scoreboard players set #epic chest_type 4
+scoreboard players set #ultimate chest_type 5
 
 #flag game_state : 0 inactive, 1 active, 2 transition
 
@@ -113,6 +126,7 @@ scoreboard players set #max_fandom map 15
 #declare tag afk Players that are currently away from keyboard
 #declare tag fresh Players that just respawned
 #declare tag participating Players that participated in this game
+#declare tag lost_soul Players that have not been vindicated
 
 # Entity tags
 #declare tag text_display Armor stands that are used to display text
@@ -123,9 +137,14 @@ scoreboard players set #max_fandom map 15
 #declare tag tp_marker Positions for player teleportation
 #declare tag loot_table_handler Pig that handles loot tables
 #declare tag vote_station Location for player voting
+#declare tag chest
+#declare tag chest.center
+#declare tag chest.ring
+#declare tag chest.spawn
 
 #declare storage uub:map_data Names and numbers for the current map
 #declare storage uub:hotbar Hotbar item configuration
+#declare storage uub:temp Temporary data
 
 #alias vector lobby 45 30 -12
 #alias vector start 45 31 -3

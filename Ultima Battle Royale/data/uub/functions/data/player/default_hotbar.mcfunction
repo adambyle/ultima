@@ -16,6 +16,7 @@ execute as @a unless score @s z.abyss.bow matches -1.. run scoreboard players se
 execute as @a unless score @s z.abyss.ingot matches -1.. run scoreboard players set @s z.abyss.ingot 7
 execute as @a unless score @s z.abyss.arrows matches -1.. run scoreboard players set @s z.abyss.arrows 10
 execute as @a unless score @s z.abyss.potion matches -1.. run scoreboard players set @s z.abyss.potion 8
+execute as @a unless score @s z.abyss.rod matches -1.. run scoreboard players set @s z.abyss.rod 2
 
 execute as @a unless score @s z.dungeon.axe matches -1.. run scoreboard players set @s z.dungeon.axe 0
 execute as @a unless score @s z.dungeon.speed matches -1.. run scoreboard players set @s z.dungeon.speed 8
@@ -45,3 +46,6 @@ execute as @a unless score @s z.avanto.sword matches -1.. run scoreboard players
 execute as @a unless score @s z.avanto.bow matches -1.. run scoreboard players set @s z.avanto.bow 1
 execute as @a unless score @s z.avanto.arrows matches -1.. run scoreboard players set @s z.avanto.arrows 10
 execute as @a unless score @s z.avanto.jump matches -1.. run scoreboard players set @s z.avanto.jump 8
+
+execute as @a unless score @s z.boxing.potion matches -1.. run scoreboard players set @s z.boxing.potion 8
+execute as @a unless score @s z.boxing.ball matches -1.. run scoreboard players set @s z.boxing.ball 1

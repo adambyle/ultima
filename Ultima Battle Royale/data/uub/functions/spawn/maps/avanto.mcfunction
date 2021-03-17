@@ -14,3 +14,5 @@ replaceitem entity @s armor.head leather_helmet{Unbreakable:1b, display: {color:
 function uub:spawn/items/refills/avanto
 
 attribute @s generic.armor base set 8
+
+scoreboard players set @s event 0

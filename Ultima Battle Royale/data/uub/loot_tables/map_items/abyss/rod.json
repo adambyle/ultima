@@ -1,0 +1,20 @@
+{
+    "type": "generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "fishing_rod",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{Unbreakable: true}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

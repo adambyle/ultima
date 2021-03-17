@@ -4,6 +4,7 @@ execute unless data entity @s EnderItems[{id:"minecraft:diamond_sword"}] run sco
 execute unless data entity @s EnderItems[{id:"minecraft:bow"}] run scoreboard players set #verify _var 0
 execute unless data entity @s EnderItems[{id:"minecraft:netherite_ingot"}] run scoreboard players set #verify _var 0
 execute unless data entity @s EnderItems[{id:"minecraft:potion"}] run scoreboard players set #verify _var 0
+execute unless data entity @s EnderItems[{id:"minecraft:fishing_rod"}] run scoreboard players set #verify _var 0
 execute unless data entity @s EnderItems[{id:"minecraft:arrow"}] run scoreboard players set #verify _var 0
 
 execute if score #verify _var matches 0 at @s run playsound entity.villager.no master @s

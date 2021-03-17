@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:14b,Duration:400, ShowParticles: false}, {Id: 1b, Duration: 400, ShowParticles: false}],display:{Name:'{\"text\": \"Potion of Stealth\",\"italic\": false}'}}"
+                            "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:14b,Duration:400, ShowParticles: false}, {Id: 1b, Duration: 400, ShowParticles: false}, {Id: 11b, Duration: 400, ShowParticles: false, Amplifier: 3b}],display:{Name:'{\"text\": \"Potion of Stealth\",\"italic\": false}'}}"
                         }
                     ]
                 }

@@ -6,4 +6,4 @@ execute if score #server map matches 5 run function uub:spawn/items/refills/cita
 execute if score #server map matches 13 run function uub:spawn/items/refills/reflection
 execute if score #server map matches 14 run function uub:spawn/items/refills/dracula
 execute if score #server map matches 15 run function uub:spawn/items/refills/avanto
-execute unless score #flag game_mode > #royale game_mode run effect give @s instant_health 1 3 true
+execute if score #server map matches 16 run function uub:spawn/items/refills/boxing

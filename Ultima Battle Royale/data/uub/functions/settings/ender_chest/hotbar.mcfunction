@@ -12,6 +12,7 @@ execute if score #server map matches 5 run function uub:settings/ender_chest/hot
 execute if score #server map matches 13 run function uub:settings/ender_chest/hotbar/maps/reflection
 execute if score #server map matches 14 run function uub:settings/ender_chest/hotbar/maps/dracula
 execute if score #server map matches 15 run function uub:settings/ender_chest/hotbar/maps/avanto
+execute if score #server map matches 16 run function uub:settings/ender_chest/hotbar/maps/boxing
 
 replaceitem entity @s enderchest.2 emerald{display:{Name:'{"text": "Confirm","color": "green","bold": true,"italic": false}'}}
 replaceitem entity @s enderchest.3 structure_void{display:{Name:'{"text": "Back","color": "dark_aqua","bold": true,"italic": false}'}}

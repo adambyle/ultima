@@ -18,5 +18,9 @@ execute store result score #slot _var run data get entity @s EnderItems[{id:"min
 function uub:settings/ender_chest/hotbar/assign
 scoreboard players operation @s z.abyss.ingot = #slot _var
 
+execute store result score #slot _var run data get entity @s EnderItems[{id:"minecraft:fishing_rod"}].Slot
+function uub:settings/ender_chest/hotbar/assign
+scoreboard players operation @s z.abyss.rod = #slot _var
+
 tellraw @s [{"text": "Hotbar >> ","color": "dark_green","bold": true},{"text": "Saved your hotbar settings!","bold": false}]
 execute at @s run playsound block.smithing_table.use master @s

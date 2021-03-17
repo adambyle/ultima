@@ -7,3 +7,7 @@ execute as @a[tag=player, tag=alive, scores={event=-1}, nbt=!{Inventory: [{id: "
 
 # Clear levitation from high players
 effect clear @a[tag=player, tag=alive, scores={altitude=34..}] levitation
+
+# Deal with fishing rod bobbers
+scoreboard players add @e[type=fishing_bobber] event 1
+kill @e[type=fishing_bobber, scores={event=100..}]

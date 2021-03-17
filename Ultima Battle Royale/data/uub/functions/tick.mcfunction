@@ -5,8 +5,8 @@ execute if score #flag game_state matches 3 run function uub:tick/active
 
 # Manage player menus
 tag @a remove menu_operator
-tag @a[tag=spectator] add menu_operator
-execute if score #flag game_state matches 0 run tag @a add menu_operator
+tag @a[tag=spectator, gamemode=!creative] add menu_operator
+execute if score #flag game_state matches 0 run tag @a[gamemode=!creative] add menu_operator
 execute as @a[tag=player,tag=menu_operator] if score @s menu = #main menu unless data entity @s EnderItems[{id: "minecraft:red_terracotta"}] run function uub:settings/opt/out
 execute as @a[tag=spectator,tag=menu_operator] if score @s menu = #main menu unless data entity @s EnderItems[{id: "minecraft:gray_terracotta"}] run function uub:settings/opt/in
 execute as @a if score @s menu = #main menu unless data entity @s EnderItems[{id: "minecraft:stone_sword"}] unless data entity @s EnderItems[{id: "minecraft:golden_sword"}] unless data entity @s EnderItems[{id: "minecraft:netherite_sword"}] run function uub:settings/ender_chest/auto_ready
@@ -56,6 +56,7 @@ tag @a remove temp
 execute as @a store result score @s _var run data get entity @s Rotation[0]
 execute as @a if score @s _var = @s rot.horizontal run tag @s add temp
 execute as @a store success score @s _var run scoreboard players operation @s rot.horizontal = @s _var
+tag @a[gamemode=!adventure] remove temp
 scoreboard players set @a[tag=!temp] afk 0
 tag @a[tag=!temp] remove afk
 scoreboard players add @a[tag=temp] afk 1
@@ -71,3 +72,11 @@ tag @a[scores={afk=225..,y.afk=3}] add temp
 title @a[tag=temp, tag=player, tag=alive] times 0 2 0
 title @a[tag=temp, tag=player, tag=alive] subtitle {"text": "Move your camera", "color": "dark_red"}
 title @a[tag=temp, tag=player, tag=alive] title {"text": "You are AFK!", "color": "dark_red", "bold": true}
+
+# Ultimate mode block handling
+fill -2 35 128 92 35 222 air replace #uub:breakable
+fill -2 24 128 92 24 222 water replace air
+
+# Send command feedback
+execute if score #debug game_state matches 1 run gamerule sendCommandFeedback true
+execute unless score #debug game_state matches 1 run gamerule sendCommandFeedback false

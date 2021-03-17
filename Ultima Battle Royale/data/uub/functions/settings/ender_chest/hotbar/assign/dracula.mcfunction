@@ -10,6 +10,10 @@ execute store result score #slot _var run data get entity @s EnderItems[{id:"min
 function uub:settings/ender_chest/hotbar/assign
 scoreboard players operation @s z.dracula.arrows = #slot _var
 
+execute store result score #slot _var run data get entity @s EnderItems[{id:"minecraft:trident"}].Slot
+function uub:settings/ender_chest/hotbar/assign
+scoreboard players operation @s z.dracula.tri = #slot _var
+
 execute store result score #slot _var run data get entity @s EnderItems[{id:"minecraft:splash_potion", tag: {Potion: "minecraft:harming"}}].Slot
 function uub:settings/ender_chest/hotbar/assign
 scoreboard players operation @s z.dracula.harm = #slot _var

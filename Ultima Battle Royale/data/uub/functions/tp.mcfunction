@@ -6,3 +6,5 @@ execute if score #server map matches 5 run function uub:tp/citadel
 execute if score #server map matches 13 run function uub:tp/reflection
 execute if score #server map matches 14 run function uub:tp/dracula
 execute if score #server map matches 15 run function uub:tp/avanto
+execute if score #server map matches 16 run function uub:tp/boxing
+execute if score #flag game_mode = #ultimate game_mode run function uub:tp/ultimate

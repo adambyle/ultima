@@ -1,4 +1,3 @@
-clear @s #uub:event/abyss/diamond
 execute at @s run playsound item.armor.equip_netherite master @s
 replaceitem entity @s armor.feet netherite_boots{Unbreakable:1b,Enchantments:[{id:"protection",lvl:2}]}
 replaceitem entity @s armor.legs netherite_leggings{Unbreakable:1b,Enchantments:[{id:"protection",lvl:2}]}

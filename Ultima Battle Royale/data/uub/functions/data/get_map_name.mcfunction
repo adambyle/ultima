@@ -6,3 +6,4 @@ execute if score #temp map matches 5 run data modify storage uub:map_data TempNa
 execute if score #temp map matches 13 run data modify storage uub:map_data TempName set value "Reflection"
 execute if score #temp map matches 14 run data modify storage uub:map_data TempName set value "Dracula's Castle"
 execute if score #temp map matches 15 run data modify storage uub:map_data TempName set value "Avanto"
+execute if score #temp map matches 16 run data modify storage uub:map_data TempName set value "Boxing Ring"

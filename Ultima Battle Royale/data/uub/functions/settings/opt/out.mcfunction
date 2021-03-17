@@ -12,5 +12,3 @@ scoreboard players reset @s score
 
 execute at @s run playsound block.note_block.xylophone master @s
 function uub:settings/ender_chest/main
-
-scoreboard players reset @s score
