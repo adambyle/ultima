@@ -35,5 +35,6 @@ execute if score #flag map = #select map if score #server map matches 10 run dat
 execute if score #flag map = #select map if score #server map matches 11 run data modify block 43 31 -12 Items[{Slot:25b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
 execute if score #flag map = #select map if score #server map matches 12 run data modify block 43 31 -12 Items[{Slot:26b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
 
+execute if score #selected map matches -2 run clear @a #uub:map_icons
 execute if score #selected map matches 1.. unless score #selected map = #server map if score #flag map = #select map run function uub:settings/map/select
 execute if score #selected map matches 1.. unless score #flag map = #select map run function uub:settings/map/select

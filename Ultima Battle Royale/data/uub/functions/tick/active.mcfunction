@@ -48,3 +48,6 @@ execute as @a[tag=player,sort=random] run function uub:death/test
 scoreboard players set #temp pn 0
 execute as @a[tag=player] run scoreboard players add #temp pn 1
 execute unless score #temp pn = #server pn run function uub:load/player_left
+
+# Reset event-detection objectives
+scoreboard players reset * crouch

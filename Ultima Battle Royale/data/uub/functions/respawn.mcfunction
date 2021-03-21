@@ -4,6 +4,6 @@ title @s reset
 title @s times 5 70 5
 title @s title {"text": "Respawning...","color": "red"}
 execute at @s run playsound entity.elder_guardian.curse master @s ~ ~ ~ 1 2
-execute unless score @s queue matches 1.. run function uub:spawn/assign_queue
 scoreboard players set @s respawn 80
+scoreboard players set @s queue 0
 title @s actionbar ""

@@ -30,6 +30,7 @@
 #declare objective afk Time until AFK occurs
 #declare objective dmg Damage taken trigger
 #declare objective menu Menu id for map selection and ender chest interface
+#declare objective crouch Whether the player is crouching
 #declare objective menu.map Map id for menu interface
 
 scoreboard objectives add _var dummy
@@ -55,6 +56,8 @@ scoreboard objectives add action trigger
 scoreboard objectives add event dummy
 scoreboard objectives add chest_type dummy
 scoreboard objectives add afk dummy
+scoreboard objectives add citadel_rune dummy
+scoreboard objectives add crouch custom:sneak_time
 scoreboard objectives add dmg minecraft.custom:minecraft.damage_taken
 
 scoreboard objectives add x.damage custom:damage_dealt

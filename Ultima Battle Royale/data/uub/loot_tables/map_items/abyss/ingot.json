@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {"text": "Equip Netherite Armor (Throw Me)", "italic": false}
+                            "name": {"text": "Equip Netherite Armor (Crouch)", "italic": false}
                         }
                     ]
                 }
