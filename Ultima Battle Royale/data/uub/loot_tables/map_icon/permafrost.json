@@ -5,11 +5,11 @@
             "entries": [
                 {
                     "type": "item",
-                    "name": "spruce_leaves",
+                    "name": "packed_ice",
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {"text": "Woodlands","bold": true,"italic": false}
+                            "name": {"text": "Permafrost","bold": true,"italic": false}
                         }
                     ]
                 }

@@ -1,4 +1,3 @@
-function uub:tick/opt_prompt
 scoreboard players add #server pn 1
 gamemode spectator
 function uub:tp

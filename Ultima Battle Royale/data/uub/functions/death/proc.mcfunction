@@ -6,9 +6,10 @@ scoreboard players set @s queue 0
 scoreboard players set @s pn 0
 scoreboard players set @s bool.die 0
 
-gamemode spectator
-function uub:tp
+execute unless score @s y.spect_death matches 1.. run scoreboard players set @s y.spect_death 1
+scoreboard players operation #spect_mode _var = @s y.spect_death
+function uub:tick/action/not_playing
 
-function uub:tick/opt_prompt/universal
+execute as @a[tag=player, tag=alive] run function uub:tick/opt_prompt
 
 execute if score #flag game_mode = #brawl game_mode run function uub:spawn/assign_queue

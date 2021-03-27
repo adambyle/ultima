@@ -5,11 +5,11 @@
             "entries": [
                 {
                     "type": "item",
-                    "name": "spruce_leaves",
+                    "name": "end_stone",
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {"text": "Woodlands","bold": true,"italic": false}
+                            "name": {"text": "Frontier","bold": true,"italic": false}
                         }
                     ]
                 }

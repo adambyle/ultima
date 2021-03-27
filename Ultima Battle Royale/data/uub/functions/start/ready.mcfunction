@@ -6,4 +6,4 @@ tag @s remove root
 execute as @a at @s run playsound block.note_block.snare master @s
 function uub:start/ready/warning
 function uub:start/ready/valid_start
-tp 45 30 -12
+function uub:tp/lobby

@@ -10,14 +10,6 @@
                         {
                             "function": "set_name",
                             "name": {"text": "Avanto","bold": true,"italic": false}
-                        },
-                        {
-
-                            "function": "set_lore",
-                            "lore": [
-                                {"text": "Click to vote for this map.","color": "gray"},
-                                "Featuring Tucker Lawson!"
-                            ]
                         }
                     ]
                 }

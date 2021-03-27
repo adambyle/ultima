@@ -56,6 +56,7 @@ scoreboard objectives add action trigger
 scoreboard objectives add event dummy
 scoreboard objectives add chest_type dummy
 scoreboard objectives add afk dummy
+scoreboard objectives add parkour dummy
 scoreboard objectives add citadel_rune dummy
 scoreboard objectives add crouch custom:sneak_time
 scoreboard objectives add dmg minecraft.custom:minecraft.damage_taken
@@ -64,6 +65,10 @@ scoreboard objectives add x.damage custom:damage_dealt
 
 scoreboard objectives add y.ready dummy
 scoreboard objectives add y.afk dummy
+scoreboard objectives add y.voteskip dummy
+scoreboard objectives add y.spect_lobby dummy
+scoreboard objectives add y.spect_death dummy
+scoreboard objectives add y.spect_opt dummy
 
 scoreboard objectives add z.manor.sword dummy
 scoreboard objectives add z.manor.axe dummy
@@ -98,6 +103,7 @@ scoreboard players set #stats menu 1
 scoreboard players set #hotbar menu 2
 scoreboard players set #vote menu 3
 scoreboard players set #spectate menu 4
+scoreboard players set #parkour menu 5
 scoreboard players set #stats.maps menu 10
 scoreboard players set #stats.modes menu 11
 scoreboard players set #stats.reset menu 12
@@ -121,6 +127,8 @@ scoreboard players set #ultimate chest_type 5
 # Player tags
 #declare tag player Players that are playing this game
 #declare tag alive Players that are alive
+#declare tag parkour Playing parkour right now
+#declare tag timed Being timed on parkour right now
 #declare tag spectator Players that are not participating
 #declare tag low_health Players on low health
 #declare tag root The player executing the function

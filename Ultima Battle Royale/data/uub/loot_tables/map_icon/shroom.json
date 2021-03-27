@@ -5,11 +5,11 @@
             "entries": [
                 {
                     "type": "item",
-                    "name": "spruce_leaves",
+                    "name": "crimson_fungus",
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {"text": "Woodlands","bold": true,"italic": false}
+                            "name": {"text": "Shroom","bold": true,"italic": false}
                         }
                     ]
                 }

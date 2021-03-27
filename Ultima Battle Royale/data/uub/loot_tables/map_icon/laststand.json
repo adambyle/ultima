@@ -5,11 +5,11 @@
             "entries": [
                 {
                     "type": "item",
-                    "name": "spruce_leaves",
+                    "name": "bell",
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {"text": "Woodlands","bold": true,"italic": false}
+                            "name": {"text": "Last Stand","bold": true,"italic": false}
                         }
                     ]
                 }

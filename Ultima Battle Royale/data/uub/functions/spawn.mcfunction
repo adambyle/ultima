@@ -1,5 +1,8 @@
 tag @s add alive
 tag @s add fresh
+tag @s remove parkour
+tag @s remove timed
+function uub:settings/ender_chest/main
 clear @s
 effect clear @s
 effect give @s instant_health 1 3 true

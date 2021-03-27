@@ -8,3 +8,5 @@ execute if score #timeout ready matches 0 run function uub:start/ready/timeout
 
 execute if score #timeout ready matches 1.. unless score #flag map = #vote map as @a[scores={y.ready=2,ready=0},tag=!afk] run function uub:start/ready
 execute if score #timeout ready matches 1.. unless score #flag map = #vote map as @a[scores={y.ready=3,ready=0}] run function uub:start/ready
+execute if score #timeout ready matches 1.. if score #flag map = #vote map as @a[scores={y.voteskip=2,ready=0,y.ready=3},tag=afk] run function uub:start/ready
+execute if score #timeout ready matches 1.. if score #flag map = #vote map as @a[scores={y.voteskip=3,ready=0}] run function uub:start/ready

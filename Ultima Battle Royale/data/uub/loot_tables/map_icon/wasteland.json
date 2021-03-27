@@ -5,11 +5,11 @@
             "entries": [
                 {
                     "type": "item",
-                    "name": "spruce_leaves",
+                    "name": "dead_bush",
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {"text": "Woodlands","bold": true,"italic": false}
+                            "name": {"text": "Wasteland","bold": true,"italic": false}
                         }
                     ]
                 }

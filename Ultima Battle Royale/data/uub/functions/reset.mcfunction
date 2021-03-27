@@ -48,7 +48,8 @@ scoreboard players set @a bool.kill 0
 scoreboard players set @a ready 0
 scoreboard players set @a load 0
 scoreboard players set @a queue 0
-scoreboard players set @a map 0
+scoreboard players set @a parkour 0
+scoreboard players set @a timed 0
 scoreboard players set #flag game_state 0
 
 # Clear blocks
@@ -60,3 +61,5 @@ fill -2 31 128 92 32 222 air replace #uub:breakable
 fill -2 33 128 92 34 222 air replace #uub:breakable
 fill -2 35 128 92 36 222 air replace #uub:breakable
 execute as @e[tag=chest] at @s run function uub:chest/empty
+
+tellraw @a [{"text": "If you run into any bugs, report them "}, {"text": "on Github.", "underlined": true, "clickEvent": {"action": "open_url", "value": "https://github.com/beegyfleeg/ultimaub/issues"}}]

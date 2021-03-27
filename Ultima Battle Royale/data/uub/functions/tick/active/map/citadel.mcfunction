@@ -15,3 +15,9 @@ execute unless entity @e[tag=citadel_rune] if predicate uub:coin_flip run scoreb
 execute if score #map event matches 0 run function uub:event/citadel/summon_rune
 
 execute as @a[scores={crouch=1}, tag=player, tag=alive, nbt={SelectedItem: {id: "minecraft:globe_banner_pattern"}}] run function uub:event/citadel/activate_rune
+
+title @a[tag=player, tag=alive, scores={citadel_rune=0}] actionbar ""
+title @a[tag=player, tag=alive, scores={citadel_rune=1}] actionbar {"text": "Δ Rune Applied -- Speed Up", "bold": true, "color": "gold"}
+title @a[tag=player, tag=alive, scores={citadel_rune=2}] actionbar {"text": "Π Rune Applied -- Health Up", "bold": true, "color": "red"}
+title @a[tag=player, tag=alive, scores={citadel_rune=3}] actionbar {"text": "Σ Rune Applied -- Attack Up", "bold": true, "color": "aqua"}
+title @a[tag=player, tag=alive, scores={citadel_rune=4}] actionbar {"text": "Γ Rune Applied -- Defense Up", "bold": true, "color": "green"}

@@ -1,12 +1,12 @@
 execute unless score #maps menu = #map menu run data remove block 43 31 -12 Items
 scoreboard players operation #maps menu = #map menu
 
-clear @a gold_block
-clear @a grass_block
-clear @a jukebox
-clear @a player_head
-clear @a magenta_glazed_terracotta
-clear @a structure_void
+clear @a[gamemode=!creative] gold_block
+clear @a[gamemode=!creative] grass_block
+clear @a[gamemode=!creative] jukebox
+clear @a[gamemode=!creative] player_head
+clear @a[gamemode=!creative] magenta_glazed_terracotta
+clear @a[gamemode=!creative] structure_void
 
 scoreboard players set #current map 0
 execute if score #flag map matches 0 run scoreboard players operation #current map = #server map

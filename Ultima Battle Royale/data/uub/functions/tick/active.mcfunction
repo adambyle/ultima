@@ -3,6 +3,7 @@ execute as @a unless score @s game_id = #server game_id run function uub:tick/wr
 
 # Players can spectate by pressing the start button
 execute positioned 45 31 -3 if block ~ ~ ~ polished_blackstone_pressure_plate[powered=true] as @p if entity @s[tag=spectator] run function uub:spectate
+execute positioned 45 31 -3 if block ~ ~ ~ polished_blackstone_pressure_plate[powered=true] as @p if entity @s[tag=player] run function uub:tp
 
 # Deal with invalid tags
 tag @a[tag=player,gamemode=spectator] remove alive
@@ -31,7 +32,7 @@ execute if score #flag game_state matches 1 if score #server map matches 16 run 
 
 # Clear unnecessary items
 kill @e[type=item,tag=!static_item]
-clear @a glass_bottle
+clear @a[gamemode=!creative] glass_bottle
 kill @e[nbt={inGround:true},type=arrow]
 
 # Reset settings buttons

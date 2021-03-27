@@ -8,7 +8,7 @@ team leave @a[tag=player]
 
 scoreboard players set #flag game_state 1
 
-schedule function uub:tick/opt_prompt/universal 4s
+execute as @a[tag=player, tag=alive] run function uub:tick/opt_prompt
 
 function uub:start/round
 

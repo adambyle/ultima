@@ -10,13 +10,6 @@
                         {
                             "function": "set_name",
                             "name": {"text": "Manor","bold": true,"italic": false}
-                        },
-                        {
-
-                            "function": "set_lore",
-                            "lore": [
-                                {"text": "Click to vote for this map.","color": "gray"}
-                            ]
                         }
                     ]
                 }
