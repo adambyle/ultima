@@ -1,3 +1,4 @@
+
 clear @s #uub:map_items/dungeon
 
 scoreboard players operation #hotbar _var = @s z.dungeon.axe

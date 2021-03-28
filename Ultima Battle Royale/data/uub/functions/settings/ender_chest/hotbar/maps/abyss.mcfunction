@@ -1,3 +1,4 @@
+
 clear @s #uub:map_items/abyss
 
 scoreboard players operation #hotbar _var = @s z.abyss.sword

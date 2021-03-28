@@ -13,4 +13,5 @@ execute if score #flag game_mode = #brawl game_mode run function uub:death/brawl
 execute as @a[tag=player, tag=alive] run function uub:spawn/items/refill
 
 execute unless score #flag game_mode > #royale game_mode run effect give @a instant_health 1 3 true
-execute unless score #flag game_mode = #brawl game_mode run effect give @a[tag=killer] instant_health 1 1 true
+
+effect clear @s glowing

@@ -1,3 +1,4 @@
+
 clear @s #uub:map_items/avanto
 
 scoreboard players operation #hotbar _var = @s z.avanto.sword

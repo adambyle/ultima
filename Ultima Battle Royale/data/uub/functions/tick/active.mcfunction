@@ -1,5 +1,5 @@
-# If any players join, have them sit out this game
-execute as @a unless score @s game_id = #server game_id run function uub:tick/wrong_session
+# Handle players who join mid-game
+execute as @a unless score @s online matches 1 run function uub:tick/action/wrong_session
 
 # Players can spectate by pressing the start button
 execute positioned 45 31 -3 if block ~ ~ ~ polished_blackstone_pressure_plate[powered=true] as @p if entity @s[tag=spectator] run function uub:spectate
@@ -40,7 +40,7 @@ setblock 43 31 -9 air
 data modify block 43 31 -12 Lock set value "Locked"
 
 # Players may sometimes lost their items
-execute as @a[tag=player,tag=alive] run function uub:spawn/items/lost
+execute if score #flag game_state matches 1 as @a[tag=player,tag=alive] run function uub:spawn/items/lost
 
 # Check for player deaths
 execute as @a[tag=player,sort=random] run function uub:death/test

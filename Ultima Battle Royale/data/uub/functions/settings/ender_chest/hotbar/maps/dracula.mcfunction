@@ -1,3 +1,4 @@
+
 clear @s #uub:map_items/dracula
 
 scoreboard players operation #hotbar _var = @s z.dracula.sword

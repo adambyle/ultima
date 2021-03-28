@@ -35,7 +35,7 @@ replaceitem entity @s[tag=spectator] enderchest.1 gray_terracotta{display:{Name:
 
 replaceitem entity @s enderchest.24 book{display: {Name: '{"text": "Choose Class", "color": "#7A3200", "bold": true, "italic": false}', Lore: ['[{"text": "Control which items are buffed in Ultimate mode. ", "color": "gray"}, {"text": "(Coming soon)", "color": "white"}]']}}
 
-execute unless score #flag map = #select map run replaceitem entity @s enderchest.20 golden_apple{display:{Name:'{"text": "Hotbar Settings","color": "yellow","bold": true,"italic": false}',Lore:['{"text": "You need to select a specific map to change your hotbar settings.","color": "gray"}']},HideFlags:63}
+replaceitem entity @s enderchest.20 golden_apple{display:{Name:'{"text": "Hotbar Settings","color": "yellow","bold": true,"italic": false}'},HideFlags:63}
 
 replaceitem entity @s[scores={y.ready=1}] enderchest.3 stone_sword{display:{Name:'{"text": "Never Auto-Ready","color": "gray","bold": true,"italic": false}',Lore:['{"text": "Control when the game automatically makes you ready.","color": "gray"}']},HideFlags:63}
 replaceitem entity @s[scores={y.ready=2}] enderchest.3 golden_sword{display:{Name:'{"text": "Auto-Ready When Not AFK","color": "gold","bold": true,"italic": false}',Lore:['{"text": "Control when the game automatically makes you ready.","color": "gray"}']},HideFlags:63}
@@ -54,4 +54,3 @@ replaceitem entity @s enderchest.22 ender_eye{display: {Name: '{"text": "Spectat
 
 scoreboard players operation #temp map = #server map
 function uub:data/get_map_name
-execute if score #flag map = #select map run loot replace entity @s enderchest.20 loot uub:hotbar_settings

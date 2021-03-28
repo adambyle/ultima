@@ -25,6 +25,6 @@ execute if score #server map matches 14 run function uub:spawn/maps/dracula
 execute if score #server map matches 15 run function uub:spawn/maps/avanto
 execute if score #server map matches 16 run function uub:spawn/maps/boxing
 
-execute at @s run playsound item.totem.use master @a ~ ~ ~ 2 0.7
+execute at @s run playsound item.totem.use master @a ~ ~ ~ 1 0.7
 
 scoreboard players set @s afk 0

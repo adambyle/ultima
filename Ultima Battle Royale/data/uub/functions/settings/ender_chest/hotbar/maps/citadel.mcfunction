@@ -1,3 +1,4 @@
+
 clear @s #uub:map_items/citadel
 
 scoreboard players operation #hotbar _var = @s z.citadel.axe

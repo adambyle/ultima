@@ -8,7 +8,8 @@ team leave @a[tag=player]
 
 scoreboard players set #flag game_state 1
 
-execute as @a[tag=player, tag=alive] run function uub:tick/opt_prompt
+execute as @a unless score @s y.spect_game matches 1.. run scoreboard players set @s y.spect_game 1
+execute as @a[scores={y.spect_game=1}, tag=spectator, tag=!parkour] run function uub:spectate
 
 function uub:start/round
 

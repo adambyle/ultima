@@ -1,3 +1,4 @@
+
 clear @s #uub:map_items/woodlands
 
 scoreboard players operation #hotbar _var = @s z.woods.sword

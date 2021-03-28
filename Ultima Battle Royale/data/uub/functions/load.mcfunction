@@ -9,8 +9,7 @@ execute as @a run function uub:data/player/default_hotbar
 bossbar set uub:game_start visible false
 bossbar set uub:game_start players @a
 
-# Increase the session number and assign it to each player
-scoreboard players add #server game_id 1
-scoreboard players operation @a game_id = #server game_id
-
 function uub:load/deop
+
+# Prepare the world if nobody is online yet
+execute unless entity @a run function uub:reset

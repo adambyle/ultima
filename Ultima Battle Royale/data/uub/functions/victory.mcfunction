@@ -6,7 +6,7 @@ execute if score #flag game_mode = #duels game_mode run function uub:victory/due
 execute unless score #flag game_mode = #duels game_mode run function uub:victory/not_duels
 
 scoreboard players set @a bool.die 0
-gamemode spectator @a[tag=!alive]
+gamemode spectator @a[tag=!alive, tag=player]
 clear @a
 effect clear @a
 effect give @a instant_health 1 3 true

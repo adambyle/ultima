@@ -1,3 +1,4 @@
+
 clear @s #uub:map_items/manor
 
 scoreboard players operation #hotbar _var = @s z.manor.sword

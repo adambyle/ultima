@@ -13,13 +13,13 @@ execute as @a[tag=spectator,tag=menu_operator] if score @s menu = #main menu unl
 execute as @a if score @s menu = #main menu unless data entity @s EnderItems[{id: "minecraft:stone_sword"}] unless data entity @s EnderItems[{id: "minecraft:golden_sword"}] unless data entity @s EnderItems[{id: "minecraft:netherite_sword"}] run function uub:settings/ender_chest/auto_ready
 execute as @a if score @s menu = #main menu unless data entity @s EnderItems[{id: "minecraft:paper"}] unless data entity @s EnderItems[{id: "minecraft:jukebox"}] unless data entity @s EnderItems[{id: "minecraft:barrier"}] run function uub:settings/ender_chest/vote_skip
 execute as @a if score @s menu = #main menu unless data entity @s EnderItems[{id: "minecraft:player_head"}] unless data entity @s EnderItems[{id: "minecraft:skeleton_skull"}] unless data entity @s EnderItems[{id: "minecraft:wither_skeleton_skull"}] unless data entity @s EnderItems[{id: "minecraft:zombie_head"}] run function uub:settings/ender_chest/afk
-execute as @a[tag=menu_operator] if score @s menu = #main menu if score #flag map = #select map unless data entity @s EnderItems[{id: "minecraft:golden_apple"}] run function uub:settings/ender_chest/hotbar
+execute as @a[tag=menu_operator] if score @s menu = #main menu unless data entity @s EnderItems[{id: "minecraft:golden_apple"}] run function uub:settings/ender_chest/hotbar
 execute as @a[tag=menu_operator] if score @s menu = #main menu unless data entity @s EnderItems[{id: "minecraft:ender_eye"}] run function uub:settings/ender_chest/spectate
 execute as @a[tag=menu_operator] if score @s menu = #main menu run function uub:settings/ender_chest/main
 execute as @a[tag=menu_operator] if score @s menu = #hotbar menu run function uub:settings/ender_chest/hotbar/gray_out
 execute as @a[tag=menu_operator] if score @s menu = #hotbar menu unless data entity @s EnderItems[{id: "minecraft:emerald"}] run function uub:settings/ender_chest/hotbar/verify
-execute as @a[tag=menu_operator] if score @s menu = #hotbar menu unless data entity @s EnderItems[{id: "minecraft:lava_bucket"}] run function uub:settings/ender_chest/hotbar
-execute as @a[tag=menu_operator] if score @s menu = #hotbar menu unless data entity @s EnderItems[{id: "minecraft:structure_void"}] run function uub:settings/ender_chest/main
+execute as @a[tag=menu_operator] if score @s menu = #hotbar menu unless data entity @s EnderItems[{id: "minecraft:lava_bucket"}] run function uub:settings/ender_chest/hotbar/general
+execute as @a[tag=menu_operator] if score @s menu = #hotbar menu unless data entity @s EnderItems[{id: "minecraft:structure_void"}] run function uub:settings/ender_chest/hotbar
 execute as @a[tag=menu_operator] if score @s menu = #spectate menu unless data entity @s EnderItems[{id: "minecraft:dragon_egg"}] run function uub:settings/ender_chest/spectate
 execute as @a[tag=menu_operator] if score @s menu = #spectate menu unless data entity @s EnderItems[{id: "minecraft:skeleton_skull"}] run function uub:settings/ender_chest/spectate
 execute as @a[tag=menu_operator] if score @s menu = #spectate menu unless data entity @s EnderItems[{id: "minecraft:red_bed"}] run function uub:settings/ender_chest/spectate
@@ -27,6 +27,7 @@ execute as @a[tag=menu_operator] if score @s menu = #spectate menu unless data e
 execute as @a[tag=menu_operator] if score @s menu = #spectate menu unless data entity @s EnderItems[{id: "minecraft:crafting_table"}] run function uub:settings/ender_chest/spectate
 execute as @a[tag=menu_operator] if score @s menu = #spectate menu run function uub:settings/ender_chest/spectate/driver
 execute as @a[tag=menu_operator] if score @s menu = #spectate menu unless data entity @s EnderItems[{id: "minecraft:structure_void"}] run function uub:settings/ender_chest/main
+execute as @a[tag=menu_operator] if score @s menu = #hotbar_menu menu run function uub:settings/ender_chest/hotbar/driver
 
 # Run timeouts
 execute if score #timeout game_mode matches 1.. run scoreboard players remove #timeout game_mode 1
@@ -37,6 +38,8 @@ setblock 47 31 -8 potted_cactus
 setblock 43 31 -13 potted_cactus
 setblock 43 31 -8 potted_cactus
 setblock 47 31 -13 potted_cactus
+setblock 59 12 -54 potted_cornflower
+setblock 59 12 -49 potted_cornflower
 
 # Fix teleport error
 execute positioned 45 30 -12 as @a[gamemode=spectator,distance=..4] run function uub:tp
@@ -44,13 +47,14 @@ execute positioned 45 30 -12 as @a[gamemode=spectator,distance=..4] run function
 # Deflect arrows
 execute as @a store result score @s altitude run data get entity @s Pos[1]
 execute as @e[type=#uub:projectiles] store result score @s altitude run data get entity @s Pos[1]
-execute as @e[type=#uub:projectiles,scores={altitude=35..},tag=!deflected] at @s run function uub:tick/projectile_deflect
+execute as @e[type=#uub:projectiles,scores={altitude=35..},tag=!deflected] at @s run function uub:tick/action/projectile_deflect
 
 # Track voting stations
 execute as @e[tag=vote_station] at @s if entity @a[gamemode=adventure,distance=..1] run scoreboard players set @s _var 1
 execute as @e[tag=vote_station] at @s unless entity @a[gamemode=adventure,distance=..1] run scoreboard players set @s _var 0
 
 # Dynamic opting
+execute if score #opt_prompt event matches 1.. run scoreboard players remove #opt_prompt event 1
 execute as @a[tag=player,scores={action=2}] run function uub:settings/opt/out
 execute as @a[gamemode=spectator,scores={action=3}] run function uub:tp/lobby
 
@@ -58,6 +62,8 @@ execute as @a[gamemode=spectator,scores={action=3}] run function uub:tp/lobby
 scoreboard players set @a action 0
 scoreboard players enable @a action
 scoreboard players set @a dmg 0
+scoreboard players reset * online
+scoreboard players set @a online 1
 
 # AFK handling
 tag @e remove temp
@@ -98,4 +104,7 @@ execute positioned 52 30 -19 as @a[distance=...5] run function uub:parkour/enter
 execute as @a[tag=parkour] unless data entity @s EnderItems[{id: "minecraft:writable_book"}] run function uub:parkour/menu
 execute as @a[tag=parkour] unless data entity @s EnderItems[{id: "minecraft:filled_map"}] run function uub:parkour/menu
 execute as @a[tag=parkour] unless data entity @s EnderItems[{id: "minecraft:structure_void"}] run function uub:parkour/exit
-execute as @a[tag=parkour, scores={altitude=11}, gamemode=!creative] run function uub:parkour/tp
+execute as @a[tag=parkour, scores={altitude=11}, gamemode=!creative, nbt={OnGround: true}] run function uub:parkour/tp
+tag @a[x=44, dx=3, y=14, dy=1, z=-36, dz=1, tag=parkour] add timed
+scoreboard players add @a[tag=timed] timer 1
+execute as @a[tag=parkour] run function uub:parkour/handler

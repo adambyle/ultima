@@ -9,8 +9,8 @@
 #declare entity beegyfleeg Server operator
 
 #declare objective _var Standard temporary variable holder (not for game settings, use #flag)
-#declare objective game_id Numberic ID for this game sesion
 #declare objective game_mode Flag holder for game mode
+#declare objective online Whether the player is online or not
 #declare objective game_state Flag holder for game state
 #declare objective health Player health
 #declare objective pn Player numeric id (only for living players)
@@ -22,6 +22,7 @@
 #declare objective bool.kill Test to see if this player has killed
 #declare objective tether Player id of the player who killed you
 #declare objective respawn Time until respawn
+#declare objective timer Parkour timer
 #declare objective ready Equal to 1 if players are ready
 #declare objective queue Point in waiting list to join game
 #declare objective chest_type The type of loot found in the chest
@@ -34,14 +35,16 @@
 #declare objective menu.map Map id for menu interface
 
 scoreboard objectives add _var dummy
-scoreboard objectives add game_id dummy
 scoreboard objectives add game_mode dummy
 scoreboard objectives add game_state dummy
 scoreboard objectives add health health {"text": "HP","color": "red"}
 scoreboard objectives add pseudo_health dummy
 scoreboard objectives add display_health dummy {"text": "HP","color": "red"}
 scoreboard objectives add pn dummy
+scoreboard objectives add online dummy
 scoreboard objectives add score dummy
+scoreboard objectives add timer dummy
+scoreboard objectives add hotbar_map dummy
 scoreboard objectives add map dummy
 scoreboard objectives add altitude dummy
 scoreboard objectives add rot.horizontal dummy
@@ -56,6 +59,7 @@ scoreboard objectives add action trigger
 scoreboard objectives add event dummy
 scoreboard objectives add chest_type dummy
 scoreboard objectives add afk dummy
+scoreboard objectives add round dummy
 scoreboard objectives add parkour dummy
 scoreboard objectives add citadel_rune dummy
 scoreboard objectives add crouch custom:sneak_time
@@ -69,6 +73,7 @@ scoreboard objectives add y.voteskip dummy
 scoreboard objectives add y.spect_lobby dummy
 scoreboard objectives add y.spect_death dummy
 scoreboard objectives add y.spect_opt dummy
+scoreboard objectives add y.spect_game dummy
 
 scoreboard objectives add z.manor.sword dummy
 scoreboard objectives add z.manor.axe dummy
@@ -104,6 +109,7 @@ scoreboard players set #hotbar menu 2
 scoreboard players set #vote menu 3
 scoreboard players set #spectate menu 4
 scoreboard players set #parkour menu 5
+scoreboard players set #hotbar_menu menu 6
 scoreboard players set #stats.maps menu 10
 scoreboard players set #stats.modes menu 11
 scoreboard players set #stats.reset menu 12
@@ -156,6 +162,7 @@ scoreboard players set #ultimate chest_type 5
 #declare storage uub:map_data Names and numbers for the current map
 #declare storage uub:hotbar Hotbar item configuration
 #declare storage uub:temp Temporary data
+#declare storage uub:players Player data
 
 #alias vector lobby 45 30 -12
 #alias vector start 45 31 -3

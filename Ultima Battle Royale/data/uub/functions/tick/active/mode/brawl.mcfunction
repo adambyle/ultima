@@ -6,7 +6,7 @@ execute if score #temp pn matches ..3 as @r[tag=player, tag=!alive, scores={queu
 # The leading player glows
 effect give @a[tag=player, tag=alive, scores={score=3..}, nbt=!{ActiveEffects: [{Id: 14b}]}] glowing 1 0 true
 effect clear @a[tag=player, tag=alive, scores={score=..2}] glowing
-effect clear @a[nbt=!{ActiveEffects: [{Id: 14b}]}, tag=alive, tag=player] glowing
+effect clear @a[nbt={ActiveEffects: [{Id: 14b}]}, tag=alive, tag=player] glowing
 
 # Tell dead players who they're tethered to
-execute as @a[tag=player, scores={tether=1..}] run function uub:tick/tether_notif
+execute as @a[tag=player, scores={tether=1..}] run function uub:tick/action/tether_notif

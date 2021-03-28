@@ -11,5 +11,5 @@ execute if score #verify _var matches 0 at @s run playsound entity.villager.no m
 execute if score #verify _var matches 0 run tellraw @s [{"text": "Hotbar >> ","color": "dark_red","bold": true},{"text": "Please make sure each item is in a slot!","bold": false}]
 execute if score #verify _var matches 1 run function uub:settings/ender_chest/hotbar/assign/citadel
 
-execute if score #verify _var matches 0 run function uub:settings/ender_chest/hotbar
-execute if score #verify _var matches 1 run function uub:settings/ender_chest/main
+execute if score #verify _var matches 0 run function uub:settings/ender_chest/hotbar/general
+execute if score #verify _var matches 1 run function uub:settings/ender_chest/hotbar

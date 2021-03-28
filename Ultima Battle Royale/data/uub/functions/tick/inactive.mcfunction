@@ -1,5 +1,5 @@
-# If any players join, simply reload
-execute as @a unless score @s game_id = #server game_id run function uub:reset
+# Set up new players
+execute as @a unless score @s online matches 1 run function uub:tick/action/welcome
 
 # Clean up entities
 kill @e[type=item]

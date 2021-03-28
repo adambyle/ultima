@@ -10,3 +10,5 @@ execute if score #flag game_mode = #duels game_mode run tellraw @s [{"text": "Op
 
 tag @s remove menu_operator
 tag @s add participating
+
+scoreboard players set @s score 0

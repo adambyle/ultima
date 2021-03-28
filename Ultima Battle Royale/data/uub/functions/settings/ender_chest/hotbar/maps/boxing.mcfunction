@@ -1,3 +1,4 @@
+
 clear @s #uub:map_items/boxing
 
 scoreboard players operation #hotbar _var = @s z.boxing.potion
