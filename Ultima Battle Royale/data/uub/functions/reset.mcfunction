@@ -67,4 +67,4 @@ execute unless data storage uub:players Global.Parkour.dracula run data modify s
 execute unless data storage uub:players Global.Parkour.avanto run data modify storage uub:players Global.Parkour.avanto set value {Half: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"Nobody"'}, Full: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"Nobody"'}}
 execute unless data storage uub:players Global.Parkour.boxing run data modify storage uub:players Global.Parkour.boxing set value {Half: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"Nobody"'}, Full: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"Nobody"'}}
 
-tellraw @a [{"text": "If you run into any bugs, report them "}, {"text": "on Github.", "underlined": true, "clickEvent": {"action": "open_url", "value": "https://github.com/beegyfleeg/ultimaub/issues"}}]
+tellraw @a [{"text": "If you run into any bugs, report them "}, {"text": "on GitHub.", "underlined": true, "clickEvent": {"action": "open_url", "value": "https://github.com/beegyfleeg/ultimaub/issues"}}]

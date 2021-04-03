@@ -50,3 +50,9 @@ scoreboard objectives add z.avanto.jump dummy
 
 scoreboard objectives add z.boxing.potion dummy
 scoreboard objectives add z.boxing.ball dummy
+
+scoreboard objectives add z.wastes.sword dummy
+scoreboard objectives add z.wastes.arrows dummy
+scoreboard objectives add z.wastes.bomb dummy
+scoreboard objectives add z.wastes.bow dummy
+scoreboard objectives add z.wastes.rabbit dummy

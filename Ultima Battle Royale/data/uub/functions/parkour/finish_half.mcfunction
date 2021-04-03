@@ -10,7 +10,7 @@ execute if score @s timer > #wr _var if score @s timer < #pb _var run function u
 scoreboard players operation #time _var = @s timer
 function uub:data/ender_chest/time
 execute if score @s timer > #wr _var if score @s timer >= #pb _var at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~ 8 0.6
-execute if score @s timer > #wr _var if score @s timer >= #pb _var run tellraw @s [{"text": "You finished in "}, {"storage": "uub:temp", "nbt": "Time", "color": "gray", "interpret": true}]
+execute if score @s timer > #wr _var if score @s timer >= #pb _var run tellraw @s [{"text": "You finished the first half in "}, {"storage": "uub:temp", "nbt": "Time", "color": "gray", "interpret": true}]
 
 scoreboard players set @s round 1
 

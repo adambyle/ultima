@@ -40,6 +40,8 @@ setblock 43 31 -8 potted_cactus
 setblock 47 31 -13 potted_cactus
 setblock 59 12 -54 potted_cornflower
 setblock 59 12 -49 potted_cornflower
+kill @e[type=tnt]
+kill @e[type=tnt_minecart]
 
 # Fix teleport error
 execute positioned 45 30 -12 as @a[gamemode=spectator,distance=..4] run function uub:tp
@@ -101,10 +103,12 @@ execute as @e[tag=parkour_particle] at @s run tp @s ~ ~ ~ ~10 ~
 execute at @e[tag=parkour_particle] positioned ~-.5 ~.2 ~ positioned ^ ^ ^.4 run particle reverse_portal 52 ~ ~ 0 1 0 0.2 0
 execute at @e[tag=parkour_particle] positioned ~-.5 ~.2 ~ positioned ^ ^ ^-.4 run particle reverse_portal 52 ~ ~ 0 1 0 0.2 0
 execute positioned 52 30 -19 as @a[distance=...5] run function uub:parkour/enter
-execute as @a[tag=parkour] unless data entity @s EnderItems[{id: "minecraft:writable_book"}] run function uub:parkour/menu
-execute as @a[tag=parkour] unless data entity @s EnderItems[{id: "minecraft:filled_map"}] run function uub:parkour/menu
-execute as @a[tag=parkour] unless data entity @s EnderItems[{id: "minecraft:structure_void"}] run function uub:parkour/exit
 execute as @a[tag=parkour, scores={altitude=11}, gamemode=!creative, nbt={OnGround: true}] run function uub:parkour/tp
-tag @a[x=44, dx=3, y=14, dy=1, z=-36, dz=1, tag=parkour] add timed
 scoreboard players add @a[tag=timed] timer 1
-execute as @a[tag=parkour] run function uub:parkour/handler
+execute as @a[tag=parkour, gamemode=adventure] run function uub:parkour/handler
+execute as @a[tag=parkour] if score @s menu = #parkour menu unless data entity @s EnderItems[{id: "minecraft:filled_map"}] run function uub:parkour/menu
+execute as @a[tag=parkour] if score @s menu = #parkour menu unless data entity @s EnderItems[{id: "minecraft:structure_void"}] run function uub:parkour/exit
+tag @e[type=painting] add static_item
+execute as @e[type=painting] run data merge entity @s {Invulnerable: true}
+
+##DEBUG

@@ -5,7 +5,7 @@
             "entries": [
                 {
                     "type": "item",
-                    "name": "warped_wart_block",
+                    "name": "nether_wart_block",
                     "functions": [
                         {
                             "function": "set_name",

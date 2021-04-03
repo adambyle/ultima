@@ -1,0 +1,29 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "paper",
+                    "functions": [
+                        {
+                            "function": "set_lore",
+                            "entity": "this",
+                            "lore": [
+                                "",
+                                {"text": "Personal Best:", "color": "blue", "italic": false, "bold": true},
+                                [{"text": "First Half: ", "italic": false, "color": "white"}, {"storage": "uub:temp", "nbt": "HalfPersonalTime", "interpret": true, "color": "gold"}],
+                                [{"text": "Full Course: ", "italic": false, "color": "white"}, {"storage": "uub:temp", "nbt": "FullPersonalTime", "interpret": true, "color": "gold"}],
+                                "",
+                                {"text": "World Record:", "color": "blue", "italic": false, "bold": true},
+                                [{"text": "First Half: ", "italic": false, "color": "white"}, {"storage": "uub:temp", "nbt": "HalfRecordTime", "interpret": true, "color": "gold"}, {"text": " by ", "color": "yellow"}, {"storage": "uub:temp", "nbt": "HalfRecordHolder", "color": "gold", "interpret": true}],
+                                [{"text": "Full Course: ", "italic": false, "color": "white"}, {"storage": "uub:temp", "nbt": "FullRecordTime", "interpret": true, "color": "gold"}, {"text": " by ", "color": "yellow"}, {"storage": "uub:temp", "nbt": "FullRecordHolder", "color": "gold", "interpret": true}]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

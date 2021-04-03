@@ -66,6 +66,7 @@ scoreboard objectives add crouch custom:sneak_time
 scoreboard objectives add dmg minecraft.custom:minecraft.damage_taken
 
 scoreboard objectives add x.damage custom:damage_dealt
+scoreboard objectives add x.rabbit killed:rabbit
 
 scoreboard objectives add y.ready dummy
 scoreboard objectives add y.afk dummy
@@ -109,6 +110,7 @@ scoreboard players set #hotbar menu 2
 scoreboard players set #vote menu 3
 scoreboard players set #spectate menu 4
 scoreboard players set #parkour menu 5
+scoreboard players set #parkour.records menu 7
 scoreboard players set #hotbar_menu menu 6
 scoreboard players set #stats.maps menu 10
 scoreboard players set #stats.modes menu 11
@@ -118,7 +120,7 @@ scoreboard players set #map menu 0
 scoreboard players set #map.default menu 1
 scoreboard players set #map.featured menu 2
 
-scoreboard players set #max_default map 5
+scoreboard players set #max_default map 6
 scoreboard players set #max_fandom map 16
 
 scoreboard players set #empty chest_type 0

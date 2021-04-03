@@ -49,3 +49,9 @@ execute as @a unless score @s z.avanto.jump matches -1.. run scoreboard players 
 
 execute as @a unless score @s z.boxing.potion matches -1.. run scoreboard players set @s z.boxing.potion 8
 execute as @a unless score @s z.boxing.ball matches -1.. run scoreboard players set @s z.boxing.ball 1
+
+execute as @a unless score @s z.wastes.sword matches -1.. run scoreboard players set @s z.wastes.sword 0
+execute as @a unless score @s z.wastes.bow matches -1.. run scoreboard players set @s z.wastes.bow 1
+execute as @a unless score @s z.wastes.bomb matches -1.. run scoreboard players set @s z.wastes.bomb 2
+execute as @a unless score @s z.wastes.arrows matches -1.. run scoreboard players set @s z.wastes.arrows 10
+execute as @a unless score @s z.wastes.rabbit matches -1.. run scoreboard players set @s z.wastes.rabbit 8

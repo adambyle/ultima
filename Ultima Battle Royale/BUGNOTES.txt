@@ -1,17 +1,8 @@
 BUGS:
 
-- 3 point kill not working
-- no heal brawl
-
 CHANGES:
-
-- better hotbar changes
-- when a player joins, use a reset alternative
 
 PENDING TEST:
 
-- broken dracula map
-- spammy chat
 - lobby players fixes
 - items remain after game
-- mixed up map icons

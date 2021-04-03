@@ -1,0 +1,24 @@
+{
+    "type": "generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "globe_banner_pattern",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{HideFlags: 63}"
+                        },
+                        {
+                            "function": "set_name",
+                            "name": {"text": "Rune","italic": false}
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

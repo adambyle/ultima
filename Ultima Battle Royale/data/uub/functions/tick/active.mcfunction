@@ -25,6 +25,14 @@ execute if score #flag game_state matches 1 if score #server map matches 2 run f
 execute if score #flag game_state matches 1 if score #server map matches 3 run function uub:tick/active/map/dungeon
 execute if score #flag game_state matches 1 if score #server map matches 4 run function uub:tick/active/map/abyss
 execute if score #flag game_state matches 1 if score #server map matches 5 run function uub:tick/active/map/citadel
+execute if score #flag game_state matches 1 if score #server map matches 6 run function uub:tick/active/map/wasteland
+execute if score #flag game_state matches 1 if score #server map matches 7 run function uub:tick/active/map/townsquare
+execute if score #flag game_state matches 1 if score #server map matches 8 run function uub:tick/active/map/laststand
+execute if score #flag game_state matches 1 if score #server map matches 9 run function uub:tick/active/map/permafrost
+execute if score #flag game_state matches 1 if score #server map matches 10 run function uub:tick/active/map/shroom
+execute if score #flag game_state matches 1 if score #server map matches 11 run function uub:tick/active/map/hellscape
+execute if score #flag game_state matches 1 if score #server map matches 12 run function uub:tick/active/map/frontier
+execute if score #flag game_state matches 1 if score #server map matches 13 run function uub:tick/active/map/reflection
 execute if score #flag game_state matches 1 if score #server map matches 13 run function uub:tick/active/map/reflection
 execute if score #flag game_state matches 1 if score #server map matches 14 run function uub:tick/active/map/dracula
 execute if score #flag game_state matches 1 if score #server map matches 15 run function uub:tick/active/map/avanto

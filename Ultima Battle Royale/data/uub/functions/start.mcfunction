@@ -35,3 +35,6 @@ schedule function uub:start/start 1s
 clear @a
 
 scoreboard players set #flag game_state 2
+
+scoreboard players set @a afk 0
+tag @a remove afk

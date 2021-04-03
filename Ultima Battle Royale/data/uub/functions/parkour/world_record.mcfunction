@@ -31,3 +31,5 @@ execute if score @s round matches 1 store result storage uub:temp PlayerData.Ful
 execute if score @s round matches 1 store result storage uub:temp GlobalData.Full.Time int 1.0 run scoreboard players get @s timer
 execute if score @s round matches 1 run data modify storage uub:temp GlobalData.Full.Name set from block 0 0 0 Items[0].tag.display.Name
 execute if score @s round matches 1 run data modify storage uub:temp GlobalData.Full.UUID set from entity @s UUID
+
+execute as @a[tag=parkour] run function uub:parkour/menu

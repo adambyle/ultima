@@ -11,6 +11,14 @@ execute if score @s hotbar_map matches 2 run function uub:settings/ender_chest/h
 execute if score @s hotbar_map matches 3 run function uub:settings/ender_chest/hotbar/maps/dungeon
 execute if score @s hotbar_map matches 4 run function uub:settings/ender_chest/hotbar/maps/abyss
 execute if score @s hotbar_map matches 5 run function uub:settings/ender_chest/hotbar/maps/citadel
+execute if score @s hotbar_map matches 6 run function uub:settings/ender_chest/hotbar/maps/wasteland
+execute if score @s hotbar_map matches 7 run function uub:settings/ender_chest/hotbar/maps/townsquare
+execute if score @s hotbar_map matches 8 run function uub:settings/ender_chest/hotbar/maps/laststand
+execute if score @s hotbar_map matches 9 run function uub:settings/ender_chest/hotbar/maps/permafrost
+execute if score @s hotbar_map matches 10 run function uub:settings/ender_chest/hotbar/maps/shroom
+execute if score @s hotbar_map matches 11 run function uub:settings/ender_chest/hotbar/maps/hellscape
+execute if score @s hotbar_map matches 12 run function uub:settings/ender_chest/hotbar/maps/frontier
+execute if score @s hotbar_map matches 13 run function uub:settings/ender_chest/hotbar/maps/reflection
 execute if score @s hotbar_map matches 13 run function uub:settings/ender_chest/hotbar/maps/reflection
 execute if score @s hotbar_map matches 14 run function uub:settings/ender_chest/hotbar/maps/dracula
 execute if score @s hotbar_map matches 15 run function uub:settings/ender_chest/hotbar/maps/avanto

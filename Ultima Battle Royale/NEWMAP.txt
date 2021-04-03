@@ -1,3 +1,4 @@
+FILES:
   spawn/maps
   settings/ender_chest/hotbar/maps
   settings/ender_chest/hotbar/verify
@@ -5,3 +6,11 @@
   spawn/items/lost
   start/map
   tick/active
+  tp
+
+VALUES:
+  allow hotbar settings access
+  hotbar settings (make sure to set defaults)
+  change max map number
+  add map to map selector
+  create items loot table

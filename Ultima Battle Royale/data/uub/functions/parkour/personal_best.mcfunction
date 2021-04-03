@@ -13,4 +13,6 @@ tellraw @a ""
 execute at @s run playsound entity.player.levelup master @s ~ ~ ~ 4 0.6
 
 execute if score @s round matches 0 store result storage uub:temp PlayerData.Half int 1.0 run scoreboard players get @s timer
-execute if score @s round matches 0 store result storage uub:temp PlayerData.Full int 1.0 run scoreboard players get @s timer
+execute if score @s round matches 1 store result storage uub:temp PlayerData.Full int 1.0 run scoreboard players get @s timer
+
+function uub:parkour/menu

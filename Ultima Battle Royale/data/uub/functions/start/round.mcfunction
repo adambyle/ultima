@@ -2,6 +2,7 @@ tag @a remove participating
 tag @a[tag=player] add participating
 
 kill @e[type=item,tag=static_item]
+kill @e[type=!player, tag=!static_item, tag=!text_display]
 
 # Map specific start functions
 execute if score #server map matches 2 run function uub:start/map/woodlands
