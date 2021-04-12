@@ -1,8 +1,10 @@
-scoreboard players operation #hotbar _var = @s z.reflect.sword
+function uub:data/player/get_nbt
+
+execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.reflection.sword
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "uub:map_items/reflection/sword"
 function uub:spawn/items/give
 
-scoreboard players operation #hotbar _var = @s z.reflect.bow
+execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.reflection.crossbow
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "uub:map_items/reflection/crossbow"
 function uub:spawn/items/give
 

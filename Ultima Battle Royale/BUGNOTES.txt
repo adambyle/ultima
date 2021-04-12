@@ -1,8 +1,14 @@
 BUGS:
 
+- "switch gamemodes" breaks spectators
+
 CHANGES:
+
+- instant hitting, abyss and boxing
+- add seamless play to brawl mode, voting to duels mode
+- analyze rabbit spawns
 
 PENDING TEST:
 
 - lobby players fixes
-- items remain after game
+- item "refill" on duels after game

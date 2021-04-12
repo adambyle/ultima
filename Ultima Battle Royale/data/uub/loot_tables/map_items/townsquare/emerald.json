@@ -1,0 +1,13 @@
+{
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "emerald"
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

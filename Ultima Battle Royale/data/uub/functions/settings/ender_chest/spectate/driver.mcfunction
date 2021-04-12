@@ -5,8 +5,8 @@ execute unless data entity @s EnderItems[{Slot: 13b}] run scoreboard players set
 execute unless data entity @s EnderItems[{Slot: 22b}] run scoreboard players set #selected _var 4
 execute unless data entity @s EnderItems[{Slot: 15b}] run scoreboard players set #selected _var 5
 execute unless data entity @s EnderItems[{Slot: 24b}] run scoreboard players set #selected _var 6
-execute unless data entity @s EnderItems[{Slot: 17b}] run scoreboard players set #selected _var 5
-execute unless data entity @s EnderItems[{Slot: 26b}] run scoreboard players set #selected _var 6
+execute unless data entity @s EnderItems[{Slot: 17b}] run scoreboard players set #selected _var 7
+execute unless data entity @s EnderItems[{Slot: 26b}] run scoreboard players set #selected _var 8
 
 execute if score #selected _var matches 1 run scoreboard players set @s y.spect_lobby 1
 execute if score #selected _var matches 2 run scoreboard players set @s y.spect_lobby 2

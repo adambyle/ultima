@@ -6,6 +6,8 @@ schedule function uub:start/lighting 3s
 title @a reset
 title @a times 0 70 10
 title @a subtitle "Next up"
-execute if score #flag map > #select map run title @a title {"storage": "uub:temp","nbt": "Map","color": "green"}
+execute if score #flag map > #select map run title @a[tag=!parkour] title {"storage": "uub:temp","nbt": "Map","color": "green"}
 
 scoreboard players add @a[tag=alive] score 1
+
+scoreboard players set #flag game_state 2

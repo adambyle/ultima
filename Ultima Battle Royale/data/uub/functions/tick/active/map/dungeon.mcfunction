@@ -9,7 +9,15 @@ execute at @e[tag=dungeon_potion] if data block ~ ~ ~ Items[{Slot: 2b}] run data
 effect clear @a[scores={x.damage=1..}] invisibility
 effect clear @a[scores={x.damage=1..}] speed
 effect clear @a[scores={x.damage=1..}] resistance
-scoreboard players reset * x.damage
+
+effect clear @a[scores={x.damaged=1..}] invisibility
+effect clear @a[scores={x.damaged=1..}] speed
+effect clear @a[scores={x.damaged=1..}] resistance
 
 clear @a[nbt={ActiveEffects: [{Id: 14b}], Inventory: [{id: "minecraft:iron_chestplate"}]}, tag=player, tag=alive] #uub:event/dungeon/armor
 execute as @a[nbt=!{ActiveEffects: [{Id: 14b}]}, nbt=!{Inventory: [{id: "minecraft:iron_chestplate"}]}, tag=player, tag=alive] run function uub:event/dungeon/revert
+
+execute at @a[nbt={ActiveEffects: [{Id: 14b}]}] run particle smoke ~ ~1 ~ .2 .4 .2 0 1
+
+clear @a[nbt={ActiveEffects: [{Id: 14b}]}] potion
+clear @a[nbt={ActiveEffects: [{Id: 3b}]}] potion

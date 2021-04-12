@@ -1,23 +1,23 @@
-
+function uub:data/player/get_nbt
 clear @s #uub:map_items/dungeon
 
-scoreboard players operation #hotbar _var = @s z.dungeon.axe
+execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.dungeon.axe
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "uub:map_items/dungeon/axe"
 function uub:spawn/items/hotbar_settings
 
-scoreboard players operation #hotbar _var = @s z.dungeon.harm
+execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.dungeon.harm
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "uub:map_items/dungeon/harm_pot"
 function uub:spawn/items/hotbar_settings
 
-scoreboard players operation #hotbar _var = @s z.dungeon.speed
+execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.dungeon.frenzy_pot
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "uub:map_items/dungeon/speed_pot"
 function uub:spawn/items/hotbar_settings
 
-scoreboard players operation #hotbar _var = @s z.dungeon.sneak
+execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.dungeon.stealth_pot
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "uub:map_items/dungeon/sneak_pot"
 function uub:spawn/items/hotbar_settings
 
-scoreboard players operation #hotbar _var = @s z.dungeon.shield
+execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.dungeon.shield
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "uub:map_items/dungeon/shield"
 function uub:spawn/items/hotbar_settings
 

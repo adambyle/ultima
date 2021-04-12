@@ -1,9 +1,8 @@
 scoreboard players set #verify _var 1
 function uub:settings/ender_chest/hotbar/clear_unused_slots
-execute unless data entity @s EnderItems[{id:"minecraft:iron_sword"}] run scoreboard players set #verify _var 0
+execute unless data entity @s EnderItems[{id:"minecraft:stone_sword"}] run scoreboard players set #verify _var 0
 execute unless data entity @s EnderItems[{id:"minecraft:crossbow"}] run scoreboard players set #verify _var 0
 execute unless data entity @s EnderItems[{id:"minecraft:arrow"}] run scoreboard players set #verify _var 0
-execute unless data entity @s EnderItems[{id:"minecraft:trident"}] run scoreboard players set #verify _var 0
 execute unless data entity @s EnderItems[{id:"minecraft:splash_potion", tag: {Potion: "minecraft:harming"}}] run scoreboard players set #verify _var 0
 execute unless data entity @s EnderItems[{id:"minecraft:splash_potion", tag: {Potion: "minecraft:water"}}] run scoreboard players set #verify _var 0
 

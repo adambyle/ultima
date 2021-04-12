@@ -5,7 +5,7 @@ execute unless score @s y.ready matches 1.. run scoreboard players set @s y.read
 execute unless score @s y.voteskip matches 1.. run scoreboard players set @s y.voteskip 1
 execute unless score @s y.afk matches 1.. run scoreboard players set @s y.afk 2
 
-clear @s red_terracotta
+clear @s lime_terracotta
 clear @s gray_terracotta
 
 clear @s golden_apple
@@ -30,7 +30,7 @@ clear @s structure_void
 
 clear @s #uub:all
 
-replaceitem entity @s[tag=player] enderchest.1 red_terracotta{display:{Name:'{"text": "Opted in","color": "red","italic": false,"bold": true}',Lore:['{"text": "Click to opt out.","color": "gray"}']}}
+replaceitem entity @s[tag=player] enderchest.1 lime_terracotta{display:{Name:'{"text": "Opted in","color": "dark_green","italic": false,"bold": true}',Lore:['{"text": "Click to opt out.","color": "gray"}']}}
 replaceitem entity @s[tag=spectator] enderchest.1 gray_terracotta{display:{Name:'{"text": "Opted out","color": "dark_gray","italic": false,"bold": true}',Lore:['{"text": "Click to opt in.","color": "gray"}']}}
 
 replaceitem entity @s enderchest.24 book{display: {Name: '{"text": "Choose Class", "color": "#7A3200", "bold": true, "italic": false}', Lore: ['[{"text": "Control which items are buffed in Ultimate mode. ", "color": "gray"}, {"text": "(Coming soon)", "color": "white"}]']}}

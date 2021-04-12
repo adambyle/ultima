@@ -1,8 +1,10 @@
-scoreboard players operation #hotbar _var = @s z.avanto.sword
+function uub:data/player/get_nbt
+
+execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.avanto.sword
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "uub:map_items/avanto/sword"
 function uub:spawn/items/give
 
-scoreboard players operation #hotbar _var = @s z.avanto.bow
+execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.avanto.bow
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "uub:map_items/avanto/bow"
 function uub:spawn/items/give
 

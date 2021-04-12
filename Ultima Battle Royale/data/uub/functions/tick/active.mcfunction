@@ -7,7 +7,6 @@ execute positioned 45 31 -3 if block ~ ~ ~ polished_blackstone_pressure_plate[po
 
 # Deal with invalid tags
 tag @a[tag=player,gamemode=spectator] remove alive
-team join lobby @a[tag=!player]
 
 # Respawn
 scoreboard players remove @a[tag=player, scores={respawn=1..}] respawn 1
@@ -43,10 +42,6 @@ kill @e[type=item,tag=!static_item]
 clear @a[gamemode=!creative] glass_bottle
 kill @e[nbt={inGround:true},type=arrow]
 
-# Reset settings buttons
-setblock 43 31 -9 air
-data modify block 43 31 -12 Lock set value "Locked"
-
 # Players may sometimes lost their items
 execute if score #flag game_state matches 1 as @a[tag=player,tag=alive] run function uub:spawn/items/lost
 
@@ -60,3 +55,6 @@ execute unless score #temp pn = #server pn run function uub:load/player_left
 
 # Reset event-detection objectives
 scoreboard players reset * crouch
+scoreboard players reset * x.damage
+scoreboard players reset * x.damaged
+scoreboard players reset * x.rabbit

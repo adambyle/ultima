@@ -1,7 +1,7 @@
 # Give the player a specific item based on their current hotbar setting
 
 # FORMAT FOR HOTBAR ASSIGNMENT
-# scoreboard players operation #hotbar _var = @s z.item
+# execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.item
 # data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "loot table"
 
 execute if data entity @s Inventory[{Slot:0b}] if score #hotbar _var matches 0 run loot give @s kill @e[limit=1,tag=loot_table_handler]

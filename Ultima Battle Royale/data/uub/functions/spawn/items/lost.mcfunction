@@ -1,10 +1,11 @@
+function uub:data/player/get_nbt
 execute if score #server map matches 1 run function uub:spawn/items/lost/manor
 execute if score #server map matches 2 run function uub:spawn/items/lost/woodlands
 execute if score #server map matches 3 run function uub:spawn/items/lost/dungeon
 execute if score #server map matches 4 run function uub:spawn/items/lost/abyss
 execute if score #server map matches 5 run function uub:spawn/items/lost/citadel
-execute if score #server map matches 6 run function uub:spawn/items/lost/wastes
-execute if score #server map matches 7 run function uub:spawn/items/lost/town
+execute if score #server map matches 6 run function uub:spawn/items/lost/wasteland
+execute if score #server map matches 7 run function uub:spawn/items/lost/townsquare
 execute if score #server map matches 8 run function uub:spawn/items/lost/stand
 execute if score #server map matches 9 run function uub:spawn/items/lost/frost
 execute if score #server map matches 10 run function uub:spawn/items/lost/shroom

@@ -1,26 +1,27 @@
+function uub:data/player/get_nbt
 clear @s #uub:map_items/citadel
 
-scoreboard players operation #hotbar _var = @s z.citadel.axe
+execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.citadel.axe
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "uub:map_items/citadel/axe"
 function uub:spawn/items/hotbar_settings
 
-scoreboard players operation #hotbar _var = @s z.citadel.sword
+execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.citadel.sword
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "uub:map_items/citadel/sword"
 function uub:spawn/items/hotbar_settings
 
-scoreboard players operation #hotbar _var = @s z.citadel.shield
+execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.citadel.shield
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "uub:map_items/citadel/shield"
 function uub:spawn/items/hotbar_settings
 
-scoreboard players operation #hotbar _var = @s z.citadel.bow
+execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.citadel.crossbow
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "uub:map_items/citadel/crossbow"
 function uub:spawn/items/hotbar_settings
 
-scoreboard players operation #hotbar _var = @s z.citadel.arrows
+execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.citadel.arrows
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "uub:map_items/citadel/one_arrow"
 function uub:spawn/items/hotbar_settings
 
-scoreboard players operation #hotbar _var = @s z.citadel.pearls
+execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.citadel.pearls
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "uub:map_items/citadel/pearl"
 function uub:spawn/items/hotbar_settings
 

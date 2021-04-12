@@ -6,7 +6,7 @@
 
 #declare bossbar uub:game_start Time until the game starts
 
-#declare entity beegyfleeg Server operator
+#declare entity bgfl Server operator
 
 #declare objective _var Standard temporary variable holder (not for game settings, use #flag)
 #declare objective game_mode Flag holder for game mode
@@ -18,8 +18,8 @@
 #declare objective map Map ID, including votes
 #declare objective altitude The Y position of the player
 #declare objective rot.horizontal Horizontal rotation of players and armor stands
-#declare objective bool.die Test to see if this player has died
-#declare objective bool.kill Test to see if this player has killed
+#declare objective die Test to see if this player has died
+#declare objective kill Test to see if this player has killed
 #declare objective tether Player id of the player who killed you
 #declare objective respawn Time until respawn
 #declare objective timer Parkour timer
@@ -48,8 +48,8 @@ scoreboard objectives add hotbar_map dummy
 scoreboard objectives add map dummy
 scoreboard objectives add altitude dummy
 scoreboard objectives add rot.horizontal dummy
-scoreboard objectives add bool.die deathCount
-scoreboard objectives add bool.kill playerKillCount
+scoreboard objectives add die deathCount
+scoreboard objectives add kill playerKillCount
 scoreboard objectives add tether dummy
 scoreboard objectives add queue dummy
 scoreboard objectives add menu dummy
@@ -65,6 +65,7 @@ scoreboard objectives add citadel_rune dummy
 scoreboard objectives add crouch custom:sneak_time
 scoreboard objectives add dmg minecraft.custom:minecraft.damage_taken
 
+scoreboard objectives add x.damaged custom:damage_taken
 scoreboard objectives add x.damage custom:damage_dealt
 scoreboard objectives add x.rabbit killed:rabbit
 
@@ -75,19 +76,6 @@ scoreboard objectives add y.spect_lobby dummy
 scoreboard objectives add y.spect_death dummy
 scoreboard objectives add y.spect_opt dummy
 scoreboard objectives add y.spect_game dummy
-
-scoreboard objectives add z.manor.sword dummy
-scoreboard objectives add z.manor.axe dummy
-scoreboard objectives add z.manor.bow dummy
-scoreboard objectives add z.manor.crossbow dummy
-scoreboard objectives add z.manor.shield dummy
-scoreboard objectives add z.manor.potion dummy
-scoreboard objectives add z.manor.arrows dummy
-
-scoreboard objectives add z.woods.sword dummy
-scoreboard objectives add z.woods.bow dummy
-scoreboard objectives add z.woods.gapple dummy
-scoreboard objectives add z.woods.arrows dummy
 
 #declare score_holder #flag Determines how the scoreboard objective holds and modifies data
 #declare score_holder #server Variables pertaining to the entire server
@@ -120,7 +108,7 @@ scoreboard players set #map menu 0
 scoreboard players set #map.default menu 1
 scoreboard players set #map.featured menu 2
 
-scoreboard players set #max_default map 6
+scoreboard players set #max_default map 7
 scoreboard players set #max_fandom map 16
 
 scoreboard players set #empty chest_type 0

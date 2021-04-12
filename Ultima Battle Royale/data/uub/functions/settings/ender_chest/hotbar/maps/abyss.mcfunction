@@ -1,27 +1,27 @@
-
+function uub:data/player/get_nbt
 clear @s #uub:map_items/abyss
 
-scoreboard players operation #hotbar _var = @s z.abyss.sword
+execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.abyss.sword
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "uub:map_items/abyss/sword"
 function uub:spawn/items/hotbar_settings
 
-scoreboard players operation #hotbar _var = @s z.abyss.bow
+execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.abyss.bow
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "uub:map_items/abyss/bow"
 function uub:spawn/items/hotbar_settings
 
-scoreboard players operation #hotbar _var = @s z.abyss.potion
+execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.abyss.potion
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "uub:map_items/abyss/lev_pot"
 function uub:spawn/items/hotbar_settings
 
-scoreboard players operation #hotbar _var = @s z.abyss.ingot
+execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.abyss.ingot
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "uub:map_items/abyss/ingot"
 function uub:spawn/items/hotbar_settings
 
-scoreboard players operation #hotbar _var = @s z.abyss.arrows
+execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.abyss.arrows
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "uub:map_items/abyss/one_arrow"
 function uub:spawn/items/hotbar_settings
 
-scoreboard players operation #hotbar _var = @s z.abyss.rod
+execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.abyss.fishing_rod
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "uub:map_items/abyss/rod"
 function uub:spawn/items/hotbar_settings
 

@@ -8,11 +8,6 @@ clear @s #uub:map_icons
 
 function uub:data/ender_chest/icons/all
 
-data modify block 0 0 0 Items[0] set from entity @s EnderItems[{Slot: 16b}]
-data modify block 0 0 0 Items[0].Slot set value 0b
-data modify block 0 0 0 Items[0].tag.display.Lore append value '{"text": "Map coming soon...", "color": "gray"}'
-loot replace entity @s enderchest.16 1 mine 0 0 0
-
 data modify block 0 0 0 Items[0] set from entity @s EnderItems[{Slot: 17b}]
 data modify block 0 0 0 Items[0].Slot set value 0b
 data modify block 0 0 0 Items[0].tag.display.Lore append value '{"text": "Map coming soon...", "color": "gray"}'

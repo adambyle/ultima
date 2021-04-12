@@ -1,9 +1,10 @@
-execute if entity @a[tag=killer,scores={bool.die=1..}] run function uub:death/simul
-execute unless entity @a[tag=killer,scores={bool.die=1..}] run function uub:death/brawl_normal
+execute if entity @a[tag=killer,scores={die=1..}] run function uub:death/simul
+execute unless entity @a[tag=killer,scores={die=1..}] run function uub:death/brawl_normal
 tag @a[tag=killer] remove fresh
-effect give @a[tag=killer] instant_health 1 1 true
 
 scoreboard players set @s tether 0
 scoreboard players operation @s tether = @r[tag=killer] pn
 
 execute as @r[tag=killer, scores={score=5..}] run function uub:victory/brawl
+
+effect give @a[tag=killer] instant_health 1 1 true

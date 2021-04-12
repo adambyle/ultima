@@ -4,7 +4,7 @@ loot replace entity @s enderchest.7 loot uub:map_icon/dungeon
 loot replace entity @s enderchest.8 loot uub:map_icon/abyss
 loot replace entity @s enderchest.14 loot uub:map_icon/citadel
 loot replace entity @s enderchest.15 loot uub:map_icon/wasteland
-loot replace entity @s enderchest.16 loot uub:map_icon/town
+loot replace entity @s enderchest.16 loot uub:map_icon/townsquare
 loot replace entity @s enderchest.17 loot uub:map_icon/laststand
 loot replace entity @s enderchest.23 loot uub:map_icon/permafrost
 loot replace entity @s enderchest.24 loot uub:map_icon/shroom

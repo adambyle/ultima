@@ -8,6 +8,12 @@ schedule clear uub:start/ready/timer
 schedule clear uub:tick/action/opt_prompt/universal
 scoreboard players set #timeout game_mode 0
 
+# Cleanup
+spawnpoint @a 45 30 -12 0
+kill @e[tag=!static_item,tag=!text_display,type=!player]
+kill @a[tag=player, team=!lobby]
+kill @a[tag=spectator, gamemode=spectator]
+
 # Reset settings
 difficulty peaceful
 time set noon
@@ -19,6 +25,8 @@ xp set @a 0 points
 gamerule naturalRegeneration false
 gamerule fallDamage false
 gamerule keepInventory true
+tag @a remove participating
+effect give @a instant_health 1 2 true
 
 # Disable PvP
 team join lobby @a
@@ -32,12 +40,7 @@ scoreboard players set @a online 1
 execute as @e[tag=text_display] run data modify entity @s CustomNameVisible set value true
 function uub:data/map_display
 execute as @a[tag=!parkour] run function uub:settings/ender_chest/main
-
-# Cleanup
-spawnpoint @a 45 30 -12 0
-kill @e[tag=!static_item,tag=!text_display,type=!player]
-kill @a[tag=player]
-kill @a[tag=spectator, gamemode=spectator]
+bossbar set uub:game_start visible false
 
 # Initialize scoreboard values
 scoreboard players reset * score
@@ -67,4 +70,9 @@ execute unless data storage uub:players Global.Parkour.dracula run data modify s
 execute unless data storage uub:players Global.Parkour.avanto run data modify storage uub:players Global.Parkour.avanto set value {Half: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"Nobody"'}, Full: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"Nobody"'}}
 execute unless data storage uub:players Global.Parkour.boxing run data modify storage uub:players Global.Parkour.boxing set value {Half: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"Nobody"'}, Full: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"Nobody"'}}
 
+# Reset settings buttons
+setblock 43 31 -9 polished_blackstone_button[powered=false,facing=west,face=floor]
+data remove block 43 31 -12 Lock
+
 tellraw @a [{"text": "If you run into any bugs, report them "}, {"text": "on GitHub.", "underlined": true, "clickEvent": {"action": "open_url", "value": "https://github.com/beegyfleeg/ultimaub/issues"}}]
+execute if score #debug game_state matches 1 run tellraw bgfl [{"text": "DEBUG MODE IS ON!\n","color": "yellow"},{"text": "Click to turn it off.","underlined": true,"clickEvent": {"action": "run_command","value": "/scoreboard players set #debug game_state 0"}}]

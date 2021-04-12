@@ -5,7 +5,7 @@ function uub:data/set_map_data
 execute if score #flag game_mode = #duels game_mode run function uub:victory/duels
 execute unless score #flag game_mode = #duels game_mode run function uub:victory/not_duels
 
-scoreboard players set @a bool.die 0
+scoreboard players set @a die 0
 gamemode spectator @a[tag=!alive, tag=player]
 clear @a
 effect clear @a
@@ -15,6 +15,3 @@ effect give @a resistance 4 4 true
 execute at @a[tag=alive] run summon firework_rocket ~ ~4 ~ {LifeTime:5,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Flight:2,Explosions:[{Type:0,Flicker:0,Trail:0,Colors:[I;4312372]}]}}}}
 execute at @a[tag=alive] run summon firework_rocket ~ ~4 ~ {LifeTime:10,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Flight:2,Explosions:[{Type:0,Flicker:0,Trail:0,Colors:[I;4312372]}]}}}}
 execute at @a[tag=alive] run summon firework_rocket ~ ~4 ~ {LifeTime:15,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Flight:2,Explosions:[{Type:0,Flicker:0,Trail:0,Colors:[I;4312372]}]}}}}
-
-execute unless score #flag game_mode = #duels game_mode run scoreboard players set #flag game_state 2
-execute if score #flag game_mode = #duels game_mode run scoreboard players set #flag game_state 3

@@ -8,7 +8,7 @@ tag @a remove menu_operator
 tag @a[tag=spectator, gamemode=!creative] add menu_operator
 tag @a[tag=player, tag=!alive, gamemode=!creative] add menu_operator
 execute if score #flag game_state matches 0 run tag @a[gamemode=!creative] add menu_operator
-execute as @a[tag=player,tag=menu_operator] if score @s menu = #main menu unless data entity @s EnderItems[{id: "minecraft:red_terracotta"}] run function uub:settings/opt/out
+execute as @a[tag=player,tag=menu_operator] if score @s menu = #main menu unless data entity @s EnderItems[{id: "minecraft:lime_terracotta"}] run function uub:settings/opt/out
 execute as @a[tag=spectator,tag=menu_operator] if score @s menu = #main menu unless data entity @s EnderItems[{id: "minecraft:gray_terracotta"}] run function uub:settings/opt/in
 execute as @a if score @s menu = #main menu unless data entity @s EnderItems[{id: "minecraft:stone_sword"}] unless data entity @s EnderItems[{id: "minecraft:golden_sword"}] unless data entity @s EnderItems[{id: "minecraft:netherite_sword"}] run function uub:settings/ender_chest/auto_ready
 execute as @a if score @s menu = #main menu unless data entity @s EnderItems[{id: "minecraft:paper"}] unless data entity @s EnderItems[{id: "minecraft:jukebox"}] unless data entity @s EnderItems[{id: "minecraft:barrier"}] run function uub:settings/ender_chest/vote_skip
@@ -112,3 +112,11 @@ tag @e[type=painting] add static_item
 execute as @e[type=painting] run data merge entity @s {Invulnerable: true}
 
 ##DEBUG
+execute as @e[type=villager] at @s run tp @s ~ ~ ~ facing entity @p[gamemode=!spectator]
+fill 75 22 73 79 22 73 wheat[age=7]
+fill 75 22 71 79 22 71 wheat[age=7]
+fill 75 21 71 79 21 73 farmland[moisture=7] replace dirt
+
+# Test for game end
+execute if score #flag game_mode = #duels game_mode as @a[scores={action=1,game_mode=0},tag=player] if score #timeout game_mode matches 0 run function uub:tick/action/change_modes
+execute if score #flag game_mode = #duels game_mode as @a[scores={action=1,game_mode=0},tag=player] if score #timeout game_mode matches 1.. run function uub:tick/action/confirm_change_modes

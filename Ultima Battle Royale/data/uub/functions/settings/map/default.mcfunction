@@ -13,14 +13,13 @@ loot replace block 43 31 -12 container.7 loot uub:map_icon/dungeon
 loot replace block 43 31 -12 container.8 loot uub:map_icon/abyss
 loot replace block 43 31 -12 container.14 loot uub:map_icon/citadel
 loot replace block 43 31 -12 container.15 loot uub:map_icon/wasteland
-loot replace block 43 31 -12 container.16 loot uub:map_icon/town
+loot replace block 43 31 -12 container.16 loot uub:map_icon/townsquare
 loot replace block 43 31 -12 container.17 loot uub:map_icon/laststand
 loot replace block 43 31 -12 container.23 loot uub:map_icon/permafrost
 loot replace block 43 31 -12 container.24 loot uub:map_icon/shroom
 loot replace block 43 31 -12 container.25 loot uub:map_icon/hellscape
 loot replace block 43 31 -12 container.26 loot uub:map_icon/frontier
 data remove block 43 31 -12 Items[].tag.display.Lore[0]
-data modify block 43 31 -12 Items[{Slot: 16b}].tag.display.Lore set value ['{"text": "Coming soon...", "color": "gray"}']
 data modify block 43 31 -12 Items[{Slot: 17b}].tag.display.Lore set value ['{"text": "Coming soon...", "color": "gray"}']
 data modify block 43 31 -12 Items[{Slot: 23b}].tag.display.Lore set value ['{"text": "Coming soon...", "color": "gray"}']
 data modify block 43 31 -12 Items[{Slot: 24b}].tag.display.Lore set value ['{"text": "Coming soon...", "color": "gray"}']

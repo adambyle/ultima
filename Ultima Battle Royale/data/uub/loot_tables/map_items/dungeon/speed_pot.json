@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:3b,Duration:400,Amplifier:2b}],display:{Name:'{\"text\": \"Potion of Fast Attack\",\"italic\": false}'}}"
+                            "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:3b,Duration:400,Amplifier:2b}, {Id: 5b, Duration: 100}],display:{Name:'{\"text\": \"Potion of Frenzying\",\"italic\": false}'}}"
                         }
                     ]
                 }

@@ -16,4 +16,4 @@ execute if score #server map matches 15 run function uub:tp/avanto
 execute if score #server map matches 16 run function uub:tp/boxing
 execute if score #flag game_mode = #ultimate game_mode run function uub:tp/ultimate
 
-execute as @s[gamemode=spectator, tag=spectator] run function uub:tick/action/opt_prompt
+effect give @s[gamemode=spectator] night_vision 99999 0 true

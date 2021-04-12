@@ -1,4 +1,4 @@
-tellraw @a [{"selector":"@s","color":"red"},{"text":" has opted in.","color":"red"}]
+tellraw @a [{"selector":"@s","color":"dark_green"}, " has opted in."]
 execute at @s run playsound block.note_block.xylophone master @s
 tag @s add player
 tag @s remove spectator

@@ -1,8 +1,10 @@
-scoreboard players operation #hotbar _var = @s z.dracula.sword
+function uub:data/player/get_nbt
+
+execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.dracula.sword
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "uub:map_items/dracula/sword"
 function uub:spawn/items/give
 
-scoreboard players operation #hotbar _var = @s z.dracula.bow
+execute store result score #hotbar _var run data get storage uub:temp Player.Hotbar.dracula.crossbow
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "uub:map_items/dracula/crossbow"
 function uub:spawn/items/give
 
