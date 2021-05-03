@@ -72,7 +72,7 @@ execute unless data storage ult:players Global.Parkour.citadel run data modify s
 setblock 43 31 -9 polished_blackstone_button[powered=false,facing=west,face=floor]
 data remove block 43 31 -12 Lock
 execute unless score #flag game_mode matches 0.. run scoreboard players operation #flag game_mode = #royale game_mode
-execute unless score #flag map matches 0.. run scoreboard players operation #flag game_mode = #select map
+execute unless score #flag map matches 0.. run scoreboard players operation #flag map = #select map
 execute unless score #server map matches 0.. run scoreboard players set #server map 1
 execute if score #flag game_mode = #duels game_mode run data modify entity @e[tag=text_display.mode_name,limit=1] CustomName set value '{"text": "Duels","color": "aqua","italic": true}'
 execute if score #flag game_mode = #royale game_mode run data modify entity @e[tag=text_display.mode_name,limit=1] CustomName set value '{"text": "Royale","color": "aqua","italic": true}'
