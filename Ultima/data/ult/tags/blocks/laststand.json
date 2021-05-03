@@ -1,0 +1,30 @@
+{
+    "values": [
+        "nether_bricks",
+        "nether_brick_wall",
+        "stone_brick_slab",
+        "stone_brick_stairs",
+        "chiseled_stone_bricks",
+        "iron_bars",
+        "sandstone_stairs",
+        "chiseled_nether_bricks",
+        "lectern",
+        "nether_brick_stairs",
+        "nether_brick_slab",
+        "nether_brick_fence",
+        "sandstone_wall",
+        "nether_brick_slab",
+        "polished_basalt",
+        "cobblestone",
+        "cobblestone_slab",
+        "netherrack",
+        "iron_trapdoor",
+        "fire",
+        "soul_lantern",
+        "red_nether_brick_slab",
+        "cracked_stone_bricks",
+        "cracked_nether_bricks",
+        "ladder",
+        "sandstone_slab"
+    ]
+}

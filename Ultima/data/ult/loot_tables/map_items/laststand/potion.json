@@ -1,0 +1,20 @@
+{
+    "type": "generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "potion",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{Potion:\"water\", CustomPotionEffects: [{Id: 10b, Duration: 200, Amplifier: 1b}], display: {Name: '{\"text\": \"Potion of Regeneration\", \"italic\": false}'}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

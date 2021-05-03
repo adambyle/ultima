@@ -1,0 +1,13 @@
+{
+    "values": [
+        "#minecraft:impact_projectiles",
+        "firework_rocket",
+        "potion",
+        "ender_pearl",
+        "fishing_bobber",
+        "item",
+        "fireball",
+        "snowball",
+        "falling_block"
+    ]
+}

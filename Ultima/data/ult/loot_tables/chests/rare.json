@@ -1,0 +1,180 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "diamond_sword",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{Unbreakable: true, CanDestroy: [\"#ult:breakable\"], HideFlags: 8}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "iron_sword",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{Unbreakable: true, Enchantments: [{id: \"minecraft:knockback\", lvl: 1}], CanDestroy: [\"#ult:breakable\"], HideFlags: 8}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "iron_axe",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{Unbreakable: true, CanDestroy: [\"#ult:breakable\"], HideFlags: 8}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "iron_pickaxe",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{Unbreakable: true, CanDestroy: [\"#ult:breakable\"], HideFlags: 8}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "iron_boots",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{Unbreakable: true, Enchantments: [{id: \"minecraft:feather_falling\", lvl: 1}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "iron_chestplate",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{Unbreakable: true, Enchantments: [{id: \"minecraft:protection\", lvl: 1}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "iron_leggings",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{Unbreakable: true, Enchantments: [{id: \"minecraft:thorns\", lvl: 1}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "iron_helmet",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{Unbreakable: true, Enchantments: [{id: \"minecraft:projectile_protection\", lvl: 1}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "potion",
+                    "functions": [
+                        {
+                            "function": "set_name",
+                            "name": {"text": "Potion of Speed I (30s)", "italic": false}
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{Potion: \"minecraft:water\", CustomPotionEffects: [{Id: 1b, Duration: 600}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "splash_potion",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{Potion: \"minecraft:water\", CustomPotionEffects: [{Id: 20b, Duration: 160, Amplifier: 1b}]}"
+                        },
+                        {
+                            "function": "set_name",
+                            "name": {"text": "Splash Potion of Wither II (8s)", "italic": false}
+                        }
+                    ]
+                },
+                {
+                    "type": "loot_table",
+                    "name": "ult:chests/rare/bow"
+                },
+                {
+                    "type": "loot_table",
+                    "name": "ult:chests/rare/crossbow"
+                }
+            ]
+        },
+        {
+            "rolls": {
+                "type": "binomial",
+                "n": 2,
+                "p": 0.35
+            },
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "obsidian",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{CanPlaceOn: [\"#ult:placeable\"], HideFlags: 63}"
+                        },
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 3,
+                                "max": 6
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "ender_pearl"
+                },
+                {
+                    "type": "item",
+                    "name": "tipped_arrow",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 4,
+                                "max": 8
+                            }
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{Potion: \"minecraft:harming\"}"
+                        },
+                        {
+                            "function": "set_name",
+                            "name": {"text": "Arrow of Harming I", "italic": false}
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "golden_apple"
+                }
+            ]
+        }
+    ]
+}

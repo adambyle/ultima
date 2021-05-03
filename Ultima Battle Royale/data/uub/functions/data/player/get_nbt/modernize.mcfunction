@@ -1,9 +1,0 @@
-execute unless data storage uub:temp Player.Parkour.manor run data modify storage uub:temp Player.Parkour.manor set value {Half: 72000, Full: 72000}
-execute unless data storage uub:temp Player.Parkour.woodlands run data modify storage uub:temp Player.Parkour.woodlands set value {Half: 72000, Full: 72000}
-execute unless data storage uub:temp Player.Parkour.dungeon run data modify storage uub:temp Player.Parkour.dungeon set value {Half: 72000, Full: 72000}
-execute unless data storage uub:temp Player.Parkour.abyss run data modify storage uub:temp Player.Parkour.abyss set value {Half: 72000, Full: 72000}
-execute unless data storage uub:temp Player.Parkour.citadel run data modify storage uub:temp Player.Parkour.citadel set value {Half: 72000, Full: 72000}
-execute unless data storage uub:temp Player.Parkour.reflection run data modify storage uub:temp Player.Parkour.reflection set value {Half: 72000, Full: 72000}
-execute unless data storage uub:temp Player.Parkour.dracula run data modify storage uub:temp Player.Parkour.dracula set value {Half: 72000, Full: 72000}
-execute unless data storage uub:temp Player.Parkour.avanto run data modify storage uub:temp Player.Parkour.avanto set value {Half: 72000, Full: 72000}
-execute unless data storage uub:temp Player.Parkour.boxing run data modify storage uub:temp Player.Parkour.boxing set value {Half: 72000, Full: 72000}

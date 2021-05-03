@@ -1,0 +1,20 @@
+{
+    "type": "generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "fire_charge",
+                    "functions": [
+                        {
+                            "function": "set_name",
+                            "name": {"text": "Fireball (Crouch)", "italic": false}
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

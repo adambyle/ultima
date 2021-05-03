@@ -1,0 +1,17 @@
+{
+    "values": [
+        "#ult:map_items/manor",
+        "#ult:map_items/woodlands",
+        "#ult:map_items/dungeon",
+        "#ult:map_items/abyss",
+        "#ult:map_items/citadel",
+        "#ult:map_items/wasteland",
+        "#ult:map_items/townsquare",
+        "#ult:map_items/reflection",
+        "#ult:map_items/dracula",
+        "#ult:map_items/avanto",
+        "#ult:map_items/laststand",
+        "#ult:map_items/boxing",
+        "#ult:map_items/ancient"
+    ]
+}
