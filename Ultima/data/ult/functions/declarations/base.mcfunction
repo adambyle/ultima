@@ -6,6 +6,8 @@ team add lobby
 team add playing
 
 #declare bossbar ult:game_start Time until the game starts
+bossbar add ult:game_start {"text": "Game start", "color": "blue"}
+bossbar set ult:game_start color blue
 
 #declare entity bgfl Server operator
 
