@@ -1,4 +1,4 @@
-# ultimabr
+# ultima
 
 Ultima is a PvP minigame designed for from 2 to around 8 players. It offers fast-paced, inclusive, and balanced fun for small groups of varying ability. Games are designed to be quick, and some game modes will attempt to put as many players in as possible so that everyone gets as much time to play as possible. Ultima was designed with play-time in mind.
 
