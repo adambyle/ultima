@@ -4,6 +4,7 @@ rmdir /S /Q Ultima\
 mkdir Ultima\
 mkdir Ultima\region\
 mkdir Ultima\data\
+mkdir Ultima\datapacks\
 copy Ultima_Source\icon.png Ultima\
 copy Ultima_Source\level.dat Ultima\
 copy Ultima_Source\level.dat_old Ultima\
@@ -12,9 +13,17 @@ copy Ultima_Source\region\r.0.1.mca Ultima\region\
 copy Ultima_Source\region\r.0.-1.mca Ultima\region\
 copy Ultima_Source\region\r.0.-2.mca Ultima\region\
 copy Ultima_Source\data\chunks.dat Ultima\data\
-xcopy /E /I Ultima_Source\datapacks\ Ultima\datapacks\
+xcopy /E /I Ultima_Source\datapacks\Ultima .\
+
+del Ultima-Datapack.zip
+7-Zip\7z a Ultima-Datapack.zip data\
+7-Zip\7z a Ultima-Datapack.zip pack.mcmeta
+rmdir /S /Q data/
+del pack.mcmeta
+
+copy Ultima-Datapack.zip Ultima\datapacks\
 
 del Ultima.zip
-del Ultima-Datapack.zip
 7-Zip\7z a Ultima.zip Ultima
-7-Zip\7z a Ultima-Datapack.zip Ultima\datapacks\Ultima\*
+
+pause
