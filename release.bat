@@ -15,5 +15,6 @@ copy Ultima_Source\data\chunks.dat Ultima\data\
 xcopy /E /I Ultima_Source\datapacks\ Ultima\datapacks\
 
 del Ultima.zip
+del Ultima-Datapack.zip
 7-Zip\7z a Ultima.zip Ultima
-7-Zip\7z a Ultima-Datapack.zip Ultima\datapacks\Ultima
+7-Zip\7z a Ultima-Datapack.zip Ultima\datapacks\Ultima\*
