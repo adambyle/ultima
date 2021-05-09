@@ -7,7 +7,8 @@ tag @s remove player
 tag @s remove alive
 tag @s add spectator
 scoreboard players set @s ready 0
-execute if score #flag game_state matches 1 run function ult:settings/opt/lobby
+scoreboard players remove #server pn 1
+execute if score #flag game_state matches 1.. run function ult:settings/opt/lobby
 function ult:data/player/detach
 function ult:data/player/clean
 scoreboard players reset @s score

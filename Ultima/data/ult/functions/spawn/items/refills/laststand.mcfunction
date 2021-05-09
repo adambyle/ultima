@@ -10,7 +10,7 @@ execute store result score #hotbar _var run data get storage ult:temp Player.Hot
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/laststand/cannonball"
 function ult:spawn/items/give
 
-clear @s potion
+clear @s splash_potion
 execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.laststand.potion
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/laststand/potion"
 function ult:spawn/items/give

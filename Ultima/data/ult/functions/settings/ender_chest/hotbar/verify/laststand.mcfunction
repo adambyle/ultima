@@ -6,7 +6,7 @@ execute unless data entity @s EnderItems[{id:"minecraft:shield"}] run scoreboard
 execute unless data entity @s EnderItems[{id:"minecraft:bow"}] run scoreboard players set #verify _var 0
 execute unless data entity @s EnderItems[{id:"minecraft:coal"}] run scoreboard players set #verify _var 0
 execute unless data entity @s EnderItems[{id:"minecraft:arrow"}] run scoreboard players set #verify _var 0
-execute unless data entity @s EnderItems[{id:"minecraft:potion"}] run scoreboard players set #verify _var 0
+execute unless data entity @s EnderItems[{id:"minecraft:splash_potion"}] run scoreboard players set #verify _var 0
 
 execute if score #verify _var matches 0 at @s run playsound entity.villager.no master @s
 execute if score #verify _var matches 0 run tellraw @s [{"text": "Hotbar >> ","color": "dark_red","bold": true},{"text": "Please make sure each item is in a slot!","bold": false}]

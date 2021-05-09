@@ -35,4 +35,4 @@ execute unless data entity @s EnderItems[{id:"minecraft:shield"}] run loot repla
 execute unless data entity @s EnderItems[{id:"minecraft:bow"}] run loot replace entity @s inventory.3 loot ult:map_items/laststand/bow
 execute unless data entity @s EnderItems[{id:"minecraft:coal"}] run loot replace entity @s inventory.4 loot ult:map_items/laststand/cannonball
 execute unless data entity @s EnderItems[{id:"minecraft:arrow"}] run loot replace entity @s inventory.5 loot ult:map_items/laststand/one_arrow
-execute unless data entity @s EnderItems[{id:"minecraft:potion"}] run loot replace entity @s inventory.6 loot ult:map_items/laststand/potion
+execute unless data entity @s EnderItems[{id:"minecraft:splash_potion"}] run loot replace entity @s inventory.6 loot ult:map_items/laststand/potion

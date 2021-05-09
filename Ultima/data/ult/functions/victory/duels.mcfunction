@@ -10,3 +10,5 @@ execute if score #flag map > #select map run title @a[tag=!parkour] title {"stor
 execute if score #flag map > #select map run title @a[tag=parkour, tag=player] title {"storage": "ult:temp","nbt": "Map","color": "green"}
 
 scoreboard players set #flag game_state 2
+
+scoreboard objectives setdisplay sidebar wins

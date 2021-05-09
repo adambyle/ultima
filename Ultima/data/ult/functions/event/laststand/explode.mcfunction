@@ -159,5 +159,6 @@ execute if predicate ult:explosion_debris run summon falling_block ~ ~ ~ {Motion
 execute if predicate ult:explosion_debris run summon falling_block ~ ~ ~ {Motion: [+.3d, +.6d, +0d], BlockState: {Name: "minecraft:cracked_nether_bricks"}, Time: 1}
 execute if predicate ult:explosion_debris run summon falling_block ~ ~ ~ {Motion: [+.3d, +.6d, +.1d], BlockState: {Name: "minecraft:cracked_nether_bricks"}, Time: 1}
 execute if predicate ult:explosion_debris run summon falling_block ~ ~ ~ {Motion: [+.3d, +.6d, +.3d], BlockState: {Name: "minecraft:cracked_nether_bricks"}, Time: 1}
+fill 60 35 96 60 24 126 cobblestone replace air
 
 kill @s

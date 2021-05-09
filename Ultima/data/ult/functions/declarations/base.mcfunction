@@ -81,6 +81,7 @@ scoreboard objectives add y.spect_game dummy
 
 scoreboard objectives add citadel.rune dummy
 scoreboard objectives add laststand.skill dummy
+scoreboard objectives add laststand.level dummy
 scoreboard objectives add ancient.debris mined:ancient_debris
 
 #declare score_holder #flag Determines how the scoreboard objective holds and modifies data

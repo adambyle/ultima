@@ -55,11 +55,7 @@ execute positioned 45 30 -12 as @a[gamemode=spectator,distance=..4] run function
 # Deflect arrows
 execute as @a store result score @s altitude run data get entity @s Pos[1]
 execute as @e[type=#ult:projectiles] store result score @s altitude run data get entity @s Pos[1]
-execute as @e[type=#ult:projectiles,scores={altitude=35..},tag=!deflected] at @s run function ult:tick/action/projectile_deflect
-
-# Track voting stations
-execute as @e[tag=vote_station] at @s if entity @a[gamemode=adventure,distance=..1] run scoreboard players set @s _var 1
-execute as @e[tag=vote_station] at @s unless entity @a[gamemode=adventure,distance=..1] run scoreboard players set @s _var 0
+execute as @e[type=#ult:projectiles, scores={altitude=35..},tag=!deflected] at @s run function ult:tick/action/projectile_deflect
 
 # Dynamic opting
 execute if score #opt_prompt event matches 1.. run scoreboard players remove #opt_prompt event 1
@@ -83,7 +79,7 @@ scoreboard players set @a online 1
 # AFK handling
 tag @e remove temp
 tag @a remove temp
-execute as @a store result score @s _var run data get entity @s Rotation[0]
+execute as @e store result score @s _var run data get entity @s Rotation[0]
 execute as @a if score @s _var = @s rot run tag @s add temp
 execute as @a store success score @s _var run scoreboard players operation @s rot = @s _var
 tag @a[gamemode=!adventure] remove temp
@@ -132,3 +128,10 @@ scoreboard players set @a[scores={crouch=1.., x.crouch=0}] x.crouch 1
 scoreboard players set @a crouch 0
 
 execute as @a run function ult:tick/action/update_pos
+
+execute if score #debug game_state matches 1 at @e[type=minecraft:area_effect_cloud] run particle composter ~ ~ ~ 0 0 0 0 0 force
+
+execute store result score #temp _var if entity @e[type=area_effect_cloud, tag=]
+##execute if score #temp _var matches 2.. run tellraw @a {"score": {"name": "#temp", "objective": "_var"}}
+##execute if score #temp _var matches 1 run tellraw @a {"entity": "@e[type=area_effect_cloud, limit=1, tag=]", "nbt": "{}"}
+kill @e[type=area_effect_cloud, tag=]

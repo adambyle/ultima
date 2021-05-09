@@ -29,3 +29,5 @@ function ult:start/map/reset
 execute if score #flag game_mode = #duels game_mode run scoreboard objectives setdisplay sidebar health
 execute if score #flag game_mode = #royale game_mode run scoreboard objectives setdisplay sidebar score
 execute if score #flag game_mode = #brawl game_mode run scoreboard objectives setdisplay sidebar score
+
+scoreboard players set @a health 20

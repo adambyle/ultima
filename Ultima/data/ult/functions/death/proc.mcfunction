@@ -15,6 +15,7 @@ execute unless score @s y.spect_death matches 1.. run scoreboard players set @s 
 scoreboard players operation #spect_mode _var = @s y.spect_death
 function ult:tick/action/not_playing
 
+execute if score #flag game_mode = #duels game_mode run function ult:spawn/assign_queue
 execute if score #flag game_mode = #brawl game_mode run function ult:spawn/assign_queue
 
 effect clear @s glowing

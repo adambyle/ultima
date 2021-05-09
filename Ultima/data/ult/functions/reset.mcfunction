@@ -25,6 +25,7 @@ xp set @a 0 points
 gamerule keepInventory true
 tag @a remove participating
 effect give @a instant_health 1 2 true
+scoreboard players reset @a map
 
 # Disable PvP
 team join lobby @a
@@ -41,7 +42,7 @@ bossbar set ult:game_start visible false
 scoreboard objectives setdisplay belowName
 scoreboard objectives setdisplay sidebar wins
 scoreboard objectives setdisplay list
-execute as @e[tag=laststand_marker] run data modify entity @s CustomNameVisible set value false
+execute as @e[tag=laststand_skill] run data modify entity @s CustomNameVisible set value false
 
 # Initialize scoreboard values
 scoreboard players reset * score
@@ -49,7 +50,6 @@ title @a actionbar ""
 execute as @a[tag=!parkour] run function ult:data/player/reset
 scoreboard players set #flag game_state 0
 scoreboard players set #opt_prompt event 0
-scoreboard players reset * health
 
 # Clear blocks
 fill -2 24 128 92 24 222 water replace #ult:breakable

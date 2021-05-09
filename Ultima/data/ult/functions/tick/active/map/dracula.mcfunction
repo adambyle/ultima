@@ -9,4 +9,4 @@ execute as @e[type=trident] store result score @s _var run data get entity @s li
 execute as @e[type=trident, scores={_var=240..}] at @s unless entity @a[tag=player, tag=alive, distance=..6] run kill @s
 
 execute as @e[type=trident, nbt={DealtDamage: true}, nbt=!{Trident: {tag: {Dead: true}}}] at @s run function ult:event/dracula/lightning
-execute as @e[type=trident, nbt={inGround: true, Trident: {tag: {Dead: true}}}] at @s if entity @a[tag=player, tag=alive, distance=..1] run function ult:event/dracula/give
+execute as @e[type=trident, nbt={inGround: true, Trident: {tag: {Dead: true}}}] at @s if entity @a[tag=player, tag=alive, distance=..2] run function ult:event/dracula/give

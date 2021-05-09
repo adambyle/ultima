@@ -5,7 +5,7 @@ function ult:settings/ender_chest/main
 clear @s
 effect clear @s
 effect give @s instant_health 1 3 true
-effect give @s resistance 4 1
+execute unless score #flag game_mode = #duels game_mode run effect give @s resistance 4 1
 gamemode adventure
 team leave @s
 

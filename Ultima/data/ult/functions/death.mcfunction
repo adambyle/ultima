@@ -47,3 +47,5 @@ execute if entity @a[tag=killer] run tag @s add fresh
 function ult:start/map/reset
 
 execute unless score #flag game_mode > #royale game_mode run effect give @a instant_health 1 3 true
+
+title @s actionbar ""
