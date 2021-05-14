@@ -16,6 +16,7 @@ bossbar set ult:game_start color blue
 #declare objective online Whether the player is online or not
 #declare objective game_state Flag holder for game state
 #declare objective health Player health
+#declare objective display_health Value that appears below players' names
 #declare objective pn Player numeric id (only for living players)
 #declare objective score The player score in Royale and Brawl
 #declare objective map Map ID, including votes
@@ -40,6 +41,7 @@ scoreboard objectives add _var dummy
 scoreboard objectives add game_mode dummy
 scoreboard objectives add game_state dummy
 scoreboard objectives add health health {"text": "HP","color": "red"}
+scoreboard objectives add display_health dummy {"text": "HP","color": "red"}
 scoreboard objectives add pn dummy
 scoreboard objectives add online dummy
 scoreboard objectives add score dummy
@@ -125,6 +127,8 @@ scoreboard players set #uncommon chest_type 2
 scoreboard players set #rare chest_type 3
 scoreboard players set #epic chest_type 4
 scoreboard players set #ultimate chest_type 5
+
+scoreboard objectives modify display_health rendertype hearts
 
 #flag game_state : 0 inactive, 1 active, 2 transition
 

@@ -10,6 +10,7 @@ function ult:data/player/detach
 scoreboard players set @s queue 0
 scoreboard players set @s pn 0
 scoreboard players set @s die 0
+scoreboard players reset @s display_health
 
 execute unless score @s y.spect_death matches 1.. run scoreboard players set @s y.spect_death 1
 scoreboard players operation #spect_mode _var = @s y.spect_death

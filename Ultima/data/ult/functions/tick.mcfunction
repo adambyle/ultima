@@ -126,6 +126,7 @@ scoreboard players set @a[scores={crouch=0}] x.crouch 0
 scoreboard players set @a[scores={crouch=1.., x.crouch=1}] x.crouch 2
 scoreboard players set @a[scores={crouch=1.., x.crouch=0}] x.crouch 1
 scoreboard players set @a crouch 0
+execute as @a[tag=player, tag=alive] run scoreboard players operation @s display_health = @s health
 
 execute as @a run function ult:tick/action/update_pos
 

@@ -26,6 +26,7 @@ gamerule keepInventory true
 tag @a remove participating
 effect give @a instant_health 1 2 true
 scoreboard players reset @a map
+scoreboard players reset * display_health
 
 # Disable PvP
 team join lobby @a

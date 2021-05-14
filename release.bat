@@ -26,4 +26,6 @@ copy Ultima-Datapack.zip Ultima\datapacks\
 del Ultima.zip
 7-Zip\7z a Ultima.zip Ultima
 
+rmdir /S /Q Ultima\
+
 pause

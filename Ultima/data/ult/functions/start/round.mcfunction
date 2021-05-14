@@ -26,7 +26,7 @@ execute if score #server map matches 14 run function ult:start/map/dracula
 execute if score #server map matches 17 run function ult:start/map/ancient
 function ult:start/map/reset
 
-execute if score #flag game_mode = #duels game_mode run scoreboard objectives setdisplay sidebar health
+execute if score #flag game_mode = #duels game_mode run scoreboard objectives setdisplay sidebar display_health
 execute if score #flag game_mode = #royale game_mode run scoreboard objectives setdisplay sidebar score
 execute if score #flag game_mode = #brawl game_mode run scoreboard objectives setdisplay sidebar score
 

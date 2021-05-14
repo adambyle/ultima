@@ -36,6 +36,7 @@ execute if score #server map matches 17 run data modify storage ult:temp Key set
 execute if score @s showedkey matches 0 run function ult:tick/action/key_point
 
 scoreboard players set @s pn 0
+scoreboard players set @s display_health 20
 function ult:spawn/assign_pn
 function ult:data/player/reset_waits
 
