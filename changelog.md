@@ -1,5 +1,20 @@
 # changelog
 
+## Release v1.0.2 -- *May 16, 2021*
+
+### **General**
+
+- Wins are reset when a new player joins.
+
+### **Bug fixes**
+
+- FIXED: Players' projectiles still linger after they have died.
+- FIXED: Once enough players have voted to start a game, the chat says the most recent voter has "changed their vote".
+- FIXED: "Game Start" spectator setting does not apply to those who aren't one of the four starting players in Brawl mode.
+- FIXED: Last Stand has no map description.
+- FIXED: Tridents are not recognized as projectiles in the code.
+- FIXED: The game ends due to "someone leaving the server" when a user joins the server mid-game
+
 ## Release v1.0.1 -- *May 13, 2021*
 
 ### **General**
