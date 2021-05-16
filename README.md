@@ -29,6 +29,6 @@ Ultima offers game modes for different sizes and playstyles of groups.
 
 ## Content
 
-Ultima comes with a total of 12 maps, 8 default maps and 4 featured maps made by other players, with more to come. For now, I will not be accepting featured maps from people other than my close friends, but this may change in the future.
+Ultima comes with a total of 14 maps, 8 default maps and 6 featured maps made by other players, with more to come. For now, I will not be accepting featured maps from people other than my close friends, but this may change in the future.
 
 While you wait for your turn to play, or for players who want to hang out with their friends but don't want to PvP, Ultima also has a parkour section with an integrated best time leaderboard, if that's your thing. Parkour courses are planned for each of the default maps.
