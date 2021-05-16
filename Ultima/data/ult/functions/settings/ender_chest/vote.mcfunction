@@ -30,6 +30,6 @@ replaceitem entity @s enderchest.23 lava_bucket{display:{Name:'{"text":"Don\'t V
 execute if score #temp _var matches 1 store result score @s map run data get storage ult:map_data Votes[0]
 execute if score #temp _var matches 2 store result score @s map run data get storage ult:map_data Votes[1]
 execute if score #temp _var matches 3 store result score @s map run data get storage ult:map_data Votes[2]
-execute if score #temp _var matches 1.. if score @s ready matches 0 run function ult:start/ready
 execute if score #temp _var matches 1.. if score @s ready matches 1 run tellraw @a [{"selector": "@s", "color": "gray"}, " changed their vote."]
 execute if score #temp _var matches 1.. if score @s ready matches 1 run function ult:tp/lobby
+execute if score #temp _var matches 1.. if score @s ready matches 0 run function ult:start/ready

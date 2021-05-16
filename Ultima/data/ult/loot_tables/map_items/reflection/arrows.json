@@ -6,13 +6,7 @@
             "entries": [
                 {
                     "type": "item",
-                    "name": "firework_rocket",
-                    "functions": [
-                        {
-                            "function": "set_nbt",
-                            "tag": "{Fireworks: {Explosions: [{Type: 1b, Colors: [I; 41727]}], Flight: 3}}"
-                        }
-                    ]
+                    "name": "firework_rocket"
                 }
             ]
         }
