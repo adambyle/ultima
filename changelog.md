@@ -13,7 +13,7 @@
 - FIXED: "Game Start" spectator setting does not apply to those who aren't one of the four starting players in Brawl mode.
 - FIXED: Last Stand has no map description.
 - FIXED: Tridents are not recognized as projectiles in the code.
-- FIXED: The game ends due to "someone leaving the server" when a user joins the server mid-game
+- FIXED: The game ends due to "someone leaving the server" when a user joins the server mid-game.
 
 ## Release v1.0.1 -- *May 13, 2021*
 
