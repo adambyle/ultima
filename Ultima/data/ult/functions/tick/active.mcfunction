@@ -40,6 +40,7 @@ execute if score #flag game_state matches 1 if score #server map matches 14 run 
 execute if score #flag game_state matches 1 if score #server map matches 15 run function ult:tick/active/map/avanto
 execute if score #flag game_state matches 1 if score #server map matches 16 run function ult:tick/active/map/boxing
 execute if score #flag game_state matches 1 if score #server map matches 17 run function ult:tick/active/map/ancient
+execute if score #flag game_state matches 1 if score #server map matches 18 run function ult:tick/active/map/marooned
 
 # Clear unnecessary items
 kill @e[type=item,tag=!static_item]

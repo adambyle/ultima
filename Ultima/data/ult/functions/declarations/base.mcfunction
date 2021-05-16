@@ -72,6 +72,7 @@ scoreboard objectives add x.crouch dummy
 scoreboard objectives add x.damaged custom:damage_taken
 scoreboard objectives add x.damage custom:damage_dealt
 scoreboard objectives add x.rabbit killed:rabbit
+scoreboard objectives add x.salmon killed:salmon
 
 scoreboard objectives add y.ready dummy
 scoreboard objectives add y.afk dummy
@@ -119,7 +120,7 @@ scoreboard players set #map.default menu 1
 scoreboard players set #map.featured menu 2
 
 scoreboard players set #max_default map 8
-scoreboard players set #max_fandom map 17
+scoreboard players set #max_fandom map 18
 
 scoreboard players set #empty chest_type 0
 scoreboard players set #common chest_type 1

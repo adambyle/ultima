@@ -15,6 +15,7 @@ execute if score #server map matches 14 run function ult:tp/dracula
 execute if score #server map matches 15 run function ult:tp/avanto
 execute if score #server map matches 16 run function ult:tp/boxing
 execute if score #server map matches 17 run function ult:tp/ancient
+execute if score #server map matches 18 run function ult:tp/marooned
 execute if score #flag game_mode = #ultimate game_mode run function ult:tp/ultimate
 
 effect give @s[gamemode=spectator] night_vision 99999 0 true

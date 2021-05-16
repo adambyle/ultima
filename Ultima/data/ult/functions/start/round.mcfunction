@@ -24,6 +24,7 @@ execute if score #server map matches 8 run function ult:start/map/laststand
 execute if score #server map matches 13 run function ult:start/map/reflection
 execute if score #server map matches 14 run function ult:start/map/dracula
 execute if score #server map matches 17 run function ult:start/map/ancient
+execute if score #server map matches 18 run function ult:start/map/marooned
 function ult:start/map/reset
 
 execute if score #flag game_mode = #duels game_mode run scoreboard objectives setdisplay sidebar display_health

@@ -33,6 +33,7 @@ execute if score #server map matches 14 run data modify storage ult:temp Key set
 execute if score #server map matches 15 run data modify storage ult:temp Key set value {playAvanto: true}
 execute if score #server map matches 16 run data modify storage ult:temp Key set value {playBoxing: true}
 execute if score #server map matches 17 run data modify storage ult:temp Key set value {playAncient: true}
+execute if score #server map matches 18 run data modify storage ult:temp Key set value {playMarooned: true}
 execute if score @s showedkey matches 0 run function ult:tick/action/key_point
 
 scoreboard players set @s pn 0
@@ -60,6 +61,7 @@ execute if score #server map matches 14 run function ult:spawn/maps/dracula
 execute if score #server map matches 15 run function ult:spawn/maps/avanto
 execute if score #server map matches 16 run function ult:spawn/maps/boxing
 execute if score #server map matches 17 run function ult:spawn/maps/ancient
+execute if score #server map matches 18 run function ult:spawn/maps/marooned
 
 execute at @s run playsound item.totem.use master @a[tag=!parkour] ~ ~ ~ 1 0.7
 

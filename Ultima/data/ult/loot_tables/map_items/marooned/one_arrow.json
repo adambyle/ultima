@@ -1,0 +1,20 @@
+{
+    "type": "generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "firework_rocket",
+                    "functions": [
+                        {
+                            "function": "set_name",
+                            "name": {"text": "Firework Rockets (x16)","italic": false}
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

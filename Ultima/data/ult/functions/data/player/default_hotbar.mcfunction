@@ -77,4 +77,11 @@ execute unless data storage ult:temp Player.Hotbar.laststand.shield run data mod
 execute unless data storage ult:temp Player.Hotbar.laststand.arrows run data modify storage ult:temp Player.Hotbar.laststand.arrows set value 10
 execute unless data storage ult:temp Player.Hotbar.laststand.potion run data modify storage ult:temp Player.Hotbar.laststand.potion set value 8
 
+execute unless data storage ult:temp Player.Hotbar.marooned.sword run data modify storage ult:temp Player.Hotbar.marooned.sword set value 0
+execute unless data storage ult:temp Player.Hotbar.marooned.crossbow run data modify storage ult:temp Player.Hotbar.marooned.crossbow set value 2
+execute unless data storage ult:temp Player.Hotbar.marooned.heart run data modify storage ult:temp Player.Hotbar.marooned.heart set value 8
+execute unless data storage ult:temp Player.Hotbar.marooned.fish run data modify storage ult:temp Player.Hotbar.marooned.fish set value 7
+execute unless data storage ult:temp Player.Hotbar.marooned.arrows run data modify storage ult:temp Player.Hotbar.marooned.arrows set value -1
+execute unless data storage ult:temp Player.Hotbar.marooned.trident run data modify storage ult:temp Player.Hotbar.marooned.trident set value 1
+
 function ult:data/player/save_nbt

@@ -15,3 +15,4 @@ execute if score #temp map matches 14 run data modify storage ult:temp Map set v
 execute if score #temp map matches 15 run data modify storage ult:temp Map set value "Avanto"
 execute if score #temp map matches 16 run data modify storage ult:temp Map set value "Boxing Ring"
 execute if score #temp map matches 17 run data modify storage ult:temp Map set value "Ancient Mines"
+execute if score #temp map matches 18 run data modify storage ult:temp Map set value "Marooned"

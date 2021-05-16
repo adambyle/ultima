@@ -122,6 +122,7 @@ execute as @e[type=painting] run data merge entity @s {Invulnerable: true}
 scoreboard players reset * x.damage
 scoreboard players reset * x.damaged
 scoreboard players reset * x.rabbit
+scoreboard players reset * x.salmon
 scoreboard players set @a[scores={crouch=0}] x.crouch 0
 scoreboard players set @a[scores={crouch=1.., x.crouch=1}] x.crouch 2
 scoreboard players set @a[scores={crouch=1.., x.crouch=0}] x.crouch 1

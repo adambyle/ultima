@@ -15,3 +15,4 @@ execute if score #temp map matches 14 run data modify entity @e[tag=loot_table_h
 execute if score #temp map matches 15 run data modify entity @e[tag=loot_table_handler,limit=1] DeathLootTable set value "ult:map_icon/avanto"
 execute if score #temp map matches 16 run data modify entity @e[tag=loot_table_handler,limit=1] DeathLootTable set value "ult:map_icon/boxing"
 execute if score #temp map matches 17 run data modify entity @e[tag=loot_table_handler,limit=1] DeathLootTable set value "ult:map_icon/ancient"
+execute if score #temp map matches 18 run data modify entity @e[tag=loot_table_handler,limit=1] DeathLootTable set value "ult:map_icon/marooned"
