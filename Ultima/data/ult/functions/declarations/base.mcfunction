@@ -9,7 +9,7 @@ team add playing
 bossbar add ult:game_start {"text": "Game start", "color": "blue"}
 bossbar set ult:game_start color blue
 
-#declare entity bgfl Server operator
+#declare entity beegyfleeg Server operator
 
 #declare objective _var Standard temporary variable holder (not for game settings, use #flag)
 #declare objective game_mode Flag holder for game mode
