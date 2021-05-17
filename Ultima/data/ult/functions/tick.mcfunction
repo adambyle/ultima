@@ -62,8 +62,6 @@ execute if score #opt_prompt event matches 1.. run scoreboard players remove #op
 execute as @a[tag=player,scores={action=2}] run function ult:settings/opt/out
 execute as @a[gamemode=spectator,scores={action=3}] run function ult:tp/lobby
 execute if score #flag game_state matches 0 as @a[tag=player, scores={ready=1, action=7}] run function ult:start/ready/unready
-team join playing @a[tag=player, team=!lobby]
-team leave @a[team=playing, tag=!player]
 
 # Test for game end
 execute if score #flag game_mode = #duels game_mode as @a[scores={action=1,game_mode=0},tag=player] if score #timeout game_mode matches 0 run function ult:tick/action/change_modes

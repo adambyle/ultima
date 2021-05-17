@@ -12,7 +12,7 @@ scoreboard players set #timeout game_mode 0
 spawnpoint @a 45 30 -12 0
 kill @e[tag=!static_item,tag=!text_display,type=!player]
 execute as @a[tag=player, team=!lobby] run function ult:tp/lobby
-execute as @a[tag=spectator, gamemode=spectator] run function ult:tp/lobby
+execute as @a[gamemode=spectator] run function ult:tp/lobby
 
 # Reset settings
 difficulty peaceful
