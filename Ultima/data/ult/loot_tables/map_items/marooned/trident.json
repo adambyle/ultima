@@ -1,0 +1,19 @@
+{
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "trident",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{Unbreakable: true, Enchantments: [{id: \"riptide\", lvl: 1s}]}"
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

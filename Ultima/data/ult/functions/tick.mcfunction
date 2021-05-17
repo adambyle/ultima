@@ -42,7 +42,7 @@ setblock 59 12 -49 potted_cornflower
 kill @e[type=tnt]
 kill @e[type=tnt_minecart]
 execute as @e[type=item_frame] run data merge entity @s {Invulnerable: true, Fixed: true}
-execute as @e[type=item_frame] at @s if entity @a[name="bgfl", gamemode=creative, distance=..8] run data merge entity @s {Fixed: false}
+execute as @e[type=item_frame] at @s if entity @a[name="beegyfleeg", gamemode=creative, distance=..8] run data merge entity @s {Fixed: false}
 execute as @e[type=item_frame] at @s if block ^ ^ ^-1 air run data merge entity @s {Fixed: true}
 execute as @e[type=item_frame] if data entity @s Item run data merge entity @s {Invisible: true}
 execute as @e[type=item_frame] unless data entity @s Item run data merge entity @s {Invisible: false}
@@ -120,6 +120,7 @@ execute as @e[type=painting] run data merge entity @s {Invulnerable: true}
 scoreboard players reset * x.damage
 scoreboard players reset * x.damaged
 scoreboard players reset * x.rabbit
+scoreboard players reset * x.salmon
 scoreboard players set @a[scores={crouch=0}] x.crouch 0
 scoreboard players set @a[scores={crouch=1.., x.crouch=1}] x.crouch 2
 scoreboard players set @a[scores={crouch=1.., x.crouch=0}] x.crouch 1

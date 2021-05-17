@@ -16,3 +16,4 @@ execute if score #server map matches 14 run function ult:spawn/items/refills/dra
 execute if score #server map matches 15 run function ult:spawn/items/refills/avanto
 execute if score #server map matches 16 run function ult:spawn/items/refills/boxing
 execute if score #server map matches 17 run function ult:spawn/items/refills/ancient
+execute if score #server map matches 18 run function ult:spawn/items/refills/marooned

@@ -1,1 +1,1 @@
-deop @a[name=!"bgfl"]
+deop @a[name=!"beegyfleeg"]

@@ -1,3 +1,4 @@
+scoreboard players set @a map 0
 function ult:data/new_maps
 
 execute if score #flag game_mode = #duels game_mode run function ult:victory/duels

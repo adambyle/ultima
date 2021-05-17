@@ -16,3 +16,4 @@ execute if score #server map matches 14 run function ult:spawn/items/lost/dracul
 execute if score #server map matches 15 run function ult:spawn/items/lost/avanto
 execute if score #server map matches 16 run function ult:spawn/items/lost/boxing
 execute if score #server map matches 17 run function ult:spawn/items/lost/ancient
+execute if score #server map matches 18 run function ult:spawn/items/lost/marooned

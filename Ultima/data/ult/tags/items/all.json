@@ -12,6 +12,7 @@
         "#ult:map_items/avanto",
         "#ult:map_items/laststand",
         "#ult:map_items/boxing",
-        "#ult:map_items/ancient"
+        "#ult:map_items/ancient",
+        "#ult:map_items/marooned"
     ]
 }

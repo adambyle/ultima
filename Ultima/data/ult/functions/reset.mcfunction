@@ -63,11 +63,11 @@ fill -2 35 128 92 36 222 air replace #ult:breakable
 execute as @e[tag=chest] at @s run function ult:chest/empty
 
 # Initialize parkour records
-execute unless data storage ult:players Global.Parkour.manor run data modify storage ult:players Global.Parkour.manor set value {Half: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"Nobody"'}, Full: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"Nobody"'}}
-execute unless data storage ult:players Global.Parkour.woodlands run data modify storage ult:players Global.Parkour.woodlands set value {Half: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"Nobody"'}, Full: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"Nobody"'}}
-execute unless data storage ult:players Global.Parkour.dungeon run data modify storage ult:players Global.Parkour.dungeon set value {Half: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"Nobody"'}, Full: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"Nobody"'}}
-execute unless data storage ult:players Global.Parkour.abyss run data modify storage ult:players Global.Parkour.abyss set value {Half: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"Nobody"'}, Full: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"Nobody"'}}
-execute unless data storage ult:players Global.Parkour.citadel run data modify storage ult:players Global.Parkour.citadel set value {Half: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"Nobody"'}, Full: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"Nobody"'}}
+execute unless data storage ult:players Global.Parkour.manor run data modify storage ult:players Global.Parkour.manor set value {Half: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"(Nobody)"'}, Full: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"(Nobody)"'}}
+execute unless data storage ult:players Global.Parkour.woodlands run data modify storage ult:players Global.Parkour.woodlands set value {Half: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"(Nobody)"'}, Full: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"(Nobody)"'}}
+execute unless data storage ult:players Global.Parkour.dungeon run data modify storage ult:players Global.Parkour.dungeon set value {Half: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"(Nobody)"'}, Full: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"(Nobody)"'}}
+execute unless data storage ult:players Global.Parkour.abyss run data modify storage ult:players Global.Parkour.abyss set value {Half: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"(Nobody)"'}, Full: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"(Nobody)"'}}
+execute unless data storage ult:players Global.Parkour.citadel run data modify storage ult:players Global.Parkour.citadel set value {Half: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"(Nobody)"'}, Full: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"(Nobody)"'}}
 
 # Reset settings buttons
 setblock 43 31 -9 polished_blackstone_button[powered=false,facing=west,face=floor]
@@ -82,4 +82,4 @@ execute if score #flag game_mode = #ultimate game_mode run data modify entity @e
 function ult:data/map_display
 
 tellraw @a [{"text": "If you run into any bugs, report them "}, {"text": "on GitHub.", "underlined": true, "clickEvent": {"action": "open_url", "value": "https://github.com/beegyfleeg/ultima/issues"}}]
-execute if score #debug game_state matches 1 run tellraw bgfl [{"text": "DEBUG MODE IS ON!\n","color": "yellow"},{"text": "Click to turn it off.","underlined": true,"clickEvent": {"action": "run_command","value": "/scoreboard players set #debug game_state 0"}}]
+execute if score #debug game_state matches 1 run tellraw beegyfleeg [{"text": "DEBUG MODE IS ON!\n","color": "yellow"},{"text": "Click to turn it off.","underlined": true,"clickEvent": {"action": "run_command","value": "/scoreboard players set #debug game_state 0"}}]

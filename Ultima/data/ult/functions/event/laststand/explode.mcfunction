@@ -1,6 +1,6 @@
 function ult:data/root
 tag @s add exploded
-execute as @e[type=fireball, distance=..5, tag=!exploded] at @s run function ult:event/laststand/explode
+execute as @e[type=fireball, distance=..5, tag=!exploded] at @s unless entity @e[tag=text_display, distance=..20] run function ult:event/laststand/explode
 
 particle explosion_emitter ~ ~ ~ 0 0 0 0 0 force
 

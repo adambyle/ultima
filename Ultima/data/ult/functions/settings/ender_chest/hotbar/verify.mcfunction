@@ -15,3 +15,4 @@ execute if score @s hotbar_map matches 14 run function ult:settings/ender_chest/
 execute if score @s hotbar_map matches 15 run function ult:settings/ender_chest/hotbar/verify/avanto
 execute if score @s hotbar_map matches 16 run function ult:settings/ender_chest/hotbar/verify/boxing
 execute if score @s hotbar_map matches 17 run function ult:settings/ender_chest/hotbar/verify/ancient
+execute if score @s hotbar_map matches 18 run function ult:settings/ender_chest/hotbar/verify/marooned

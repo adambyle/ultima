@@ -16,6 +16,7 @@ execute unless data entity @s EnderItems[{Slot:1b}] run scoreboard players set @
 execute unless data entity @s EnderItems[{Slot:2b}] run scoreboard players set @s hotbar_map 15
 execute unless data entity @s EnderItems[{Slot:3b}] run scoreboard players set @s hotbar_map 16
 execute unless data entity @s EnderItems[{Slot:9b}] run scoreboard players set @s hotbar_map 17
+execute unless data entity @s EnderItems[{Slot:10b}] run scoreboard players set @s hotbar_map 18
 execute if score @s hotbar_map matches ..12 if score @s hotbar_map > #max_default map run function ult:settings/ender_chest/hotbar
 execute if score @s hotbar_map matches 13.. if score @s hotbar_map > #max_fandom map run function ult:settings/ender_chest/hotbar
 execute if score @s hotbar_map matches 1.. run function ult:settings/ender_chest/hotbar/general
