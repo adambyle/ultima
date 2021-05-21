@@ -17,8 +17,6 @@ title @a[scores={laststand.skill=3}, tag=player, tag=alive] actionbar [{"text": 
 title @a[scores={laststand.skill=4}, tag=player, tag=alive] actionbar [{"text": "Active skill: "}, {"text": "Backstabbing", "color": "blue", "bold": true}]
 
 execute as @a[tag=player, tag=alive, scores={x.damage=0.., laststand.skill=1}] at @s run function ult:event/laststand/flurry/flurry
-effect give @a[tag=player, tag=alive, scores={x.damaged=1.., laststand.skill=1}] weakness 1
-effect give @a[tag=player, tag=alive, scores={x.damaged=1.., laststand.skill=2}] slowness 1 1
 execute as @a[tag=player, tag=alive, scores={event=0, laststand.skill=3}] run function ult:event/laststand/combo/remove
 execute as @a[tag=player, tag=alive, scores={x.damage=0.., laststand.skill=3}] run function ult:event/laststand/combo/apply
 execute as @a[tag=player, tag=alive, scores={laststand.skill=4}] at @s anchored eyes run function ult:event/laststand/backstab/test

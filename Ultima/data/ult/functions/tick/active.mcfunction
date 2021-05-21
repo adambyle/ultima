@@ -2,8 +2,7 @@
 execute as @a unless score @s online matches 1 run function ult:tick/action/wrong_session
 
 # Players can spectate by pressing the start button
-execute positioned 45 31 -3 if block ~ ~ ~ polished_blackstone_pressure_plate[powered=true] as @p if entity @s[tag=spectator] run function ult:spectate
-execute positioned 45 31 -3 if block ~ ~ ~ polished_blackstone_pressure_plate[powered=true] as @p if entity @s[tag=player] run function ult:tp
+execute positioned 45 31 -3 if block ~ ~ ~ polished_blackstone_pressure_plate[powered=true] as @p run function ult:spectate
 
 # Deal with invalid tags
 tag @a[tag=player,gamemode=spectator] remove alive

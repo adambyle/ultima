@@ -8,7 +8,7 @@ execute store result score #slot _var run data get entity @s EnderItems[{id:"min
 function ult:settings/ender_chest/hotbar/assign
 execute store result storage ult:temp Player.Hotbar.abyss.bow int 1.0 run scoreboard players get #slot _var
 
-execute store result score #slot _var run data get entity @s EnderItems[{id:"minecraft:potion"}].Slot
+execute store result score #slot _var run data get entity @s EnderItems[{id:"minecraft:splash_potion"}].Slot
 function ult:settings/ender_chest/hotbar/assign
 execute store result storage ult:temp Player.Hotbar.abyss.potion int 1.0 run scoreboard players get #slot _var
 

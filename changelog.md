@@ -1,5 +1,25 @@
 # changelog
 
+## Release v1.1.0 -- *May, 2021*
+
+### **General**
+
+- Number of votes and who voted for what can be seen at the start of each game.
+
+### **Maps*
+
+- Abyss: Potion of Levitation is now a Splash Potion.
+- Dungeon: Potion of Resilience: Resistance lowered from level IV to level III.
+- Last Stand: *Flurry Rush* and *Hot Pursuit* no longer have trade-offs, to match the other two skills.
+- Marooned: NEW MAP by Reed Aldridge!
+
+### **Bug fixes**
+
+- FIXED: Last Stand cannonballs will sometimes explode in the lobby.
+- FIXED: Players who are opted in and in the lobby cannot use the pressure plate to spectate the game.
+
+---
+
 ## Release v1.0.2 -- *May 16, 2021*
 
 ### **General**
@@ -15,6 +35,8 @@
 - FIXED: Tridents are not recognized as projectiles in the code.
 - FIXED: The game ends due to "someone leaving the server" when a user joins the server mid-game.
 
+---
+
 ## Release v1.0.1 -- *May 13, 2021*
 
 ### **General**
@@ -29,6 +51,8 @@
 
 - FIXED: Health display is set to 0 at the beginnings of some games.
 - FIXED: Sidebar health display during Duels mode shows the values of all players to ever have joined the world.
+
+---
 
 ## Release v1.0.0 -- *May 8, 2021*
 

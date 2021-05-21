@@ -6,11 +6,11 @@
             "entries": [
                 {
                     "type": "item",
-                    "name": "potion",
+                    "name": "splash_potion",
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:25b,Duration:60,Amplifier:4b}],display:{Name:'{\"text\": \"Potion of Levitation\",\"italic\": false}'}}"
+                            "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:25b,Duration:60,Amplifier:4b}],display:{Name:'{\"text\": \"Splash Potion of Levitation\",\"italic\": false}'}}"
                         }
                     ]
                 }
