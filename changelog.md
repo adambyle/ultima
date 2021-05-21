@@ -43,9 +43,9 @@
 
 - Health display reworked, fixing multiple bugs.
 
-### **Citadel**
+### **Maps**
 
-- Applying the Health Rune while it is already applied no longer restores 8 HP.
+- Citadel: Applying the Health Rune while it is already applied no longer restores 8 HP.
 
 ### **Bug fixes**
 
