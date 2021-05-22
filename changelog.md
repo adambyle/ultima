@@ -1,12 +1,25 @@
 # changelog
 
-## Release v1.1.0 -- *May, 2021*
+## Release v1.1.1 -- *May 22, 2021*
+
+### **Maps**
+
+- Marooned: Salmon gives Absorption II (4 hearts), was Absorption I (2 hearts).
+- Wasteland: Smoke Bomb now never teleports to the nearest warp point.
+
+### **Bug fixes**
+
+- FIXED: When a player joins the world, player attributes are reverted (affects instant-attack maps and Citadel's runes, among other things).
+- FIXED: Players who are force-opted out while in a voting station are locked in the station until they relog.
+- FIXED: Wins do not actually reset properly.
+
+## Release v1.1.0 -- *May 21, 2021*
 
 ### **General**
 
 - Number of votes and who voted for what can be seen at the start of each game.
 
-### **Maps*
+### **Maps**
 
 - Abyss: Potion of Levitation is now a Splash Potion.
 - Dungeon: Potion of Resilience: Resistance lowered from level IV to level III.

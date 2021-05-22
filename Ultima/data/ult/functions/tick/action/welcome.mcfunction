@@ -5,3 +5,6 @@ execute if score #debug game_state matches 1 run tellraw beegyfleeg [{"text": "D
 effect give @s instant_health 1 3 true
 
 clear
+
+scoreboard players reset * wins
+scoreboard players set @a wins 0

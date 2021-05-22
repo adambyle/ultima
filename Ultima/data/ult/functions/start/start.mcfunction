@@ -10,6 +10,8 @@ execute as @e[tag=text_display] run data modify entity @s CustomNameVisible set 
 
 scoreboard players set #flag game_state 1
 
+execute at @e[tag=vote_station] run tp @a[distance=..3] 45 30 -12
+
 execute as @a unless score @s y.spect_game matches 1.. run scoreboard players set @s y.spect_game 1
 execute as @a[scores={y.spect_game=1}, tag=spectator, tag=!parkour] run function ult:spectate
 execute as @a[scores={y.spect_game=1}, tag=player, tag=!alive] run function ult:spectate
