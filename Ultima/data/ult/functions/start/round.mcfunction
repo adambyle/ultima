@@ -19,8 +19,8 @@ gamerule drowningDamage false
 execute if score #server map matches 2 run function ult:start/map/woodlands
 execute if score #server map matches 3 run function ult:start/map/dungeon
 execute if score #server map matches 5 run function ult:start/map/citadel
-execute if score #server map matches 7 run function ult:start/map/townsquare
-execute if score #server map matches 8 run function ult:start/map/laststand
+execute if score #server map matches 7 run function ult:start/map/town_square
+execute if score #server map matches 8 run function ult:start/map/last_stand
 execute if score #server map matches 13 run function ult:start/map/reflection
 execute if score #server map matches 14 run function ult:start/map/dracula
 execute if score #server map matches 17 run function ult:start/map/ancient

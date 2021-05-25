@@ -13,8 +13,8 @@ loot replace block 43 31 -12 container.7 loot ult:map_icon/dungeon
 loot replace block 43 31 -12 container.8 loot ult:map_icon/abyss
 loot replace block 43 31 -12 container.14 loot ult:map_icon/citadel
 loot replace block 43 31 -12 container.15 loot ult:map_icon/wasteland
-loot replace block 43 31 -12 container.16 loot ult:map_icon/townsquare
-loot replace block 43 31 -12 container.17 loot ult:map_icon/laststand
+loot replace block 43 31 -12 container.16 loot ult:map_icon/town_square
+loot replace block 43 31 -12 container.17 loot ult:map_icon/last_stand
 loot replace block 43 31 -12 container.23 loot ult:map_icon/permafrost
 loot replace block 43 31 -12 container.24 loot ult:map_icon/shroom
 loot replace block 43 31 -12 container.25 loot ult:map_icon/hellscape

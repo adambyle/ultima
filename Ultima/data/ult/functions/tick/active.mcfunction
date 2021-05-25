@@ -28,8 +28,8 @@ execute if score #flag game_state matches 1 if score #server map matches 3 run f
 execute if score #flag game_state matches 1 if score #server map matches 4 run function ult:tick/active/map/abyss
 execute if score #flag game_state matches 1 if score #server map matches 5 run function ult:tick/active/map/citadel
 execute if score #flag game_state matches 1 if score #server map matches 6 run function ult:tick/active/map/wasteland
-execute if score #flag game_state matches 1 if score #server map matches 7 run function ult:tick/active/map/townsquare
-execute if score #flag game_state matches 1 if score #server map matches 8 run function ult:tick/active/map/laststand
+execute if score #flag game_state matches 1 if score #server map matches 7 run function ult:tick/active/map/town_square
+execute if score #flag game_state matches 1 if score #server map matches 8 run function ult:tick/active/map/last_stand
 execute if score #flag game_state matches 1 if score #server map matches 9 run function ult:tick/active/map/permafrost
 execute if score #flag game_state matches 1 if score #server map matches 10 run function ult:tick/active/map/shroom
 execute if score #flag game_state matches 1 if score #server map matches 11 run function ult:tick/active/map/hellscape

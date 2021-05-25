@@ -16,7 +16,8 @@ execute as @e[sort=nearest, limit=1, tag=!temp] if entity @s[type=potion, distan
 
 execute if score @s deathsource matches 3 if score #server map matches 5 run scoreboard players set @r[tag=root] deathsource 5
 
-execute as @e[sort=nearest, limit=1, tag=!temp] if entity @s[nbt={SelectedItem: {id: "minecraft:flint"}}, distance=..5] run scoreboard players set @r[tag=root] deathsource 6
+execute if score @s deathsource matches 4 if score #server map matches 6 run scoreboard players set @r[tag=root] deathsource 6
+execute if score @s deathsource matches 4 if score #server map matches 17 run scoreboard players set @r[tag=root] deathsource 6
 
 execute store result score #fire _var run data get entity @s Fire
 execute if score #fire _var matches 1.. run scoreboard players set @s deathsource 7

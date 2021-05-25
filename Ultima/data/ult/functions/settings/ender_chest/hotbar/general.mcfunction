@@ -12,8 +12,8 @@ execute if score @s hotbar_map matches 3 run function ult:settings/ender_chest/h
 execute if score @s hotbar_map matches 4 run function ult:settings/ender_chest/hotbar/maps/abyss
 execute if score @s hotbar_map matches 5 run function ult:settings/ender_chest/hotbar/maps/citadel
 execute if score @s hotbar_map matches 6 run function ult:settings/ender_chest/hotbar/maps/wasteland
-execute if score @s hotbar_map matches 7 run function ult:settings/ender_chest/hotbar/maps/townsquare
-execute if score @s hotbar_map matches 8 run function ult:settings/ender_chest/hotbar/maps/laststand
+execute if score @s hotbar_map matches 7 run function ult:settings/ender_chest/hotbar/maps/town_square
+execute if score @s hotbar_map matches 8 run function ult:settings/ender_chest/hotbar/maps/last_stand
 execute if score @s hotbar_map matches 9 run function ult:settings/ender_chest/hotbar/maps/permafrost
 execute if score @s hotbar_map matches 10 run function ult:settings/ender_chest/hotbar/maps/shroom
 execute if score @s hotbar_map matches 11 run function ult:settings/ender_chest/hotbar/maps/hellscape

@@ -5,8 +5,8 @@ execute if score #server map matches 3 run function ult:spawn/items/refills/dung
 execute if score #server map matches 4 run function ult:spawn/items/refills/abyss
 execute if score #server map matches 5 run function ult:spawn/items/refills/citadel
 execute if score #server map matches 6 run function ult:spawn/items/refills/wasteland
-execute if score #server map matches 7 run function ult:spawn/items/refills/townsquare
-execute if score #server map matches 8 run function ult:spawn/items/refills/laststand
+execute if score #server map matches 7 run function ult:spawn/items/refills/town_square
+execute if score #server map matches 8 run function ult:spawn/items/refills/last_stand
 execute if score #server map matches 9 run function ult:spawn/items/refills/frost
 execute if score #server map matches 10 run function ult:spawn/items/refills/shroom
 execute if score #server map matches 11 run function ult:spawn/items/refills/hell

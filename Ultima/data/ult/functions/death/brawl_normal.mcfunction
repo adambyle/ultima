@@ -1,6 +1,6 @@
 scoreboard players set #increase _var 2
 execute as @s[tag=fresh] run scoreboard players set #increase _var 1
-execute as @s[tag=revenge] run scoreboard players set #increase _var 3
+execute if score .revenge control matches 1 run scoreboard players set #increase _var 3
 scoreboard players set #decrease _var 1
 
 execute if score #decrease _var > @s score run scoreboard players operation #decrease _var = @s score

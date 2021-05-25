@@ -4,8 +4,8 @@ execute if score #server map matches 3 run function ult:tp/dungeon
 execute if score #server map matches 4 run function ult:tp/abyss
 execute if score #server map matches 5 run function ult:tp/citadel
 execute if score #server map matches 6 run function ult:tp/wasteland
-execute if score #server map matches 7 run function ult:tp/townsquare
-execute if score #server map matches 8 run function ult:tp/laststand
+execute if score #server map matches 7 run function ult:tp/town_square
+execute if score #server map matches 8 run function ult:tp/last_stand
 execute if score #server map matches 9 run function ult:tp/permafrost
 execute if score #server map matches 10 run function ult:tp/shroom
 execute if score #server map matches 11 run function ult:tp/hellscape

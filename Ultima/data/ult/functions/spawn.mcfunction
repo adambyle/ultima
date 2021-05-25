@@ -50,8 +50,8 @@ execute if score #server map matches 3 run function ult:spawn/maps/dungeon
 execute if score #server map matches 4 run function ult:spawn/maps/abyss
 execute if score #server map matches 5 run function ult:spawn/maps/citadel
 execute if score #server map matches 6 run function ult:spawn/maps/wasteland
-execute if score #server map matches 7 run function ult:spawn/maps/townsquare
-execute if score #server map matches 8 run function ult:spawn/maps/laststand
+execute if score #server map matches 7 run function ult:spawn/maps/town_square
+execute if score #server map matches 8 run function ult:spawn/maps/last_stand
 execute if score #server map matches 9 run function ult:spawn/maps/frost
 execute if score #server map matches 10 run function ult:spawn/maps/shroom
 execute if score #server map matches 11 run function ult:spawn/maps/hell

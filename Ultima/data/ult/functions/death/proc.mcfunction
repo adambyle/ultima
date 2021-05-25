@@ -4,8 +4,7 @@ execute if score @s pn matches 3 run fill 95 31 1 125 31 31 white_stained_glass 
 execute if score @s pn matches 4 run fill 95 31 1 125 31 31 white_stained_glass replace yellow_stained_glass
 
 tag @s remove alive
-tag @a remove revenge
-execute if score @r[tag=killer] tether = @s pn run tag @s add revenge
+execute store success score .revenge control if score @r[tag=killer] tether = @s pn
 function ult:data/player/detach
 scoreboard players set @s queue 0
 scoreboard players set @s pn 0

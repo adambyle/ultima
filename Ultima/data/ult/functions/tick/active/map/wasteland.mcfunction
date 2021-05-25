@@ -1,12 +1,12 @@
-execute as @a[scores={x.crouch=1}, nbt={SelectedItem: {id: "minecraft:flint"}}] at @s run function ult:event/wasteland/smoke_bomb
-execute as @a[scores={x.crouch=1}, nbt={Inventory: [{id: "minecraft:flint", Slot: -106b}]}] at @s run function ult:event/wasteland/smoke_bomb
+execute as @a[scores={x.crouch=1}, nbt={SelectedItem: {id: "minecraft:flint"}}] at @s run function ult:tick/active/map/wasteland/smoke_bomb
+execute as @a[scores={x.crouch=1}, nbt={Inventory: [{id: "minecraft:flint", Slot: -106b}]}] at @s run function ult:tick/active/map/wasteland/smoke_bomb
 
 execute if predicate ult:rabbit_spawn at @r at @e[tag=wasteland_rabbit_spawn, sort=random, limit=1] unless entity @e[type=rabbit, distance=..12] run summon rabbit
 
-execute as @a[scores={x.rabbit=1..}, nbt=!{Inventory: [{id: "minecraft:cooked_rabbit"}]}] run function ult:event/wasteland/food
+execute as @a[scores={x.rabbit=1..}, nbt=!{Inventory: [{id: "minecraft:cooked_rabbit"}]}] run function ult:tick/active/map/wasteland/food
 
-execute as @a[scores={x.crouch=1}, nbt={SelectedItem: {id: "minecraft:cooked_rabbit"}}] run function ult:event/wasteland/eat_food
-execute as @a[scores={x.crouch=1}, nbt={Inventory: [{id: "minecraft:cooked_rabbit", Slot: -106b}]}] run function ult:event/wasteland/eat_food
+execute as @a[scores={x.crouch=1}, nbt={SelectedItem: {id: "minecraft:cooked_rabbit"}}] run function ult:tick/active/map/wasteland/eat_food
+execute as @a[scores={x.crouch=1}, nbt={Inventory: [{id: "minecraft:cooked_rabbit", Slot: -106b}]}] run function ult:tick/active/map/wasteland/eat_food
 
 execute at @e[tag=wasteland_port] align xyz positioned ~.5 ~ ~.5 run playsound block.wooden_door.open master @a[distance=...3, tag=player, tag=alive, tag=!wasteland_warped]
 

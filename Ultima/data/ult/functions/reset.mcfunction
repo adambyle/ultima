@@ -43,7 +43,7 @@ bossbar set ult:game_start visible false
 scoreboard objectives setdisplay belowName
 scoreboard objectives setdisplay sidebar wins
 scoreboard objectives setdisplay list
-execute as @e[tag=laststand_skill] run data modify entity @s CustomNameVisible set value false
+execute as @e[tag=last_stand_skill] run data modify entity @s CustomNameVisible set value false
 
 # Initialize scoreboard values
 scoreboard players reset * score

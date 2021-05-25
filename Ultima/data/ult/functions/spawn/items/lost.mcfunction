@@ -5,8 +5,8 @@ execute if score #server map matches 3 run function ult:spawn/items/lost/dungeon
 execute if score #server map matches 4 run function ult:spawn/items/lost/abyss
 execute if score #server map matches 5 run function ult:spawn/items/lost/citadel
 execute if score #server map matches 6 run function ult:spawn/items/lost/wasteland
-execute if score #server map matches 7 run function ult:spawn/items/lost/townsquare
-execute if score #server map matches 8 run function ult:spawn/items/lost/laststand
+execute if score #server map matches 7 run function ult:spawn/items/lost/town_square
+execute if score #server map matches 8 run function ult:spawn/items/lost/last_stand
 execute if score #server map matches 9 run function ult:spawn/items/lost/frost
 execute if score #server map matches 10 run function ult:spawn/items/lost/shroom
 execute if score #server map matches 11 run function ult:spawn/items/lost/hell

@@ -4,8 +4,8 @@ execute if score @s hotbar_map matches 3 run function ult:settings/ender_chest/h
 execute if score @s hotbar_map matches 4 run function ult:settings/ender_chest/hotbar/verify/abyss
 execute if score @s hotbar_map matches 5 run function ult:settings/ender_chest/hotbar/verify/citadel
 execute if score @s hotbar_map matches 6 run function ult:settings/ender_chest/hotbar/verify/wasteland
-execute if score @s hotbar_map matches 7 run function ult:settings/ender_chest/hotbar/verify/townsquare
-execute if score @s hotbar_map matches 8 run function ult:settings/ender_chest/hotbar/verify/laststand
+execute if score @s hotbar_map matches 7 run function ult:settings/ender_chest/hotbar/verify/town_square
+execute if score @s hotbar_map matches 8 run function ult:settings/ender_chest/hotbar/verify/last_stand
 execute if score @s hotbar_map matches 9 run function ult:settings/ender_chest/hotbar/verify/permafrost
 execute if score @s hotbar_map matches 10 run function ult:settings/ender_chest/hotbar/verify/shroom
 execute if score @s hotbar_map matches 11 run function ult:settings/ender_chest/hotbar/verify/hellscape
