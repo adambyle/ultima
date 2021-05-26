@@ -1,4 +1,4 @@
-# tags
+# Entity Tags
 
 Tags are used to mark and categorize entities. Some have important uses, while others are just arbitrary.
 
@@ -41,7 +41,7 @@ Tag|Purpose|Function(s)
 `loot_table_handler`|Tags a pig which is used as a dynamic loot table.|`settings/ender_chest/hotbar/maps/*` /  `spawn/items/*`
 `menu_operator`|Players capable of operating a menu right now.|`tick`
 `new_wasteland_warped`|Players who just warped.|`tick/action/map/wasteland/*`
-`played_ultimate`|All players once they have joined the world at least once.|`tick/action/*`
+`played_ultima`|All players once they have joined the world at least once.|`tick/action/*`
 `random`|Player to be randomly credited with a kill in Royale mode.|`death/*`
 `timed`|Players doing parkour whose timers are running.|`parkour/*`
 `vote_station`|Markers to teleport players when they need to vote for a map.|`*`

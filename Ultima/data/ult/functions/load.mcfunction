@@ -75,6 +75,9 @@ scoreboard players set event.skill.flurry_rush const 1
 scoreboard players set event.skill.backstabbing const 2
 scoreboard players set event.skill.hot_pursuit const 3
 
+scoreboard players set flag.debug_mode.off const 0
+scoreboard players set flag.debug_mode.on const 1
+
 scoreboard players set flag.game_state.inactive const 0
 scoreboard players set flag.game_state.active const 1
 scoreboard players set flag.game_state.transition const 2
@@ -120,10 +123,8 @@ scoreboard players set menu.spectator const 3
 scoreboard players set menu.vote const 4
 scoreboard players set menu.parkour const 5
 
-# Prepare the world if nobody is online yet
-execute unless entity @a run function ult:load/first
-
 # Prepare teams
+team add lobby
 team modify lobby friendlyFire false
 scoreboard objectives modify wins displayname {"text": "Wins", "color": "dark_green"}
 scoreboard objectives modify health_display displayname {"text": "HP", "color": "dark_red"}
@@ -132,3 +133,10 @@ scoreboard objectives modify score displayname {"text": "Score", "color": "blue"
 
 team add respawn_marker
 team modify respawn_marker color dark_red
+
+# Prepare data storage
+#declare storage ult:players
+#declare storage ult:temp
+
+# Prepare the world if nobody is online yet
+execute unless entity @a run function ult:load/first

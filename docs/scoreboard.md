@@ -1,4 +1,4 @@
-# scoreboard
+# Scoreboard
 
 Scoreboard objectives in Ultima are not namespaced. Do not mix the Ultima data pack with any other data packs.
 
@@ -53,6 +53,7 @@ Declaration|Criterion|Description
 
 Switch|Purpose
 -|-
+`debug_mode`|Toggled on for development purposes only.
 `game_state`|Determines whether the game is active.
 `map`|Current map being played on.
 `map_menu`|Map choice menu interface tracker.
@@ -102,6 +103,11 @@ This is a list of easy access constant flags that act as a kind of enumerator to
     1: flurry_rush
     2: backstabbing
     4: hot_pursuit
+
+### `flag.debug_mode`
+
+    0: off
+    1: on
 
 ### `flag.game_state`
 

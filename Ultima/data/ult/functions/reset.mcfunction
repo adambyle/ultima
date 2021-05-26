@@ -6,20 +6,17 @@ schedule clear ult:spawn/next
 schedule clear ult:start/lighting
 schedule clear ult:start/ready/timer
 schedule clear ult:tick/action/opt_prompt/universal
-scoreboard players set #timeout game_mode 0
+scoreboard players set .switch_game_mode control 0
 
 # Cleanup
 spawnpoint @a 45 30 -12 0
-kill @e[tag=!static_item,tag=!text_display,type=!player]
+kill @e[tag=!static_item, tag=!text_display, type=!player]
 execute as @a[tag=player, team=!lobby] run function ult:tp/lobby
 execute as @a[gamemode=spectator] run function ult:tp/lobby
 
 # Reset settings
 difficulty peaceful
 time set noon
-clear @a
-effect clear @a
-gamemode adventure @a
 xp set @a 0 levels
 xp set @a 0 points
 gamerule keepInventory true
@@ -82,4 +79,6 @@ execute if score #flag game_mode = #ultimate game_mode run data modify entity @e
 function ult:data/map_display
 
 tellraw @a [{"text": "If you run into any bugs, report them "}, {"text": "on GitHub.", "underlined": true, "clickEvent": {"action": "open_url", "value": "https://github.com/beegyfleeg/ultima/issues"}}]
-execute if score #debug game_state matches 1 run tellraw beegyfleeg [{"text": "DEBUG MODE IS ON!\n","color": "yellow"},{"text": "Click to turn it off.","underlined": true,"clickEvent": {"action": "run_command","value": "/scoreboard players set #debug game_state 0"}}]
+execute if score .debug_mode flag = flag.debug_mode.on const run tellraw beegyfleeg [{"text": "DEBUG MODE IS ON!\n","color": "yellow"},{"text": "Click to turn it off.","underlined": true,"clickEvent": {"action": "run_command","value": "/scoreboard players set .debug_mode flag 0"}}]
+
+function ult:settings/map/main

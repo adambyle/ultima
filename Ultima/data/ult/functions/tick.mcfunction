@@ -29,7 +29,7 @@ execute as @a[tag=menu_operator] if score @s menu = #spectate menu unless data e
 execute as @a[tag=menu_operator] if score @s menu = #hotbar_menu menu run function ult:settings/ender_chest/hotbar/driver
 
 # Run timeouts
-execute if score #timeout game_mode matches 1.. run scoreboard players remove #timeout game_mode 1
+execute if score .switch_game_mode control matches 1.. run scoreboard players remove .switch_game_mode control 1
 
 # Reset blocks
 setblock 45 31 -3 polished_blackstone_pressure_plate[powered=false]
@@ -64,9 +64,9 @@ execute as @a[gamemode=spectator,scores={action=3}] run function ult:tp/lobby
 execute if score #flag game_state matches 0 as @a[tag=player, scores={ready=1, action=7}] run function ult:start/ready/unready
 
 # Test for game end
-execute if score #flag game_mode = #duels game_mode as @a[scores={action=1,game_mode=0},tag=player] if score #timeout game_mode matches 0 run function ult:tick/action/change_modes
-execute if score #flag game_mode = #duels game_mode unless entity @a[scores={game_mode=0},tag=player] if score #timeout game_mode matches 1.. run function ult:tick/action/confirm_change_modes
-execute if score #flag game_mode = #duels game_mode as @a[scores={action=1,game_mode=0},tag=player] if score #timeout game_mode matches 1.. run function ult:tick/action/confirm_change_modes
+execute if score #flag game_mode = #duels game_mode as @a[scores={action=1,game_mode=0},tag=player] if score .switch_game_mode control matches 0 run function ult:tick/action/change_modes
+execute if score #flag game_mode = #duels game_mode unless entity @a[scores={game_mode=0},tag=player] if score .switch_game_mode control matches 1.. run function ult:tick/action/confirm_change_modes
+execute if score #flag game_mode = #duels game_mode as @a[scores={action=1,game_mode=0},tag=player] if score .switch_game_mode control matches 1.. run function ult:tick/action/confirm_change_modes
 
 # Deal with trigger actions and reset some objectives
 scoreboard players set @a action 0
@@ -102,8 +102,8 @@ fill -2 35 128 92 35 222 air replace #ult:breakable
 fill -2 24 128 92 24 222 water replace air
 
 # Send command feedback
-execute if score #debug game_state matches 1 run gamerule sendCommandFeedback true
-execute unless score #debug game_state matches 1 run gamerule sendCommandFeedback false
+execute if score .debug_mode flag matches 1 run gamerule sendCommandFeedback true
+execute unless score .debug_mode flag matches 1 run gamerule sendCommandFeedback false
 
 # Parkour handler
 execute as @e[tag=parkour_particle] at @s run tp @s ~ ~ ~ ~10 ~
@@ -129,7 +129,7 @@ execute as @a[tag=player, tag=alive] run scoreboard players operation @s display
 
 execute as @a run function ult:tick/action/update_pos
 
-execute if score #debug game_state matches 1 at @e[type=minecraft:area_effect_cloud] run particle composter ~ ~ ~ 0 0 0 0 0 force
+execute if score .debug_mode flag matches 1 at @e[type=minecraft:area_effect_cloud] run particle composter ~ ~ ~ 0 0 0 0 0 force
 
 execute store result score #temp _var if entity @e[type=area_effect_cloud, tag=]
 ##execute if score #temp _var matches 2.. run tellraw @a {"score": {"name": "#temp", "objective": "_var"}}
