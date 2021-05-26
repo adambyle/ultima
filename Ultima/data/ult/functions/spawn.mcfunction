@@ -5,16 +5,16 @@ function ult:settings/ender_chest/main
 clear @s
 effect clear @s
 effect give @s instant_health 1 3 true
-execute unless score #flag game_mode = #duels game_mode run effect give @s resistance 4 1
+execute unless score .game_mode flag = flag.game_mode.duels const run effect give @s resistance 4 1
 gamemode adventure
 team leave @s
 
 scoreboard players set @s showedkey 0
 data modify storage ult:temp Key set value {playGame: true}
 execute if score @s showedkey matches 0 run function ult:tick/action/key_point
-execute if score #flag game_mode = #duels game_mode run data modify storage ult:temp Key set value {playDuels: true}
-execute if score #flag game_mode = #royale game_mode run data modify storage ult:temp Key set value {playRoyale: true}
-execute if score #flag game_mode = #brawl game_mode run data modify storage ult:temp Key set value {playBrawl: true}
+execute if score .game_mode flag = flag.game_mode.duels const run data modify storage ult:temp Key set value {playDuels: true}
+execute if score .game_mode flag = flag.game_mode.royale const run data modify storage ult:temp Key set value {playRoyale: true}
+execute if score .game_mode flag = flag.game_mode.brawl const run data modify storage ult:temp Key set value {playBrawl: true}
 execute if score @s showedkey matches 0 run function ult:tick/action/key_point
 execute if score #server map matches 1 run data modify storage ult:temp Key set value {playManor: true}
 execute if score #server map matches 2 run data modify storage ult:temp Key set value {playWoodlands: true}
@@ -43,7 +43,7 @@ function ult:data/player/reset_waits
 
 function ult:tp
 
-execute if score #flag game_mode = #ultimate game_mode run function ult:spawn/ultimate
+execute if score .game_mode flag = #ultimate game_mode run function ult:spawn/ultimate
 execute if score #server map matches 1 run function ult:spawn/maps/manor
 execute if score #server map matches 2 run function ult:spawn/maps/woodlands
 execute if score #server map matches 3 run function ult:spawn/maps/dungeon
@@ -66,6 +66,6 @@ execute if score #server map matches 18 run function ult:spawn/maps/marooned
 execute at @s run playsound item.totem.use master @a[tag=!parkour] ~ ~ ~ 1 0.7
 
 scoreboard players set @s afk 0
-scoreboard players set @s die 0
+scoreboard players set @s death 0
 
 title @s actionbar ""

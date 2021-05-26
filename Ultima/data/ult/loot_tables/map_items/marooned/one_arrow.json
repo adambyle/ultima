@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {"text": "Firework Rockets (x16)","italic": false}
+                            "name": {"text": "Firework Rockets (x16)", "italic": false}
                         }
                     ]
                 }

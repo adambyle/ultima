@@ -4,7 +4,7 @@ clear @a[gamemode=!creative] #ult:map_icons
 clear @s #ult:all
 scoreboard players set @s map 0
 
-execute unless data entity @s EnderItems[{id:"minecraft:structure_void"}] run function ult:tp/lobby
+execute unless data entity @s EnderItems[{id: "minecraft:structure_void"}] run function ult:tp/lobby
 scoreboard players set #temp _var 0
 execute unless data entity @s EnderItems[{Slot:2b}] run scoreboard players set #temp _var 1
 execute unless data entity @s EnderItems[{Slot:4b}] run scoreboard players set #temp _var 2
@@ -24,8 +24,8 @@ execute store result score #temp map run data get storage ult:map_data Votes[2]
 function ult:settings/ender_chest/vote/set_loot_table
 loot replace entity @s enderchest.6 kill @e[tag=loot_table_handler,limit=1]
 
-replaceitem entity @s enderchest.21 structure_void{display:{Name:'{"text":"Cancel","color":"dark_aqua","bold":true,"italic":false}',Lore:['{"text":"Click if you are not ready to play.","color":"gray"}']}}
-replaceitem entity @s enderchest.23 lava_bucket{display:{Name:'{"text":"Don\'t Vote","color":"red","bold":true,"italic":false}',Lore:['{"text":"Choose this to skip adding your vote to the pool.","color":"gray"}']}}
+replaceitem entity @s enderchest.21 structure_void{display: {Name:'{"text": "Cancel", "color": "dark_aqua", "bold":true, "italic":false}',Lore: ['{"text": "Click if you are not ready to play.", "color": "gray"}']}}
+replaceitem entity @s enderchest.23 lava_bucket{display: {Name:'{"text": "Don\'t Vote", "color": "red", "bold":true, "italic":false}',Lore: ['{"text": "Choose this to skip adding your vote to the pool.", "color": "gray"}']}}
 
 execute if score #temp _var matches 1 store result score @s map run data get storage ult:map_data Votes[0]
 execute if score #temp _var matches 2 store result score @s map run data get storage ult:map_data Votes[1]

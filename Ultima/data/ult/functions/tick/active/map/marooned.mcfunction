@@ -1,5 +1,5 @@
 execute as @a[tag=player, tag=alive] run function ult:tick/active/map/marooned/trident_ownership
-loot give @a[nbt=!{Inventory:[{id:"minecraft:trident"}]}, scores={_var=0}] loot ult:map_items/marooned/trident
+loot give @a[nbt=!{Inventory: [{id: "minecraft:trident"}]}, scores={_var=0}] loot ult:map_items/marooned/trident
 
 fill 131 13 186 95 25 124 spruce_fence_gate[open=false, facing=east] replace spruce_fence_gate[open=true, facing=east]
 fill 131 13 186 95 25 124 spruce_fence_gate[open=false, facing=west] replace spruce_fence_gate[open=true, facing=west]

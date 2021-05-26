@@ -19,20 +19,20 @@ loot replace block 43 31 -12 container.23 loot ult:map_icon/permafrost
 loot replace block 43 31 -12 container.24 loot ult:map_icon/shroom
 loot replace block 43 31 -12 container.25 loot ult:map_icon/hellscape
 loot replace block 43 31 -12 container.26 loot ult:map_icon/frontier
-replaceitem block 43 31 -12 container.11 structure_void{display:{Name:'{"text":"Back","color":"dark_red","italic":false,"bold":true}',Lore:['{"text":"Back to Map Selection...","color":"gray"}']}}
+replaceitem block 43 31 -12 container.11 structure_void{display: {Name:'{"text": "Back", "color": "dark_red", "italic":false, "bold":true}',Lore: ['{"text": "Back to Map Selection...", "color": "gray"}']}}
 
-execute if score #flag map = #select map if score #server map matches 1 run data modify block 43 31 -12 Items[{Slot:5b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
-execute if score #flag map = #select map if score #server map matches 2 run data modify block 43 31 -12 Items[{Slot:6b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
-execute if score #flag map = #select map if score #server map matches 3 run data modify block 43 31 -12 Items[{Slot:7b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
-execute if score #flag map = #select map if score #server map matches 4 run data modify block 43 31 -12 Items[{Slot:8b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
-execute if score #flag map = #select map if score #server map matches 5 run data modify block 43 31 -12 Items[{Slot:14b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
-execute if score #flag map = #select map if score #server map matches 6 run data modify block 43 31 -12 Items[{Slot:15b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
-execute if score #flag map = #select map if score #server map matches 7 run data modify block 43 31 -12 Items[{Slot:16b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
-execute if score #flag map = #select map if score #server map matches 8 run data modify block 43 31 -12 Items[{Slot:17b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
-execute if score #flag map = #select map if score #server map matches 9 run data modify block 43 31 -12 Items[{Slot:23b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
-execute if score #flag map = #select map if score #server map matches 10 run data modify block 43 31 -12 Items[{Slot:24b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
-execute if score #flag map = #select map if score #server map matches 11 run data modify block 43 31 -12 Items[{Slot:25b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
-execute if score #flag map = #select map if score #server map matches 12 run data modify block 43 31 -12 Items[{Slot:26b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
+execute if score #flag map = #select map if score #server map matches 1 run data modify block 43 31 -12 Items[{Slot:5b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
+execute if score #flag map = #select map if score #server map matches 2 run data modify block 43 31 -12 Items[{Slot:6b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
+execute if score #flag map = #select map if score #server map matches 3 run data modify block 43 31 -12 Items[{Slot:7b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
+execute if score #flag map = #select map if score #server map matches 4 run data modify block 43 31 -12 Items[{Slot:8b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
+execute if score #flag map = #select map if score #server map matches 5 run data modify block 43 31 -12 Items[{Slot:14b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
+execute if score #flag map = #select map if score #server map matches 6 run data modify block 43 31 -12 Items[{Slot:15b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
+execute if score #flag map = #select map if score #server map matches 7 run data modify block 43 31 -12 Items[{Slot:16b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
+execute if score #flag map = #select map if score #server map matches 8 run data modify block 43 31 -12 Items[{Slot:17b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
+execute if score #flag map = #select map if score #server map matches 9 run data modify block 43 31 -12 Items[{Slot:23b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
+execute if score #flag map = #select map if score #server map matches 10 run data modify block 43 31 -12 Items[{Slot:24b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
+execute if score #flag map = #select map if score #server map matches 11 run data modify block 43 31 -12 Items[{Slot:25b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
+execute if score #flag map = #select map if score #server map matches 12 run data modify block 43 31 -12 Items[{Slot:26b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
 
 execute unless score #selected map matches 0 run clear @a[gamemode=!creative] #ult:map_icons
 execute if score #selected map matches 1.. unless score #selected map = #server map if score #flag map = #select map run function ult:settings/map/select

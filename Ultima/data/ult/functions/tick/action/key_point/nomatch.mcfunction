@@ -35,7 +35,7 @@ execute if data storage ult:temp Key.dieRoyale run tellraw @s [{"text": "Key poi
 execute if data storage ult:temp Key._ run tellraw @s ""
 execute if data storage ult:temp Key.playGame run tellraw @s "Ultima is a PvP game. The object is to eliminate all of your opponents. You will learn more about the specific game mode you've chosen the next time you play."
 execute if data storage ult:temp Key.playDuels run tellraw @s "In Duels mode, you face another player one-on-one. With more than two people, you take turns fighting. Winner stays!"
-execute if data storage ult:temp Key.playRoyale run tellraw @s "In Royale mode, the last man standing wins. You have to kill every other player in a row to win. If you die, all the players you've killed so far get to respawn!"
+execute if data storage ult:temp Key.playRoyale run tellraw @s "In Royale mode, the last man standing wins. You have to kill every other player in a row to win. If you death, all the players you've killed so far get to respawn!"
 execute if data storage ult:temp Key.playBrawl run tellraw @s "In Brawl mode, up to four players are always in the arena at once! Try to come out on top in this frenzy for points. Avenging your death and not targeting players who just spawned will earn you the most points."
 execute if data storage ult:temp Key.playManor run tellraw @s "The Manor map tests your skills in generic 1.9 combat. Bring everything you know about basic PvP to the table."
 execute if data storage ult:temp Key.playWoodlands run tellraw @s "The Woodlands map rewards careful aim and 1.9-style combos. You can increase your supply of arrows in the treehouse."

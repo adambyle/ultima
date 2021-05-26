@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id: 1b, Duration: 400}, {Id: 11b, Duration: 100, Amplifier: 2b}],display:{Name:'{\"text\": \"Potion of Resilience\",\"italic\": false}'}}"
+                            "tag": "{Potion:\"minecraft:water\",CustomPotionEffects: [{Id: 1b, Duration: 400}, {Id: 11b, Duration: 100, Amplifier: 2b}],display: {Name:'{\"text\": \"Potion of Resilience\",\"italic\": false}'}}"
                         }
                     ]
                 }

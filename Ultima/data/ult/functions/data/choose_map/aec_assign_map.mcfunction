@@ -1,4 +1,4 @@
-summon area_effect_cloud ~ ~ ~ {Tags:["choose_map"]}
+summon area_effect_cloud ~ ~ ~ {Tags: ["choose_map"]}
 execute as @e[tag=choose_map] unless score @s map matches 1.. run scoreboard players operation @s map = #temp _var
 
 scoreboard players add #temp _var 1

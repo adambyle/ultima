@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {"text": "Town Square","bold": true,"italic": false}
+                            "name": {"text": "Town Square", "bold": true, "italic": false}
                         }
                     ]
                 }

@@ -27,8 +27,8 @@ execute if score #server map matches 17 run function ult:start/map/ancient
 execute if score #server map matches 18 run function ult:start/map/marooned
 function ult:start/map/reset
 
-execute if score #flag game_mode = #duels game_mode run scoreboard objectives setdisplay sidebar display_health
-execute if score #flag game_mode = #royale game_mode run scoreboard objectives setdisplay sidebar score
-execute if score #flag game_mode = #brawl game_mode run scoreboard objectives setdisplay sidebar score
+execute if score .game_mode flag = flag.game_mode.duels const run scoreboard objectives setdisplay sidebar display_health
+execute if score .game_mode flag = flag.game_mode.royale const run scoreboard objectives setdisplay sidebar score
+execute if score .game_mode flag = flag.game_mode.brawl const run scoreboard objectives setdisplay sidebar score
 
 scoreboard players set @a health 20

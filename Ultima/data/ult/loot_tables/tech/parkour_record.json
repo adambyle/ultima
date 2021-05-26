@@ -12,11 +12,11 @@
                             "entity": "this",
                             "lore": [
                                 "",
-                                {"text": "Personal Best:", "color": "blue", "italic": false, "bold": true},
+                                {"text": "Personal Best: ", "color": "blue", "italic": false, "bold": true},
                                 [{"text": "First Half: ", "italic": false, "color": "white"}, {"storage": "ult:temp", "nbt": "HalfPersonalTime", "interpret": true, "color": "gold"}],
                                 [{"text": "Full Course: ", "italic": false, "color": "white"}, {"storage": "ult:temp", "nbt": "FullPersonalTime", "interpret": true, "color": "gold"}],
                                 "",
-                                {"text": "World Record:", "color": "blue", "italic": false, "bold": true},
+                                {"text": "World Record: ", "color": "blue", "italic": false, "bold": true},
                                 [{"text": "First Half: ", "italic": false, "color": "white"}, {"storage": "ult:temp", "nbt": "HalfRecordTime", "interpret": true, "color": "gold"}, {"text": " by ", "color": "yellow"}, {"storage": "ult:temp", "nbt": "HalfRecordHolder", "color": "gold", "interpret": true}],
                                 [{"text": "Full Course: ", "italic": false, "color": "white"}, {"storage": "ult:temp", "nbt": "FullRecordTime", "interpret": true, "color": "gold"}, {"text": " by ", "color": "yellow"}, {"storage": "ult:temp", "nbt": "FullRecordHolder", "color": "gold", "interpret": true}]
                             ]

@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {"text": "Dungeon","bold": true,"italic": false}
+                            "name": {"text": "Dungeon", "bold": true, "italic": false}
                         }
                     ]
                 }

@@ -1,6 +1,6 @@
 scoreboard players set @s pn 0
 scoreboard players set @s tether 0
-scoreboard players set @s die 0
+scoreboard players set @s death 0
 scoreboard players set @s kill 0
 scoreboard players set @s ready 0
 scoreboard players set @s queue 0

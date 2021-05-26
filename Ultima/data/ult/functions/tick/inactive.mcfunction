@@ -10,11 +10,11 @@ execute positioned 45 31 -3 if block ~ ~ ~ polished_blackstone_pressure_plate[po
 execute if block 43 31 -9 polished_blackstone_button[powered=true] run function ult:settings/mode
 
 # Map settings handler
-execute if score #maps menu = #map menu unless data block 43 31 -12 Items[{id:"minecraft:gold_block"}] run function ult:settings/map/featured
-execute if score #maps menu = #map menu unless data block 43 31 -12 Items[{id:"minecraft:crafting_table"}] run function ult:settings/map/default
+execute if score #maps menu = #map menu unless data block 43 31 -12 Items[{id: "minecraft:gold_block"}] run function ult:settings/map/featured
+execute if score #maps menu = #map menu unless data block 43 31 -12 Items[{id: "minecraft:crafting_table"}] run function ult:settings/map/default
 execute if score #maps menu = #map menu run function ult:settings/map/main
-execute if score #maps menu = #map.default menu unless data block 43 31 -12 Items[{id:"minecraft:structure_void"}] run function ult:settings/map/main
-execute if score #maps menu = #map.featured menu unless data block 43 31 -12 Items[{id:"minecraft:structure_void"}] run function ult:settings/map/main
+execute if score #maps menu = #map.default menu unless data block 43 31 -12 Items[{id: "minecraft:structure_void"}] run function ult:settings/map/main
+execute if score #maps menu = #map.featured menu unless data block 43 31 -12 Items[{id: "minecraft:structure_void"}] run function ult:settings/map/main
 execute if score #maps menu = #map.default menu run function ult:settings/map/default
 execute if score #maps menu = #map.featured menu run function ult:settings/map/featured
 

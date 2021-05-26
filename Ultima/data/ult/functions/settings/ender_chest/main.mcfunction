@@ -30,16 +30,16 @@ clear @s structure_void
 
 clear @s #ult:all
 
-replaceitem entity @s[tag=player] enderchest.1 lime_terracotta{display:{Name:'{"text": "Opted in","color": "dark_green","italic": false,"bold": true}',Lore:['{"text": "Click to opt out.","color": "gray"}']}}
-replaceitem entity @s[tag=spectator] enderchest.1 gray_terracotta{display:{Name:'{"text": "Opted out","color": "dark_gray","italic": false,"bold": true}',Lore:['{"text": "Click to opt in.","color": "gray"}']}}
+replaceitem entity @s[tag=player] enderchest.1 lime_terracotta{display: {Name:'{"text": "Opted in", "color": "dark_green", "italic": false, "bold": true}',Lore: ['{"text": "Click to opt out.", "color": "gray"}']}}
+replaceitem entity @s[tag=spectator] enderchest.1 gray_terracotta{display: {Name:'{"text": "Opted out", "color": "dark_gray", "italic": false, "bold": true}',Lore: ['{"text": "Click to opt in.", "color": "gray"}']}}
 
 replaceitem entity @s enderchest.24 book{display: {Name: '{"text": "Choose Class", "color": "#7A3200", "bold": true, "italic": false}', Lore: ['[{"text": "Control which items are buffed in Ultimate mode. ", "color": "gray"}, {"text": "(Coming soon)", "color": "white"}]']}}
 
-replaceitem entity @s enderchest.20 golden_apple{display:{Name:'{"text": "Hotbar Settings","color": "yellow","bold": true,"italic": false}'},HideFlags:63}
+replaceitem entity @s enderchest.20 golden_apple{display: {Name:'{"text": "Hotbar Settings", "color": "yellow", "bold": true, "italic": false}'},HideFlags:63}
 
-replaceitem entity @s[scores={y.ready=1}] enderchest.3 stone_sword{display:{Name:'{"text": "Never Auto-Ready","color": "gray","bold": true,"italic": false}',Lore:['{"text": "Control when the game automatically makes you ready.","color": "gray"}']},HideFlags:63}
-replaceitem entity @s[scores={y.ready=2}] enderchest.3 golden_sword{display:{Name:'{"text": "Auto-Ready When Not AFK","color": "gold","bold": true,"italic": false}',Lore:['{"text": "Control when the game automatically makes you ready.","color": "gray"}']},HideFlags:63}
-replaceitem entity @s[scores={y.ready=3}] enderchest.3 netherite_sword{display:{Name:'{"text": "Always Auto-Ready","color": "dark_red","bold": true,"italic": false}',Lore:['{"text": "Control when the game automatically makes you ready.","color": "gray"}']},HideFlags:63}
+replaceitem entity @s[scores={y.ready=1}] enderchest.3 stone_sword{display: {Name:'{"text": "Never Auto-Ready", "color": "gray", "bold": true, "italic": false}',Lore: ['{"text": "Control when the game automatically makes you ready.", "color": "gray"}']},HideFlags:63}
+replaceitem entity @s[scores={y.ready=2}] enderchest.3 golden_sword{display: {Name:'{"text": "Auto-Ready When Not AFK", "color": "gold", "bold": true, "italic": false}',Lore: ['{"text": "Control when the game automatically makes you ready.", "color": "gray"}']},HideFlags:63}
+replaceitem entity @s[scores={y.ready=3}] enderchest.3 netherite_sword{display: {Name:'{"text": "Always Auto-Ready", "color": "dark_red", "bold": true, "italic": false}',Lore: ['{"text": "Control when the game automatically makes you ready.", "color": "gray"}']},HideFlags:63}
 
 replaceitem entity @s[scores={y.afk=1}] enderchest.5 player_head{display: {Name: '{"text": "AFK after 5 seconds", "bold": true, "color": "dark_aqua", "italic": false}', Lore: ['{"text": "Control when the game thinks you\'re AFK.", "color": "gray"}']}}
 replaceitem entity @s[scores={y.afk=2}] enderchest.5 zombie_head{display: {Name: '{"text": "AFK after 10 seconds", "bold": true, "color": "dark_green", "italic": false}', Lore: ['{"text": "Control when the game thinks you\'re AFK.", "color": "gray"}']}}

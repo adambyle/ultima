@@ -18,8 +18,8 @@ tellraw @a {"text": "\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n", "obfuscated"
 tellraw @a {"text": "Parkour World Record!", "color": "red", "bold": true}
 execute if score @s round matches 0 run tellraw @a [{"storage": "ult:temp", "nbt": "Map", "color": "aqua"}, {"text": " First Half\n", "color": "dark_aqua"}]
 execute if score @s round matches 1 run tellraw @a [{"storage": "ult:temp", "nbt": "Map", "color": "aqua"}, {"text": " Full Course\n", "color": "dark_aqua"}]
-tellraw @a [{"text": "", "color": "dark_gray"}, {"text": "World Record:", "strikethrough": true}, " ", {"storage": "ult:temp", "nbt": "WorldRecordTime", "interpret": true}, " by ", {"storage": "ult:temp", "nbt": "RecordHolder", "interpret": true}]
-tellraw @a [{"text": "", "color": "yellow"}, {"text": "New Record:", "color": "green", "bold": true}, " ", {"storage": "ult:temp", "nbt": "Time", "interpret": true, "color": "dark_green"}, " by ", {"selector": "@s", "color": "yellow"}]
+tellraw @a [{"text": "", "color": "dark_gray"}, {"text": "World Record: ", "strikethrough": true}, " ", {"storage": "ult:temp", "nbt": "WorldRecordTime", "interpret": true}, " by ", {"storage": "ult:temp", "nbt": "RecordHolder", "interpret": true}]
+tellraw @a [{"text": "", "color": "yellow"}, {"text": "New Record: ", "color": "green", "bold": true}, " ", {"storage": "ult:temp", "nbt": "Time", "interpret": true, "color": "dark_green"}, " by ", {"selector": "@s", "color": "yellow"}]
 tellraw @a {"text": "\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n", "obfuscated": true, "bold": true}
 
 loot replace block 0 0 0 container.0 loot ult:tech/name

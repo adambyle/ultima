@@ -38,14 +38,14 @@ execute if score @s deathsource matches 8 unless entity @a[tag=killer] run data 
 execute if score @s deathsource matches 0..6 run data modify storage ult:temp Death2 set value '""'
 
 execute as @a[tag=killer] at @s run playsound entity.player.levelup master @s
-execute if score #flag game_mode = #duels game_mode run function ult:death/duels
-execute if score #flag game_mode = #royale game_mode run function ult:death/royale
-execute if score #flag game_mode = #brawl game_mode run function ult:death/brawl
+execute if score .game_mode flag = flag.game_mode.duels const run function ult:death/duels
+execute if score .game_mode flag = flag.game_mode.royale const run function ult:death/royale
+execute if score .game_mode flag = flag.game_mode.brawl const run function ult:death/brawl
 
 execute if entity @a[tag=killer] run tag @s add fresh
 
 function ult:start/map/reset
 
-execute unless score #flag game_mode > #royale game_mode run effect give @a instant_health 1 3 true
+execute unless score .game_mode flag > flag.game_mode.royale const run effect give @a instant_health 1 3 true
 
 title @s actionbar ""

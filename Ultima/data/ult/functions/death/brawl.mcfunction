@@ -1,5 +1,5 @@
-execute unless entity @a[tag=killer,scores={die=1..}] run function ult:death/brawl_normal
-execute if entity @a[tag=killer,scores={die=1..}] run function ult:death/simul
+execute unless entity @a[tag=killer,scores={death=1..}] run function ult:death/brawl_normal
+execute if entity @a[tag=killer,scores={death=1..}] run function ult:death/simul
 tag @a[tag=killer] remove fresh
 
 scoreboard players set @s tether 0

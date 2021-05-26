@@ -17,10 +17,10 @@ kill @e[tag=respawn_marker, scores={respawn=..1}]
 function ult:spawn/queue_advance
 
 # Mode specific functions
-execute if score #flag game_state matches 1 if score #flag game_mode = #duels game_mode run function ult:tick/active/mode/duels
-execute if score #flag game_state matches 1 if score #flag game_mode = #royale game_mode run function ult:tick/active/mode/royale
-execute if score #flag game_state matches 1 if score #flag game_mode = #brawl game_mode run function ult:tick/active/mode/brawl
-execute if score #flag game_state matches 1 if score #flag game_mode = #ultimate game_mode run function ult:tick/active/mode/ultimate
+execute if score #flag game_state matches 1 if score .game_mode flag = flag.game_mode.duels const run function ult:tick/active/mode/duels
+execute if score #flag game_state matches 1 if score .game_mode flag = flag.game_mode.royale const run function ult:tick/active/mode/royale
+execute if score #flag game_state matches 1 if score .game_mode flag = flag.game_mode.brawl const run function ult:tick/active/mode/brawl
+execute if score #flag game_state matches 1 if score .game_mode flag = #ultimate game_mode run function ult:tick/active/mode/ultimate
 
 # Map specific functions
 execute if score #flag game_state matches 1 if score #server map matches 2 run function ult:tick/active/map/woodlands

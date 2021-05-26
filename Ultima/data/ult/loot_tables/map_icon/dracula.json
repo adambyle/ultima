@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {"text": "Dracula's Castle","bold": true,"italic": false}
+                            "name": {"text": "Dracula's Castle", "bold": true, "italic": false}
                         }
                     ]
                 }

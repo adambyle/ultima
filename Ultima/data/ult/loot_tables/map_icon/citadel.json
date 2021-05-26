@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {"text": "Citadel","bold": true,"italic": false}
+                            "name": {"text": "Citadel", "bold": true, "italic": false}
                         }
                     ]
                 }

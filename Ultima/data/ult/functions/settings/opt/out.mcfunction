@@ -1,7 +1,7 @@
 function ult:data/root
-execute if score #flag game_mode = #duels game_mode as @s[tag=player, tag=alive] as @r[tag=alive, tag=!root] run function ult:victory
+execute if score .game_mode flag = flag.game_mode.duels const as @s[tag=player, tag=alive] as @r[tag=alive, tag=!root] run function ult:victory
 
-execute if score @s[tag=player] online matches 1 run tellraw @a [{"selector": "@s","color":"dark_gray"}, {"text": " has opted out.", "color": "dark_gray"}]
+execute if score @s[tag=player] online matches 1 run tellraw @a [{"selector": "@s", "color": "dark_gray"}, {"text": " has opted out.", "color": "dark_gray"}]
 execute if score @s[tag=player] online matches 1 run scoreboard players remove #server pn 1
 tag @s remove player
 tag @s remove alive

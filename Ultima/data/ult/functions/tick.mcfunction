@@ -64,9 +64,9 @@ execute as @a[gamemode=spectator,scores={action=3}] run function ult:tp/lobby
 execute if score #flag game_state matches 0 as @a[tag=player, scores={ready=1, action=7}] run function ult:start/ready/unready
 
 # Test for game end
-execute if score #flag game_mode = #duels game_mode as @a[scores={action=1,game_mode=0},tag=player] if score .switch_game_mode control matches 0 run function ult:tick/action/change_modes
-execute if score #flag game_mode = #duels game_mode unless entity @a[scores={game_mode=0},tag=player] if score .switch_game_mode control matches 1.. run function ult:tick/action/confirm_change_modes
-execute if score #flag game_mode = #duels game_mode as @a[scores={action=1,game_mode=0},tag=player] if score .switch_game_mode control matches 1.. run function ult:tick/action/confirm_change_modes
+execute if score .game_mode flag = flag.game_mode.duels const as @a[scores={action=1,game_mode=0},tag=player] if score .switch_game_mode control matches 0 run function ult:tick/action/change_modes
+execute if score .game_mode flag = flag.game_mode.duels const unless entity @a[scores={game_mode=0},tag=player] if score .switch_game_mode control matches 1.. run function ult:tick/action/confirm_change_modes
+execute if score .game_mode flag = flag.game_mode.duels const as @a[scores={action=1,game_mode=0},tag=player] if score .switch_game_mode control matches 1.. run function ult:tick/action/confirm_change_modes
 
 # Deal with trigger actions and reset some objectives
 scoreboard players set @a action 0

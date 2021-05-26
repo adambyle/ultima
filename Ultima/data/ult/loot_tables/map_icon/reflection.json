@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {"text": "Reflection","bold": true,"italic": false}
+                            "name": {"text": "Reflection", "bold": true, "italic": false}
                         }
                     ]
                 }

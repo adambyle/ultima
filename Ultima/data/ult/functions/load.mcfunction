@@ -99,6 +99,10 @@ scoreboard players set flag.map.marooned const 53
 scoreboard players set flag.map.hill const 54
 scoreboard players set flag.map.bathhouse const 55
 scoreboard players set flag.map.ultimate const 96
+scoreboard players operation flag.map.start_default const = flag.map.manor const
+scoreboard players operation flag.map.end_default const = flag.map.last_stand const
+scoreboard players operation flag.map.start_fandom const = flag.map.reflection const
+scoreboard players operation flag.map.end_fandom const = flag.map.marooned const
 
 scoreboard players set flag.map_menu.main const 0
 scoreboard players set flag.map_menu.default const 1

@@ -69,16 +69,16 @@ execute unless data storage ult:players Global.Parkour.citadel run data modify s
 # Reset settings buttons
 setblock 43 31 -9 polished_blackstone_button[powered=false,facing=west,face=floor]
 data remove block 43 31 -12 Lock
-execute unless score #flag game_mode matches 0.. run scoreboard players operation #flag game_mode = #royale game_mode
+execute unless score .game_mode flag matches 0.. run scoreboard players operation .game_mode flag = flag.game_mode.royale const
 execute unless score #flag map matches 0.. run scoreboard players operation #flag map = #select map
 execute unless score #server map matches 0.. run scoreboard players set #server map 1
-execute if score #flag game_mode = #duels game_mode run data modify entity @e[tag=text_display.mode_name,limit=1] CustomName set value '{"text": "Duels","color": "aqua","italic": true}'
-execute if score #flag game_mode = #royale game_mode run data modify entity @e[tag=text_display.mode_name,limit=1] CustomName set value '{"text": "Royale","color": "aqua","italic": true}'
-execute if score #flag game_mode = #brawl game_mode run data modify entity @e[tag=text_display.mode_name,limit=1] CustomName set value '{"text": "Brawl","color": "aqua","italic": true}'
-execute if score #flag game_mode = #ultimate game_mode run data modify entity @e[tag=text_display.mode_name,limit=1] CustomName set value '{"text": "Ultimate","color": "aqua","italic": true}'
+execute if score .game_mode flag = flag.game_mode.duels const run data modify entity @e[tag=text_display.mode_name,limit=1] CustomName set value '{"text": "Duels", "color": "aqua", "italic": true}'
+execute if score .game_mode flag = flag.game_mode.royale const run data modify entity @e[tag=text_display.mode_name,limit=1] CustomName set value '{"text": "Royale", "color": "aqua", "italic": true}'
+execute if score .game_mode flag = flag.game_mode.brawl const run data modify entity @e[tag=text_display.mode_name,limit=1] CustomName set value '{"text": "Brawl", "color": "aqua", "italic": true}'
+execute if score .game_mode flag = #ultimate game_mode run data modify entity @e[tag=text_display.mode_name,limit=1] CustomName set value '{"text": "Ultimate", "color": "aqua", "italic": true}'
 function ult:data/map_display
 
 tellraw @a [{"text": "If you run into any bugs, report them "}, {"text": "on GitHub.", "underlined": true, "clickEvent": {"action": "open_url", "value": "https://github.com/beegyfleeg/ultima/issues"}}]
-execute if score .debug_mode flag = flag.debug_mode.on const run tellraw beegyfleeg [{"text": "DEBUG MODE IS ON!\n","color": "yellow"},{"text": "Click to turn it off.","underlined": true,"clickEvent": {"action": "run_command","value": "/scoreboard players set .debug_mode flag 0"}}]
+execute if score .debug_mode flag = flag.debug_mode.on const run tellraw beegyfleeg [{"text": "DEBUG MODE IS ON!\n", "color": "yellow"},{"text": "Click to turn it off.", "underlined": true, "clickEvent": {"action": "run_command", "value": "/scoreboard players set .debug_mode flag 0"}}]
 
 function ult:settings/map/main
