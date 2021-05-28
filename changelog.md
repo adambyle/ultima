@@ -1,5 +1,19 @@
 # changelog
 
+## Release v1.1.2 -- *May 27, 2021*
+
+### **Maps**
+
+- Reflection: Teleportation has been switched to crouching/jumping, instead of pressing buttons.
+- Reflection: Players now spawn on random sides of the mirror.
+- Wasteland: Smoke Bomb now summons a splash potion instead of doing direct damage, lowering the damage done and allowing for credited kills.
+
+### **Bug Fixes**
+
+- FIXED: Wasteland has unusual default hotbar settings.
+- FIXED: Newly joined players can neither opt in nor out, and are locked out of games along with other functionalities.
+- FIXED: No maps generate when loading the world for the first time.
+
 ## Release v1.1.1 -- *May 22, 2021*
 
 ### **Maps**
