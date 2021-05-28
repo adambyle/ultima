@@ -13,3 +13,5 @@ replaceitem entity @s armor.chest netherite_chestplate{Unbreakable:1b, Enchantme
 function ult:spawn/items/refills/reflection
 
 effect give @s night_vision 99999 0 true
+
+execute if predicate ult:coin_flip at @s run tp @s ~ 32 ~

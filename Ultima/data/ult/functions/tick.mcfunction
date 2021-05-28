@@ -117,6 +117,7 @@ tag @e[type=painting] add static_item
 execute as @e[type=painting] run data merge entity @s {Invulnerable: true}
 
 # Reset event-detection objectives
+scoreboard players reset * x.jump
 scoreboard players reset * x.damage
 scoreboard players reset * x.damaged
 scoreboard players reset * x.rabbit

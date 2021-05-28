@@ -68,6 +68,7 @@ scoreboard objectives add wins dummy
 scoreboard objectives add showedkey dummy
 
 scoreboard objectives add x.crouch dummy
+scoreboard objectives add x.jump custom:jump
 scoreboard objectives add x.damaged custom:damage_taken
 scoreboard objectives add x.damage custom:damage_dealt
 scoreboard objectives add x.rabbit killed:rabbit

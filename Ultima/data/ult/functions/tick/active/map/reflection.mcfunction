@@ -6,3 +6,6 @@ execute at @a[tag=player, tag=alive, scores={pn=3}, gamemode=adventure] run fill
 execute at @a[tag=player, tag=alive, scores={pn=4}, gamemode=adventure] run fill ~ 31 ~ ~ 31 ~ yellow_stained_glass replace #impermeable
 
 execute as @e[type=firework_rocket, tag=!reflectionRocket] at @s run function ult:event/reflection/reflect
+
+execute as @a[tag=player, tag=alive, scores={x.jump=1..}] at @s if block ~ ~-1 ~ blue_concrete run function ult:event/reflection/tp/up
+execute as @a[tag=player, tag=alive, scores={x.crouch=1}] at @s if block ~ ~3 ~ red_concrete run function ult:event/reflection/tp/down
