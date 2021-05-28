@@ -5,7 +5,7 @@
             "entries": [
                 {
                     "type": "item",
-                    "name": "paper",
+                    "name": "stone",
                     "functions": [
                         {
                             "function": "set_lore",

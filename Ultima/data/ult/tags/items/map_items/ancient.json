@@ -1,8 +1,9 @@
 {
     "values": [
-        "diamond_sword",
         "diamond_axe",
+        "diamond_hoe",
         "diamond_pickaxe",
-        "fire_charge"
+        "fire_charge",
+        "netherite_ingot"
     ]
 }

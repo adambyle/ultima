@@ -1,1 +1,1 @@
-scoreboard players set #map event 40
+scoreboard players set .map event 40

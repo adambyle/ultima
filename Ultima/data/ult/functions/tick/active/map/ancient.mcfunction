@@ -1,11 +1,11 @@
 execute as @a[scores={ancient.debris=1..}] run function ult:tick/active/map/ancient/give_ingot
 
 scoreboard players set @a _var 0
-execute as @a if score @s x.crouch matches 1 if data entity @s {SelectedItem: {id: "minecraft:netherite_ingot"}} run scoreboard players set @s _var 1
-execute as @a if score @s x.crouch matches 1 if data entity @s {Inventory: [{id: "minecraft:netherite_ingot", Slot: -106b}]} run scoreboard players set @s _var 2
+execute as @a if score @s crouch_mode matches 1 if data entity @s {SelectedItem: {id: "minecraft:netherite_ingot"}} run scoreboard players set @s _var 1
+execute as @a if score @s crouch_mode matches 1 if data entity @s {Inventory: [{id: "minecraft:netherite_ingot", Slot: -106b}]} run scoreboard players set @s _var 2
 execute as @a[scores={_var=1..}] run function ult:tick/active/map/ancient/upgrade
 
-execute as @a[scores={x.crouch=1}, nbt={SelectedItem: {id: "minecraft:fire_charge"}}] at @s anchored eyes run function ult:tick/active/map/ancient/fireball
+execute as @a[scores={crouch_mode=1}, nbt={SelectedItem: {id: "minecraft:fire_charge"}}] at @s anchored eyes run function ult:tick/active/map/ancient/fireball
 scoreboard players reset * z.ancient.gold
 scoreboard players reset * ancient.debris
 

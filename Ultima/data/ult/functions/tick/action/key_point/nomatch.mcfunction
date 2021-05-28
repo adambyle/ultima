@@ -62,4 +62,4 @@ execute if data storage ult:temp Key.dieRoyale run tellraw @s "Have you ever pla
 
 tellraw @s {"text": "\nhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh\n", "color": "red", "obfuscated": true, "bold": true}
 
-scoreboard players set @s showedkey 1
+tag @s add key_shown

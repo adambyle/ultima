@@ -6,13 +6,12 @@ schedule clear ult:spawn/next
 schedule clear ult:start/lighting
 schedule clear ult:start/ready/timer
 schedule clear ult:tick/action/opt_prompt/universal
-scoreboard players set .switch_game_mode control 0
 
 # Cleanup
 spawnpoint @a 45 30 -12 0
 kill @e[tag=!static_item, tag=!text_display, type=!player]
-execute as @a[tag=player, team=!lobby] run function ult:tp/lobby
-execute as @a[gamemode=spectator] run function ult:tp/lobby
+execute as @a[tag=player, team=!lobby] run function ult:lobby
+execute as @a[gamemode=spectator] run function ult:lobby
 
 # Reset settings
 difficulty peaceful
@@ -23,7 +22,7 @@ gamerule keepInventory true
 tag @a remove participating
 effect give @a instant_health 1 2 true
 scoreboard players reset @a map
-scoreboard players reset * display_health
+scoreboard players reset * health_display
 
 # Disable PvP
 team join lobby @a
@@ -46,8 +45,8 @@ execute as @e[tag=last_stand_skill] run data modify entity @s CustomNameVisible 
 scoreboard players reset * score
 title @a actionbar ""
 execute as @a[tag=!parkour] run function ult:data/player/reset
-scoreboard players set #flag game_state 0
-scoreboard players set #opt_prompt event 0
+scoreboard players set .game_state flag 0
+scoreboard players set .opt_prompt control 0
 
 # Clear blocks
 fill -2 24 128 92 24 222 water replace #ult:breakable
@@ -70,15 +69,14 @@ execute unless data storage ult:players Global.Parkour.citadel run data modify s
 setblock 43 31 -9 polished_blackstone_button[powered=false,facing=west,face=floor]
 data remove block 43 31 -12 Lock
 execute unless score .game_mode flag matches 0.. run scoreboard players operation .game_mode flag = flag.game_mode.royale const
-execute unless score #flag map matches 0.. run scoreboard players operation #flag map = #select map
-execute unless score #server map matches 0.. run scoreboard players set #server map 1
-execute if score .game_mode flag = flag.game_mode.duels const run data modify entity @e[tag=text_display.mode_name,limit=1] CustomName set value '{"text": "Duels", "color": "aqua", "italic": true}'
-execute if score .game_mode flag = flag.game_mode.royale const run data modify entity @e[tag=text_display.mode_name,limit=1] CustomName set value '{"text": "Royale", "color": "aqua", "italic": true}'
-execute if score .game_mode flag = flag.game_mode.brawl const run data modify entity @e[tag=text_display.mode_name,limit=1] CustomName set value '{"text": "Brawl", "color": "aqua", "italic": true}'
-execute if score .game_mode flag = #ultimate game_mode run data modify entity @e[tag=text_display.mode_name,limit=1] CustomName set value '{"text": "Ultimate", "color": "aqua", "italic": true}'
-function ult:data/map_display
+execute unless score .map_mode flag matches 0.. run scoreboard players operation .map_mode flag = flag.map_mode.selected const
+execute unless score .map flag matches 0.. run scoreboard players set .map flag 1
+execute if score .game_mode flag = flag.game_mode.duels const run data modify entity @e[tag=text_display.mode_name, limit=1] CustomName set value '{"text": "Duels", "color": "aqua", "italic": true}'
+execute if score .game_mode flag = flag.game_mode.royale const run data modify entity @e[tag=text_display.mode_name, limit=1] CustomName set value '{"text": "Royale", "color": "aqua", "italic": true}'
+execute if score .game_mode flag = flag.game_mode.brawl const run data modify entity @e[tag=text_display.mode_name, limit=1] CustomName set value '{"text": "Brawl", "color": "aqua", "italic": true}'
+function ult:data/map/map_display
 
 tellraw @a [{"text": "If you run into any bugs, report them "}, {"text": "on GitHub.", "underlined": true, "clickEvent": {"action": "open_url", "value": "https://github.com/beegyfleeg/ultima/issues"}}]
-execute if score .debug_mode flag = flag.debug_mode.on const run tellraw beegyfleeg [{"text": "DEBUG MODE IS ON!\n", "color": "yellow"},{"text": "Click to turn it off.", "underlined": true, "clickEvent": {"action": "run_command", "value": "/scoreboard players set .debug_mode flag 0"}}]
+execute if score .debug_mode flag = flag.debug_mode.on const run tellraw @a[tag=operator] [{"text": "DEBUG MODE IS ON!\n", "color": "yellow"}, {"text": "Click to turn it off.", "underlined": true, "clickEvent": {"action": "run_command", "value": "/scoreboard players set .debug_mode flag 0"}}]
 
 function ult:settings/map/main

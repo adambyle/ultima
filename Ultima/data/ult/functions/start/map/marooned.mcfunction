@@ -24,7 +24,7 @@ fill 131 12 186 95 25 124 spruce_stairs[waterlogged=false, half=top, facing=nort
 fill 131 12 186 95 25 124 spruce_stairs[waterlogged=false, half=top, facing=south] replace spruce_stairs[waterlogged=true, half=top, facing=south]
 fill 131 12 186 95 25 124 birch_fence[waterlogged=false] replace birch_fence[waterlogged=true]
 fill 131 12 186 95 25 124 end_stone_brick_wall[waterlogged=false] replace end_stone_brick_wall[waterlogged=true]
-scoreboard players set #map event 0
+scoreboard players set .map event 0
 scoreboard players set #transition event 0
 
 gamerule drowningDamage true

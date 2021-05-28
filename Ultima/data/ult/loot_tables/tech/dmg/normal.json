@@ -10,7 +10,7 @@
                         {
                             "function": "set_name",
                             "entity": "this",
-                            "name": {"score": {"name": "#temp", "objective": "_var"}, "color": "#ff8888"}
+                            "name": {"score": {"name": ".temp", "objective": "_var"}, "color": "#ff8888"}
                         }
                     ]
                 }

@@ -6,5 +6,5 @@ gamerule naturalRegeneration true
 gamerule fallDamage true
 gamerule keepInventory false
 
-scoreboard players set #arch chest_type 4
+scoreboard players set #arch chest 4
 function ult:chest/refill

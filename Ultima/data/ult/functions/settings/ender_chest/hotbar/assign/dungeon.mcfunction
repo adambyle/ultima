@@ -22,5 +22,5 @@ execute store result storage ult:temp Player.Hotbar.dungeon.frenzy_pot int 1.0 r
 
 function ult:data/player/save_nbt
 
-tellraw @s [{"text": "Hotbar >> ", "color": "dark_green", "bold": true},{"text": "Saved your hotbar settings!", "bold": false}]
+tellraw @s [{"text": "Hotbar >> ", "color": "dark_green", "bold": true}, {"text": "Saved your hotbar settings!", "bold": false}]
 execute at @s run playsound block.smithing_table.use master @s

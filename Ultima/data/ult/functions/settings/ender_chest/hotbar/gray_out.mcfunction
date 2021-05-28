@@ -13,8 +13,8 @@ execute unless data entity @s EnderItems[{Slot:25b}] run replaceitem entity @s e
 execute unless data entity @s EnderItems[{Slot:26b}] run replaceitem entity @s enderchest.26 gray_stained_glass_pane{display: {Name:'{"text": "Hotbar Slot 9", "color": "dark_gray", "italic": false}'}}
 clear @s gray_stained_glass_pane
 
-scoreboard players set #temp _var 0
-execute store result score #temp _var run clear @s #ult:all 0
-execute if score #temp _var matches 1 store success score #temp _var if data entity @s SelectedItem
-execute if score #temp _var matches 1 run tellraw @s [{"text": "Hotbar >> ", "color": "dark_red", "bold": true},{"text": "Keep the items in the ender chest please!", "bold": false}]
-execute if score #temp _var matches 1 run function ult:settings/ender_chest/hotbar
+scoreboard players set .temp _var 0
+execute store result score .temp _var run clear @s #ult:map_items/all 0
+execute if score .temp _var matches 1 store success score .temp _var if data entity @s SelectedItem
+execute if score .temp _var matches 1 run tellraw @s [{"text": "Hotbar >> ", "color": "dark_red", "bold": true}, {"text": "Keep the items in the ender chest please!", "bold": false}]
+execute if score .temp _var matches 1 run function ult:settings/ender_chest/hotbar/main

@@ -1,18 +1,18 @@
 function ult:data/player/get_nbt
 
-execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.last_stand.sword
+execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.sword
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/last_stand/sword"
 function ult:spawn/items/give
 
-execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.last_stand.axe
+execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.axe
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/last_stand/axe"
 function ult:spawn/items/give
 
-execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.last_stand.bow
+execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.bow
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/last_stand/bow"
 function ult:spawn/items/give
 
-execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.last_stand.shield
+execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.shield
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/last_stand/shield"
 function ult:spawn/items/give
 

@@ -12,11 +12,12 @@
         "red_mushroom_block",
         "netherrack",
         "end_stone",
-        "polished_andesite",
+        "white_stained_glass",
         "red_nether_bricks",
         "snow_block",
         "light_blue_wool",
         "ancient_debris",
-        "nether_wart_block"
+        "nether_wart_block",
+        "netherite_block"
     ]
 }

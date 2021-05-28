@@ -11,11 +11,11 @@ execute if score #map citadel.rune matches 5.. run scoreboard players remove #ma
 
 tag @e[nbt={Item: {id: "minecraft:globe_banner_pattern"}}, type=item] add citadel_rune
 tag @e[tag=citadel_rune] add static_item
-execute unless entity @e[tag=citadel_rune] if predicate ult:coin_flip run scoreboard players remove #map event 1
-execute if score #map event matches 0 run function ult:tick/active/map/citadel/summon_rune
+execute unless entity @e[tag=citadel_rune] if predicate ult:coin_flip run scoreboard players remove .map event 1
+execute if score .map event matches 0 run function ult:tick/active/map/citadel/summon_rune
 
-execute as @a[scores={x.crouch=1}, tag=player, tag=alive, nbt={SelectedItem: {id: "minecraft:globe_banner_pattern"}}] run function ult:tick/active/map/citadel/activate_rune
-execute as @a[scores={x.crouch=1}, tag=player, tag=alive, nbt={Inventory: [{id: "minecraft:globe_banner_pattern", Slot: -106b}]}] run function ult:tick/active/map/citadel/activate_rune
+execute as @a[scores={crouch_mode=1}, tag=player, tag=alive, nbt={SelectedItem: {id: "minecraft:globe_banner_pattern"}}] run function ult:tick/active/map/citadel/activate_rune
+execute as @a[scores={crouch_mode=1}, tag=player, tag=alive, nbt={Inventory: [{id: "minecraft:globe_banner_pattern", Slot: -106b}]}] run function ult:tick/active/map/citadel/activate_rune
 
 title @a[tag=player, tag=alive, scores={citadel.rune=0}] actionbar ""
 title @a[tag=player, tag=alive, scores={citadel.rune=1}] actionbar {"text": "Δ Rune Applied -- Speed Up", "bold": true, "color": "gold"}

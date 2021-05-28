@@ -1,19 +1,16 @@
 function ult:data/root
-execute if score .game_mode flag = flag.game_mode.duels const as @s[tag=player, tag=alive] as @r[tag=alive, tag=!root] run function ult:victory
 
 execute if score @s[tag=player] online matches 1 run tellraw @a [{"selector": "@s", "color": "dark_gray"}, {"text": " has opted out.", "color": "dark_gray"}]
-execute if score @s[tag=player] online matches 1 run scoreboard players remove #server pn 1
+execute at @s run playsound block.note_block.xylophone master @s
+execute as @s[tag=player] run function ult:exit
 tag @s remove player
-tag @s remove alive
 tag @s add spectator
-scoreboard players set @s ready 0
-execute if score #flag game_state matches 1.. run function ult:settings/opt/lobby
-function ult:data/player/detach
-function ult:data/player/clean
+tag @s remove ready
+execute if score .game_state flag = flag.game_state.active const run function ult:settings/opt/out/mid_game
+
 scoreboard players reset @s score
 scoreboard players reset @s health
 
-execute at @s run playsound block.note_block.xylophone master @s
-function ult:settings/ender_chest/main
-
 effect give @s instant_health 1 2 true
+
+function ult:settings/ender_chest/main

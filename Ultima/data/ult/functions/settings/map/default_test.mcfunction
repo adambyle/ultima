@@ -10,4 +10,4 @@ execute unless data block 43 31 -12 Items[{Slot:23b}] run scoreboard players set
 execute unless data block 43 31 -12 Items[{Slot:24b}] run scoreboard players set #selected map 10
 execute unless data block 43 31 -12 Items[{Slot:25b}] run scoreboard players set #selected map 11
 execute unless data block 43 31 -12 Items[{Slot:26b}] run scoreboard players set #selected map 12
-execute if score #selected map > #max_default map run scoreboard players set #selected map -2
+execute if score #selected map > flag.map.end_default const run scoreboard players set #selected map -2

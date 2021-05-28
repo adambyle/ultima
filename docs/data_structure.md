@@ -1,4 +1,4 @@
-## NBT Data Structure
+# NBT Data Structure
 
 The NBT field `ult:players` contains all essential player data for settings, records, and statistics. The NBT is organized as follows:
 
@@ -32,7 +32,7 @@ The NBT field `ult:players` contains all essential player data for settings, rec
                 woodlands {
                     ... see hotbar settings file
                 },
-                ... for each map id
+                ... for each map id (camelCase)
             },
             Keys[] { a key
                 byte <name of key> : always 1b, present in Array if captured

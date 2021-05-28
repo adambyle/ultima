@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{Unbreakable:true, BlockEntityTag: {Patterns: [{Pattern:cbo,Color:14},{Pattern:mr,Color:10},{Pattern:mc,Color:3},{Pattern:tt,Color:15}],Base:0}}"
+                            "tag": "{Unbreakable: true, BlockEntityTag: {Patterns: [{Pattern: \"cbo\", Color: 14}, {Pattern: \"mr\", Color: 10}, {Pattern: \"mc\", Color: 3}, {Pattern: \"tt\", Color: 15}], Base: 0}}"
                         },
                         {
                             "function": "set_name",

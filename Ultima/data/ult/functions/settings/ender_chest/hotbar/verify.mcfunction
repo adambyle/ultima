@@ -1,18 +1,18 @@
-execute if score @s hotbar_map matches 1 run function ult:settings/ender_chest/hotbar/verify/manor
-execute if score @s hotbar_map matches 2 run function ult:settings/ender_chest/hotbar/verify/woodlands
-execute if score @s hotbar_map matches 3 run function ult:settings/ender_chest/hotbar/verify/dungeon
-execute if score @s hotbar_map matches 4 run function ult:settings/ender_chest/hotbar/verify/abyss
-execute if score @s hotbar_map matches 5 run function ult:settings/ender_chest/hotbar/verify/citadel
-execute if score @s hotbar_map matches 6 run function ult:settings/ender_chest/hotbar/verify/wasteland
-execute if score @s hotbar_map matches 7 run function ult:settings/ender_chest/hotbar/verify/town_square
-execute if score @s hotbar_map matches 8 run function ult:settings/ender_chest/hotbar/verify/last_stand
-execute if score @s hotbar_map matches 9 run function ult:settings/ender_chest/hotbar/verify/permafrost
-execute if score @s hotbar_map matches 10 run function ult:settings/ender_chest/hotbar/verify/shroom
-execute if score @s hotbar_map matches 11 run function ult:settings/ender_chest/hotbar/verify/hellscape
-execute if score @s hotbar_map matches 12 run function ult:settings/ender_chest/hotbar/verify/frontier
-execute if score @s hotbar_map matches 13 run function ult:settings/ender_chest/hotbar/verify/reflection
-execute if score @s hotbar_map matches 14 run function ult:settings/ender_chest/hotbar/verify/dracula
-execute if score @s hotbar_map matches 15 run function ult:settings/ender_chest/hotbar/verify/avanto
-execute if score @s hotbar_map matches 16 run function ult:settings/ender_chest/hotbar/verify/boxing
-execute if score @s hotbar_map matches 17 run function ult:settings/ender_chest/hotbar/verify/ancient
-execute if score @s hotbar_map matches 18 run function ult:settings/ender_chest/hotbar/verify/marooned
+execute if score @s hotbar_map = flag.map.manor const run function ult:settings/ender_chest/hotbar/verify/manor
+execute if score @s hotbar_map = flag.map.woodlands const run function ult:settings/ender_chest/hotbar/verify/woodlands
+execute if score @s hotbar_map = flag.map.dungeon const run function ult:settings/ender_chest/hotbar/verify/dungeon
+execute if score @s hotbar_map = flag.map.abyss const run function ult:settings/ender_chest/hotbar/verify/abyss
+execute if score @s hotbar_map = flag.map.citadel const run function ult:settings/ender_chest/hotbar/verify/citadel
+execute if score @s hotbar_map = flag.map.wasteland const run function ult:settings/ender_chest/hotbar/verify/wasteland
+execute if score @s hotbar_map = flag.map.town_square const run function ult:settings/ender_chest/hotbar/verify/town_square
+execute if score @s hotbar_map = flag.map.last_stand const run function ult:settings/ender_chest/hotbar/verify/last_stand
+execute if score @s hotbar_map = flag.map.permafrost const run function ult:settings/ender_chest/hotbar/verify/permafrost
+execute if score @s hotbar_map = flag.map.shroom const run function ult:settings/ender_chest/hotbar/verify/shroom
+execute if score @s hotbar_map = flag.map.hellscape const run function ult:settings/ender_chest/hotbar/verify/hellscape
+execute if score @s hotbar_map = flag.map.frontier const run function ult:settings/ender_chest/hotbar/verify/frontier
+execute if score @s hotbar_map = flag.map.reflection const run function ult:settings/ender_chest/hotbar/verify/reflection
+execute if score @s hotbar_map = flag.map.dracula const run function ult:settings/ender_chest/hotbar/verify/dracula
+execute if score @s hotbar_map = flag.map.avanto const run function ult:settings/ender_chest/hotbar/verify/avanto
+execute if score @s hotbar_map = flag.map.boxing const run function ult:settings/ender_chest/hotbar/verify/boxing
+execute if score @s hotbar_map = flag.map.ancient const run function ult:settings/ender_chest/hotbar/verify/ancient
+execute if score @s hotbar_map = flag.map.marooned const run function ult:settings/ender_chest/hotbar/verify/marooned

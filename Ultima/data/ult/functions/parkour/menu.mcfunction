@@ -1,5 +1,5 @@
-execute unless score @s menu = #parkour menu run function ult:settings/ender_chest/clear
-scoreboard players operation @s menu = #parkour menu
+execute unless score @s menu = menu.parkour const run function ult:settings/ender_chest/clear
+scoreboard players operation @s menu = menu.parkour const
 
 clear @s[gamemode=!creative] structure_void
 clear @s[gamemode=!creative] writable_book

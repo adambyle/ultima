@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{Potion:\"water\", CustomPotionEffects: [{Id: 10b, Duration: 300, Amplifier: 1b}], display: {Name: '{\"text\": \"Potion of Regeneration\", \"italic\": false}'}}"
+                            "tag": "{Potion: \"water\", CustomPotionEffects: [{Id: 10b, Duration: 300, Amplifier: 1b}], display: {Name: '{\"text\": \"Potion of Regeneration\", \"italic\": false}'}}"
                         }
                     ]
                 }

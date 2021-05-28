@@ -25,7 +25,7 @@ fill 131 19 186 95 19 124 spruce_stairs[waterlogged=true, half=top, facing=south
 fill 131 19 186 95 19 124 birch_fence[waterlogged=true] replace birch_fence[waterlogged=false]
 fill 131 19 186 95 19 124 end_stone_brick_wall[waterlogged=true] replace end_stone_brick_wall[waterlogged=false]
 scoreboard players set #transition event 0
-scoreboard players add #map event 1
+scoreboard players add .map event 1
 
 execute if predicate ult:coin_flip run summon salmon 104 18 134
 execute if predicate ult:coin_flip run summon salmon 109 18 130

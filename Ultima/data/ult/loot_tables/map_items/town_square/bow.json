@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{Unbreakable:true, Enchantments: [{id: \"minecraft:power\", lvl: 3}]}"
+                            "tag": "{Unbreakable: true, Enchantments: [{id: \"minecraft:power\", lvl: 3s}]}"
                         }
                     ]
                 }

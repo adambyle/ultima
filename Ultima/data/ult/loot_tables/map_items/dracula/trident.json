@@ -14,7 +14,7 @@
                         },
                         {
                             "function": "set_nbt",
-                            "tag": "{Unbreakable: 1b, Enchantments: [{id: \"minecraft:channeling\", lvl: 1}]}"
+                            "tag": "{Unbreakable: true, Enchantments: [{id: \"minecraft:channeling\", lvl: 1s}]}"
                         }
                     ]
                 }

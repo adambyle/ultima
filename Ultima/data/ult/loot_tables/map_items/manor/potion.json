@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{Potion:\"strong_healing\"}"
+                            "tag": "{Potion: \"strong_healing\"}"
                         }
                     ]
                 }

@@ -1,5 +1,5 @@
 function ult:settings/ender_chest/clear
-scoreboard players operation @s menu = #spectate menu
+scoreboard players operation @s menu = menu.spectator const
 
 clear @s ender_eye
 clear @s red_bed

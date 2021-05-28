@@ -1,11 +1,11 @@
 {
     "values": [
-        "diamond_sword",
-        "diamond_axe",
+        "netherite_sword",
+        "netherite_axe",
         "shield",
-        "crossbow",
+        "splash_potion",
         "bow",
-        "potion",
+        "coal",
         "arrow"
     ]
 }

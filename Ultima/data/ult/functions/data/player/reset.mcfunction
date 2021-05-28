@@ -1,3 +1,4 @@
+scoreboard players set @s afk 0
 scoreboard players set @s pn 0
 scoreboard players set @s tether 0
 scoreboard players set @s death 0

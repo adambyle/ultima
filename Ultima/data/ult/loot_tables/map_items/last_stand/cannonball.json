@@ -4,8 +4,8 @@
             "rolls": 1,
             "entries": [
                 {
-                    "type": "minecraft:item",
-                    "name": "minecraft:coal",
+                    "type": "item",
+                    "name": "coal",
                     "functions": [
                         {
                             "function": "set_name",

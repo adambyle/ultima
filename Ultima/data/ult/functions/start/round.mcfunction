@@ -16,19 +16,20 @@ gamerule fallDamage false
 gamerule drowningDamage false
 
 # Map specific start functions
-execute if score #server map matches 2 run function ult:start/map/woodlands
-execute if score #server map matches 3 run function ult:start/map/dungeon
-execute if score #server map matches 5 run function ult:start/map/citadel
-execute if score #server map matches 7 run function ult:start/map/town_square
-execute if score #server map matches 8 run function ult:start/map/last_stand
-execute if score #server map matches 13 run function ult:start/map/reflection
-execute if score #server map matches 14 run function ult:start/map/dracula
-execute if score #server map matches 17 run function ult:start/map/ancient
-execute if score #server map matches 18 run function ult:start/map/marooned
+execute if score .map flag = flag.map.woodlands const run function ult:start/map/woodlands
+execute if score .map flag = flag.map.dungeon const run function ult:start/map/dungeon
+execute if score .map flag = flag.map.citadel const run function ult:start/map/citadel
+execute if score .map flag = flag.map.town_square const run function ult:start/map/town_square
+execute if score .map flag = flag.map.last_stand const run function ult:start/map/last_stand
+execute if score .map flag matches 13 run function ult:start/map/reflection
+execute if score .map flag matches 14 run function ult:start/map/dracula
+execute if score .map flag matches 17 run function ult:start/map/ancient
+execute if score .map flag matches 18 run function ult:start/map/marooned
 function ult:start/map/reset
 
-execute if score .game_mode flag = flag.game_mode.duels const run scoreboard objectives setdisplay sidebar display_health
+execute if score .game_mode flag = flag.game_mode.duels const run scoreboard objectives setdisplay sidebar health_display
 execute if score .game_mode flag = flag.game_mode.royale const run scoreboard objectives setdisplay sidebar score
 execute if score .game_mode flag = flag.game_mode.brawl const run scoreboard objectives setdisplay sidebar score
 
-scoreboard players set @a health 20
+scoreboard players reset * health_display
+execute unless score .game_mode flag = flag.game_mode.duels const run scoreboard players set @a[tag=player] health_display 20

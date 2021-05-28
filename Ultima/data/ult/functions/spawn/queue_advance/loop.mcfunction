@@ -10,4 +10,4 @@ execute as @a[tag=player, tag=!alive] if score @s queue = #queue _var run scoreb
 execute if score #can_deplete _var matches 1 run scoreboard players remove @a[tag=root] queue 1
 
 scoreboard players add #iter _var 1
-execute if score #iter _var <= #server pn run function ult:spawn/queue_advance/loop
+execute if score #iter _var <= .total_players control run function ult:spawn/queue_advance/loop

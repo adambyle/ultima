@@ -1,4 +1,4 @@
-execute unless score .game_mode flag = flag.game_mode.brawl const run tellraw @a [{"selector": "@s", "color": "dark_green"},{"text": " will respawn.", "color": "gray"}]
+execute unless score .game_mode flag = flag.game_mode.brawl const run tellraw @a [{"selector": "@s", "color": "dark_green"}, {"text": " will respawn.", "color": "gray"}]
 execute unless score .game_mode flag = flag.game_mode.brawl const run scoreboard players set @s tether -1
 title @s reset
 title @s times 5 70 5

@@ -5,12 +5,12 @@
             "entries": [
                 {
                     "type": "item",
-                    "name": "dirt",
+                    "name": "stone",
                     "functions": [
                         {
                             "function": "set_name",
                             "entity": "this",
-                            "name": ["", {"selector": "@a[tag=temp]", "color": "red", "bold": true}, " is respawning in ", {"score": {"name": "#time", "objective": "_var"}, "bold": true, "color": "gray", "extra": ["..."]}]
+                            "name": ["", {"selector": "@a[tag=temp]", "color": "red", "bold": true}, " is respawning in ", {"score": {"name": ".time", "objective": "_var"}, "bold": true, "color": "gray", "extra": ["..."]}]
                         }
                     ]
                 }

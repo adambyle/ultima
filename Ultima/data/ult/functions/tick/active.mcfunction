@@ -16,52 +16,50 @@ tp @e[tag=respawn_marker, scores={respawn=..1}] 0 2000 0
 kill @e[tag=respawn_marker, scores={respawn=..1}]
 function ult:spawn/queue_advance
 
-# Mode specific functions
-execute if score #flag game_state matches 1 if score .game_mode flag = flag.game_mode.duels const run function ult:tick/active/mode/duels
-execute if score #flag game_state matches 1 if score .game_mode flag = flag.game_mode.royale const run function ult:tick/active/mode/royale
-execute if score #flag game_state matches 1 if score .game_mode flag = flag.game_mode.brawl const run function ult:tick/active/mode/brawl
-execute if score #flag game_state matches 1 if score .game_mode flag = #ultimate game_mode run function ult:tick/active/mode/ultimate
-
-# Map specific functions
-execute if score #flag game_state matches 1 if score #server map matches 2 run function ult:tick/active/map/woodlands
-execute if score #flag game_state matches 1 if score #server map matches 3 run function ult:tick/active/map/dungeon
-execute if score #flag game_state matches 1 if score #server map matches 4 run function ult:tick/active/map/abyss
-execute if score #flag game_state matches 1 if score #server map matches 5 run function ult:tick/active/map/citadel
-execute if score #flag game_state matches 1 if score #server map matches 6 run function ult:tick/active/map/wasteland
-execute if score #flag game_state matches 1 if score #server map matches 7 run function ult:tick/active/map/town_square
-execute if score #flag game_state matches 1 if score #server map matches 8 run function ult:tick/active/map/last_stand
-execute if score #flag game_state matches 1 if score #server map matches 9 run function ult:tick/active/map/permafrost
-execute if score #flag game_state matches 1 if score #server map matches 10 run function ult:tick/active/map/shroom
-execute if score #flag game_state matches 1 if score #server map matches 11 run function ult:tick/active/map/hellscape
-execute if score #flag game_state matches 1 if score #server map matches 12 run function ult:tick/active/map/frontier
-execute if score #flag game_state matches 1 if score #server map matches 13 run function ult:tick/active/map/reflection
-execute if score #flag game_state matches 1 if score #server map matches 14 run function ult:tick/active/map/dracula
-execute if score #flag game_state matches 1 if score #server map matches 15 run function ult:tick/active/map/avanto
-execute if score #flag game_state matches 1 if score #server map matches 16 run function ult:tick/active/map/boxing
-execute if score #flag game_state matches 1 if score #server map matches 17 run function ult:tick/active/map/ancient
-execute if score #flag game_state matches 1 if score #server map matches 18 run function ult:tick/active/map/marooned
-
 # Clear unnecessary items
 kill @e[type=item,tag=!static_item]
 clear @a[gamemode=!creative] glass_bottle
 kill @e[nbt={inGround:true},type=arrow]
 
 # Players may sometimes lost their items
-execute if score #flag game_state matches 1 as @a[tag=player,tag=alive] run function ult:spawn/items/lost
-
-# Check for player deaths
-execute as @a[tag=player,sort=random] run function ult:death/test
+execute as @a[tag=player, tag=alive] run function ult:spawn/items/lost
 
 # Handle death sources
-scoreboard players set @a deathsource 0
+scoreboard players reset * death_cause
 execute as @a[tag=player, tag=alive] at @s run function ult:death/source
-
-# Reload if a player has left the server
-scoreboard players set #temp pn 0
-execute as @a[tag=player] run scoreboard players add #temp pn 1
-execute unless score #temp pn = #server pn run function ult:load/player_left
 
 # Damage indicators
 scoreboard players remove @e[tag=dmg_indicator] timer 1
 kill @e[tag=dmg_indicator, scores={timer=..0}]
-execute as @a[tag=player, tag=alive, scores={x.damaged=1..}] run function ult:tick/action/damage_indicator
+execute as @a[tag=player, tag=alive, scores={damage_taken=1..}] run function ult:tick/action/damage_indicator
+
+# Check for player deaths
+execute as @a[tag=player,sort=random] run function ult:death/test
+
+# Map specific functions
+execute if score .game_state flag = flag.game_state.active const if score .map flag = flag.map.woodlands const run function ult:tick/active/map/woodlands
+execute if score .game_state flag = flag.game_state.active const if score .map flag = flag.map.dungeon const run function ult:tick/active/map/dungeon
+execute if score .game_state flag = flag.game_state.active const if score .map flag = flag.map.abyss const run function ult:tick/active/map/abyss
+execute if score .game_state flag = flag.game_state.active const if score .map flag = flag.map.citadel const run function ult:tick/active/map/citadel
+execute if score .game_state flag = flag.game_state.active const if score .map flag = flag.map.wasteland const run function ult:tick/active/map/wasteland
+execute if score .game_state flag = flag.game_state.active const if score .map flag = flag.map.town_square const run function ult:tick/active/map/town_square
+execute if score .game_state flag = flag.game_state.active const if score .map flag = flag.map.last_stand const run function ult:tick/active/map/last_stand
+execute if score .game_state flag = flag.game_state.active const if score .map flag matches 9 run function ult:tick/active/map/permafrost
+execute if score .game_state flag = flag.game_state.active const if score .map flag matches 10 run function ult:tick/active/map/shroom
+execute if score .game_state flag = flag.game_state.active const if score .map flag matches 11 run function ult:tick/active/map/hellscape
+execute if score .game_state flag = flag.game_state.active const if score .map flag matches 12 run function ult:tick/active/map/frontier
+execute if score .game_state flag = flag.game_state.active const if score .map flag matches 13 run function ult:tick/active/map/reflection
+execute if score .game_state flag = flag.game_state.active const if score .map flag matches 14 run function ult:tick/active/map/dracula
+execute if score .game_state flag = flag.game_state.active const if score .map flag matches 15 run function ult:tick/active/map/avanto
+execute if score .game_state flag = flag.game_state.active const if score .map flag matches 16 run function ult:tick/active/map/boxing
+execute if score .game_state flag = flag.game_state.active const if score .map flag matches 17 run function ult:tick/active/map/ancient
+execute if score .game_state flag = flag.game_state.active const if score .map flag matches 18 run function ult:tick/active/map/marooned
+
+# Mode specific functions
+execute if score .game_state flag = flag.game_state.active const if score .game_mode flag = flag.game_mode.royale const run function ult:tick/active/mode/royale
+execute if score .game_state flag = flag.game_state.active const if score .game_mode flag = flag.game_mode.brawl const run function ult:tick/active/mode/brawl
+
+# Reload if a player has left the server
+scoreboard players set .temp_pn _var 0
+execute as @a[tag=player] run scoreboard players add .temp_pn _var 1
+execute unless score .temp_pn _var = .total_players control run function ult:load/player_left

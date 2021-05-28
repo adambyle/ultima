@@ -14,6 +14,10 @@
                         {
                             "function": "set_lore",
                             "lore": [{"text": "Coming soon...", "color": "gray"}]
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{gui: true}"
                         }
                     ]
                 }

@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{Fireworks: {Explosions: [{Type: 4b, Colors: [I; 16711680]}], Flight: 3}}"
+                            "tag": "{Fireworks: {Explosions: [{Type: 4b, Colors: [I; 16711680]}], Flight: 3b}}"
                         },
                         {
                             "function": "set_count",

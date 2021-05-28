@@ -10,6 +10,10 @@
                         {
                             "function": "set_name",
                             "name": {"text": "Town Square", "bold": true, "italic": false}
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{gui: true}"
                         }
                     ]
                 }

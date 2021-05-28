@@ -64,6 +64,13 @@ Switch|Purpose
 
 This is a list of easy access constant flags that act as a kind of enumerator to enchance code readability. A scoreholder of `const` takes the form `setting.name`, where `setting` is a objective or a `flag` switch of the form `flag.switch`, where `switch` is the switch's name; the scoreholder is the "type" of sorts of the constant flag, and `name` is the shorthand of the value.
 
+### `action`
+
+    0: change_modes
+    1: opt_out
+    2: tp_lobby
+    3: unready
+
 ### `chest`
 
     0: common
@@ -167,3 +174,5 @@ This is a list of easy access constant flags that act as a kind of enumerator to
     3: spectator
     4: vote
     5: parkour
+    6: parkour_records
+    7: parkour_maps
