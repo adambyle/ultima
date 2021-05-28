@@ -52,9 +52,9 @@ execute unless data storage ult:temp Player.Hotbar.avanto.potion run data modify
 execute unless data storage ult:temp Player.Hotbar.boxing.potion run data modify storage ult:temp Player.Hotbar.boxing.potion set value 1
 execute unless data storage ult:temp Player.Hotbar.boxing.powerball run data modify storage ult:temp Player.Hotbar.boxing.powerball set value 0
 
-execute unless data storage ult:temp Player.Hotbar.wasteland.sword run data modify storage ult:temp Player.Hotbar.wasteland.sword set value 1
-execute unless data storage ult:temp Player.Hotbar.wasteland.crossbow run data modify storage ult:temp Player.Hotbar.wasteland.crossbow set value 2
-execute unless data storage ult:temp Player.Hotbar.wasteland.bomb run data modify storage ult:temp Player.Hotbar.wasteland.bomb set value 3
+execute unless data storage ult:temp Player.Hotbar.wasteland.sword run data modify storage ult:temp Player.Hotbar.wasteland.sword set value 0
+execute unless data storage ult:temp Player.Hotbar.wasteland.crossbow run data modify storage ult:temp Player.Hotbar.wasteland.crossbow set value 1
+execute unless data storage ult:temp Player.Hotbar.wasteland.bomb run data modify storage ult:temp Player.Hotbar.wasteland.bomb set value 2
 execute unless data storage ult:temp Player.Hotbar.wasteland.arrows run data modify storage ult:temp Player.Hotbar.wasteland.arrows set value 10
 execute unless data storage ult:temp Player.Hotbar.wasteland.meat run data modify storage ult:temp Player.Hotbar.wasteland.meat set value 8
 
