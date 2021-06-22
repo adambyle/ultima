@@ -1,3 +1,3 @@
 kill @s
 setblock ~ ~ ~ brewing_stand
-replaceitem block ~ ~ ~ container.1 splash_potion{Potion: "minecraft:strong_healing"}
+item replace block ~ ~ ~ container.1 with splash_potion{Potion: "minecraft:strong_healing"}

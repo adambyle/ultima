@@ -16,10 +16,10 @@ execute store result score #hotbar _var run data get storage ult:temp Player.Hot
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/citadel/shield"
 function ult:spawn/items/give
 
-replaceitem entity @s armor.feet golden_boots{Unbreakable:1b, Enchantments: [{id: "protection", lvl: 2}]}
-replaceitem entity @s armor.legs golden_leggings{Unbreakable:1b, Enchantments: [{id: "projectile_protection", lvl: 3}]}
-replaceitem entity @s armor.chest golden_chestplate{Unbreakable:1b, Enchantments: [{id: "projectile_protection", lvl: 3}]}
-replaceitem entity @s armor.head golden_helmet{Unbreakable:1b, Enchantments: [{id: "protection", lvl: 2}]}
+item replace entity @s armor.feet with golden_boots{Unbreakable:1b, Enchantments: [{id: "protection", lvl: 2}]}
+item replace entity @s armor.legs with golden_leggings{Unbreakable:1b, Enchantments: [{id: "projectile_protection", lvl: 3}]}
+item replace entity @s armor.chest with golden_chestplate{Unbreakable:1b, Enchantments: [{id: "projectile_protection", lvl: 3}]}
+item replace entity @s armor.head with golden_helmet{Unbreakable:1b, Enchantments: [{id: "protection", lvl: 2}]}
 
 function ult:spawn/items/refills/citadel
 

@@ -5,7 +5,7 @@ function ult:data/player/get_nbt
 
 clear @s[gamemode=!creative] filled_map
 
-replaceitem entity @s enderchest.11 structure_void{display: {Name:'{"text": "Back", "color": "dark_aqua", "bold": true, "italic": false}'}}
+item replace entity @s enderchest.11 with structure_void{display: {Name:'{"text": "Back", "color": "dark_aqua", "bold": true, "italic": false}'}}
 
 loot replace entity @s enderchest.5 loot ult:map_icon/manor
 loot replace entity @s enderchest.6 loot ult:map_icon/woodlands

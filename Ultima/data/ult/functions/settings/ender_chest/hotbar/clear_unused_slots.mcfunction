@@ -1,13 +1,13 @@
-replaceitem entity @s enderchest.0 air
-replaceitem entity @s enderchest.1 air
-replaceitem entity @s enderchest.2 air
-replaceitem entity @s enderchest.3 air
-replaceitem entity @s enderchest.4 air
-replaceitem entity @s enderchest.5 air
-replaceitem entity @s enderchest.7 air
-replaceitem entity @s enderchest.8 air
-replaceitem entity @s enderchest.10 air
-replaceitem entity @s enderchest.11 air
-replaceitem entity @s enderchest.12 air
-replaceitem entity @s enderchest.13 air
-replaceitem entity @s enderchest.14 air
+item replace entity @s enderchest.0 with air
+item replace entity @s enderchest.1 with air
+item replace entity @s enderchest.2 with air
+item replace entity @s enderchest.3 with air
+item replace entity @s enderchest.4 with air
+item replace entity @s enderchest.5 with air
+item replace entity @s enderchest.7 with air
+item replace entity @s enderchest.8 with air
+item replace entity @s enderchest.10 with air
+item replace entity @s enderchest.11 with air
+item replace entity @s enderchest.12 with air
+item replace entity @s enderchest.13 with air
+item replace entity @s enderchest.14 with air

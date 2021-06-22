@@ -17,5 +17,5 @@ execute if score @s citadel.rune matches 3 run attribute @s generic.attack_damag
 execute if score @s citadel.rune matches 4 run attribute @s generic.armor base set 9
 execute if score @s citadel.rune matches 4 run attribute @s generic.armor_toughness base set 4
 
-replaceitem entity @s[nbt={SelectedItem: {id: "minecraft:globe_banner_pattern"}}] weapon.mainhand air
-replaceitem entity @s[nbt={Inventory: [{id: "minecraft:globe_banner_pattern", Slot: -106b}]}] weapon.offhand air
+item replace entity @s[nbt={SelectedItem: {id: "minecraft:globe_banner_pattern"}}] weapon.mainhand with air
+item replace entity @s[nbt={Inventory: [{id: "minecraft:globe_banner_pattern", Slot: -106b}]}] weapon.offhand with air

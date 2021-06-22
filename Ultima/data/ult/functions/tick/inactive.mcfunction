@@ -24,6 +24,6 @@ execute as @a if score @s menu = menu.vote const at @s unless entity @e[tag=vote
 
 # Use chestplate to show opt status
 clear @a[gamemode=!creative] leather_chestplate
-replaceitem entity @a[tag=spectator] armor.chest leather_chestplate{display: {color: 3881787}}
-replaceitem entity @a[tag=player,scores={ready=0}] armor.chest leather_chestplate{display: {color: 1557856}}
-replaceitem entity @a[tag=player,scores={ready=1}] armor.chest leather_chestplate{display: {color: 2040492}}
+item replace entity @a[tag=spectator] armor.chest with leather_chestplate{display: {color: 3881787}}
+item replace entity @a[tag=player,scores={ready=0}] armor.chest with leather_chestplate{display: {color: 1557856}}
+item replace entity @a[tag=player,scores={ready=1}] armor.chest with leather_chestplate{display: {color: 2040492}}

@@ -19,7 +19,7 @@ loot replace block 43 31 -12 container.23 loot ult:map_icon/permafrost
 loot replace block 43 31 -12 container.24 loot ult:map_icon/shroom
 loot replace block 43 31 -12 container.25 loot ult:map_icon/hellscape
 loot replace block 43 31 -12 container.26 loot ult:map_icon/frontier
-replaceitem block 43 31 -12 container.11 structure_void{display: {Name:'{"text": "Back", "color": "dark_red", "italic":false, "bold":true}',Lore: ['{"text": "Back to Map Selection...", "color": "gray"}']}}
+item replace block 43 31 -12 container.11 with structure_void{display: {Name:'{"text": "Back", "color": "dark_red", "italic":false, "bold":true}',Lore: ['{"text": "Back to Map Selection...", "color": "gray"}']}}
 
 execute if score .map_mode flag = flag.map_mode.selected const if score .map flag = flag.map.manor const run data modify block 43 31 -12 Items[{Slot:5b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
 execute if score .map_mode flag = flag.map_mode.selected const if score .map flag = flag.map.woodlands const run data modify block 43 31 -12 Items[{Slot:6b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'

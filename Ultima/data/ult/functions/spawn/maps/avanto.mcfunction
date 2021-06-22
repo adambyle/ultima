@@ -8,10 +8,10 @@ execute store result score #hotbar _var run data get storage ult:temp Player.Hot
 data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/avanto/bow"
 function ult:spawn/items/give
 
-replaceitem entity @s armor.feet leather_boots{Unbreakable:1b, display: {color: 16777215}}
-replaceitem entity @s armor.legs leather_leggings{Unbreakable:1b, display: {color: 16777215}}
-replaceitem entity @s armor.chest leather_chestplate{Unbreakable:1b, display: {color: 16777215}}
-replaceitem entity @s armor.head leather_helmet{Unbreakable:1b, display: {color: 16777215}}
+item replace entity @s armor.feet with leather_boots{Unbreakable:1b, display: {color: 16777215}}
+item replace entity @s armor.legs with leather_leggings{Unbreakable:1b, display: {color: 16777215}}
+item replace entity @s armor.chest with leather_chestplate{Unbreakable:1b, display: {color: 16777215}}
+item replace entity @s armor.head with leather_helmet{Unbreakable:1b, display: {color: 16777215}}
 
 function ult:spawn/items/refills/avanto
 

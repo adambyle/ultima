@@ -26,6 +26,6 @@ execute if score @s hotbar_map = flag.map.boxing const run function ult:settings
 execute if score @s hotbar_map = flag.map.ancient const run function ult:settings/ender_chest/hotbar/maps/ancient
 execute if score @s hotbar_map = flag.map.marooned const run function ult:settings/ender_chest/hotbar/maps/marooned
 
-replaceitem entity @s enderchest.2 emerald{display: {Name:'{"text": "Confirm", "color": "green", "bold": true, "italic": false}'}}
-replaceitem entity @s enderchest.3 structure_void{display: {Name:'{"text": "Back", "color": "dark_aqua", "bold": true, "italic": false}'}}
-replaceitem entity @s enderchest.4 lava_bucket{display: {Name:'{"text": "Reset Icons", "color": "red", "bold": true, "italic": false}'}}
+item replace entity @s enderchest.2 with emerald{display: {Name:'{"text": "Confirm", "color": "green", "bold": true, "italic": false}'}}
+item replace entity @s enderchest.3 with structure_void{display: {Name:'{"text": "Back", "color": "dark_aqua", "bold": true, "italic": false}'}}
+item replace entity @s enderchest.4 with lava_bucket{display: {Name:'{"text": "Reset Icons", "color": "red", "bold": true, "italic": false}'}}
