@@ -8,7 +8,7 @@ scoreboard players add #time _var 19
 scoreboard players operation #time _var /= #const _var
 
 loot replace block 0 0 0 container.0 loot ult:tech/respawn_marker
-data modify entity @s CustomName set from block 0 0 0 Items[{Slot: 0b}].tag.display.Name
+data modify entity @s CustomName set from block 0 0 0 Items[0].tag.display.Name
 
 scoreboard players operation #time _var = @s respawn
 scoreboard players set #const _var 5

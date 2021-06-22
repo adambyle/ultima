@@ -10,7 +10,7 @@ execute as @e[tag=text_display] run data modify entity @s CustomNameVisible set 
 
 scoreboard players set .game_state flag 1
 
-execute at @e[tag=vote_station] run tp @a[distance=..3] 45 30 -12
+execute at @e[tag=vote_station] run tp @a[distance=..2] 45 30 -12
 
 execute as @a run function ult:start/spectate
 

@@ -1,4 +1,4 @@
-scoreboard players operation .temp map = @s parkour
+scoreboard players operation .temp_map _var = @s parkour
 function ult:data/map/get_map_data
 
 execute if score @s round = half.front const store result score #time _var run data get storage ult:temp GlobalData.Half.Time

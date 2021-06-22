@@ -3,12 +3,12 @@ tag @e remove temp_fireball
 summon fireball ^ ^ ^1 {Tags: ["temp_fireball"], Item: {id: "coal", Count: 1b}, Fire: -20s}
 scoreboard players operation @e[tag=temp_fireball] pn = @s pn
 tag @e remove temp
-summon minecraft:area_effect_cloud ^ ^ ^1 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["fireball_tracker", "temp"]}
+summon marker ^ ^ ^1 {Tags: ["fireball_tracker", "temp"]}
 scoreboard players operation @e[tag=temp] pn = @s pn
 tag @e remove temp
 
 tag @e remove temp
-summon minecraft:area_effect_cloud ^ ^ ^50 {Tags: ["temp"]}
+summon marker ^ ^ ^50 {Tags: ["temp"]}
 
 execute store result score #x _var run data get entity @e[tag=temp, limit=1] Pos[0] 1000000
 execute store result score #y _var run data get entity @e[tag=temp, limit=1] Pos[1] 1000000

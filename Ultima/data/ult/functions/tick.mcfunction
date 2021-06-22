@@ -115,12 +115,12 @@
 
 # Area Effect Cloud debugging
     # Show AEC locations
-    execute if score .debug_mode flag matches 1 at @e[type=minecraft:area_effect_cloud] run particle composter ~ ~ ~ 0 0 0 0 0 force
+    execute if score .debug_mode flag matches 1 at @e[type=marker] run particle composter ~ ~ ~ 0 0 0 0 0 force
     # Count number of stray untagged AECs
-    execute store result score .temp _var if entity @e[type=area_effect_cloud, tag=]
+    execute store result score .temp _var if entity @e[type=marker, tag=]
     # Display number if greater than 1
     execute if score .temp _var matches 2.. run tellraw @a[tag=operator] {"score": {"name": ".temp", "objective": "_var"}}
     # Display NBT if number is 1
-    execute if score .temp _var matches 1 run tellraw @a[tag=operator] {"entity": "@e[type=area_effect_cloud, limit=1, tag=]", "nbt": "{}"}
+    execute if score .temp _var matches 1 run tellraw @a[tag=operator] {"entity": "@e[type=marker, limit=1, tag=]", "nbt": "{}"}
     # Kill strays
-    kill @e[type=area_effect_cloud, tag=]
+    kill @e[type=marker, tag=]

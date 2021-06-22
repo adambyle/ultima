@@ -20,7 +20,7 @@ execute if score .map_menu flag = #map.featured menu run function ult:settings/m
 
 execute as @a[tag=player] if score @s menu = menu.vote const run function ult:settings/ender_chest/vote
 
-execute as @a if score @s menu = menu.vote const at @s unless entity @e[tag=vote_station,distance=..1] run function ult:settings/ender_chest/main
+execute as @a if score @s menu = menu.vote const at @s unless entity @e[tag=vote_station,distance=..2] run function ult:settings/ender_chest/main
 
 # Use chestplate to show opt status
 clear @a[gamemode=!creative] leather_chestplate

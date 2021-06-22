@@ -2,7 +2,7 @@ function ult:data/root
 
 tag @e remove temp
 tag @a[gamemode=spectator] add temp
-tag @e[type=area_effect_cloud] add temp
+tag @e[type=marker] add temp
 tag @e[type=armor_stand] add temp
 tag @s add temp
 

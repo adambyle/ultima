@@ -2,7 +2,7 @@ tag @s add reflection_rocket
 
 tag @e remove temp
 tag @e remove temp2
-summon area_effect_cloud ~ ~ ~ {Tags: ["temp2"]}
+summon marker ~ ~ ~ {Tags: ["temp2"]}
 
 execute store result score #y _var run data get entity @s Pos[1] 10000
 scoreboard players set #new_y _var 315000

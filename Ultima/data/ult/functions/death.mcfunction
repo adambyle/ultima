@@ -3,7 +3,7 @@
 function ult:data/root
 function ult:data/player/get_nbt
 tag @e remove temp
-summon area_effect_cloud ~ ~ ~ {Tags: ["temp"]}
+summon marker ~ ~ ~ {Tags: ["temp"]}
 data modify entity @e[tag=temp, limit=1] Pos set from storage ult:temp Player.Pos
 execute at @e[tag=temp] run function ult:death/fx
 kill @e[tag=temp]

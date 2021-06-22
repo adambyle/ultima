@@ -1,0 +1,6 @@
+[
+    {
+        "function": "set_name",
+        "name": [{"text": "By ", "color": "dark_aqua", "italic": true}, {"storage": "ult:temp", "nbt": "Author"}]
+    }
+]

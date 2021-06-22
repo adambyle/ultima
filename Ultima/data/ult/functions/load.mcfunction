@@ -94,6 +94,7 @@
     scoreboard players set flag.game_state.active const 1
     scoreboard players set flag.game_state.transition const 2
     # For `.map flag` and `hotbar_map`
+    scoreboard players set flag.map.none const -1
     scoreboard players set flag.map.manor const 0
     scoreboard players set flag.map.woodlands const 1
     scoreboard players set flag.map.dungeon const 2

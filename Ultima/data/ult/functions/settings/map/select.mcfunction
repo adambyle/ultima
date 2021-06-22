@@ -6,4 +6,4 @@ execute as @a at @s run playsound entity.item_frame.remove_item master @s
 execute as @a if score @s menu = menu.hotbar const run function ult:settings/ender_chest/main
 clear @a[gamemode=!creative] #ult:map_icons
 
-execute at @e[tag=vote_station] run tp @a[distance=..3] 45 30 -12
+execute at @e[tag=vote_station] run tp @a[distance=..2] 45 30 -12

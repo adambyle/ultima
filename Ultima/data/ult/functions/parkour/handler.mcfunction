@@ -1,6 +1,6 @@
 scoreboard players operation #time _var = @s timer
 function ult:data/ender_chest/time
-scoreboard players operation .temp map = @s parkour
+scoreboard players operation .temp_map _var = @s parkour
 function ult:data/map/get_map_data
 title @s actionbar [{"text": "Running ", "color": "aqua"}, {"storage": "ult:temp", "nbt": "Map", "color": "dark_aqua"}, "          ", {"storage": "ult:temp", "nbt": "Time", "interpret": true, "color": "gold", "bold": true}]
 

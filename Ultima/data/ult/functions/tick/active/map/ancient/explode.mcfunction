@@ -11,16 +11,16 @@ execute store result score #alt _var run data get entity @s Pos[1]
 kill @s
 
 tag @e remove temp
-summon area_effect_cloud ~ ~ ~ {Tags: ["temp"]}
-summon area_effect_cloud ~ ~ ~ {Tags: ["temp"]}
-summon area_effect_cloud ~ ~ ~ {Tags: ["temp"]}
-summon area_effect_cloud ~ ~ ~ {Tags: ["temp"]}
-summon area_effect_cloud ~ ~ ~ {Tags: ["temp"]}
-summon area_effect_cloud ~ ~ ~ {Tags: ["temp"]}
-summon area_effect_cloud ~ ~ ~ {Tags: ["temp"]}
-summon area_effect_cloud ~ ~ ~ {Tags: ["temp"]}
-summon area_effect_cloud ~ ~ ~ {Tags: ["temp"]}
-summon area_effect_cloud ~ ~ ~ {Tags: ["temp"]}
+summon marker ~ ~ ~ {Tags: ["temp"]}
+summon marker ~ ~ ~ {Tags: ["temp"]}
+summon marker ~ ~ ~ {Tags: ["temp"]}
+summon marker ~ ~ ~ {Tags: ["temp"]}
+summon marker ~ ~ ~ {Tags: ["temp"]}
+summon marker ~ ~ ~ {Tags: ["temp"]}
+summon marker ~ ~ ~ {Tags: ["temp"]}
+summon marker ~ ~ ~ {Tags: ["temp"]}
+summon marker ~ ~ ~ {Tags: ["temp"]}
+summon marker ~ ~ ~ {Tags: ["temp"]}
 
 execute if score #alt _var matches 26.. run spreadplayers ~ ~ 0 3 under 34 false @e[tag=temp]
 execute if score #alt _var matches 21..25 run spreadplayers ~ ~ 0 3 under 25 false @e[tag=temp]

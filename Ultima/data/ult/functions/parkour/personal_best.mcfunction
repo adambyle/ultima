@@ -1,4 +1,4 @@
-scoreboard players operation .temp map = @s parkour
+scoreboard players operation .temp_map _var = @s parkour
 function ult:data/map/get_map_data
 
 scoreboard players operation #time _var = @s timer

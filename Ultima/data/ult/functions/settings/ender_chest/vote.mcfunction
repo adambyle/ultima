@@ -2,7 +2,7 @@ execute unless score @s menu = menu.vote const run function ult:settings/ender_c
 scoreboard players operation @s menu = menu.vote const
 clear @a[gamemode=!creative] #ult:map_icons
 clear @s #ult:map_items/all
-scoreboard players set @s vote 0
+scoreboard players operation @s vote = flag.map.none const
 
 execute unless data entity @s EnderItems[{id: "minecraft:structure_void"}] run function ult:lobby
 scoreboard players set .temp _var 0
@@ -12,15 +12,15 @@ execute unless data entity @s EnderItems[{Slot:6b}] run scoreboard players set .
 execute unless data entity @s EnderItems[{Slot:23b}] run scoreboard players set .temp _var 4
 execute unless data entity @s EnderItems[0] run scoreboard players set .temp _var 0
 
-execute store result score .temp map run data get storage ult:players Votes[0]
+execute store result score .temp_map _var run data get storage ult:players Votes[0]
 function ult:settings/ender_chest/vote/set_loot_table
 loot replace entity @s enderchest.2 kill @e[tag=loot_table_handler,limit=1]
 
-execute store result score .temp map run data get storage ult:players Votes[1]
+execute store result score .temp_map _var run data get storage ult:players Votes[1]
 function ult:settings/ender_chest/vote/set_loot_table
 loot replace entity @s enderchest.4 kill @e[tag=loot_table_handler,limit=1]
 
-execute store result score .temp map run data get storage ult:players Votes[2]
+execute store result score .temp_map _var run data get storage ult:players Votes[2]
 function ult:settings/ender_chest/vote/set_loot_table
 loot replace entity @s enderchest.6 kill @e[tag=loot_table_handler,limit=1]
 
