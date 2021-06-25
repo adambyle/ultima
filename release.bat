@@ -14,11 +14,12 @@ copy Ultima_Source\region\r.0.-1.mca Ultima\region\
 copy Ultima_Source\region\r.0.-2.mca Ultima\region\
 copy Ultima_Source\data\chunks.dat Ultima\data\
 xcopy /E /I Ultima_Source\datapacks\Ultima .\
+rmdir /S /Q data\ult\functions\util
 
 del Ultima-Datapack.zip
 7-Zip\7z a Ultima-Datapack.zip data\
 7-Zip\7z a Ultima-Datapack.zip pack.mcmeta
-rmdir /S /Q data/
+rmdir /S /Q data\
 del pack.mcmeta
 
 copy Ultima-Datapack.zip Ultima\datapacks\
