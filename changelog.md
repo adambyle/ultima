@@ -1,5 +1,7 @@
 # changelog
 
+---
+
 ## Release v1.1.2 -- *May 27, 2021*
 
 ### **Maps**
@@ -14,6 +16,8 @@
 - FIXED: Newly joined players can neither opt in nor out, and are locked out of games along with other functionalities.
 - FIXED: No maps generate when loading the world for the first time.
 
+---
+
 ## Release v1.1.1 -- *May 22, 2021*
 
 ### **Maps**
@@ -26,6 +30,8 @@
 - FIXED: When a player joins the world, player attributes are reverted (affects instant-attack maps and Citadel's runes, among other things).
 - FIXED: Players who are force-opted out while in a voting station are locked in the station until they relog.
 - FIXED: Wins do not actually reset properly.
+
+---
 
 ## Release v1.1.0 -- *May 21, 2021*
 
