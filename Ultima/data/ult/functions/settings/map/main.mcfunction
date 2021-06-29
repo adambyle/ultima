@@ -14,12 +14,12 @@ execute unless score .map_mode flag matches 0 run scoreboard players operation #
 
 execute if data block 43 31 -12 Items[0] run function ult:settings/map/main_test
 
-item replace block 43 31 -12 container.3 with gold_block{display: {Name:'{"text": "Featured maps", "color": "gold", "italic":false, "bold":true}',Lore: ['{"text": "Choose from player-made maps.", "color": "gray"}']}}
-item replace block 43 31 -12 container.5 with crafting_table{display: {Name:'{"text": "Default maps", "color": "dark_green", "italic":false, "bold":true}',Lore: ['{"text": "Choose from the default maps.", "color": "gray"}']}}
+item replace block 43 31 -12 container.3 with gold_block{display: {Name: '{"text": "Featured maps", "color": "gold", "italic":false, "bold": true}', Lore: ['{"text": "Choose from player-made maps.", "color": "gray"}']}}
+item replace block 43 31 -12 container.5 with crafting_table{display: {Name: '{"text": "Default maps", "color": "dark_green", "italic":false, "bold": true}', Lore: ['{"text": "Choose from the default maps.", "color": "gray"}']}}
 
-item replace block 43 31 -12 container.20 with jukebox{display: {Name:'{"text": "Vote Map", "color": "dark_red", "italic":false, "bold":true}',Lore: ['{"text": "Vote between three different maps before the game.", "color": "gray"}']}}
-item replace block 43 31 -12 container.22 with player_head{display: {Name:'{"text": "Random Map", "color": "dark_aqua", "italic":false, "bold":true}',Lore: ['{"text": "Play a completely random map each game.", "color": "gray"}']},SkullOwner: {Id: [I;747841846,649743677,-1669641069,-1832488580],Properties: {textures: [{Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjg4ZmE5NzNlYTQ0NGNjODA4NzY4ZWE0OGJmMjY1N2FlOWE1NmMwYWY2MDI3NWU4NDQ2M2IxOTU2MjliY2UifX19"}]}}}
-item replace block 43 31 -12 container.24 with magenta_glazed_terracotta{display: {Name:'{"text": "Cycle Map", "color": "dark_purple", "italic":false, "bold":true}',Lore: ['{"text": "Go through every map in order.", "color": "gray"}']}}
+item replace block 43 31 -12 container.20 with jukebox{display: {Name: '{"text": "Vote Map", "color": "dark_red", "italic":false, "bold": true}', Lore: ['{"text": "Vote between three different maps before the game.", "color": "gray"}']}}
+item replace block 43 31 -12 container.22 with player_head{display: {Name: '{"text": "Random Map", "color": "dark_aqua", "italic":false, "bold": true}', Lore: ['{"text": "Play a completely random map each game.", "color": "gray"}']}, SkullOwner: {Id: [I; 747841846,649743677, -1669641069, -1832488580], Properties: {textures: [{Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjg4ZmE5NzNlYTQ0NGNjODA4NzY4ZWE0OGJmMjY1N2FlOWE1NmMwYWY2MDI3NWU4NDQ2M2IxOTU2MjliY2UifX19"}]}}}
+item replace block 43 31 -12 container.24 with magenta_glazed_terracotta{display: {Name: '{"text": "Cycle Map", "color": "dark_purple", "italic":false, "bold": true}', Lore: ['{"text": "Go through every map in order.", "color": "gray"}']}}
 
 execute if score .map_mode flag = flag.map_mode.vote const run data modify block 43 31 -12 Items[{id: "minecraft:jukebox"}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
 execute if score .map_mode flag = flag.map_mode.random const run data modify block 43 31 -12 Items[{id: "minecraft:player_head"}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'

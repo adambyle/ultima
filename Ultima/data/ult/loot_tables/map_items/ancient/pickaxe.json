@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{Unbreakable:true, CanDestroy: [\"minecraft:ancient_debris\"]}"
+                            "tag": "{Unbreakable: true, CanDestroy: [\"minecraft:ancient_debris\"]}"
                         }
                     ]
                 }

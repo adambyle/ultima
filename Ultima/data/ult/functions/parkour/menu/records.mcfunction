@@ -6,7 +6,7 @@ function ult:data/player/get_nbt
 clear @s[gamemode=!creative] writable_book
 clear @s[gamemode=!creative] #ult:map_icons
 
-item replace entity @s enderchest.11 with structure_void{display: {Name:'{"text": "Back", "color": "dark_aqua", "bold": true, "italic": false}'}}
+item replace entity @s enderchest.11 with structure_void{display: {Name: '{"text": "Back", "color": "dark_aqua", "bold": true, "italic": false}'}}
 
 data modify storage ult:temp GlobalData set from storage ult:players Global.Parkour.manor
 data modify storage ult:temp PlayerData set from storage ult:temp Player.Parkour.manor

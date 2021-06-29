@@ -1,3 +1,4 @@
+# Go to the lobby
     tp @s 45 30 -12 0 0
     gamemode adventure
     clear

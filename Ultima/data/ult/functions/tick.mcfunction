@@ -35,7 +35,7 @@
     tag @e[type=painting] add static_item
 
 # Fix spectator teleport error
-    execute positioned 45 30 -12 as @a[gamemode=spectator,distance=..4] run function ult:tp
+    execute positioned 45 30 -12 as @a[gamemode=spectator, distance=..4] run function ult:tp
 
 # Store altitude and reflect arrows
     # Get NBT data and store

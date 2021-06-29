@@ -2,31 +2,31 @@ function ult:data/player/get_nbt
 clear @s #ult:map_items/last_stand
 
 execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.sword
-data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/last_stand/sword"
+data modify entity @e[limit=1, tag=loot_table_handler] DeathLootTable set value "ult:map_items/last_stand/sword"
 function ult:spawn/items/hotbar_settings
 
 execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.axe
-data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/last_stand/axe"
+data modify entity @e[limit=1, tag=loot_table_handler] DeathLootTable set value "ult:map_items/last_stand/axe"
 function ult:spawn/items/hotbar_settings
 
 execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.bow
-data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/last_stand/bow"
+data modify entity @e[limit=1, tag=loot_table_handler] DeathLootTable set value "ult:map_items/last_stand/bow"
 function ult:spawn/items/hotbar_settings
 
 execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.shield
-data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/last_stand/shield"
+data modify entity @e[limit=1, tag=loot_table_handler] DeathLootTable set value "ult:map_items/last_stand/shield"
 function ult:spawn/items/hotbar_settings
 
 execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.cannonball
-data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/last_stand/cannonball"
+data modify entity @e[limit=1, tag=loot_table_handler] DeathLootTable set value "ult:map_items/last_stand/cannonball"
 function ult:spawn/items/hotbar_settings
 
 execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.arrows
-data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/last_stand/one_arrow"
+data modify entity @e[limit=1, tag=loot_table_handler] DeathLootTable set value "ult:map_items/last_stand/one_arrow"
 function ult:spawn/items/hotbar_settings
 
 execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.potion
-data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/last_stand/potion"
+data modify entity @e[limit=1, tag=loot_table_handler] DeathLootTable set value "ult:map_items/last_stand/potion"
 function ult:spawn/items/hotbar_settings
 
 execute unless data entity @s EnderItems[{id: "minecraft:netherite_sword"}] run loot replace entity @s inventory.0 loot ult:map_items/last_stand/sword

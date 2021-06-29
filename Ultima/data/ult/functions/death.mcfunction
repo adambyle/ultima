@@ -45,4 +45,4 @@ function ult:start/map/reset
 
 execute if score .game_mode flag = flag.game_mode.royale const run effect give @a instant_health 1 3 true
 
-function ult:exit/death
+function ult:death/exit

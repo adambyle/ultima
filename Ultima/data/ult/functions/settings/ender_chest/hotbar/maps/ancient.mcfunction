@@ -2,23 +2,23 @@ function ult:data/player/get_nbt
 clear @s #ult:map_items/ancient
 
 execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.ancient.axe
-data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/ancient/axe"
+data modify entity @e[limit=1, tag=loot_table_handler] DeathLootTable set value "ult:map_items/ancient/axe"
 function ult:spawn/items/hotbar_settings
 
 execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.ancient.pickaxe
-data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/ancient/pickaxe"
+data modify entity @e[limit=1, tag=loot_table_handler] DeathLootTable set value "ult:map_items/ancient/pickaxe"
 function ult:spawn/items/hotbar_settings
 
 execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.ancient.fireball
-data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/ancient/fireball"
+data modify entity @e[limit=1, tag=loot_table_handler] DeathLootTable set value "ult:map_items/ancient/fireball"
 function ult:spawn/items/hotbar_settings
 
 execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.ancient.ingot
-data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/ancient/ingot"
+data modify entity @e[limit=1, tag=loot_table_handler] DeathLootTable set value "ult:map_items/ancient/ingot"
 function ult:spawn/items/hotbar_settings
 
 execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.ancient.hoe
-data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/ancient/hoe"
+data modify entity @e[limit=1, tag=loot_table_handler] DeathLootTable set value "ult:map_items/ancient/hoe"
 function ult:spawn/items/hotbar_settings
 
 execute unless data entity @s EnderItems[{id: "minecraft:diamond_axe"}] run loot replace entity @s inventory.0 loot ult:map_items/ancient/axe

@@ -9,7 +9,7 @@ clear @s gray_stained_glass_pane
 clear @s blue_stained_glass_pane
 clear @s crafting_table
 
-item replace entity @s enderchest.0 with structure_void{display: {Name:'{"text": "Save and Exit", "color": "dark_aqua", "bold": true, "italic": false}'}}
+item replace entity @s enderchest.0 with structure_void{display: {Name: '{"text": "Save and Exit", "color": "dark_aqua", "bold": true, "italic": false}'}}
 
 item replace entity @s enderchest.2 with dragon_egg{display: {Name: '{"text": "Joining World", "bold": true, "italic": false, "color": "white"}'}}
 item replace entity @s enderchest.4 with skeleton_skull{display: {Name: '{"text": "Death", "bold": true, "italic": false, "color": "white"}'}}

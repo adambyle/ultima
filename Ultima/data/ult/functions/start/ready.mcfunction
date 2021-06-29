@@ -1,6 +1,6 @@
 function ult:data/root
 scoreboard players set @s ready 1
-execute unless entity @a[tag=player,scores={ready=1},tag=!root] run function ult:start/ready/first_ready
+execute unless entity @a[tag=player, scores={ready=1}, tag=!root] run function ult:start/ready/first_ready
 scoreboard players set #max _var 0
 execute as @a[tag=player] run scoreboard players add #max _var 1
 scoreboard players set #ready _var 0

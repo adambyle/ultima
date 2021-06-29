@@ -28,7 +28,7 @@ scoreboard players reset * health_display
 team join lobby @a
 
 # Initialize new players
-execute as @a[tag=!player,tag=!spectator] run function ult:settings/opt/in
+execute as @a[tag=!player, tag=!spectator] run function ult:settings/opt/in
 scoreboard players reset * online
 scoreboard players set @a online 1
 
@@ -66,7 +66,7 @@ execute unless data storage ult:players Global.Parkour.abyss run data modify sto
 execute unless data storage ult:players Global.Parkour.citadel run data modify storage ult:players Global.Parkour.citadel set value {Half: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"(Nobody)"'}, Full: {Time: 72000, UUID: [I; 0, 0, 0, 0], Name: '"(Nobody)"'}}
 
 # Reset settings buttons
-setblock 43 31 -9 polished_blackstone_button[powered=false,facing=west,face=floor]
+setblock 43 31 -9 polished_blackstone_button[powered=false, facing=west, face=floor]
 data remove block 43 31 -12 Lock
 execute unless score .game_mode flag matches 0.. run scoreboard players operation .game_mode flag = flag.game_mode.royale const
 execute unless score .map_mode flag matches 0.. run scoreboard players operation .map_mode flag = flag.map_mode.selected const

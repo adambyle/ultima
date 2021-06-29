@@ -9,4 +9,4 @@ clear @s #ult:map_icons
 
 function ult:data/ender_chest/icons/all
 
-item replace entity @s enderchest.13 with structure_void{display: {Name:'{"text": "Back", "color": "dark_aqua", "bold": true, "italic": false}'}}
+item replace entity @s enderchest.13 with structure_void{display: {Name: '{"text": "Back", "color": "dark_aqua", "bold": true, "italic": false}'}}

@@ -14,4 +14,4 @@ execute if score #count2 _var matches 0 run data modify storage ult:temp Ready s
 execute if score #count2 _var matches 1.. run data modify storage ult:temp Ready set value '{"selector": "@a[scores={ready=1}, tag=player]"}'
 
 tellraw @a [{"selector": "@s", "color": "dark_red"}, {"text": " is no longer ready. "}, {"score": {"name": "#ready", "objective": "_var"}, "color": "dark_gray", "underlined": true, "hoverEvent": {"action": "show_text", "contents": ["", {"text": "Ready:\n", "color": "blue", "bold": true}, {"storage": "ult:temp", "nbt": "Ready", "interpret": true, "color": "white"}, {"text": "\nWaiting on:\n", "color": "dark_red", "bold": true}, {"storage": "ult:temp", "nbt": "NotReady", "color": "gray", "interpret": true}]}, "extra": [" / ", {"score": {"name": "#max", "objective": "_var"}}]}]
-execute unless entity @a[tag=player,scores={ready=1}] run function ult:start/ready/cancel
+execute unless entity @a[tag=player, scores={ready=1}] run function ult:start/ready/cancel

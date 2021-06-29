@@ -1,6 +1,6 @@
 function ult:data/player/get_nbt
 
-item replace entity @s armor.head with leather_helmet{Unbreakable:1b, display: {color: 16711680}}
+item replace entity @s armor.head with leather_helmet{Unbreakable: 1b, display: {color: 16711680}}
 
 function ult:spawn/items/refills/boxing
 

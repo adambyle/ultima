@@ -2,27 +2,27 @@ function ult:data/player/get_nbt
 clear @s #ult:map_items/citadel
 
 execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.citadel.axe
-data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/citadel/axe"
+data modify entity @e[limit=1, tag=loot_table_handler] DeathLootTable set value "ult:map_items/citadel/axe"
 function ult:spawn/items/hotbar_settings
 
 execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.citadel.sword
-data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/citadel/sword"
+data modify entity @e[limit=1, tag=loot_table_handler] DeathLootTable set value "ult:map_items/citadel/sword"
 function ult:spawn/items/hotbar_settings
 
 execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.citadel.shield
-data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/citadel/shield"
+data modify entity @e[limit=1, tag=loot_table_handler] DeathLootTable set value "ult:map_items/citadel/shield"
 function ult:spawn/items/hotbar_settings
 
 execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.citadel.crossbow
-data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/citadel/crossbow"
+data modify entity @e[limit=1, tag=loot_table_handler] DeathLootTable set value "ult:map_items/citadel/crossbow"
 function ult:spawn/items/hotbar_settings
 
 execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.citadel.arrows
-data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/citadel/one_arrow"
+data modify entity @e[limit=1, tag=loot_table_handler] DeathLootTable set value "ult:map_items/citadel/one_arrow"
 function ult:spawn/items/hotbar_settings
 
 execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.citadel.pearls
-data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/citadel/pearl"
+data modify entity @e[limit=1, tag=loot_table_handler] DeathLootTable set value "ult:map_items/citadel/pearl"
 function ult:spawn/items/hotbar_settings
 
 execute unless data entity @s EnderItems[{id: "minecraft:golden_sword"}] run loot replace entity @s inventory.0 loot ult:map_items/citadel/sword

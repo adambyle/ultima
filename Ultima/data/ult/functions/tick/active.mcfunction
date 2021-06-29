@@ -5,7 +5,7 @@ execute as @a unless score @s online matches 1 run function ult:tick/action/wron
 execute positioned 45 31 -3 if block ~ ~ ~ polished_blackstone_pressure_plate[powered=true] as @p run function ult:spectate
 
 # Deal with invalid tags
-tag @a[tag=player,gamemode=spectator] remove alive
+tag @a[tag=player, gamemode=spectator] remove alive
 
 # Respawn
 scoreboard players remove @a[tag=player, scores={respawn=1..}] respawn 1
@@ -17,9 +17,9 @@ kill @e[tag=respawn_marker, scores={respawn=..1}]
 function ult:spawn/queue_advance
 
 # Clear unnecessary items
-kill @e[type=item,tag=!static_item]
+kill @e[type=item, tag=!static_item]
 clear @a[gamemode=!creative] glass_bottle
-kill @e[nbt={inGround:true},type=arrow]
+kill @e[nbt={inGround: true}, type=arrow]
 
 # Players may sometimes lost their items
 execute as @a[tag=player, tag=alive] run function ult:spawn/items/lost
@@ -34,7 +34,7 @@ kill @e[tag=dmg_indicator, scores={timer=..0}]
 execute as @a[tag=player, tag=alive, scores={damage_taken=1..}] run function ult:tick/action/damage_indicator
 
 # Check for player deaths
-execute as @a[tag=player,sort=random] run function ult:death/test
+execute as @a[tag=player, sort=random] run function ult:death/test
 
 # Map specific functions
 execute if score .game_state flag = flag.game_state.active const if score .map flag = flag.map.woodlands const run function ult:tick/active/map/woodlands

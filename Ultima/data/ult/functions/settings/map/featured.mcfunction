@@ -13,16 +13,16 @@ loot replace block 43 31 -12 container.7 loot ult:map_icon/avanto
 loot replace block 43 31 -12 container.8 loot ult:map_icon/boxing
 loot replace block 43 31 -12 container.14 loot ult:map_icon/ancient
 loot replace block 43 31 -12 container.15 loot ult:map_icon/marooned
-item replace block 43 31 -12 container.11 with structure_void{display: {Name:'{"text": "Back", "color": "dark_red", "italic":false, "bold":true}',Lore: ['{"text": "Back to Map Selection...", "color": "gray"}']}}
+item replace block 43 31 -12 container.11 with structure_void{display: {Name: '{"text": "Back", "color": "dark_red", "italic":false, "bold": true}', Lore: ['{"text": "Back to Map Selection...", "color": "gray"}']}}
 
-execute if score .map_mode flag = flag.map_mode.selected const if score .map flag matches 13 run data modify block 43 31 -12 Items[{Slot:5b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
-execute if score .map_mode flag = flag.map_mode.selected const if score .map flag matches 14 run data modify block 43 31 -12 Items[{Slot:6b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
-execute if score .map_mode flag = flag.map_mode.selected const if score .map flag matches 15 run data modify block 43 31 -12 Items[{Slot:7b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
-execute if score .map_mode flag = flag.map_mode.selected const if score .map flag matches 16 run data modify block 43 31 -12 Items[{Slot:8b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
-execute if score .map_mode flag = flag.map_mode.selected const if score .map flag matches 17 run data modify block 43 31 -12 Items[{Slot:14b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
-execute if score .map_mode flag = flag.map_mode.selected const if score .map flag matches 18 run data modify block 43 31 -12 Items[{Slot:15b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
-execute if score .map_mode flag = flag.map_mode.selected const if score .map flag matches 19 run data modify block 43 31 -12 Items[{Slot:16b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
-execute if score .map_mode flag = flag.map_mode.selected const if score .map flag matches 20 run data modify block 43 31 -12 Items[{Slot:17b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
+execute if score .map_mode flag = flag.map_mode.selected const if score .map flag matches 13 run data modify block 43 31 -12 Items[{Slot: 5b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
+execute if score .map_mode flag = flag.map_mode.selected const if score .map flag matches 14 run data modify block 43 31 -12 Items[{Slot: 6b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
+execute if score .map_mode flag = flag.map_mode.selected const if score .map flag matches 15 run data modify block 43 31 -12 Items[{Slot: 7b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
+execute if score .map_mode flag = flag.map_mode.selected const if score .map flag matches 16 run data modify block 43 31 -12 Items[{Slot: 8b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
+execute if score .map_mode flag = flag.map_mode.selected const if score .map flag matches 17 run data modify block 43 31 -12 Items[{Slot: 14b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
+execute if score .map_mode flag = flag.map_mode.selected const if score .map flag matches 18 run data modify block 43 31 -12 Items[{Slot: 15b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
+execute if score .map_mode flag = flag.map_mode.selected const if score .map flag matches 19 run data modify block 43 31 -12 Items[{Slot: 16b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
+execute if score .map_mode flag = flag.map_mode.selected const if score .map flag matches 20 run data modify block 43 31 -12 Items[{Slot: 17b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
 execute if score .map_mode flag = flag.map_mode.selected const if score .map flag matches 21 run data modify block 43 31 -12 Items[{Slot:23b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
 execute if score .map_mode flag = flag.map_mode.selected const if score .map flag matches 22 run data modify block 43 31 -12 Items[{Slot:24b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
 execute if score .map_mode flag = flag.map_mode.selected const if score .map flag matches 23 run data modify block 43 31 -12 Items[{Slot:25b}].tag.display.Lore append value '{"text": "Selected.", "color": "green"}'
