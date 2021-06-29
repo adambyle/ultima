@@ -1,1 +1,2 @@
-scoreboard players set .map event 30
+# Trident timer init
+    scoreboard players set .map event 30

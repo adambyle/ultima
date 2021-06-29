@@ -15,6 +15,6 @@
     effect give @a resistance 4 4 true
 
 # Fireworks!
-    execute at @a[tag=alive] run summon firework_rocket ~ ~4 ~ {LifeTime: 5, FireworksItem: {id: "firework_rocket", Count: 1b, tag: {Fireworks: {Flight: 2, Explosions: [{Type: 0b, Flicker: false, Trail: false, Colors: [I; 4312372]}]}}}}
-    execute at @a[tag=alive] run summon firework_rocket ~ ~4 ~ {LifeTime: 10, FireworksItem: {id: "firework_rocket", Count: 1b, tag: {Fireworks: {Flight: 2, Explosions: [{Type: 0b, Flicker: false, Trail: false, Colors: [I; 4312372]}]}}}}
-    execute at @a[tag=alive] run summon firework_rocket ~ ~4 ~ {LifeTime: 15, FireworksItem: {id: "firework_rocket", Count: 1b, tag: {Fireworks: {Flight: 2, Explosions: [{Type: 0b, Flicker: false, Trail: false, Colors: [I; 4312372]}]}}}}
+    execute at @a[tag=alive] run summon firework_rocket ~ ~4 ~ {FireworksItem: {Count: 1b, id: "firework_rocket", tag: {Fireworks: {Explosions: [{Colors: [I; 4312372], Flicker: false, Trail: false, Type: 0b}], Flight: 2b}}}, LifeTime: 5}
+    execute at @a[tag=alive] run summon firework_rocket ~ ~4 ~ {FireworksItem: {Count: 1b, id: "firework_rocket", tag: {Fireworks: {Explosions: [{Colors: [I; 4312372], Flicker: false, Trail: false, Type: 0b}], Flight: 2b}}}, LifeTime: 10}
+    execute at @a[tag=alive] run summon firework_rocket ~ ~4 ~ {FireworksItem: {Count: 1b, id: "firework_rocket", tag: {Fireworks: {Explosions: [{Colors: [I; 4312372], Flicker: false, Trail: false, Type: 0b}], Flight: 2b}}}, LifeTime: 15}

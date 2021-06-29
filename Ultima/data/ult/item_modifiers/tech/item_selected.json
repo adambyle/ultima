@@ -1,0 +1,6 @@
+{
+    "function": "set_lore",
+    "entity": "this",
+    "lore": [{"text": "Selected.", "color": "green", "italic": true}],
+    "replace": true
+}

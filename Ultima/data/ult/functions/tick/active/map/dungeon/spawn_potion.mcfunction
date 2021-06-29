@@ -1,4 +1,4 @@
 setblock ~ ~ ~ air
-summon falling_block ~ ~ ~ {Glowing: true, BlockState: {Name: "minecraft:brewing_stand", Properties: {has_bottle_1: "true"}}, NoGravity: true, DropItem: false, Time: -999999}
+summon falling_block ~ ~ ~ {BlockState: {Name: "minecraft:brewing_stand", Properties: {has_bottle_1: "true"}}, DropItem: false, Glowing: true, NoGravity: true, Time: -999999, Tags: ["fake_potion"]}
 
-scoreboard players set .map event 200
+scoreboard players set .map event 300

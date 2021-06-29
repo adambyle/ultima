@@ -1,25 +1,25 @@
 function ult:data/player/get_nbt
 
-execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.sword
-data modify entity @e[limit=1, tag=loot_table_handler] DeathLootTable set value "ult:map_items/last_stand/sword"
+execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.sword
+loot replace block 0 0 0 container.0 loot ult:map_items/last_stand/sword
 function ult:spawn/items/give
 
-execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.axe
-data modify entity @e[limit=1, tag=loot_table_handler] DeathLootTable set value "ult:map_items/last_stand/axe"
+execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.axe
+loot replace block 0 0 0 container.0 loot ult:map_items/last_stand/axe
 function ult:spawn/items/give
 
-execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.bow
-data modify entity @e[limit=1, tag=loot_table_handler] DeathLootTable set value "ult:map_items/last_stand/bow"
+execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.bow
+loot replace block 0 0 0 container.0 loot ult:map_items/last_stand/bow
 function ult:spawn/items/give
 
-execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.shield
-data modify entity @e[limit=1, tag=loot_table_handler] DeathLootTable set value "ult:map_items/last_stand/shield"
+execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.shield
+loot replace block 0 0 0 container.0 loot ult:map_items/last_stand/shield
 function ult:spawn/items/give
 
-item replace entity @s armor.feet with netherite_boots{Unbreakable: 1b}
-item replace entity @s armor.legs with netherite_leggings{Unbreakable: 1b}
-item replace entity @s armor.chest with netherite_chestplate{Unbreakable: 1b}
-item replace entity @s armor.head with netherite_helmet{Unbreakable: 1b}
+item replace entity @s armor.feet with netherite_boots{Unbreakable: true}
+item replace entity @s armor.legs with netherite_leggings{Unbreakable: true}
+item replace entity @s armor.chest with netherite_chestplate{Unbreakable: true}
+item replace entity @s armor.head with netherite_helmet{Unbreakable: true}
 
 function ult:spawn/items/refills/last_stand
 

@@ -17,5 +17,6 @@
 
 # Add player to the scoreboard
     scoreboard players set @s score 0
+    # Don't add self to health display scoreboard if it's during a duel
     execute unless score .game_mode flag = flag.game_mode.duels const run scoreboard players set @s health_display 20
 

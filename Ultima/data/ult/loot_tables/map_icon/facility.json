@@ -1,0 +1,27 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "exposed_cut_copper",
+                    "functions": [
+                        {
+                            "function": "set_name",
+                            "name": {"text": "Facility", "bold": true, "italic": false}
+                        },
+                        {
+                            "function": "set_lore",
+                            "lore": [{"text": "Coming soon...", "color": "gray"}]
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{GUI: true}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

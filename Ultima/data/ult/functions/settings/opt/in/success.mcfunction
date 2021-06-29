@@ -8,6 +8,7 @@
 
 # Determine if the player can join the game
     scoreboard players set .temp _var 0
+    # Can if brawl or duels mode
     execute if score .game_mode flag = flag.game_mode.brawl const run scoreboard players set .temp _var 1
     execute if score .game_mode flag = flag.game_mode.duels const run scoreboard players set .temp _var 1
 

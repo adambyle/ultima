@@ -4,7 +4,7 @@
     tag @s add spectator
     tag @s remove ready
     # Don't announce anything if this is part of joining the world
-    execute if score @s[tag=player] online matches 1 run tellraw @a [{"selector": "@s", "color": "dark_gray"}, {"text": " has opted out.", "color": "dark_gray"}]
+    execute if score @s online matches 1 run tellraw @a [{"selector": "@s", "color": "dark_gray"}, {"text": " has opted out.", "color": "dark_gray"}]
     execute at @s run playsound block.note_block.xylophone master @s
     # Exit the arena properly if mid-game
     execute if score .game_state flag = flag.game_state.active const run function ult:settings/opt/out/mid_game
@@ -15,4 +15,5 @@
 
 # Lobby procedures
     effect give @s instant_health 1 2 true
-    function ult:settings/ender_chest/main
+    function ult:settings/player/main
+    execute if entity @a[tag=ready] run function ult:start/ready/update_notice

@@ -9,7 +9,7 @@ function ult:data/root
 
 scoreboard players operation @s score -= .dec _var
 scoreboard players operation @a[tag=killer] score += .inc _var
-execute unless entity @a[tag=killer] run scoreboard players add @a[tag=!root, tag=player] score 1
+execute unless entity @a[tag=killer] run scoreboard players add @a[tag=player, tag=!root] score 1
 
 scoreboard players operation @s tether = @r[tag=killer] pn
 

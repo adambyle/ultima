@@ -1,3 +1,4 @@
 function ult:reset
 function ult:data/map/new_maps
-scoreboard players reset * wins
+bossbar set ult:game_start visible false
+bossbar set ult:game_start color blue

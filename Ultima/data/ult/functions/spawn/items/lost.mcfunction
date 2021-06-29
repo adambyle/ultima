@@ -7,13 +7,13 @@ execute if score .map flag = flag.map.citadel const run function ult:spawn/items
 execute if score .map flag = flag.map.wasteland const run function ult:spawn/items/lost/wasteland
 execute if score .map flag = flag.map.town_square const run function ult:spawn/items/lost/town_square
 execute if score .map flag = flag.map.last_stand const run function ult:spawn/items/lost/last_stand
-execute if score .map flag matches 9 run function ult:spawn/items/lost/frost
-execute if score .map flag matches 10 run function ult:spawn/items/lost/shroom
-execute if score .map flag matches 11 run function ult:spawn/items/lost/hell
-execute if score .map flag matches 12 run function ult:spawn/items/lost/frontier
-execute if score .map flag matches 13 run function ult:spawn/items/lost/reflection
-execute if score .map flag matches 14 run function ult:spawn/items/lost/dracula
-execute if score .map flag matches 15 run function ult:spawn/items/lost/avanto
-execute if score .map flag matches 16 run function ult:spawn/items/lost/boxing
-execute if score .map flag matches 17 run function ult:spawn/items/lost/ancient
-execute if score .map flag matches 18 run function ult:spawn/items/lost/marooned
+execute if score .map flag = flag.map.permafrost const run function ult:spawn/items/lost/frost
+execute if score .map flag = flag.map.shroom const run function ult:spawn/items/lost/shroom
+execute if score .map flag = flag.map.hellscape const run function ult:spawn/items/lost/hell
+execute if score .map flag = flag.map.frontier const run function ult:spawn/items/lost/frontier
+execute if score .map flag = flag.map.reflection const run function ult:spawn/items/lost/reflection
+execute if score .map flag = flag.map.dracula const run function ult:spawn/items/lost/dracula
+execute if score .map flag = flag.map.avanto const run function ult:spawn/items/lost/avanto
+execute if score .map flag = flag.map.boxing const run function ult:spawn/items/lost/boxing
+execute if score .map flag = flag.map.ancient const run function ult:spawn/items/lost/ancient
+execute if score .map flag = flag.map.marooned const run function ult:spawn/items/lost/marooned

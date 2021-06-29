@@ -21,6 +21,13 @@
                                     "name": "Speed",
                                     "operation": "addition",
                                     "slot": "mainhand"
+                                },
+                                {
+                                    "amount": 0.02,
+                                    "attribute": "generic.movement_speed",
+                                    "name": "Speed",
+                                    "operation": "addition",
+                                    "slot": "offhand"
                                 }
                             ]
                         }

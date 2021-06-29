@@ -1,0 +1,7 @@
+[
+    {
+        "function": "set_name",
+        "entity": "this",
+        "name": {"storage": "ult:temp", "nbt": "Map", "color": "gold", "italic": true}
+    }
+]

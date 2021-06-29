@@ -19,8 +19,4 @@ scoreboard players set @s score 0
 
 execute if entity @a[tag=killer] run function ult:tick/action/opt_prompt/lobby_tp
 
-tag @s remove key_shown
-data modify storage ult:temp Key set value {dieRoyale: true}
-execute if entity @a[tag=killer] as @s[tag=!key_shown] run function ult:tick/action/key_point
-
 execute as @a[tag=killer] if score @s score >= .temp_pn _var run function ult:victory

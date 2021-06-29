@@ -1,6 +1,6 @@
 # Count the votes
     function ult:data/root
-    execute as @a[tag=player] if score @s vote = @e[tag=root, limit=1] control run scoreboard players add @e[tag=root] _var 1
+    execute as @a[tag=player] if score @s vote = @e[limit=1, tag=root] control run scoreboard players add @e[tag=root] _var 1
 
 # Summon a vote candidate per vote this map received
     scoreboard players set .temp _var 0

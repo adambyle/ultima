@@ -1,13 +1,13 @@
 execute as @a[tag=player, tag=alive] run function ult:tick/active/map/marooned/trident_ownership
-loot give @a[nbt=!{Inventory: [{id: "minecraft:trident"}]}, scores={_var=0}] loot ult:map_items/marooned/trident
+loot give @a[scores={_var=0}, nbt=!{Inventory: [{id: "minecraft:trident"}]}] loot ult:map_items/marooned/trident
 
-fill 131 13 186 95 25 124 spruce_fence_gate[open=false, facing=east] replace spruce_fence_gate[open=true, facing=east]
-fill 131 13 186 95 25 124 spruce_fence_gate[open=false, facing=west] replace spruce_fence_gate[open=true, facing=west]
-fill 131 13 186 95 25 124 spruce_fence_gate[open=false, facing=north] replace spruce_fence_gate[open=true, facing=north]
-fill 131 13 186 95 25 124 spruce_fence_gate[open=false, facing=south] replace spruce_fence_gate[open=true, facing=south]
+fill 131 13 186 95 25 124 spruce_fence_gate[facing=east, open=false] replace spruce_fence_gate[facing=east, open=true]
+fill 131 13 186 95 25 124 spruce_fence_gate[facing=west, open=false] replace spruce_fence_gate[facing=west, open=true]
+fill 131 13 186 95 25 124 spruce_fence_gate[facing=north, open=false] replace spruce_fence_gate[facing=north, open=true]
+fill 131 13 186 95 25 124 spruce_fence_gate[facing=south, open=false] replace spruce_fence_gate[facing=south, open=true]
 
-execute if score #transition event matches 1 run scoreboard players add .map event 1
-execute if score #transition event matches 0 if predicate ult:coin_flip run scoreboard players add .map event 1
+execute if score .transition event matches 1 run scoreboard players add .map event 1
+execute if score .transition event matches 0 if predicate ult:coin_flip run scoreboard players add .map event 1
 execute if score .map event matches 100 run function ult:tick/active/map/marooned/flood/0
 execute if score .map event matches 110 run function ult:tick/active/map/marooned/flood/1
 execute if score .map event matches 120 run function ult:tick/active/map/marooned/flood/2
@@ -28,15 +28,15 @@ execute if score .map event matches 370 run function ult:tick/active/map/maroone
 
 effect give @a[tag=player, tag=alive, nbt={SelectedItem: {id: "minecraft:heart_of_the_sea"}}] dolphins_grace 99999 0
 effect give @a[tag=player, tag=alive, nbt={SelectedItem: {id: "minecraft:heart_of_the_sea"}}] water_breathing 99999 0
-item replace entity @a[tag=player, tag=alive, nbt={SelectedItem: {id: "minecraft:heart_of_the_sea"}}] armor.feet with iron_boots{Unbreakable: 1b, Enchantments: [{id: "minecraft:protection", lvl: 1s}, {id: "minecraft:depth_strider", lvl: 3s}]}
+item replace entity @a[tag=player, tag=alive, nbt={SelectedItem: {id: "minecraft:heart_of_the_sea"}}] armor.feet with iron_boots{Enchantments: [{id: "protection", lvl: 1s}, {id: "depth_strider", lvl: 3s}], Unbreakable: true}
 effect give @a[tag=player, tag=alive, nbt={Inventory: [{id: "minecraft:heart_of_the_sea", Slot: -106b}]}] dolphins_grace 99999 0
 effect give @a[tag=player, tag=alive, nbt={Inventory: [{id: "minecraft:heart_of_the_sea", Slot: -106b}]}] water_breathing 99999 0
-item replace entity @a[tag=player, tag=alive, nbt={Inventory: [{id: "minecraft:heart_of_the_sea", Slot: -106b}]}] armor.feet with iron_boots{Unbreakable: 1b, Enchantments: [{id: "minecraft:protection", lvl: 1s}, {id: "minecraft:depth_strider", lvl: 3s}]}
+item replace entity @a[tag=player, tag=alive, nbt={Inventory: [{id: "minecraft:heart_of_the_sea", Slot: -106b}]}] armor.feet with iron_boots{Enchantments: [{id: "protection", lvl: 1s}, {id: "depth_strider", lvl: 3s}], Unbreakable: true}
 effect clear @a[nbt=!{SelectedItem: {id: "minecraft:heart_of_the_sea"}}, nbt=!{Inventory: [{id: "minecraft:heart_of_the_sea", Slot: -106b}]}] dolphins_grace 
 effect clear @a[nbt=!{SelectedItem: {id: "minecraft:heart_of_the_sea"}}, nbt=!{Inventory: [{id: "minecraft:heart_of_the_sea", Slot: -106b}]}] water_breathing 
-item replace entity @a[nbt=!{SelectedItem: {id: "minecraft:heart_of_the_sea"}}, nbt=!{Inventory: [{id: "minecraft:heart_of_the_sea", Slot: -106b}]}] armor.feet with iron_boots{Unbreakable: 1b, Enchantments: [{id: "minecraft:protection", lvl: 1s}]}
+item replace entity @a[nbt=!{SelectedItem: {id: "minecraft:heart_of_the_sea"}}, nbt=!{Inventory: [{id: "minecraft:heart_of_the_sea", Slot: -106b}]}] armor.feet with iron_boots{Enchantments: [{id: "protection", lvl: 1s}], Unbreakable: true}
 
-execute as @a[scores={x.salmon=1..}, nbt=!{Inventory: [{id: "minecraft:cooked_salmon"}]}] run function ult:tick/active/map/marooned/food
+execute as @a[scores={event.salmon=1..}, nbt=!{Inventory: [{id: "minecraft:cooked_salmon"}]}] run function ult:tick/active/map/marooned/food
 
 execute as @a[scores={crouch_mode=1}, nbt={SelectedItem: {id: "minecraft:cooked_salmon"}}] run function ult:tick/active/map/marooned/eat_food
 execute as @a[scores={crouch_mode=1}, nbt={Inventory: [{id: "minecraft:cooked_salmon", Slot: -106b}]}] run function ult:tick/active/map/marooned/eat_food

@@ -1,12 +1,15 @@
-scoreboard players set @e[tag=last_stand_skill] event.skill 0
-scoreboard players set @e[tag=last_stand_skill, scores={event.skill=0}, sort=random, limit=1] event.skill 1
-scoreboard players set @e[tag=last_stand_skill, scores={event.skill=0}, sort=random, limit=1] event.skill 2
-scoreboard players set @e[tag=last_stand_skill, scores={event.skill=0}, sort=random, limit=1] event.skill 3
-scoreboard players set @e[tag=last_stand_skill, scores={event.skill=0}, sort=random, limit=1] event.skill 4
+# Randomize skill shrines
+    scoreboard players set @e[tag=last_stand_skill] event.skill 0
+    scoreboard players set @e[sort=random, limit=1, tag=last_stand_skill, scores={event.skill=0}] event.skill 1
+    scoreboard players set @e[sort=random, limit=1, tag=last_stand_skill, scores={event.skill=0}] event.skill 2
+    scoreboard players set @e[sort=random, limit=1, tag=last_stand_skill, scores={event.skill=0}] event.skill 3
+    scoreboard players set @e[sort=random, limit=1, tag=last_stand_skill, scores={event.skill=0}] event.skill 4
 
-data merge entity @e[tag=last_stand_skill, scores={event.skill=1}, limit=1] {CustomName: '{"text": "Flurry Rush", "color": "green"}'}
-data merge entity @e[tag=last_stand_skill, scores={event.skill=2}, limit=1] {CustomName: '{"text": "Hot Pursuit", "color": "green"}'}
-data merge entity @e[tag=last_stand_skill, scores={event.skill=3}, limit=1] {CustomName: '{"text": "Combonatrix", "color": "green"}'}
-data merge entity @e[tag=last_stand_skill, scores={event.skill=4}, limit=1] {CustomName: '{"text": "Backstabbing", "color": "green"}'}
+# Set shrine names
+    data merge entity @e[limit=1, tag=last_stand_skill, scores={event.skill=1}] {CustomName: '{"text": "Flurry Rush (Crouch here)", "color": "green"}', CustomNameVisible: true}
+    data merge entity @e[limit=1, tag=last_stand_skill, scores={event.skill=2}] {CustomName: '{"text": "Hot Pursuit (Crouch here)", "color": "green"}', CustomNameVisible: true}
+    data merge entity @e[limit=1, tag=last_stand_skill, scores={event.skill=3}] {CustomName: '{"text": "Combonatrix (Crouch here)", "color": "green"}', CustomNameVisible: true}
+    data merge entity @e[limit=1, tag=last_stand_skill, scores={event.skill=4}] {CustomName: '{"text": "Backstabbing (Crouch here)", "color": "green"}', CustomNameVisible: true}
 
-scoreboard players set @a event.skill 0
+# Reset skills (from previous games)
+    scoreboard players set @a event.skill 0

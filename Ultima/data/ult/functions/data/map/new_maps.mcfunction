@@ -6,19 +6,19 @@
     function ult:data/map/choose_map/marker_assign_map
 
 # Choose three new distinct maps for voting
-    data modify storage ult:players Votes set value [0, 0, 0]
+    data modify storage ult:data Votes set value [0, 0, 0]
     tag @e remove temp
     # Generate first map
-    tag @e[tag=choose_map, limit=1, sort=random] add temp
-    execute store result storage ult:players Votes[0] int 1 run scoreboard players get @e[tag=temp, limit=1] map
+    tag @e[sort=random, limit=1, tag=choose_map] add temp
+    execute store result storage ult:data Votes[0] int 1 run scoreboard players get @e[limit=1, tag=temp] control
     kill @e[tag=temp]
     # ..second
-    tag @e[tag=choose_map, limit=1, sort=random] add temp
-    execute store result storage ult:players Votes[1] int 1 run scoreboard players get @e[tag=temp, limit=1] map
+    tag @e[sort=random, limit=1, tag=choose_map] add temp
+    execute store result storage ult:data Votes[1] int 1 run scoreboard players get @e[limit=1, tag=temp] control
     kill @e[tag=temp]
     # ...third
-    tag @e[tag=choose_map, limit=1, sort=random] add temp
-    execute store result storage ult:players Votes[2] int 1 run scoreboard players get @e[tag=temp, limit=1] map
+    tag @e[sort=random, limit=1, tag=choose_map] add temp
+    execute store result storage ult:data Votes[2] int 1 run scoreboard players get @e[limit=1, tag=temp] control
     kill @e[tag=temp]
 
 # Clean up the map markers

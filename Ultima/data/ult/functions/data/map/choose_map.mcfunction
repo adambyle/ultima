@@ -1,10 +1,10 @@
 # Cycle through maps
     # If on cycle mode, increment by one
     execute if score .map_mode flag = flag.map_mode.cycle const run scoreboard players add .map flag 1
-    # If above the default map limit, bring to fandom map start
-    execute if score .map flag > flag.map.end_default const unless score .map flag >= flag.map.start_fandom const run scoreboard players operation .map flag = flag.map.start_fandom const
-    # If above the default fandom limit, bring to default map start
-    execute if score .map flag > flag.map.end_fandom const run scoreboard players operation .map flag = flag.map.start_default const
+    # If above the default map limit, bring to featured map start
+    execute if score .map flag > flag.map.end_default const unless score .map flag >= flag.map.start_featured const run scoreboard players operation .map flag = flag.map.start_featured const
+    # If above the default featured limit, bring to default map start
+    execute if score .map flag > flag.map.end_featured const run scoreboard players operation .map flag = flag.map.start_default const
 
 # Generate markers for each map
     scoreboard players operation .temp _var = flag.map.start_default const
@@ -12,9 +12,9 @@
 
 # Generate the random selection of a map
     # If on random mode, make it the active map
-    execute if score .map_mode flag = flag.map_mode.random const run scoreboard players operation .map flag = @e[tag=choose_map, limit=1, sort=random] _var
+    execute if score .map_mode flag = flag.map_mode.random const run scoreboard players operation .map flag = @e[sort=random, limit=1, tag=choose_map] control
     # Generate a backup random for failed votes
-    scoreboard players operation .random_map control = @e[tag=choose_map, limit=1, sort=random] map
+    scoreboard players operation .random_map control = @e[sort=random, limit=1, tag=choose_map] control
 
 # Count the votes for each map
     scoreboard players set @e[tag=choose_map] _var 0

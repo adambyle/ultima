@@ -1,17 +1,20 @@
-execute as @a[tag=alive, tag=player] run function ult:tick/action/opt_prompt
+# Give the players a way to leave the game
+    execute as @a[tag=alive, tag=player] run function ult:tick/action/opt_prompt
 
-function ult:start/round
+# Round-specific commands
+    function ult:start/round
 
-execute as @a[tag=alive, tag=player, sort=random] run function ult:spawn
-execute as @a at @s run playsound block.note_block.pling master @s ~ ~ ~ 4 1.5
-execute as @a at @s run playsound block.note_block.pling master @s ~ ~ ~ 4 2
+# Spawn all the starting players in a random order
+    execute as @a[sort=random, tag=alive, tag=player] run function ult:spawn
+    tag @a remove fresh
+    execute as @a at @s run playsound block.note_block.pling master @s ~ ~ ~ 4 1.5
+    execute as @a at @s run playsound block.note_block.pling master @s ~ ~ ~ 4 2
 
-execute as @e[tag=text_display] run data modify entity @s CustomNameVisible set value false
+# Final lobby clean up
+    execute as @e[tag=text_display] run data modify entity @s CustomNameVisible set value false
+    execute at @e[tag=vote_station] run tp @a[distance=..2] 45 30 -12
+    scoreboard players operation .game_state flag = flag.game_state.active const
 
-scoreboard players set .game_state flag 1
+# Players who have opted to spectate games when they just start are teleported to watch
+    execute as @a run function ult:start/spectate
 
-execute at @e[tag=vote_station] run tp @a[distance=..2] 45 30 -12
-
-execute as @a run function ult:start/spectate
-
-tag @a remove fresh

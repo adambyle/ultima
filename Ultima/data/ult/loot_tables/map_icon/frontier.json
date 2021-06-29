@@ -17,7 +17,7 @@
                         },
                         {
                             "function": "set_nbt",
-                            "tag": "{gui: true}"
+                            "tag": "{GUI: true}"
                         }
                     ]
                 }

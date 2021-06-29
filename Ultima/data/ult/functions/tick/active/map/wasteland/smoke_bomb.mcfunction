@@ -1,10 +1,10 @@
 function ult:data/root
 tag @e remove temp
-tag @e[tag=wasteland_tp, limit=1, sort=furthest] add temp
-tp @s @e[tag=wasteland_tp, limit=1, sort=random, tag=!temp]
-effect give @a[distance=..5, tag=player, tag=alive, tag=!root] instant_damage
-effect give @a[distance=..5, tag=player, tag=alive, tag=!root] blindness 2
-playsound entity.generic.explode master @a[tag=!parkour]
+tag @e[sort=furthest, limit=1, tag=wasteland_tp] add temp
+tp @s @e[sort=random, limit=1, tag=wasteland_tp, tag=!temp]
+effect give @a[tag=player, tag=alive, tag=!root, distance=..5] instant_damage
+effect give @a[tag=player, tag=alive, tag=!root, distance=..5] blindness 2
+playsound entity.generic.explode master @a
 particle explosion_emitter ~ ~ ~ 0 0 0 0 0 force
 clear @s flint
 execute at @s run particle explosion_emitter ~ ~ ~ 0 0 0 0 0 force

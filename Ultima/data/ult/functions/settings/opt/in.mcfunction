@@ -14,4 +14,5 @@
     execute if score .temp _var matches 1 run function ult:settings/opt/in/success
 
 # Clean up
-    function ult:settings/ender_chest/main
+    function ult:settings/player/main
+    execute if entity @a[tag=ready] run function ult:start/ready/update_notice

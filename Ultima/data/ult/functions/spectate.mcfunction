@@ -5,6 +5,3 @@
 
 # Give link to teleport back to lobby
     function ult:tick/action/opt_prompt
-
-# Leave the lobby team
-    team leave @s
