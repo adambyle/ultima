@@ -14,7 +14,7 @@
                         },
                         {
                             "function": "set_name",
-                            "name": {"text": "Rune","italic": false}
+                            "name": {"text": "Rune", "italic": false}
                         }
                     ]
                 }

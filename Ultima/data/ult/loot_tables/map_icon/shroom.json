@@ -9,11 +9,15 @@
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {"text": "Shroom","bold": true,"italic": false}
+                            "name": {"text": "Shroom", "bold": true, "italic": false}
                         },
                         {
                             "function": "set_lore",
                             "lore": [{"text": "Coming soon...", "color": "gray"}]
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{GUI: true}"
                         }
                     ]
                 }

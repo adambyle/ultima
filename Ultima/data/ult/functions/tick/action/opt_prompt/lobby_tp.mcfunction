@@ -1,1 +1,0 @@
-tellraw @s[gamemode=spectator] [{"text":"You can adjust your settings and play parkour ","color":"gold"},{"text":"in the lobby while you wait.","underlined":true,"clickEvent":{"action": "run_command","value": "/trigger action set 3"}}]

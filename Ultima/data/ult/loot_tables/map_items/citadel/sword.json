@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{Unbreakable:true, Enchantments: [{id: \"minecraft:sharpness\", lvl: 5}]}"
+                            "tag": "{Unbreakable: true, Enchantments: [{id: \"minecraft:sharpness\", lvl: 5s}]}"
                         }
                     ]
                 }

@@ -1,16 +1,16 @@
 function ult:data/player/get_nbt
 
-execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.dungeon.axe
-data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/dungeon/axe"
+execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.dungeon.axe
+loot replace block 0 0 0 container.0 loot ult:map_items/dungeon/axe
 function ult:spawn/items/give
 
-execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.dungeon.shield
-data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/dungeon/shield"
+execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.dungeon.shield
+loot replace block 0 0 0 container.0 loot ult:map_items/dungeon/shield
 function ult:spawn/items/give
 
-replaceitem entity @s armor.feet iron_boots{Unbreakable: 1b}
-replaceitem entity @s armor.legs iron_leggings{Unbreakable: 1b}
-replaceitem entity @s armor.chest iron_chestplate{Unbreakable: 1b}
-replaceitem entity @s armor.head iron_helmet{Unbreakable: 1b}
+item replace entity @s armor.feet with iron_boots{Unbreakable: true}
+item replace entity @s armor.legs with iron_leggings{Unbreakable: true}
+item replace entity @s armor.chest with iron_chestplate{Unbreakable: true}
+item replace entity @s armor.head with iron_helmet{Unbreakable: true}
 
 function ult:spawn/items/refills/dungeon

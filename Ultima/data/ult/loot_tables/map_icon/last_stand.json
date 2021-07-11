@@ -1,0 +1,23 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "cracked_deepslate_bricks",
+                    "functions": [
+                        {
+                            "function": "set_name",
+                            "name": {"text": "Last Stand", "bold": true, "italic": false}
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{GUI: true}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

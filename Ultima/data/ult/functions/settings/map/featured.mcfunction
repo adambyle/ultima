@@ -1,33 +1,38 @@
-execute unless score #maps menu = #map.featured menu run data remove block 43 31 -12 Items
-scoreboard players operation #maps menu = #map.featured menu
+# Set up GUI space
+# Clear chest
+    data remove block 43 31 -12 Items
+    # Change GUI flag
+    scoreboard players operation .map_menu flag = flag.map_menu.featured const
+    # Clear inventory of GUI items
+    clear @a #ult:all{GUI: true}
 
-scoreboard players set #selected map 0
-
-clear @a[gamemode=!creative] gold_block
-
-execute if data block 43 31 -12 Items[0] run function ult:settings/map/featured_test
-
-loot replace block 43 31 -12 container.5 loot ult:map_icon/reflection
-loot replace block 43 31 -12 container.6 loot ult:map_icon/dracula
-loot replace block 43 31 -12 container.7 loot ult:map_icon/avanto
-loot replace block 43 31 -12 container.8 loot ult:map_icon/boxing
-loot replace block 43 31 -12 container.14 loot ult:map_icon/ancient
-loot replace block 43 31 -12 container.15 loot ult:map_icon/marooned
-replaceitem block 43 31 -12 container.11 structure_void{display:{Name:'{"text":"Back","color":"dark_red","italic":false,"bold":true}',Lore:['{"text":"Back to Map Selection...","color":"gray"}']}}
-
-execute if score #flag map = #select map if score #server map matches 13 run data modify block 43 31 -12 Items[{Slot:5b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
-execute if score #flag map = #select map if score #server map matches 14 run data modify block 43 31 -12 Items[{Slot:6b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
-execute if score #flag map = #select map if score #server map matches 15 run data modify block 43 31 -12 Items[{Slot:7b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
-execute if score #flag map = #select map if score #server map matches 16 run data modify block 43 31 -12 Items[{Slot:8b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
-execute if score #flag map = #select map if score #server map matches 17 run data modify block 43 31 -12 Items[{Slot:14b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
-execute if score #flag map = #select map if score #server map matches 18 run data modify block 43 31 -12 Items[{Slot:15b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
-execute if score #flag map = #select map if score #server map matches 19 run data modify block 43 31 -12 Items[{Slot:16b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
-execute if score #flag map = #select map if score #server map matches 20 run data modify block 43 31 -12 Items[{Slot:17b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
-execute if score #flag map = #select map if score #server map matches 21 run data modify block 43 31 -12 Items[{Slot:23b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
-execute if score #flag map = #select map if score #server map matches 22 run data modify block 43 31 -12 Items[{Slot:24b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
-execute if score #flag map = #select map if score #server map matches 23 run data modify block 43 31 -12 Items[{Slot:25b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
-execute if score #flag map = #select map if score #server map matches 24 run data modify block 43 31 -12 Items[{Slot:26b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'
-
-execute unless score #selected map matches 0 run clear @a[gamemode=!creative] #ult:map_icons
-execute if score #selected map matches 1.. unless score #selected map = #server map if score #flag map = #select map run function ult:settings/map/select
-execute if score #selected map matches 1.. unless score #flag map = #select map run function ult:settings/map/select
+# Display icons
+    # Maps
+    loot replace block 43 31 -12 container.3 loot ult:map_icon/reflection
+    loot replace block 43 31 -12 container.4 loot ult:map_icon/dracula
+    loot replace block 43 31 -12 container.5 loot ult:map_icon/avanto
+    loot replace block 43 31 -12 container.6 loot ult:map_icon/boxing
+    loot replace block 43 31 -12 container.7 loot ult:map_icon/ancient
+    loot replace block 43 31 -12 container.8 loot ult:map_icon/marooned
+    loot replace block 43 31 -12 container.12 loot ult:map_icon/hill
+    loot replace block 43 31 -12 container.13 loot ult:map_icon/bathhouse
+    loot replace block 43 31 -12 container.14 loot ult:map_icon/coming_soon/featured
+    loot replace block 43 31 -12 container.15 loot ult:map_icon/coming_soon/featured
+    loot replace block 43 31 -12 container.16 loot ult:map_icon/coming_soon/featured
+    loot replace block 43 31 -12 container.17 loot ult:map_icon/coming_soon/featured
+    loot replace block 43 31 -12 container.21 loot ult:map_icon/coming_soon/featured
+    loot replace block 43 31 -12 container.22 loot ult:map_icon/coming_soon/featured
+    loot replace block 43 31 -12 container.23 loot ult:map_icon/coming_soon/featured
+    loot replace block 43 31 -12 container.24 loot ult:map_icon/coming_soon/featured
+    loot replace block 43 31 -12 container.25 loot ult:map_icon/coming_soon/featured
+    loot replace block 43 31 -12 container.26 loot ult:map_icon/coming_soon/featured
+    item replace block 43 31 -12 container.10 with structure_void{GUI: true, display: {Lore: ['{"text": "Back to Map Selection...", "color": "gray"}'], Name: '{"text": "Back", "color": "dark_aqua", "italic":false, "bold": true}'}}
+    # Mark selected item
+    execute if score .map_mode flag = flag.map_mode.selected const if score .map flag = flag.map.reflection const run item modify block 43 31 -12 container.3 ult:tech/item_selected
+    execute if score .map_mode flag = flag.map_mode.selected const if score .map flag = flag.map.dracula const run item modify block 43 31 -12 container.4 ult:tech/item_selected
+    execute if score .map_mode flag = flag.map_mode.selected const if score .map flag = flag.map.avanto const run item modify block 43 31 -12 container.5 ult:tech/item_selected
+    execute if score .map_mode flag = flag.map_mode.selected const if score .map flag = flag.map.boxing const run item modify block 43 31 -12 container.6 ult:tech/item_selected
+    execute if score .map_mode flag = flag.map_mode.selected const if score .map flag = flag.map.ancient const run item modify block 43 31 -12 container.7 ult:tech/item_selected
+    execute if score .map_mode flag = flag.map_mode.selected const if score .map flag = flag.map.marooned const run item modify block 43 31 -12 container.8 ult:tech/item_selected
+    execute if score .map_mode flag = flag.map_mode.selected const if score .map flag = flag.map.hill const run item modify block 43 31 -12 container.12 ult:tech/item_selected
+    execute if score .map_mode flag = flag.map_mode.selected const if score .map flag = flag.map.bathhouse const run item modify block 43 31 -12 container.13 ult:tech/item_selected

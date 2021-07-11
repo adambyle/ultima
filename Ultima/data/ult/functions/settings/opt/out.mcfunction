@@ -1,19 +1,19 @@
-function ult:data/root
-execute if score #flag game_mode = #duels game_mode as @s[tag=player, tag=alive] as @r[tag=alive, tag=!root] run function ult:victory
+# Opt out
+    function ult:data/root
+    tag @s remove player
+    tag @s add spectator
+    tag @s remove ready
+    # Don't announce anything if this is part of joining the world
+    execute if score @s online matches 1 run tellraw @a [{"selector": "@s", "color": "dark_gray"}, {"text": " has opted out.", "color": "dark_gray"}]
+    execute at @s run playsound block.note_block.xylophone master @s
+    # Exit the arena properly if mid-game
+    execute if score .game_state flag = flag.game_state.active const run function ult:settings/opt/out/mid_game
 
-execute if score @s[tag=player] online matches 1 run tellraw @a [{"selector": "@s","color":"dark_gray"}, {"text": " has opted out.", "color": "dark_gray"}]
-execute if score @s[tag=player] online matches 1 run scoreboard players remove #server pn 1
-tag @s remove player
-tag @s remove alive
-tag @s add spectator
-scoreboard players set @s ready 0
-execute if score #flag game_state matches 1.. run function ult:settings/opt/lobby
-function ult:data/player/detach
-function ult:data/player/clean
-scoreboard players reset @s score
-scoreboard players reset @s health
+# Leave scoreboard
+    scoreboard players reset @s score
+    scoreboard players reset @s health
 
-execute at @s run playsound block.note_block.xylophone master @s
-function ult:settings/ender_chest/main
-
-effect give @s instant_health 1 2 true
+# Lobby procedures
+    effect give @s instant_health 1 2 true
+    function ult:settings/player/main
+    execute if entity @a[tag=ready] run function ult:start/ready/update_notice

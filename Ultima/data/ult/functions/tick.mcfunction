@@ -1,138 +1,118 @@
 # Run respective functions for whether the game is running
-execute if score #flag game_state matches 0 run function ult:tick/inactive
-execute if score #flag game_state matches 1 run function ult:tick/active
+    execute if score .game_state flag = flag.game_state.inactive const run function ult:tick/inactive
+    execute if score .game_state flag = flag.game_state.active const run function ult:tick/active
 
 # Manage player menus
-tag @a remove menu_operator
-tag @a[tag=spectator, gamemode=!creative] add menu_operator
-tag @a[tag=player, tag=!alive, gamemode=!creative] add menu_operator
-execute if score #flag game_state matches 0 run tag @a[gamemode=!creative] add menu_operator
-execute as @a[tag=player,tag=menu_operator] if score @s menu = #main menu unless data entity @s EnderItems[{id: "minecraft:lime_terracotta"}] run function ult:settings/opt/out
-execute as @a[tag=spectator,tag=menu_operator] if score @s menu = #main menu unless data entity @s EnderItems[{id: "minecraft:gray_terracotta"}] run function ult:settings/opt/in
-execute as @a if score @s menu = #main menu unless data entity @s EnderItems[{id: "minecraft:stone_sword"}] unless data entity @s EnderItems[{id: "minecraft:golden_sword"}] unless data entity @s EnderItems[{id: "minecraft:netherite_sword"}] run function ult:settings/ender_chest/auto_ready
-execute as @a if score @s menu = #main menu unless data entity @s EnderItems[{id: "minecraft:paper"}] unless data entity @s EnderItems[{id: "minecraft:jukebox"}] unless data entity @s EnderItems[{id: "minecraft:barrier"}] run function ult:settings/ender_chest/vote_skip
-execute as @a if score @s menu = #main menu unless data entity @s EnderItems[{id: "minecraft:player_head"}] unless data entity @s EnderItems[{id: "minecraft:skeleton_skull"}] unless data entity @s EnderItems[{id: "minecraft:wither_skeleton_skull"}] unless data entity @s EnderItems[{id: "minecraft:zombie_head"}] run function ult:settings/ender_chest/afk
-execute as @a[tag=menu_operator] if score @s menu = #main menu unless data entity @s EnderItems[{id: "minecraft:golden_apple"}] run function ult:settings/ender_chest/hotbar
-execute as @a[tag=menu_operator] if score @s menu = #main menu unless data entity @s EnderItems[{id: "minecraft:ender_eye"}] run function ult:settings/ender_chest/spectate
-execute as @a[tag=menu_operator] if score @s menu = #main menu run function ult:settings/ender_chest/main
-execute as @a[tag=menu_operator] if score @s menu = #hotbar menu run function ult:settings/ender_chest/hotbar/gray_out
-execute as @a[tag=menu_operator] if score @s menu = #hotbar menu unless data entity @s EnderItems[{id: "minecraft:emerald"}] run function ult:settings/ender_chest/hotbar/verify
-execute as @a[tag=menu_operator] if score @s menu = #hotbar menu unless data entity @s EnderItems[{id: "minecraft:lava_bucket"}] run function ult:settings/ender_chest/hotbar/general
-execute as @a[tag=menu_operator] if score @s menu = #hotbar menu unless data entity @s EnderItems[{id: "minecraft:structure_void"}] run function ult:settings/ender_chest/hotbar
-execute as @a[tag=menu_operator] if score @s menu = #spectate menu unless data entity @s EnderItems[{id: "minecraft:dragon_egg"}] run function ult:settings/ender_chest/spectate
-execute as @a[tag=menu_operator] if score @s menu = #spectate menu unless data entity @s EnderItems[{id: "minecraft:skeleton_skull"}] run function ult:settings/ender_chest/spectate
-execute as @a[tag=menu_operator] if score @s menu = #spectate menu unless data entity @s EnderItems[{id: "minecraft:red_bed"}] run function ult:settings/ender_chest/spectate
-execute as @a[tag=menu_operator] if score @s menu = #spectate menu unless data entity @s EnderItems[{id: "minecraft:ender_eye"}] run function ult:settings/ender_chest/spectate
-execute as @a[tag=menu_operator] if score @s menu = #spectate menu unless data entity @s EnderItems[{id: "minecraft:crafting_table"}] run function ult:settings/ender_chest/spectate
-execute as @a[tag=menu_operator] if score @s menu = #spectate menu run function ult:settings/ender_chest/spectate/driver
-execute as @a[tag=menu_operator] if score @s menu = #spectate menu unless data entity @s EnderItems[{id: "minecraft:structure_void"}] run function ult:settings/ender_chest/main
-execute as @a[tag=menu_operator] if score @s menu = #hotbar_menu menu run function ult:settings/ender_chest/hotbar/driver
+    execute as @a run function ult:settings/player/driver
+    
+# Reset blocks and prevent griefing
+    # Reset the pressure plate for when players step on it
+    setblock 45 31 -3 polished_blackstone_pressure_plate[powered=false]
+    # Reset potted plants, which can be interacted with in adventure modes
+    setblock 47 31 -8 potted_cactus
+    setblock 43 31 -13 potted_cactus
+    setblock 43 31 -8 potted_cactus
+    setblock 47 31 -13 potted_cactus
+    clear @a[team=lobby] cactus
+    setblock 59 12 -54 potted_cornflower
+    setblock 59 12 -49 potted_cornflower
+    clear @a[team=lobby] cornflower
+    # Prevent accidental explosions (for development)
+    kill @e[type=tnt]
+    kill @e[type=tnt_minecart]
+    kill @e[type=creeper]
+    # Freeze item frames, except for when the developer is near
+    execute as @e[type=item_frame] run data merge entity @s {Fixed: true, Invulnerable: true}
+    execute as @e[type=item_frame] at @s if entity @a[gamemode=creative, tag=operator, distance=..8] run data merge entity @s {Fixed: false}
+    execute as @e[type=painting] run data merge entity @s {Invulnerable: true}
+    # Force item frames to float, even when the developer is near
+    execute as @e[type=item_frame] at @s if block ^ ^ ^-1 air run data merge entity @s {Fixed: true}
+    # Make item frames invisible when occupied
+    execute as @e[type=item_frame] if data entity @s Item run data merge entity @s {Invisible: true}
+    execute as @e[type=item_frame] unless data entity @s Item run data merge entity @s {Invisible: false}
+    # Don't allow item frames and paintings to be destroyed by cleanup code
+    tag @e[type=item_frame] add static_item
+    tag @e[type=painting] add static_item
+    # Don't allow items from hotbar settings in player inventory
+    execute as @a[team=lobby] unless score @s menu = menu.hotbar_workspace const run clear @s #ult:map_items/all
 
-# Run timeouts
-execute if score #timeout game_mode matches 1.. run scoreboard players remove #timeout game_mode 1
+# Fix spectator teleport error
+    execute positioned 45 30 -12 as @a[gamemode=spectator, distance=..4] run function ult:tp
 
-# Reset blocks
-setblock 45 31 -3 polished_blackstone_pressure_plate[powered=false]
-setblock 47 31 -8 potted_cactus
-setblock 43 31 -13 potted_cactus
-setblock 43 31 -8 potted_cactus
-setblock 47 31 -13 potted_cactus
-setblock 59 12 -54 potted_cornflower
-setblock 59 12 -49 potted_cornflower
-kill @e[type=tnt]
-kill @e[type=tnt_minecart]
-execute as @e[type=item_frame] run data merge entity @s {Invulnerable: true, Fixed: true}
-execute as @e[type=item_frame] at @s if entity @a[name="beegyfleeg", gamemode=creative, distance=..8] run data merge entity @s {Fixed: false}
-execute as @e[type=item_frame] at @s if block ^ ^ ^-1 air run data merge entity @s {Fixed: true}
-execute as @e[type=item_frame] if data entity @s Item run data merge entity @s {Invisible: true}
-execute as @e[type=item_frame] unless data entity @s Item run data merge entity @s {Invisible: false}
-tag @e[type=item_frame] add static_item
-tag @e[type=painting] add static_item
+# Store altitude and reflect arrows
+    # Get NBT data and store
+    execute as @a store result score @s altitude run data get entity @s Pos[1]
+    execute as @e[type=#ult:projectiles] store result score @s altitude run data get entity @s Pos[1]
+    # Reflect projectiles that are at Y=35 and above, that have not already been reflected
+    execute as @e[type=#ult:projectiles, tag=!deflected, scores={altitude=35..}] at @s run function ult:tech/projectile_deflect
 
-# Fix teleport error
-execute positioned 45 30 -12 as @a[gamemode=spectator,distance=..4] run function ult:tp
+# Dynamic opting with actions
+    # Players can exit their game mode
+    execute if score .game_mode flag = flag.game_mode.duels const as @a[tag=player] if score @s action = action.change_modes const unless entity @a[tag=player, tag=change_modes] run function ult:settings/mode/change_modes
+    execute if score .game_mode flag = flag.game_mode.duels const as @a[tag=player, tag=!change_modes] if score @s action = action.change_modes const if entity @a[tag=player, tag=change_modes] run function ult:settings/mode/confirm_change_modes
+    # Players can opt out mid-game
+    execute as @a[tag=player] if score @s action = action.opt_out const run function ult:settings/opt/out
+    # Spectators can return to lobby
+    execute as @a[gamemode=spectator] if score @s action = action.tp_lobby const run function ult:lobby
+    # Players can unready
+    execute if score .game_state flag = flag.game_state.inactive const as @a[tag=player, tag=ready] if score @s action = action.unready const run function ult:start/ready/unready
+    # Reset and enable action triggers
+    scoreboard players reset * action
+    scoreboard players enable @a action
 
-# Deflect arrows
-execute as @a store result score @s altitude run data get entity @s Pos[1]
-execute as @e[type=#ult:projectiles] store result score @s altitude run data get entity @s Pos[1]
-execute as @e[type=#ult:projectiles, scores={altitude=35..},tag=!deflected] at @s run function ult:tick/action/projectile_deflect
+# Tag online players
+    scoreboard players reset * online
+    scoreboard players set @a online 1
 
-# Dynamic opting
-execute if score #opt_prompt event matches 1.. run scoreboard players remove #opt_prompt event 1
-execute as @a[tag=player,scores={action=2}] run function ult:settings/opt/out
-execute as @a[gamemode=spectator,scores={action=3}] run function ult:tp/lobby
-execute if score #flag game_state matches 0 as @a[tag=player, scores={ready=1, action=7}] run function ult:start/ready/unready
-
-# Test for game end
-execute if score #flag game_mode = #duels game_mode as @a[scores={action=1,game_mode=0},tag=player] if score #timeout game_mode matches 0 run function ult:tick/action/change_modes
-execute if score #flag game_mode = #duels game_mode unless entity @a[scores={game_mode=0},tag=player] if score #timeout game_mode matches 1.. run function ult:tick/action/confirm_change_modes
-execute if score #flag game_mode = #duels game_mode as @a[scores={action=1,game_mode=0},tag=player] if score #timeout game_mode matches 1.. run function ult:tick/action/confirm_change_modes
-
-# Deal with trigger actions and reset some objectives
-scoreboard players set @a action 0
-scoreboard players enable @a action
-scoreboard players reset * online
-scoreboard players set @a online 1
-
-# AFK handling
-tag @e remove temp
-tag @a remove temp
-execute as @e store result score @s _var run data get entity @s Rotation[0]
-execute as @a if score @s _var = @s rot run tag @s add temp
-execute as @a store success score @s _var run scoreboard players operation @s rot = @s _var
-tag @a[gamemode=!adventure] remove temp
-scoreboard players set @a[tag=!temp] afk 0
-tag @a[tag=!temp] remove afk
-scoreboard players add @a[tag=temp] afk 1
-tag @a[scores={afk=100..,y.afk=1}] add afk
-tag @a[scores={afk=200..,y.afk=2}] add afk
-tag @a[scores={afk=300..,y.afk=3}] add afk
-execute as @a[tag=player,tag=alive,tag=afk] run function ult:settings/opt/out
-scoreboard players set @a[tag=afk] afk 0
-tag @a remove temp
-tag @a[scores={afk=75..,y.afk=1}] add temp
-tag @a[scores={afk=150..,y.afk=2}] add temp
-tag @a[scores={afk=225..,y.afk=3}] add temp
-title @a[tag=temp, tag=player, tag=alive] times 0 2 0
-title @a[tag=temp, tag=player, tag=alive] subtitle {"text": "Move your camera", "color": "dark_red"}
-title @a[tag=temp, tag=player, tag=alive] title {"text": "You are AFK!", "color": "dark_red", "bold": true}
-
-# Ultimate mode block handling
-fill -2 35 128 92 35 222 air replace #ult:breakable
-fill -2 24 128 92 24 222 water replace air
+# AFK handler
+    tag @a remove temp
+    # Get rotation, then see if the rotation matches value from previous tick
+    execute as @a store result score @s _var run data get entity @s Rotation[0]
+    # If the values match, then player has not moved, and is a candidate for being AFK
+    execute as @a[gamemode=adventure] if score @s _var = @s rotation run tag @s add temp
+    # Reset the AFK timer of non-AFK players
+    scoreboard players set @a[tag=!temp] afk 0
+    # Players who just moved this tick should no longer be AFK-tagged
+    tag @a[tag=!temp] remove afk
+    # AFK players have their timer incremented
+    scoreboard players add @a[tag=temp] afk 1
+    # Handle AFK timers
+    execute as @a[tag=player, scores={afk=1..}] run function ult:tech/afk/handler
+    # Show AFK warnings
+    execute as @a[tag=player, tag=alive] run function ult:tech/afk/warning
 
 # Send command feedback
-execute if score #debug game_state matches 1 run gamerule sendCommandFeedback true
-execute unless score #debug game_state matches 1 run gamerule sendCommandFeedback false
-
-# Parkour handler
-execute as @e[tag=parkour_particle] at @s run tp @s ~ ~ ~ ~10 ~
-execute at @e[tag=parkour_particle] positioned ~-.5 ~.2 ~ positioned ^ ^ ^.4 run particle reverse_portal 52 ~ ~ 0 1 0 0.2 0 force
-execute at @e[tag=parkour_particle] positioned ~-.5 ~.2 ~ positioned ^ ^ ^-.4 run particle reverse_portal 52 ~ ~ 0 1 0 0.2 0 force
-execute positioned 52 30 -19 as @a[distance=...5] run function ult:parkour/enter
-execute as @a[tag=parkour, scores={altitude=11}, gamemode=!creative, nbt={OnGround: true}] run function ult:parkour/tp
-scoreboard players add @a[tag=timed] timer 1
-execute as @a[tag=parkour, gamemode=adventure] run function ult:parkour/handler
-tag @e[type=painting] add static_item
-execute as @e[type=painting] run data merge entity @s {Invulnerable: true}
+    execute if score .debug_mode flag = flag.debug_mode.on const run gamerule sendCommandFeedback true
+    execute unless score .debug_mode flag = flag.debug_mode.on const run gamerule sendCommandFeedback false
 
 # Reset event-detection objectives
-scoreboard players reset * x.jump
-scoreboard players reset * x.damage
-scoreboard players reset * x.damaged
-scoreboard players reset * x.rabbit
-scoreboard players reset * x.salmon
-scoreboard players set @a[scores={crouch=0}] x.crouch 0
-scoreboard players set @a[scores={crouch=1.., x.crouch=1}] x.crouch 2
-scoreboard players set @a[scores={crouch=1.., x.crouch=0}] x.crouch 1
-scoreboard players set @a crouch 0
-execute as @a[tag=player, tag=alive] run scoreboard players operation @s display_health = @s health
+    scoreboard players reset * damage_dealt
+    scoreboard players reset * damage_taken
+    scoreboard players reset * event.rabbit
+    scoreboard players reset * event.salmon
+    scoreboard players reset * jump
+    # Deal with crouch stages
+    execute as @a[scores={crouch=0}] run scoreboard players operation @s crouch_mode = crouch_mode.not_crouching const
+    execute as @a[scores={crouch=1..}] if score @s crouch_mode = crouch_mode.crouch_pressed const run scoreboard players operation @s crouch_mode = crouch_mode.crouch_held const
+    execute as @a[scores={crouch=1..}] if score @s crouch_mode = crouch_mode.not_crouching const run scoreboard players operation @s crouch_mode = crouch_mode.crouch_pressed const
+    scoreboard players set @a crouch 0
+    # Set health displays
+    execute as @a[tag=player, tag=alive] run scoreboard players operation @s health_display = @s health
 
-execute as @a run function ult:tick/action/update_pos
+# Update player positions
+    execute as @a run function ult:data/player/update_pos
 
-execute if score #debug game_state matches 1 at @e[type=minecraft:area_effect_cloud] run particle composter ~ ~ ~ 0 0 0 0 0 force
-
-execute store result score #temp _var if entity @e[type=area_effect_cloud, tag=]
-##execute if score #temp _var matches 2.. run tellraw @a {"score": {"name": "#temp", "objective": "_var"}}
-##execute if score #temp _var matches 1 run tellraw @a {"entity": "@e[type=area_effect_cloud, limit=1, tag=]", "nbt": "{}"}
-kill @e[type=area_effect_cloud, tag=]
+# Marker debugging
+    # Show marker locations
+    execute if score .debug_mode flag = flag.debug_mode.on const at @e[type=marker] run particle composter ~ ~ ~ 0 0 0 0 0 force
+    execute if score .debug_mode flag = flag.debug_mode.on const at @e[type=area_effect_cloud] run particle enchanted_hit ~ ~ ~ 0 0 0 0 0 force
+    # Count number of stray untagged markers
+    execute store result score .temp _var if entity @e[type=marker, tag=]
+    # Display number if greater than 1
+    execute if score .temp _var matches 2.. run tellraw @a[tag=operator] {"score": {"name": ".temp", "objective": "_var"}}
+    # Display NBT if number is 1
+    execute if score .temp _var matches 1 run tellraw @a[tag=operator] {"entity": "@e[type=marker, limit=1, tag=]", "nbt": "{}"}
+    # Kill strays
+    kill @e[type=marker, tag=]
+    # Fix respawn marker glitch
+    team join respawn_marker @e[tag=respawn_marker]

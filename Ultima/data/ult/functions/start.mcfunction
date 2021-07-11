@@ -1,40 +1,46 @@
-# If vote mode, set the map
-execute if score #flag map = #vote map run function ult:data/choose_map
-execute if score #flag map = #random map if score #server map matches 0 run function ult:data/choose_map
-execute if score #flag game_mode = #ultimate game_mode run scoreboard players set #server map 0
-
-function ult:data/set_map_data
+# Choose map
+    execute if score .map_mode flag = flag.map_mode.vote const run function ult:data/map/choose_map
+    # Determine if a new random map is needed
+    scoreboard players set .new_random _var 1
+    execute if score .map flag >= flag.map.start_default const if score .map flag <= flag.map.end_default const run scoreboard players set .new_random _var 0
+    execute if score .map flag >= flag.map.start_fandom const if score .map flag <= flag.map.end_fandom const run scoreboard players set .new_random _var 0
+    execute if score .new_random _var matches 1 if score .map_mode flag = flag.map_mode.random const run function ult:data/map/choose_map
+    # Change day time
+    function ult:start/lighting
 
 # Determine players, setup game
-scoreboard players set @a[tag=player] score 0
-execute if score #flag game_mode = #duels game_mode run function ult:start/mode/duels
-execute if score #flag game_mode = #ultimate game_mode run function ult:start/mode/ultimate
-execute if score #flag game_mode matches 1..2 run function ult:start/mode/multi
+    scoreboard players operation .game_state flag = flag.game_state.transition const
+    # Reset scores
+    scoreboard players set @a[tag=player] score 0
+    # Mode specific preparations
+    execute if score .game_mode flag = flag.game_mode.duels const run function ult:start/mode/duels
+    execute if score .game_mode flag matches 1..2 run function ult:start/mode/multi
 
-function ult:start/lighting
-
-# Count the total players
-scoreboard players set #server pn 0
-execute as @a[tag=player] run scoreboard players add #server pn 1
+# Count the total players4
+    scoreboard players set .total_players control 0
+    execute as @a[tag=player] run scoreboard players add .total_players control 1
 
 # Announce the map (in certain cases)
-title @a reset
-title @a times 0 16 4
-title @a subtitle ["By ",{"storage": "ult:temp","nbt": "Author"}]
-execute if score #flag map > #select map unless score #flag game_mode = #ultimate game_mode run title @a[tag=!parkour] title {"storage": "ult:temp","nbt": "Map","color": "green"}
-execute if score #flag map > #select map unless score #flag game_mode = #ultimate game_mode run title @a[tag=parkour, tag=player] title {"storage": "ult:temp","nbt": "Map","color": "green"}
+    scoreboard players operation .temp_map _var = .map flag
+    function ult:data/map/get_details
+    title @a reset
+    title @a times 0 16 4
+    title @a subtitle ["By ", {"storage": "ult:temp", "nbt": "Author"}]
+    # If not selected
+    execute unless score .map_mode flag = flag.map_mode.selected const run title @a[tag=player] title {"storage": "ult:temp", "nbt": "Map", "color": "green"}
 
 # Timeout for actual game start
-execute as @a at @s run playsound block.note_block.pling master @s ~ ~ ~ 4 0.75
-execute as @a at @s run playsound block.note_block.pling master @s ~ ~ ~ 4 1
-schedule function ult:start/start 1s
+    execute as @a at @s run playsound block.note_block.pling master @s ~ ~ ~ 4 0.75
+    execute as @a at @s run playsound block.note_block.pling master @s ~ ~ ~ 4 1
+    schedule function ult:start/start 1s
 
-clear @a
+# Reset AFK
+    scoreboard players set @a afk 0
+    tag @a remove afk
 
-scoreboard players set #flag game_state 2
-
-scoreboard players set @a afk 0
-tag @a remove afk
-
-setblock 43 31 -9 air
-data modify block 43 31 -12 Lock set value "Locked"
+# Prepare lobby
+    clear @a
+    # Remove game mode switcher
+    setblock 43 31 -9 air
+    # Lock map picker
+    data modify block 43 31 -12 Lock set value "Locked"

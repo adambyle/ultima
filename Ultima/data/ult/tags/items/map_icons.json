@@ -2,12 +2,12 @@
     "values": [
         "dark_oak_planks",
         "spruce_leaves",
-        "stone_bricks",
+        "chiseled_stone_bricks",
         "blackstone",
         "gold_block",
         "red_sand",
         "emerald_block",
-        "basalt",
+        "cracked_deepslate_bricks",
         "packed_ice",
         "red_mushroom_block",
         "netherrack",
@@ -18,7 +18,11 @@
         "light_blue_wool",
         "ancient_debris",
         "nether_wart_block",
-        "oak_wood",
-        "sea_lantern"
+        "netherite_block",
+        "exposed_cut_copper",
+        "flowering_azalea_leaves",
+        "dark_prismarine",
+        "sea_lantern",
+        "oak_wood"
     ]
 }

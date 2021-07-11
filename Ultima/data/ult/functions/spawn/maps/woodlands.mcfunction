@@ -1,21 +1,21 @@
 function ult:data/player/get_nbt
 
-execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.woodlands.sword
-data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/woodlands/sword"
+execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.woodlands.sword
+loot replace block 0 0 0 container.0 loot ult:map_items/woodlands/sword
 function ult:spawn/items/give
 
-execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.woodlands.bow
-data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/woodlands/bow"
+execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.woodlands.bow
+loot replace block 0 0 0 container.0 loot ult:map_items/woodlands/bow
 function ult:spawn/items/give
 
 
-execute store result score #hotbar _var run data get storage ult:temp Player.Hotbar.woodlands.arrows
-data modify entity @e[limit=1,tag=loot_table_handler] DeathLootTable set value "ult:map_items/woodlands/arrows"
+execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.woodlands.arrows
+loot replace block 0 0 0 container.0 loot ult:map_items/woodlands/arrows
 function ult:spawn/items/give
 
-replaceitem entity @s armor.feet iron_boots{Unbreakable:1b,Enchantments:[{id:"protection",lvl:4}]}
-replaceitem entity @s armor.legs leather_leggings{Unbreakable:1b}
-replaceitem entity @s armor.chest leather_chestplate{Unbreakable:1b}
-replaceitem entity @s armor.head iron_helmet{Unbreakable:1b,Enchantments:[{id:"protection",lvl:4}]}
+item replace entity @s armor.feet with iron_boots{Unbreakable: true, Enchantments: [{id: "minecraft:protection", lvl: 4}]}
+item replace entity @s armor.legs with leather_leggings{Unbreakable: true}
+item replace entity @s armor.chest with leather_chestplate{Unbreakable: true}
+item replace entity @s armor.head with iron_helmet{Unbreakable: true, Enchantments: [{id: "minecraft:protection", lvl: 4}]}
 
 function ult:spawn/items/refills/woodlands

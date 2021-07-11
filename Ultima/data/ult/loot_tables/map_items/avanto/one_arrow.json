@@ -14,11 +14,11 @@
                         },
                         {
                             "function": "set_name",
-                            "name": {"text": "Arrows of Slowness (x32)","italic": false}
+                            "name": {"text": "Arrows of Slowness (x32)", "italic": false}
                         },
                         {
                             "function": "set_nbt",
-                            "tag": "{Potion: \"strong_slowness\"}"
+                            "tag": "{Potion: \"minecraft:strong_slowness\"}"
                         }
                     ]
                 }

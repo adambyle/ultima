@@ -1,4 +1,7 @@
-gamemode spectator
-function ult:tp
-function ult:tick/action/opt_prompt
-team leave @s
+# Spectator mode
+    gamemode spectator
+    effect give @s night_vision 99999 0 true
+    function ult:tp
+
+# Give link to teleport back to lobby
+    function ult:settings/opt/prompt

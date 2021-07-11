@@ -1,0 +1,8 @@
+{
+    "function": "set_lore",
+    "entity": "this",
+    "lore": [
+        [{"text": "Selected: ", "color": "white", "italic": false}, {"storage": "ult:temp", "nbt": "Map", "color": "green", "italic": false}]
+    ],
+    "replace": true
+}

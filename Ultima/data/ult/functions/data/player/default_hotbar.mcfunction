@@ -58,10 +58,10 @@ execute unless data storage ult:temp Player.Hotbar.wasteland.bomb run data modif
 execute unless data storage ult:temp Player.Hotbar.wasteland.arrows run data modify storage ult:temp Player.Hotbar.wasteland.arrows set value 10
 execute unless data storage ult:temp Player.Hotbar.wasteland.meat run data modify storage ult:temp Player.Hotbar.wasteland.meat set value 8
 
-execute unless data storage ult:temp Player.Hotbar.townsquare.sword run data modify storage ult:temp Player.Hotbar.townsquare.sword set value 0
-execute unless data storage ult:temp Player.Hotbar.townsquare.axe run data modify storage ult:temp Player.Hotbar.townsquare.axe set value 1
-execute unless data storage ult:temp Player.Hotbar.townsquare.shield run data modify storage ult:temp Player.Hotbar.townsquare.shield set value -1
-execute unless data storage ult:temp Player.Hotbar.townsquare.bow run data modify storage ult:temp Player.Hotbar.townsquare.bow set value 2
+execute unless data storage ult:temp Player.Hotbar.townSquare.sword run data modify storage ult:temp Player.Hotbar.townSquare.sword set value 0
+execute unless data storage ult:temp Player.Hotbar.townSquare.axe run data modify storage ult:temp Player.Hotbar.townSquare.axe set value 1
+execute unless data storage ult:temp Player.Hotbar.townSquare.shield run data modify storage ult:temp Player.Hotbar.townSquare.shield set value -1
+execute unless data storage ult:temp Player.Hotbar.townSquare.bow run data modify storage ult:temp Player.Hotbar.townSquare.bow set value 2
 
 execute unless data storage ult:temp Player.Hotbar.ancient.axe run data modify storage ult:temp Player.Hotbar.ancient.axe set value 0
 execute unless data storage ult:temp Player.Hotbar.ancient.pickaxe run data modify storage ult:temp Player.Hotbar.ancient.pickaxe set value 2
@@ -69,13 +69,13 @@ execute unless data storage ult:temp Player.Hotbar.ancient.fireball run data mod
 execute unless data storage ult:temp Player.Hotbar.ancient.ingot run data modify storage ult:temp Player.Hotbar.ancient.ingot set value -1
 execute unless data storage ult:temp Player.Hotbar.ancient.hoe run data modify storage ult:temp Player.Hotbar.ancient.hoe set value 1
 
-execute unless data storage ult:temp Player.Hotbar.laststand.sword run data modify storage ult:temp Player.Hotbar.laststand.sword set value 0
-execute unless data storage ult:temp Player.Hotbar.laststand.axe run data modify storage ult:temp Player.Hotbar.laststand.axe set value 1
-execute unless data storage ult:temp Player.Hotbar.laststand.bow run data modify storage ult:temp Player.Hotbar.laststand.bow set value 2
-execute unless data storage ult:temp Player.Hotbar.laststand.cannonball run data modify storage ult:temp Player.Hotbar.laststand.cannonball set value 7
-execute unless data storage ult:temp Player.Hotbar.laststand.shield run data modify storage ult:temp Player.Hotbar.laststand.shield set value -1
-execute unless data storage ult:temp Player.Hotbar.laststand.arrows run data modify storage ult:temp Player.Hotbar.laststand.arrows set value 10
-execute unless data storage ult:temp Player.Hotbar.laststand.potion run data modify storage ult:temp Player.Hotbar.laststand.potion set value 8
+execute unless data storage ult:temp Player.Hotbar.lastStand.sword run data modify storage ult:temp Player.Hotbar.lastStand.sword set value 0
+execute unless data storage ult:temp Player.Hotbar.lastStand.axe run data modify storage ult:temp Player.Hotbar.lastStand.axe set value 1
+execute unless data storage ult:temp Player.Hotbar.lastStand.bow run data modify storage ult:temp Player.Hotbar.lastStand.bow set value 2
+execute unless data storage ult:temp Player.Hotbar.lastStand.cannonball run data modify storage ult:temp Player.Hotbar.lastStand.cannonball set value 7
+execute unless data storage ult:temp Player.Hotbar.lastStand.shield run data modify storage ult:temp Player.Hotbar.lastStand.shield set value -1
+execute unless data storage ult:temp Player.Hotbar.lastStand.arrows run data modify storage ult:temp Player.Hotbar.lastStand.arrows set value 10
+execute unless data storage ult:temp Player.Hotbar.lastStand.potion run data modify storage ult:temp Player.Hotbar.lastStand.potion set value 8
 
 execute unless data storage ult:temp Player.Hotbar.marooned.sword run data modify storage ult:temp Player.Hotbar.marooned.sword set value 0
 execute unless data storage ult:temp Player.Hotbar.marooned.crossbow run data modify storage ult:temp Player.Hotbar.marooned.crossbow set value 2

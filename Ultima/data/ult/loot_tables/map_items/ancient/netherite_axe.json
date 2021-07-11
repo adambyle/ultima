@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{Unbreakable:true, Enchantments: [{id: \"fire_aspect\", lvl: 1}]}"
+                            "tag": "{Unbreakable: true, Enchantments: [{id: \"minecraft:fire_aspect\", lvl: 1s}]}"
                         }
                     ]
                 }

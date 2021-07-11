@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{Potion:\"minecraft:water\", CustomPotionEffects: [{Id: 18b, Duration: 100}], display: {Name: '{\"text\": \"Splash Potion of Weakness\", \"italic\": false}'}}"
+                            "tag": "{Potion: \"minecraft:water\", CustomPotionEffects: [{Id: 18b, Duration: 100}], display: {Name: '{\"text\": \"Splash Potion of Weakness\", \"italic\": false}'}}"
                         }
                     ]
                 }

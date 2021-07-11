@@ -1,0 +1,5 @@
+{
+    "function": "set_name",
+    "entity": "this",
+    "name": [{"text": "By ", "color": "dark_green", "italic": true}, {"storage": "ult:temp", "nbt": "Author"}]
+}
