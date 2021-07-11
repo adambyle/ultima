@@ -13,6 +13,8 @@ loot replace block 43 31 -12 container.7 loot ult:map_icon/avanto
 loot replace block 43 31 -12 container.8 loot ult:map_icon/boxing
 loot replace block 43 31 -12 container.14 loot ult:map_icon/ancient
 loot replace block 43 31 -12 container.15 loot ult:map_icon/marooned
+loot replace block 43 31 -12 container.16 loot ult:map_icon/hill
+loot replace block 43 31 -12 container.17 loot ult:map_icon/bathhouse
 replaceitem block 43 31 -12 container.11 structure_void{display:{Name:'{"text":"Back","color":"dark_red","italic":false,"bold":true}',Lore:['{"text":"Back to Map Selection...","color":"gray"}']}}
 
 execute if score #flag map = #select map if score #server map matches 13 run data modify block 43 31 -12 Items[{Slot:5b}].tag.display.Lore append value '{"text":"Selected.","color":"green"}'

@@ -120,7 +120,7 @@ scoreboard players set #map.default menu 1
 scoreboard players set #map.featured menu 2
 
 scoreboard players set #max_default map 8
-scoreboard players set #max_fandom map 18
+scoreboard players set #max_fandom map 20
 
 scoreboard players set #empty chest_type 0
 scoreboard players set #common chest_type 1

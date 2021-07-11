@@ -6,3 +6,5 @@ execute if score #temp map matches 15 run data modify storage ult:temp Author se
 execute if score #temp map matches 16 run data modify storage ult:temp Author set value "Reed Aldridge"
 execute if score #temp map matches 17 run data modify storage ult:temp Author set value "TuckThuDuck"
 execute if score #temp map matches 18 run data modify storage ult:temp Author set value "Reed Aldridge"
+execute if score #temp map matches 19 run data modify storage ult:temp Author set value "Jonathan Deiss"
+execute if score #temp map matches 20 run data modify storage ult:temp Author set value "Jonathan Deiss"
