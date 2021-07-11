@@ -36,7 +36,6 @@
     scoreboard players reset * vote
     # Set proper flags
     scoreboard players operation .game_state flag = flag.game_state.inactive const
-    scoreboard players set .opt_prompt control 0
     # Set displays
     scoreboard objectives setdisplay belowName
     scoreboard objectives setdisplay list

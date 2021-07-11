@@ -14,6 +14,9 @@
     effect give @a instant_health 1 3 true
     effect give @a resistance 4 4 true
 
+# Stop running tick functions
+    scoreboard players operation .game_state flag = flag.game_state.transition const
+
 # Fireworks!
     execute at @a[tag=alive] run summon firework_rocket ~ ~4 ~ {FireworksItem: {Count: 1b, id: "firework_rocket", tag: {Fireworks: {Explosions: [{Colors: [I; 4312372], Flicker: false, Trail: false, Type: 0b}], Flight: 2b}}}, LifeTime: 5}
     execute at @a[tag=alive] run summon firework_rocket ~ ~4 ~ {FireworksItem: {Count: 1b, id: "firework_rocket", tag: {Fireworks: {Explosions: [{Colors: [I; 4312372], Flicker: false, Trail: false, Type: 0b}], Flight: 2b}}}, LifeTime: 10}

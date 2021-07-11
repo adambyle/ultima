@@ -17,8 +17,9 @@ xcopy /E /I Ultima_Source\datapacks\Ultima .\
 
 del Ultima-Datapack.zip
 7-Zip\7z a Ultima-Datapack.zip data\
+rmdir /S /Q data\ult\functions\util
 7-Zip\7z a Ultima-Datapack.zip pack.mcmeta
-rmdir /S /Q data/
+rmdir /S /Q data\
 del pack.mcmeta
 
 copy Ultima-Datapack.zip Ultima\datapacks\

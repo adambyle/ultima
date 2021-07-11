@@ -4,4 +4,4 @@
     function ult:tp
 
 # Give link to teleport back to lobby
-    function ult:tick/action/opt_prompt
+    function ult:settings/opt/prompt

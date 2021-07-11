@@ -17,6 +17,6 @@ execute unless entity @a[tag=killer] run tellraw @a [{"selector": "@s", "color":
 scoreboard players operation @s tether = @r[tag=killer] pn
 scoreboard players set @s score 0
 
-execute if entity @a[tag=killer] run function ult:tick/action/opt_prompt/lobby_tp
+execute if entity @a[tag=killer] run function ult:settings/opt/prompt/lobby_tp
 
 execute as @a[tag=killer] if score @s score >= .temp_pn _var run function ult:victory

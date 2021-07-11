@@ -44,14 +44,12 @@
     execute as @a store result score @s altitude run data get entity @s Pos[1]
     execute as @e[type=#ult:projectiles] store result score @s altitude run data get entity @s Pos[1]
     # Reflect projectiles that are at Y=35 and above, that have not already been reflected
-    execute as @e[type=#ult:projectiles, tag=!deflected, scores={altitude=35..}] at @s run function ult:tick/action/projectile_deflect
+    execute as @e[type=#ult:projectiles, tag=!deflected, scores={altitude=35..}] at @s run function ult:tech/projectile_deflect
 
 # Dynamic opting with actions
     # Players can exit their game mode
-    execute if score .game_mode flag = flag.game_mode.duels const as @a[tag=player] if score @s action = action.change_modes const unless entity @a[tag=player, tag=change_modes] run function ult:tick/action/change_modes
-    execute if score .game_mode flag = flag.game_mode.duels const as @a[tag=player, tag=!change_modes] if score @s action = action.change_modes const if entity @a[tag=player, tag=change_modes] run function ult:tick/action/confirm_change_modes
-    # Count down the time until the next opt prompt can be shown
-    execute if score .opt_prompt control matches 1.. run scoreboard players remove .opt_prompt control 1
+    execute if score .game_mode flag = flag.game_mode.duels const as @a[tag=player] if score @s action = action.change_modes const unless entity @a[tag=player, tag=change_modes] run function ult:settings/mode/change_modes
+    execute if score .game_mode flag = flag.game_mode.duels const as @a[tag=player, tag=!change_modes] if score @s action = action.change_modes const if entity @a[tag=player, tag=change_modes] run function ult:settings/mode/confirm_change_modes
     # Players can opt out mid-game
     execute as @a[tag=player] if score @s action = action.opt_out const run function ult:settings/opt/out
     # Spectators can return to lobby
@@ -79,9 +77,9 @@
     # AFK players have their timer incremented
     scoreboard players add @a[tag=temp] afk 1
     # Handle AFK timers
-    execute as @a[tag=player, scores={afk=1..}] run function ult:tick/action/afk_handler
+    execute as @a[tag=player, scores={afk=1..}] run function ult:tech/afk/handler
     # Show AFK warnings
-    execute as @a[tag=player, tag=alive] run function ult:tick/action/afk_warning
+    execute as @a[tag=player, tag=alive] run function ult:tech/afk/warning
 
 # Send command feedback
     execute if score .debug_mode flag = flag.debug_mode.on const run gamerule sendCommandFeedback true
