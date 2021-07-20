@@ -1,5 +1,5 @@
-scoreboard players set #map event 60
-scoreboard players set #phase event 2
+scoreboard players set .map event 60
+scoreboard players set .phase event 2
 
 execute positioned 163.5 23 172.5 as @p[tag=player, tag=alive, nbt={OnGround: true}] at @s if block ~ ~-1 ~ red_stained_glass run tag @s add hill_king
 

@@ -20,3 +20,5 @@ scoreboard players set @s score 0
 execute if entity @a[tag=killer] run function ult:settings/opt/prompt/lobby_tp
 
 execute as @a[tag=killer] if score @s score >= .temp_pn _var run function ult:victory
+
+effect give @a instant_health 1 3 true

@@ -1,4 +1,5 @@
-team leave @s
+# Leave the lobby team
+    team leave @s
 
 # Different teleportation depending on map
     execute if score .map flag = flag.map.manor const run function ult:tp/manor

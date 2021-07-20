@@ -1,5 +1,5 @@
-scoreboard players set #map event 120
-scoreboard players set #phase event 1
+scoreboard players set .map event 120
+scoreboard players set .phase event 1
 tag @a remove hill_king
 
 title @a[tag=player, tag=alive] reset

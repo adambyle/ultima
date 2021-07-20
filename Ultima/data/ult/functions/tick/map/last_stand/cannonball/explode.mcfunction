@@ -1,6 +1,6 @@
 function ult:data/root
 tag @s add exploded
-execute as @e[type=fireball, tag=!exploded, distance=..5] at @s unless entity @e[tag=text_display, distance=..20] run function ult:tick/map/last_stand/explode
+execute as @e[type=fireball, tag=!exploded, distance=..5] at @s unless entity @e[tag=text_display, distance=..20] run function ult:tick/map/last_stand/cannonball/explode
 
 particle explosion_emitter ~ ~ ~ 0 0 0 0 0 force
 

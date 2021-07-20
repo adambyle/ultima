@@ -1,18 +1,9 @@
+gamemode adventure
 tag @s add alive
-function ult:settings/player/main
 clear @s
 effect clear @s
 effect give @s instant_health 1 3 true
 execute unless score .game_mode flag = flag.game_mode.duels const run effect give @s resistance 4 1
-gamemode adventure
-
-scoreboard players reset @s queue
-scoreboard players reset @s pn
-scoreboard players reset @s death
-scoreboard players reset @s kill
-function ult:spawn/assign_pn
-scoreboard players set @s health_display 20
-scoreboard players set @s respawn -1
 
 function ult:tp
 
@@ -38,7 +29,18 @@ execute if score .map flag = flag.map.hill const run function ult:spawn/maps/hil
 execute if score .map flag = flag.map.bathhouse const run function ult:spawn/maps/bathhouse
 
 execute at @s run playsound item.totem.use master @a ~ ~ ~ 1 0.7
+# Reset crucial objectives; assign unique player id
+    scoreboard players reset @s queue
+    scoreboard players reset @s pn
+    scoreboard players reset @s death
+    scoreboard players reset @s kill
+    scoreboard players reset @s afk
+    function ult:spawn/assign_pn
+    scoreboard players set @s health_display 20
+    scoreboard players set @s respawn -1
 
-scoreboard players set @s afk 0
+# Map specifics
 
-title @s actionbar ""
+# Spec fx
+    execute at @s run playsound item.totem.use master @a ~ ~ ~ 1 0.7
+    title @s actionbar ""
