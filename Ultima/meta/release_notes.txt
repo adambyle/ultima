@@ -6,3 +6,4 @@ complete refactor, many potential bugs eliminated
 reduced lag
 dracula map accessibility
 lobby tutorials
+ancient mines fireball offhand

@@ -1,6 +1,9 @@
-scoreboard players set .map event 120
-scoreboard players set .phase event 1
-tag @a remove hill_king
+# Switch phase, reset timer
+    scoreboard players set .map event 120
+    scoreboard players set .phase event 1
+
+# Nobody is king
+    tag @a remove hill_king
 
 title @a[tag=player, tag=alive] reset
 title @a[tag=player, tag=alive] times 0 10 5

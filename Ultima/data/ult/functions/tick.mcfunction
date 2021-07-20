@@ -65,10 +65,10 @@
     scoreboard players set @a online 1
 
 # AFK handler
-    tag @a remove temp
     # Get rotation, then see if the rotation matches value from previous tick
     execute as @a store result score @s _var run data get entity @s Rotation[0]
     # If the values match, then player has not moved, and is a candidate for being AFK
+    tag @a remove temp
     execute as @a[gamemode=adventure] if score @s _var = @s rotation run tag @s add temp
     # Reset the AFK timer of non-AFK players
     scoreboard players set @a[tag=!temp] afk 0

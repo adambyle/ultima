@@ -1,7 +1,9 @@
-scoreboard players set .map event 60
-scoreboard players set .phase event 2
+# Switch phase, reset timer
+    scoreboard players set .map event 60
+    scoreboard players set .phase event 2
 
-execute positioned 163.5 23 172.5 as @p[tag=player, tag=alive, nbt={OnGround: true}] at @s if block ~ ~-1 ~ red_stained_glass run tag @s add hill_king
+# Nearest player to center is king
+    execute positioned 163.5 23 172.5 as @p[tag=player, tag=alive, nbt={OnGround: true}] at @s if block ~ ~-1 ~ red_stained_glass run tag @s add hill_king
 
 title @a[tag=player, tag=alive] reset
 title @a[tag=player, tag=alive] times 0 10 5
