@@ -1,6 +1,6 @@
 # With flint selected (in either hand) and crouching, use a smoke bomb
-    execute as @a[scores={crouch_mode=1}, nbt={SelectedItem: {id: "minecraft:flint"}}] at @s run function ult:tick/map/wasteland/smoke_bomb
-    execute as @a[scores={crouch_mode=1}, nbt={Inventory: [{id: "minecraft:flint", Slot: -106b}]}] at @s run function ult:tick/map/wasteland/smoke_bomb
+    execute as @a[nbt={SelectedItem: {id: "minecraft:flint"}}] if score @s crouch_mode = crouch_mode.crouch_pressed const at @s run function ult:tick/map/wasteland/smoke_bomb
+    execute as @a[nbt={Inventory: [{id: "minecraft:flint", Slot: -106b}]}] if score @s crouch_mode = crouch_mode.crouch_pressed const at @s run function ult:tick/map/wasteland/smoke_bomb
 
 # Spawn rabbit at a random rabbit spawn location if there is no rabbit already nearby
     execute if predicate ult:maps/wasteland/rabbit_spawn at @e[sort=random, limit=1, tag=wasteland_rabbit_spawn] unless entity @e[type=rabbit, distance=..12] run summon rabbit
@@ -8,9 +8,9 @@
 # Give players who killed a rabbit a cooked rabbit meat item
     execute as @a[scores={event.rabbit=1..}, nbt=!{Inventory: [{id: "minecraft:cooked_rabbit"}]}] run function ult:tick/map/wasteland/food
 
-# With meat selected (in either hadn) and crouching, eat the food
-    execute as @a[scores={crouch_mode=1}, nbt={SelectedItem: {id: "minecraft:cooked_rabbit"}}] run function ult:tick/map/wasteland/eat_food
-    execute as @a[scores={crouch_mode=1}, nbt={Inventory: [{id: "minecraft:cooked_rabbit", Slot: -106b}]}] run function ult:tick/map/wasteland/eat_food
+# With meat selected (in either hand) and crouching, eat the food
+    execute as @a[nbt={SelectedItem: {id: "minecraft:cooked_rabbit"}}] if score @s crouch_mode = crouch_mode.crouch_pressed const run function ult:tick/map/wasteland/eat_food
+    execute as @a[nbt={Inventory: [{id: "minecraft:cooked_rabbit", Slot: -106b}]}] if score @s crouch_mode = crouch_mode.crouch_pressed const run function ult:tick/map/wasteland/eat_food
 
 # Make the rabbits easier to catch
     effect give @e[type=rabbit] slowness 999999 1 true

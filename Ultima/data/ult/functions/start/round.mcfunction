@@ -3,8 +3,8 @@
     tag @a[tag=player] add participating
 
 # Reset any remaining items/entities from the map (with continuous play)
-    kill @e[type=item, tag=static_item]
-    kill @e[type=!player, tag=!static_item, tag=!text_display]
+    kill @e[type=item, tag=static]
+    kill @e[type=!player, tag=!static, tag=!text_display]
 
 # Resetting attributes and gamerules (may change in map-specifics below)
     execute as @a run attribute @s generic.armor base set 0

@@ -70,15 +70,17 @@
     scoreboard players set death_cause.lava const 8
     scoreboard players set death_cause.shot_aerial const 9
     # For `event.rune`
-    scoreboard players set event.rune.health const 0
-    scoreboard players set event.rune.speed const 1
-    scoreboard players set event.rune.attack const 2
-    scoreboard players set event.rune.defense const 3
+    scoreboard players set event.rune.none const 0
+    scoreboard players set event.rune.health const 1
+    scoreboard players set event.rune.speed const 2
+    scoreboard players set event.rune.attack const 3
+    scoreboard players set event.rune.defense const 4
     # For `event.skill`
-    scoreboard players set event.skill.combonatrix const 0
-    scoreboard players set event.skill.flurry_rush const 1
-    scoreboard players set event.skill.backstabbing const 2
-    scoreboard players set event.skill.hot_pursuit const 3
+    scoreboard players set event.skill.none const 0
+    scoreboard players set event.skill.combonatrix const 1
+    scoreboard players set event.skill.flurry_rush const 2
+    scoreboard players set event.skill.backstabbing const 3
+    scoreboard players set event.skill.hot_pursuit const 4
     # For `.debug_mode flag`
     scoreboard players set flag.debug_mode.off const 0
     scoreboard players set flag.debug_mode.on const 1

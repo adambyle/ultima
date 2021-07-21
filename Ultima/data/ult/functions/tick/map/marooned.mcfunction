@@ -44,5 +44,5 @@
     execute as @a[scores={event.salmon=1..}, nbt=!{Inventory: [{id: "minecraft:cooked_salmon"}]}] run function ult:tick/map/marooned/food
 
 # Players can eat the meat from either hand
-    execute as @a[scores={crouch_mode=1}, nbt={SelectedItem: {id: "minecraft:cooked_salmon"}}] run function ult:tick/map/marooned/eat_food
-    execute as @a[scores={crouch_mode=1}, nbt={Inventory: [{id: "minecraft:cooked_salmon", Slot: -106b}]}] run function ult:tick/map/marooned/eat_food
+    execute as @a[nbt={SelectedItem: {id: "minecraft:cooked_salmon"}}] if score @s crouch_mode = crouch_mode.crouch_pressed const run function ult:tick/map/marooned/eat_food
+    execute as @a[nbt={Inventory: [{id: "minecraft:cooked_salmon", Slot: -106b}]}] if score @s crouch_mode = crouch_mode.crouch_pressed const run function ult:tick/map/marooned/eat_food

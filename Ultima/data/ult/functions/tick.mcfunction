@@ -31,8 +31,8 @@
     execute as @e[type=item_frame] if data entity @s Item run data merge entity @s {Invisible: true}
     execute as @e[type=item_frame] unless data entity @s Item run data merge entity @s {Invisible: false}
     # Don't allow item frames and paintings to be destroyed by cleanup code
-    tag @e[type=item_frame] add static_item
-    tag @e[type=painting] add static_item
+    tag @e[type=item_frame] add static
+    tag @e[type=painting] add static
     # Don't allow items from hotbar settings in player inventory
     execute as @a[team=lobby] unless score @s menu = menu.hotbar_workspace const run clear @s #ult:map_items/all
 

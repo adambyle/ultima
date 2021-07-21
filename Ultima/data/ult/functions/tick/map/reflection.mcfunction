@@ -12,4 +12,4 @@
 
 # Move between sides of the mirror by jumping/crouching on the colored pads
     execute as @a[tag=player, tag=alive, scores={jump=1..}] at @s if block ~ ~-1 ~ blue_concrete run function ult:tick/map/reflection/tp/up
-    execute as @a[tag=player, tag=alive, scores={crouch_mode=1}] at @s if block ~ ~3 ~ red_concrete run function ult:tick/map/reflection/tp/down
+    execute as @a[tag=player, tag=alive] if score @s crouch_mode = crouch_mode.crouch_pressed const at @s if block ~ ~3 ~ red_concrete run function ult:tick/map/reflection/tp/down

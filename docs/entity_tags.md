@@ -9,10 +9,8 @@ This is a list of tags that are important to the functionality of all of Ultima.
 Tag|Purpose
 -|-
 `alive`|Players that have `player` and are alive in the game.
-`chest` / `chest.*`|Barrel marker.
 `fresh`|Players that just spawned.
 `killer`|Tracks the player responsible for the kill during the death procedure.
-`parkour`|Players doing parkour right now.
 `participating`|Players that have at some point been a part of the current game.
 `player`|Players who wish to participate in a round.
 `ready`|Players who are ready to start the game.

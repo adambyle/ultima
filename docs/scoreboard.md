@@ -29,14 +29,13 @@ Declaration|Criterion|Description
 `event.skill`|`dummy`|Used in the Last Stand map to track activated skill.
 `event.skill_inc`|`dummy`|Used in the Last Stand map to track skill progression.
 `flag`|`dummy`|Game setting flag.
-`half`|`dummy`|The half of the parkour course the player is on.
 `health`|`health`
 `health_display`|`dummy`|Display value for player health.
 `hotbar_map`|`dummy`|The map whose hotbar the player is adjusting.
+`jump`|`custom:jump`
 `kill`|`playerKillCount`
 `menu`|`dummy`|Player menu interface tracker.
 `online`|`dummy`|Used to keep track of online players.
-`parkour`|`dummy`|The parkour map the player is on.
 `pn`|`dummy`|Unique player id, only for living players.
 `respawn`|`dummy`|Time until player respawn.
 `queue`|`dummy`|Spot in line to enter the game; `0` is the front of the line.
@@ -58,7 +57,7 @@ Switch|Purpose
 `map`|Current map being played on.
 `map_menu`|Map choice menu interface tracker.
 `map_mode`|Determines whether the map is random in some way, voted, or being manually selected.
-`mode`|The active game mode.
+`game_mode`|The active game mode.
 
 ## `const` values
 
@@ -70,14 +69,6 @@ This is a list of easy access constant flags that act as a kind of enumerator to
     1: opt_out
     2: tp_lobby
     3: unready
-
-### `chest`
-
-    0: common
-    1: uncommon
-    2: rare
-    3: epic
-    4: ultimate
 
 ### `crouch_mode`
 
@@ -91,24 +82,27 @@ This is a list of easy access constant flags that act as a kind of enumerator to
     1: abyss_fall
     2: abyss_fished
     3: shot
-    4: harming
+    4: harming_potion
     5: shot_hard
     6: exploded
     7: fire
     8: lava
+    9: shot_aerial
 
 ### `event.rune`
 
-    0: health
-    1: speed
-    2: attack
-    3: defense
+    0: none
+    1: health
+    2: speed
+    3: attack
+    4: defense
 
 ### `event.skill`
 
-    0: combonatrix
-    1: flurry_rush
-    2: backstabbing
+    0: none
+    1: combonatrix
+    2: flurry_rush
+    3: backstabbing
     4: hot_pursuit
 
 ### `flag.debug_mode`
@@ -132,6 +126,13 @@ This is a list of easy access constant flags that act as a kind of enumerator to
     5: wasteland
     6: town_square
     7: last_stand
+    8: permafrost
+    9: shroom
+    10: hellscape
+    11: frontier
+    12: facility
+    13: meadow
+    14: leagues
     48: reflection
     49: dracula
     50: avanto
@@ -155,24 +156,17 @@ This is a list of easy access constant flags that act as a kind of enumerator to
     2: cycle
     3: vote
 
-### `flag.mode`
+### `flag.game_mode`
 
     0: duels
     1: royale
     2: brawl
 
-### `half`
-
-    0: front
-    1: back
-
 ### `menu`
 
     0: main
-    1: hotbar_main
-    2: hotbar
-    3: spectator
-    4: vote
-    5: parkour
-    6: parkour_records
-    7: parkour_maps
+    10: hotbar_default
+    11: hotbar_featured
+    12: hotbar_workspace
+    20: spectate
+    30: vote

@@ -25,4 +25,4 @@ function ult:spawn/items/refills/citadel
 
 attribute @s generic.armor base set 3
 
-scoreboard players set @s event.rune 0
+scoreboard players operation @s event.rune = event.rune.none const

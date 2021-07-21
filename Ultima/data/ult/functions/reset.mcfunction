@@ -74,8 +74,8 @@
     time set noon
 
 # Clean up entities
-    kill @e[type=!player, tag=!static_item, tag=!text_display]
-    kill @e[type=item, tag=static_item]
+    kill @e[type=!player, tag=!static, tag=!text_display]
+    kill @e[type=item, tag=static]
 
 # Prepare displays
     bossbar set ult:game_start visible false

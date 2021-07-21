@@ -22,7 +22,7 @@
     function ult:spawn/queue_advance
 
 # Clear unnecessary items
-    kill @e[type=item, tag=!static_item]
+    kill @e[type=item, tag=!static]
     clear @a[gamemode=!creative] glass_bottle
     kill @e[type=arrow, nbt={inGround: true}]
 

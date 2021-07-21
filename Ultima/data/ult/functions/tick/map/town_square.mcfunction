@@ -7,7 +7,7 @@
     loot give @a[scores={damage_dealt=1..}] loot ult:map_items/town_square/emerald
 
 # Crouch to upgrade with netherite
-    execute as @a[scores={crouch_mode=1}, nbt={SelectedItem: {id: "minecraft:netherite_ingot"}}] run function ult:tick/map/town_square/upgrade_armor
+    execute as @a[nbt={SelectedItem: {id: "minecraft:netherite_ingot"}}] if score @s crouch_mode = crouch_mode.crouch_pressed const run function ult:tick/map/town_square/upgrade_armor
 
 # Prevent insertion of items into container blocks by players
     data remove block 79 21 78 Items

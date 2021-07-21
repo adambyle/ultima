@@ -1,25 +1,8 @@
 # NBT Data Structure
 
-The NBT field `ult:players` contains all essential player data for settings, records, and statistics. The NBT is organized as follows:
+The NBT field `ult:players` contains all essential player data for settings and statistics. The NBT is organized as follows:
 
     ult:players {
-        Global { NBT data shared between all players
-            Parkour { Parkour record times
-                manor { for Manor map
-                    Full { for full course
-                        string Name : JSON text name of record holder,
-                        int Time : ticks to complete this portion,
-                        int[] UUID : UUID of record holder
-                    },
-                    Half { for half course
-                        ... see above
-                    }
-                },
-                woodlands { for Woodlands map
-                    ... see above
-                }
-            }
-        },
         Players[] { a player's data
             byte afkTime : enumerator for AFK settings,
             byte autoReady : enumerator for auto-ready settings,
@@ -33,18 +16,6 @@ The NBT field `ult:players` contains all essential player data for settings, rec
                     ... see hotbar settings file
                 },
                 ... for each map id (camelCase)
-            },
-            Keys[] { a key
-                byte <name of key> : always 1b, present in Array if captured
-            },
-            Parkour { parkour data
-                manor {
-                    int Full : ticks to complete full course,
-                    int Half : ticks to complete half course
-                },
-                woodlands {
-                    ... see above
-                }
             },
             double[] Pos : last record location of player,
             byte skipVote : enumerator for auto-vote settings,

@@ -23,6 +23,6 @@ item replace entity @s armor.head with netherite_helmet{Unbreakable: true}
 
 function ult:spawn/items/refills/last_stand
 
-scoreboard players set @s event.skill 0
+scoreboard players operation @s event.skill = event.skill.none const
 scoreboard players set @s event.skill_inc 0
 scoreboard players set @s event 0
