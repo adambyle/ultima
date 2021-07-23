@@ -65,10 +65,11 @@ This is a list of easy access constant flags that act as a kind of enumerator to
 
 ### `action`
 
-    0: change_modes
-    1: opt_out
-    2: tp_lobby
-    3: unready
+    0: none
+    1: change_modes
+    2: opt_out
+    3: tp_lobby
+    4: unready
 
 ### `crouch_mode`
 
@@ -88,6 +89,7 @@ This is a list of easy access constant flags that act as a kind of enumerator to
     7: fire
     8: lava
     9: shot_aerial
+    10: rocket
 
 ### `event.rune`
 

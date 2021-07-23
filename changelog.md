@@ -13,18 +13,24 @@
   - Item modifiers used instead of the shulker box loot table exploit method.
 - Removed parkour.
 - All references to Ultimate mode/"Classic Game" were removed permanently.
-  - Ultimate mode may be made into its own spin-off game instead. It does not fit the theme or purpose of Ultima.
+  - Ultimate mode may be made into its own spin-off game instead, but it does not fit the theme or purpose of the main installation of Ultima.
 - Tutorials/explanations of the game modes and maps were added to lecterns in the lobby.
 - Removed "key points".
 - Player statistics can be viewed in the ender chest.
+- Added death messages for being shot in midair and being killed by a firework rocket.
+- Projectiles no longer reflect if they have a downward trajectory; now players can shoot their bow correctly in Avanto while being above the map ceiling.
 
 **Maps**:
 
 - Ancient Mines: Fireballs can be launched from the offhand.
 - Bathhouse: NEW MAP by Jonathan Deiss!
+- Citadel: Players no longer have invisible extra health after switching out the Health Rune for something else. Previously, players would have to be hit once for their health to update to normal after being above the max.
+- Citadel: Runes can no longer be thrown out of your inventory without them disappearing.
 - Dracula's Castle: Added a way to get to the central tower from underneath via twisting vines.
 - Dungeon: Potion of Healing now appears almost immediately after game start, and time between refills decreased to 15s from 30s.
 - The Hill: NEW MAP by Jonathan Deiss!
+- Town Square: Iron Axe now costs 10 emeralds (was 12) and is now unenchanted (was Sharpness I). Splash Potion of Harming now costs 12 emeralds.
+- Wasteland: Another smoke bomb rework: smoke bombs first try to find a landing zone with no nearby players, and if that fails, that a random landing zone (except the nearest) is selected.
 
 **Bug fixes**:
 
