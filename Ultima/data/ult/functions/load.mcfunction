@@ -50,10 +50,11 @@
 
 # Set constant enumerators
     # For `action`
-    scoreboard players set action.change_modes const 0
-    scoreboard players set action.opt_out const 1
-    scoreboard players set action.tp_lobby const 2
-    scoreboard players set action.unready const 3
+    scoreboard players set action.none const 0
+    scoreboard players set action.change_modes const 1
+    scoreboard players set action.opt_out const 2
+    scoreboard players set action.tp_lobby const 3
+    scoreboard players set action.unready const 4
     # For `crouch_mode`
     scoreboard players set crouch_mode.not_crouching const 0
     scoreboard players set crouch_mode.crouch_pressed const 1
@@ -69,6 +70,7 @@
     scoreboard players set death_cause.fire const 7
     scoreboard players set death_cause.lava const 8
     scoreboard players set death_cause.shot_aerial const 9
+    scoreboard players set death_cause.rocket const 10
     # For `event.rune`
     scoreboard players set event.rune.none const 0
     scoreboard players set event.rune.health const 1

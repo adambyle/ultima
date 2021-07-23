@@ -11,10 +11,8 @@
     execute if entity @a[tag=alive] run tellraw @a [{"selector": "@a[tag=killer]", "color": "green"}, {"text": " wins! ", "color": "green"}, {"text": "[Details]", "color": "dark_gray", "hoverEvent": {"action": "show_text", "contents": [{"selector": "@a[tag=alive]"}, {"text": " was at ", "color": "gray"}, {"score": {"name": "@r[tag=alive]", "objective": "health"}, "color": "dark_red"}, {"text": " HP.", "color": "dark_red"}]}}]
 
 # Prompt players to switch modes
-    tellraw @a[tag=player] [{"text": "If you want to change gamemodes, ", "color": "blue"}, {"text": "click here.", "underlined": true, "clickEvent": {"action": "run_command", "value": "/trigger action set 0"}}]
+    tellraw @a[tag=player] [{"text": "If you want to change gamemodes, ", "color": "blue"}, {"text": "click here.", "underlined": true, "clickEvent": {"action": "run_command", "value": "/trigger action set 1"}}]
 
 # Reset death/kill count for next round
     scoreboard players reset * death
     scoreboard players reset * kill
-
-function ult:victory

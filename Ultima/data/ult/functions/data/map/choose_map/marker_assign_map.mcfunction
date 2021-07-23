@@ -6,6 +6,6 @@
 # Increase the map value
     scoreboard players add .temp _var 1
     # Carry over if through all the defaults
-    execute if score .temp _var > flag.end_default const unless score .temp _var > flag.start_featured const run scoreboard players operation .temp _var = flag.start_featured const
+    execute if score .temp _var > flag.map.end_default const unless score .temp _var >= flag.map.start_featured const run scoreboard players operation .temp _var = flag.map.start_featured const
     # Assign the next map if not through all maps
-    execute unless score .temp _var > flag.end_featured const run function ult:data/map/choose_map/marker_assign_map
+    execute unless score .temp _var > flag.map.end_featured const run function ult:data/map/choose_map/marker_assign_map

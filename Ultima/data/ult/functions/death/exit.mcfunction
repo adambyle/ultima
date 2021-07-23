@@ -25,9 +25,4 @@ function ult:data/root
 # Main menu
     function ult:settings/player/main
 
-# Spectate or lobby
-    function ult:data/player/get_nbt
-    execute store result score .spect_mode _var run data get storage ult:temp Player.Spectate.death
-    function ult:exit
-
 title @s actionbar ""

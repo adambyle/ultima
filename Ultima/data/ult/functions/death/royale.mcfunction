@@ -15,7 +15,7 @@
     execute unless entity @a[tag=killer] run tag @a[tag=random] add killer
 
 # If STILL no killer exists
-    execute unless entity @a[tag=killer] run tellraw @a [{"selector": "@s", "color": "red"}, {"text": " died.", "color": "gray"}]
+    execute unless entity @a[tag=killer] run tellraw @a [{"selector": "@s", "color": "red"}, " ", {"storage": "ult:temp", "nbt": "Death1", "color": "gray", "interpret": true}, {"text": ". ", "color": "gray"}]
 
 # Set tether
     scoreboard players operation @s tether = @r[tag=killer] pn
@@ -25,9 +25,3 @@
 
 # If the player will be waiting for their killer to die
     execute if entity @a[tag=killer] run function ult:settings/opt/prompt/lobby_tp
-
-# If all the players are dead
-    scoreboard players set .temp_pn _var 0
-    execute as @a[tag=player] run scoreboard players add .temp_pn _var 1
-    scoreboard players remove .temp_pn _var 1
-    execute as @a[tag=killer] if score @s score >= .temp_pn _var run function ult:victory

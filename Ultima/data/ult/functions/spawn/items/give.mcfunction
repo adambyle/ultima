@@ -16,6 +16,7 @@ execute if data entity @s Inventory[{Slot: 12b}] if score .hotbar _var matches 1
 data modify entity @e[tag=temp, limit=1] Item.id set from block 0 0 0 Items[0].id
 data modify entity @e[tag=temp, limit=1] Item.Count set from block 0 0 0 Items[0].Count
 data modify entity @e[tag=temp, limit=1] Item.tag set from block 0 0 0 Items[0].tag
+data modify entity @e[tag=temp, limit=1] Tags append value "static"
 
 execute unless data entity @s Inventory[{Slot: 0b}] if score .hotbar _var matches 0 run item replace entity @s hotbar.0 from block 0 0 0 container.0
 execute unless data entity @s Inventory[{Slot: 1b}] if score .hotbar _var matches 1 run item replace entity @s hotbar.1 from block 0 0 0 container.0

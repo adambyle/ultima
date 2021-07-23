@@ -53,6 +53,7 @@
     execute as @a run attribute @s generic.movement_speed base set 0.1
     spawnpoint @a 45 30 -12 0
     # Reset tags
+    tag @a remove ready
     tag @a remove alive
     tag @a remove change_modes
     tag @a remove fresh

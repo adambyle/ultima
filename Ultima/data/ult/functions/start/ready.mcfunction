@@ -4,8 +4,8 @@ function ult:data/root
     tag @s add ready
     function ult:start/ready/update_notice
     tellraw @a[tag=!root] [{"selector": "@s", "color": "blue"}, {"text": " is ready."}]
-    tellraw @s [{"selector": "@s", "color": "blue"}, {"text": " is ready. "}, {"text": "Mistake? Click to unready.", "color": "aqua", "underlined": true, "clickEvent": {"action": "run_command", "value": "/trigger action set 3"}}]
-    execute as @a at @s run playsound block.note_block.snare master @s
+    tellraw @s [{"selector": "@s", "color": "blue"}, {"text": " is ready. "}, {"text": "Mistake? Click to unready.", "color": "aqua", "underlined": true, "clickEvent": {"action": "run_command", "value": "/trigger action set 4"}}]
+    execute as @a at @s run playsound block.note_block.snare master @s ~ ~ ~ 64 1
 
 # If the first player to be ready...
     execute unless entity @a[tag=player, tag=!root, tag=ready] run function ult:start/ready/first_ready

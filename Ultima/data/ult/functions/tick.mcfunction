@@ -43,13 +43,13 @@
     # Get NBT data and store
     execute as @a store result score @s altitude run data get entity @s Pos[1]
     execute as @e[type=#ult:projectiles] store result score @s altitude run data get entity @s Pos[1]
-    # Reflect projectiles that are at Y=35 and above, that have not already been reflected
-    execute as @e[type=#ult:projectiles, tag=!deflected, scores={altitude=35..}] at @s run function ult:tech/projectile_deflect
+    execute as @e[type=#ult:projectiles] store result score @s _var run data get entity @s Motion[1]
+    # Reflect projectiles that are at Y=35 and above, that have not already been reflected, that are traveling upward
+    execute as @e[type=#ult:projectiles, tag=!deflected, scores={altitude=35.., _var=0..}] at @s run function ult:tech/projectile_deflect
 
 # Dynamic opting with actions
     # Players can exit their game mode
-    execute if score .game_mode flag = flag.game_mode.duels const as @a[tag=player] if score @s action = action.change_modes const unless entity @a[tag=player, tag=change_modes] run function ult:settings/mode/change_modes
-    execute if score .game_mode flag = flag.game_mode.duels const as @a[tag=player, tag=!change_modes] if score @s action = action.change_modes const if entity @a[tag=player, tag=change_modes] run function ult:settings/mode/confirm_change_modes
+    execute if score .game_state flag = flag.game_state.active const if score .game_mode flag = flag.game_mode.duels const as @a[tag=player] if score @s action = action.change_modes const run function ult:settings/mode/change
     # Players can opt out mid-game
     execute as @a[tag=player] if score @s action = action.opt_out const run function ult:settings/opt/out
     # Spectators can return to lobby
@@ -97,7 +97,7 @@
     execute as @a[scores={crouch=1..}] if score @s crouch_mode = crouch_mode.not_crouching const run scoreboard players operation @s crouch_mode = crouch_mode.crouch_pressed const
     scoreboard players set @a crouch 0
     # Set health displays
-    execute as @a[tag=player, tag=alive] run scoreboard players operation @s health_display = @s health
+    execute as @a[tag=player, tag=alive] if score @s health matches 0.. run scoreboard players operation @s health_display = @s health
 
 # Update player positions
     execute as @a run function ult:data/player/update_pos

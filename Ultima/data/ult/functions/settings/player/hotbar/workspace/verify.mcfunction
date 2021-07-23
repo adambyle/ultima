@@ -18,3 +18,5 @@ execute if score @s hotbar_map = flag.map.avanto const run function ult:settings
 execute if score @s hotbar_map = flag.map.boxing const run function ult:settings/player/hotbar/workspace/verify/boxing
 execute if score @s hotbar_map = flag.map.ancient const run function ult:settings/player/hotbar/workspace/verify/ancient
 execute if score @s hotbar_map = flag.map.marooned const run function ult:settings/player/hotbar/workspace/verify/marooned
+execute if score @s hotbar_map = flag.map.hill const run function ult:settings/player/hotbar/workspace/verify/hill
+execute if score @s hotbar_map = flag.map.bathhouse const run function ult:settings/player/hotbar/workspace/verify/bathhouse

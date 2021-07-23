@@ -1,5 +1,5 @@
-effect give @s slowness 4 2
-effect give @s weakness 4 2
+effect give @s slowness 3 2
+effect give @s weakness 3 2
 
 # If beatdown phase, death
     execute if score .phase event matches 2 run kill @s

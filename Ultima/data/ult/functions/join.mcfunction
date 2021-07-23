@@ -27,9 +27,6 @@ function ult:data/root
     tag @s remove fresh
     tag @s remove participating
 
-# Assign missing hotbar settings
-    function ult:data/player/default_hotbar
-
 # Setup player menu
     function ult:settings/player/main
 

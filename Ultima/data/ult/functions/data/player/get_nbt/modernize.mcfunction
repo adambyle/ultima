@@ -6,3 +6,4 @@
     execute unless data storage ult:temp Player.Spectate.startGame run data modify storage ult:temp Player.Spectate.startGame set value true
     execute unless data storage ult:temp Player.Spectate.optOut run data modify storage ult:temp Player.Spectate.optOut set value false
     execute unless data storage ult:temp Player.Spectate.death run data modify storage ult:temp Player.Spectate.death set value true
+    function ult:data/player/default_hotbar

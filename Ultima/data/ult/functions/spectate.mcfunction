@@ -5,3 +5,4 @@
 
 # Give link to teleport back to lobby
     function ult:settings/opt/prompt
+

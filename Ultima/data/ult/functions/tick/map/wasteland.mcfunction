@@ -16,7 +16,7 @@
     effect give @e[type=rabbit] slowness 999999 1 true
 
 # Players near a port make a door sound
-    execute at @e[tag=wasteland_port] align xyz positioned ~.5 ~ ~.5 run playsound block.wooden_door.open master @a[tag=player, tag=alive, tag=!wasteland_warped, distance=...3]
+    execute at @e[tag=wasteland_port] run playsound block.wooden_door.open master @a[tag=player, tag=alive, tag=!wasteland_warped, distance=...3]
 
 # Port number 1
     # Tag the newly teleporting players

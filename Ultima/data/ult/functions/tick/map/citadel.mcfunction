@@ -12,10 +12,6 @@
     execute if predicate ult:coin_flip run scoreboard players add .map_rune _var 1
     execute if score .map_rune _var matches 5.. run scoreboard players remove .map_rune _var 4
 
-# Thrown runes are still static
-    tag @e[type=item, nbt={Item: {id: "minecraft:globe_banner_pattern"}}] add citadel_rune
-    tag @e[tag=citadel_rune] add static
-
 # Decrease timer and summon rune at 0
     execute unless entity @e[tag=citadel_rune] if predicate ult:coin_flip run scoreboard players remove .map event 1
     execute if score .map event matches 0 run function ult:tick/map/citadel/summon_rune

@@ -15,6 +15,8 @@
     execute if score .map_menu flag = flag.map_menu.featured const run function ult:settings/map/featured/driver
 
 # Use chestplate to show opt status
-    item replace entity @a[tag=spectator] armor.chest with leather_chestplate{display: {color: 3881787}}
-    item replace entity @a[tag=player, tag=!ready] armor.chest with leather_chestplate{display: {color: 1557856}}
-    item replace entity @a[tag=player, tag=ready] armor.chest with leather_chestplate{display: {color: 2040492}}
+    execute as @a store result score @s _var run clear @s leather_chestplate 0
+    item replace entity @a[tag=spectator, nbt=!{Inventory: [{id: "minecraft:leather_chestplate", Slot: 102b, tag: {display: {color: 3881787}}}]}] armor.chest with leather_chestplate{display: {color: 3881787}}
+    item replace entity @a[tag=player, tag=!ready, nbt=!{Inventory: [{id: "minecraft:leather_chestplate", Slot: 102b, tag: {display: {color: 1557856}}}]}] armor.chest with leather_chestplate{display: {color: 1557856}}
+    item replace entity @a[tag=player, tag=ready, nbt=!{Inventory: [{id: "minecraft:leather_chestplate", Slot: 102b, tag: {display: {color: 2040492}}}]}] armor.chest with leather_chestplate{display: {color: 2040492}}
+    clear @a[scores={_var=2..}] leather_chestplate

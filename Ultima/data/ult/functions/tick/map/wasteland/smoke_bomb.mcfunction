@@ -4,10 +4,13 @@ particle explosion_emitter ~ ~ ~ 0 0 0 0 0 force
 clear @s flint
 effect give @s resistance 2 2 true
 
-# Teleport to a random teleport destination that is not the nearest one
+# Find a suitable teleportation location
     tag @e remove temp
-    tag @e[sort=nearest, limit=1, tag=wasteland_tp] add temp
-    tp @s @e[sort=random, limit=1, tag=wasteland_tp, tag=!temp]
+    execute as @e[tag=wasteland_tp] at @s if entity @a[tag=player, tag=alive, distance=..4] run tag @s add temp
+    tag @e remove temp2
+    tag @e[sort=nearest, limit=1, tag=wasteland_tp] add temp2
+    execute if entity @e[tag=wasteland_tp, tag=!temp, tag=!temp2] positioned as @e[sort=random, limit=1, tag=wasteland_tp, tag=!temp] run tp @s ~ ~ ~ ~ ~
+    execute unless entity @e[tag=wasteland_tp, tag=!temp, tag=!temp2] positioned as @e[sort=random, limit=1, tag=wasteland_tp, tag=!temp2] run tp @s ~ ~ ~ ~ ~
 
 # Give nearby players blindness
     effect give @a[tag=player, tag=alive, tag=!root, distance=..5] instant_damage

@@ -17,8 +17,8 @@
 # Fireball explosion handler
     tag @e remove exploded
     # Fireballs can collide
-    execute as @e[type=fireball] at @s if entity @e[type=fireball, distance=0.01..5] run function ult:tick/map/ancient/explode
+    execute as @e[type=fireball] at @s if entity @e[type=fireball, distance=0.01..5] run function ult:tick/map/ancient/fireball/explode
     # Catch trackers up to fireballs
     execute as @e[type=fireball] at @s run tp @e[sort=nearest, limit=1, tag=fireball_tracker, distance=..3] @s
     # If a tracker loses track of its fireball, explode
-    execute as @e[tag=fireball_tracker] at @s unless entity @e[type=fireball, distance=..1] run function ult:tick/map/ancient/explode
+    execute as @e[tag=fireball_tracker] at @s unless entity @e[type=fireball, distance=..1] run function ult:tick/map/ancient/fireball/explode

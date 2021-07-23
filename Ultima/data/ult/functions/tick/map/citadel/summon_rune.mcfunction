@@ -2,6 +2,7 @@
     scoreboard players set .map event 150
 
 # Summon one of four randomized runes
+    tag @e remove temp
     execute if score .map_rune _var = event.rune.speed const run summon item 77 23 15 {Tags: ["citadel_rune", "static", "temp"], Item: {id: "globe_banner_pattern", Count: 1b, tag: {HideFlags: 63, display: {Name: '{"text": "Δ Speed Rune (Crouch)", "italic": false}'}}}}
     execute if score .map_rune _var = event.rune.health const run summon item 77 23 15 {Tags: ["citadel_rune", "static", "temp"], Item: {id: "globe_banner_pattern", Count: 1b, tag: {HideFlags: 63, display: {Name: '{"text": "Π Health Rune (Crouch)", "italic": false}'}}}}
     execute if score .map_rune _var = event.rune.attack const run summon item 77 23 15 {Tags: ["citadel_rune", "static", "temp"], Item: {id: "globe_banner_pattern", Count: 1b, tag: {HideFlags: 63, display: {Name: '{"text": "Σ Attack Rune (Crouch)", "italic": false}'}}}}

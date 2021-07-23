@@ -1,9 +1,0 @@
-parkour removed
-average of 4 seconds after game start dungeon potion
-average of 15 seconds from then on out
-removed all traces of ultimate mode
-complete refactor, many potential bugs eliminated
-reduced lag
-dracula map accessibility
-lobby tutorials
-ancient mines fireball offhand

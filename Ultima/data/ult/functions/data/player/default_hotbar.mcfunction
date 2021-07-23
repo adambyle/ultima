@@ -1,5 +1,3 @@
-function ult:data/player/get_nbt
-
 execute unless data storage ult:temp Player.Hotbar.manor.sword run data modify storage ult:temp Player.Hotbar.manor.sword set value 0
 execute unless data storage ult:temp Player.Hotbar.manor.axe run data modify storage ult:temp Player.Hotbar.manor.axe set value 1
 execute unless data storage ult:temp Player.Hotbar.manor.crossbow run data modify storage ult:temp Player.Hotbar.manor.crossbow set value 2
@@ -84,4 +82,8 @@ execute unless data storage ult:temp Player.Hotbar.marooned.fish run data modify
 execute unless data storage ult:temp Player.Hotbar.marooned.arrows run data modify storage ult:temp Player.Hotbar.marooned.arrows set value -1
 execute unless data storage ult:temp Player.Hotbar.marooned.trident run data modify storage ult:temp Player.Hotbar.marooned.trident set value 1
 
-function ult:data/player/save_nbt
+execute unless data storage ult:temp Player.Hotbar.bathhouse.sword run data modify storage ult:temp Player.Hotbar.bathhouse.sword set value 0
+execute unless data storage ult:temp Player.Hotbar.bathhouse.shears run data modify storage ult:temp Player.Hotbar.bathhouse.shears set value 2
+execute unless data storage ult:temp Player.Hotbar.bathhouse.bow run data modify storage ult:temp Player.Hotbar.bathhouse.bow set value 3
+execute unless data storage ult:temp Player.Hotbar.bathhouse.arrows run data modify storage ult:temp Player.Hotbar.bathhouse.arrows set value 10
+execute unless data storage ult:temp Player.Hotbar.bathhouse.blocks run data modify storage ult:temp Player.Hotbar.bathhouse.blocks set value 1
