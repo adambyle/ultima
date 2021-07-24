@@ -21,27 +21,27 @@
     execute as @e[tag=last_stand_skill] at @s unless block ~ ~-1 ~ lectern run function ult:tick/map/last_stand/skill/inactive_marker
 
 # Crouch near active shrines to apply the skill
-    execute as @a[tag=player, tag=alive] if score @s crouch_mode = crouch_mode.crouch_pressed const at @s at @e[tag=last_stand_skill, distance=..3] if block ~ ~-1 ~ lectern unless score @s event.skill = @e[sort=nearest, limit=1, tag=last_stand_skill] event.skill run function ult:tick/map/last_stand/skill/apply
+    execute as @a[tag=alive] if score @s crouch_mode = crouch_mode.crouch_pressed const at @s at @e[tag=last_stand_skill, distance=..3] if block ~ ~-1 ~ lectern unless score @s event.skill = @e[sort=nearest, limit=1, tag=last_stand_skill] event.skill run function ult:tick/map/last_stand/skill/apply
 
 # Active skill hotbar display
-    execute as @a[tag=player, tag=alive] if score @s event.skill = event.skill.none const run title @s actionbar [{"text": "Active skill: "}, {"text": "None", "color": "dark_red", "bold": true}]
-    execute as @a[tag=player, tag=alive] if score @s event.skill = event.skill.flurry_rush const run title @s actionbar [{"text": "Active skill: "}, {"text": "Flurry Rush", "color": "blue", "bold": true}]
-    execute as @a[tag=player, tag=alive] if score @s event.skill = event.skill.hot_pursuit const run title @s actionbar [{"text": "Active skill: "}, {"text": "Hot Pursuit", "color": "blue", "bold": true}]
-    execute as @a[tag=player, tag=alive] if score @s event.skill = event.skill.combonatrix const run title @s actionbar [{"text": "Active skill: "}, {"text": "Combonatrix", "color": "blue", "bold": true}]
-    execute as @a[tag=player, tag=alive] if score @s event.skill = event.skill.backstabbing const run title @s actionbar [{"text": "Active skill: "}, {"text": "Backstabbing", "color": "blue", "bold": true}]
+    execute as @a[tag=alive] if score @s event.skill = event.skill.none const run title @s actionbar [{"text": "Active skill: "}, {"text": "None", "color": "dark_red", "bold": true}]
+    execute as @a[tag=alive] if score @s event.skill = event.skill.flurry_rush const run title @s actionbar [{"text": "Active skill: "}, {"text": "Flurry Rush", "color": "blue", "bold": true}]
+    execute as @a[tag=alive] if score @s event.skill = event.skill.hot_pursuit const run title @s actionbar [{"text": "Active skill: "}, {"text": "Hot Pursuit", "color": "blue", "bold": true}]
+    execute as @a[tag=alive] if score @s event.skill = event.skill.combonatrix const run title @s actionbar [{"text": "Active skill: "}, {"text": "Combonatrix", "color": "blue", "bold": true}]
+    execute as @a[tag=alive] if score @s event.skill = event.skill.backstabbing const run title @s actionbar [{"text": "Active skill: "}, {"text": "Backstabbing", "color": "blue", "bold": true}]
 
 # Skill specific functions
     # If damage was dealt, do flurry rush (flurry rush)
-    execute as @a[tag=player, tag=alive, scores={damage_dealt=0..}] if score @s event.skill = event.skill.flurry_rush const at @s run function ult:tick/map/last_stand/flurry/flurry
+    execute as @a[tag=alive, scores={damage_dealt=0..}] if score @s event.skill = event.skill.flurry_rush const at @s run function ult:tick/map/last_stand/flurry/flurry
     # If time ran out, disable combo (combonatrix)
-    execute as @a[tag=player, tag=alive, scores={event=0}] if score @s event.skill = event.skill.combonatrix const run function ult:tick/map/last_stand/combo/remove
+    execute as @a[tag=alive, scores={event=0}] if score @s event.skill = event.skill.combonatrix const run function ult:tick/map/last_stand/combo/remove
     # If damage was dealth, enable combo (combonatrix)
-    execute as @a[tag=player, tag=alive, scores={damage_dealt=0..}] if score @s event.skill = event.skill.combonatrix const run function ult:tick/map/last_stand/combo/apply
+    execute as @a[tag=alive, scores={damage_dealt=0..}] if score @s event.skill = event.skill.combonatrix const run function ult:tick/map/last_stand/combo/apply
     # Test for strength capabilities (backstabbing)
-    execute as @a[tag=player, tag=alive] if score @s event.skill = event.skill.backstabbing const at @s anchored eyes run function ult:tick/map/last_stand/backstab/test
+    execute as @a[tag=alive] if score @s event.skill = event.skill.backstabbing const at @s anchored eyes run function ult:tick/map/last_stand/backstab/test
 
 # Countdown combo timer (combonatrix)
-    scoreboard players remove @a[tag=player, tag=alive, scores={event=1..}] event 1
+    scoreboard players remove @a[tag=alive, scores={event=1..}] event 1
 
 # Randomize flurry rush teleportation
     scoreboard players add .map event.skill_inc 1

@@ -24,5 +24,5 @@ fill 131 12 186 95 12 124 spruce_stairs[facing=north, half=top, waterlogged=true
 fill 131 12 186 95 12 124 spruce_stairs[facing=south, half=top, waterlogged=true] replace spruce_stairs[facing=south, half=top, waterlogged=false]
 fill 131 12 186 95 12 124 birch_fence[waterlogged=true] replace birch_fence[waterlogged=false]
 fill 131 12 186 95 12 124 end_stone_brick_wall[waterlogged=true] replace end_stone_brick_wall[waterlogged=false]
-execute as @a at @s run playsound entity.ender_dragon.growl master @s ~ ~ ~ 16 0.8
+execute as @a[tag=watching] at @s run playsound entity.ender_dragon.growl master @s ~ ~ ~ 16 0.8
 scoreboard players set .transition event 1

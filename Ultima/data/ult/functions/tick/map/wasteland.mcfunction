@@ -16,33 +16,33 @@
     effect give @e[type=rabbit] slowness 999999 1 true
 
 # Players near a port make a door sound
-    execute at @e[tag=wasteland_port] run playsound block.wooden_door.open master @a[tag=player, tag=alive, tag=!wasteland_warped, distance=...3]
+    execute at @e[tag=wasteland_port] run playsound block.wooden_door.open master @a[tag=alive, tag=!wasteland_warped, distance=...3]
 
 # Port number 1
     # Tag the newly teleporting players
-    execute positioned 77 21 50 run tag @a[tag=player, tag=alive, tag=!wasteland_warped, distance=...3] add new_wasteland_warped
+    execute positioned 77 21 50 run tag @a[tag=alive, tag=!wasteland_warped, distance=...3] add new_wasteland_warped
     # Teleport aforementioned players
-    execute positioned 77 21 50 run tp @a[tag=player, tag=alive, tag=!wasteland_warped, distance=...3] 77 21 52 0 ~
+    execute positioned 77 21 50 run tp @a[tag=alive, tag=!wasteland_warped, distance=...3] 77 21 52 0 ~
     # Prevent them from teleporting back from the destination port until they move away
     tag @a[tag=new_wasteland_warped] add wasteland_warped
     # They're not new anymore
     tag @a remove new_wasteland_warped
 
 # Port number 2
-    execute positioned 77 21 52 run tag @a[tag=player, tag=alive, tag=!wasteland_warped, distance=...3] add new_wasteland_warped
-    execute positioned 77 21 52 run tp @a[tag=player, tag=alive, tag=!wasteland_warped, distance=...3] 77 21 50 180 ~
+    execute positioned 77 21 52 run tag @a[tag=alive, tag=!wasteland_warped, distance=...3] add new_wasteland_warped
+    execute positioned 77 21 52 run tp @a[tag=alive, tag=!wasteland_warped, distance=...3] 77 21 50 180 ~
     tag @a[tag=new_wasteland_warped] add wasteland_warped
     tag @a remove new_wasteland_warped
 
 # Port number 3
-    execute positioned 75 21 47 run tag @a[tag=player, tag=alive, tag=!wasteland_warped, distance=...3] add new_wasteland_warped
-    execute positioned 75 21 47 run tp @a[tag=player, tag=alive, tag=!wasteland_warped, distance=...3] 75 26 53 -90 ~
+    execute positioned 75 21 47 run tag @a[tag=alive, tag=!wasteland_warped, distance=...3] add new_wasteland_warped
+    execute positioned 75 21 47 run tp @a[tag=alive, tag=!wasteland_warped, distance=...3] 75 26 53 -90 ~
     tag @a[tag=new_wasteland_warped] add wasteland_warped
     tag @a remove new_wasteland_warped
 
 # Port number 4
-    execute positioned 75 26 53 run tag @a[tag=player, tag=alive, tag=!wasteland_warped, distance=...3] add new_wasteland_warped
-    execute positioned 75 26 53 run tp @a[tag=player, tag=alive, tag=!wasteland_warped, distance=...3] 75 21 47 -90 ~
+    execute positioned 75 26 53 run tag @a[tag=alive, tag=!wasteland_warped, distance=...3] add new_wasteland_warped
+    execute positioned 75 26 53 run tp @a[tag=alive, tag=!wasteland_warped, distance=...3] 75 21 47 -90 ~
     tag @a[tag=new_wasteland_warped] add wasteland_warped
     tag @a remove new_wasteland_warped
 

@@ -1,7 +1,7 @@
 title @s reset
 title @s times 5 70 5
 title @s title {"text": "Spawning...", "color": "red"}
-execute at @s run playsound entity.elder_guardian.curse master @s ~ ~ ~ 1 2
+execute at @s run playsound entity.elder_guardian.curse master @s ~ ~ ~ 4 2
 scoreboard players set @s respawn 80
 scoreboard players reset @s queue
 title @s actionbar ""

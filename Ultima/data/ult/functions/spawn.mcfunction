@@ -44,5 +44,5 @@ execute unless score .game_mode flag = flag.game_mode.duels const run effect giv
     execute if score .map flag = flag.map.bathhouse const run function ult:spawn/maps/bathhouse
 
 # Spec fx
-    execute at @s run playsound item.totem.use master @a ~ ~ ~ 1 0.7
+    execute at @s run playsound item.totem.use master @a[tag=watching] ~ ~ ~ 1 0.7
     title @s actionbar ""

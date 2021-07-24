@@ -4,9 +4,6 @@
 # Players can spectate by pressing the start button
     execute positioned 45 31 -3 if block ~ ~ ~ polished_blackstone_pressure_plate[powered=true] as @p run function ult:spectate
 
-# Deal with invalid tags
-    tag @a[gamemode=spectator, tag=player] remove alive
-
 # Respawn
     # Count down respawn timers
     scoreboard players remove @a[tag=player, scores={respawn=1..}] respawn 1
@@ -27,7 +24,7 @@
     kill @e[type=arrow, nbt={inGround: true}]
 
 # Players may sometimes lose their items
-    execute as @a[tag=player, tag=alive] run function ult:spawn/items/lost
+    execute as @a[tag=alive] run function ult:spawn/items/lost
 
 # Map specific functions
     execute if score .map flag = flag.map.woodlands const run function ult:tick/map/woodlands
@@ -57,7 +54,7 @@
 # Damage indicators
     scoreboard players remove @e[tag=dmg_indicator] control 1
     kill @e[tag=dmg_indicator, scores={control=..0}]
-    execute as @a[tag=player, tag=alive, scores={damage_taken=1..}] run function ult:tech/damage_indicator
+    execute as @a[tag=alive, scores={damage_taken=1..}] run function ult:tech/damage_indicator
 
 # Check for player deaths
     execute as @a[sort=random, tag=player] run function ult:death/test
@@ -69,4 +66,4 @@
 
 # Handle death sources
     scoreboard players reset * death_cause
-    execute as @a[tag=player, tag=alive] at @s run function ult:death/source
+    execute as @a[tag=alive] at @s run function ult:death/source

@@ -3,4 +3,4 @@
 
 # Make all players unlearn this skill if they have it
     function ult:data/root
-    execute as @a[tag=player, tag=alive] if score @s event.skill = @e[limit=1, tag=root] event.skill run function ult:tick/map/last_stand/skill/remove
+    execute as @a[tag=alive] if score @s event.skill = @e[limit=1, tag=root] event.skill run function ult:tick/map/last_stand/skill/remove

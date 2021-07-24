@@ -13,7 +13,7 @@ function ult:data/player/get_nbt
     execute at @s run tag @p[tag=!root, scores={kill=1..}] add killer
     scoreboard players remove @a[tag=killer] kill 1
     # Notify them
-    execute as @a[tag=killer] at @s run playsound entity.player.levelup master @s
+    execute as @a[tag=killer] at @s run playsound entity.player.levelup master @s ~ ~ ~ 4
 
 # Death message
     # If there was a killer

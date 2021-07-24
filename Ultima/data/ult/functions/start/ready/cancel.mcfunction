@@ -4,5 +4,5 @@
     scoreboard players set .ready_timeout _var -1
 
 # Unready everyone
-    execute as @a[tag=player, tag=ready] at @s run playsound entity.villager.no master @s
+    execute as @a[tag=player, tag=ready] at @s run playsound entity.villager.no master @s ~ ~ ~ 4
     tag @a remove ready

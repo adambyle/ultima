@@ -1,6 +1,6 @@
 # Announce opt
     tellraw @a [{"selector": "@s", "color": "dark_green"}, " has opted in."]
-    execute at @s run playsound block.note_block.xylophone master @s
+    execute at @s run playsound block.note_block.xylophone master @s ~ ~ ~ 4
 
 # Opt in
     tag @s remove spectator

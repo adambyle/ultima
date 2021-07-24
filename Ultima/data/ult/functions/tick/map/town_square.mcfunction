@@ -1,6 +1,6 @@
 # Give players emeralds when the event timer reaches 0
     scoreboard players remove .map event 1
-    execute if score .map event matches ..0 run loot give @a[tag=player, tag=alive] loot ult:map_items/town_square/emerald
+    execute if score .map event matches ..0 run loot give @a[tag=alive] loot ult:map_items/town_square/emerald
     # Repeat every 2 seconds (40 ticks)
     execute if score .map event matches ..0 run scoreboard players set .map event 40
     # Also give emeralds when players deal damage to other players

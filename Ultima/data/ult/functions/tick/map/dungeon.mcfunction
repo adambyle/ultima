@@ -5,7 +5,7 @@
     execute if score .map event matches ..0 at @e[sort=random, limit=1, tag=dungeon_potion] run function ult:tick/map/dungeon/spawn_potion
 
 # Only fill the actual potion (and place the physical brewing stand) if there is a player nearby
-    execute at @e[tag=dungeon_potion] as @e[type=falling_block, distance=..2] if entity @a[tag=player, tag=player, tag=alive, scores={altitude=21}, distance=..5] run function ult:tick/map/dungeon/fill_potion
+    execute at @e[tag=dungeon_potion] as @e[type=falling_block, distance=..2] if entity @a[tag=player, tag=alive, scores={altitude=21}, distance=..5] run function ult:tick/map/dungeon/fill_potion
 
 # Prevent brewing stand griefing
     execute at @e[tag=dungeon_potion] if data block ~ ~ ~ Items[0] unless data block ~ ~ ~ Items[{Slot: 1b, tag: {Potion: "minecraft:strong_healing"}}] run data remove block ~ ~ ~ Items

@@ -5,10 +5,10 @@
     execute store result storage ult:temp Player.afkTime byte 1 run scoreboard players get .afk _var
 
 # Play a sound effect
-    execute if score .afk _var matches 0 at @s run playsound entity.player.hurt master @s
-    execute if score .afk _var matches 1 at @s run playsound entity.zombie.hurt master @s
-    execute if score .afk _var matches 2 at @s run playsound entity.skeleton.hurt master @s
-    execute if score .afk _var matches 3 at @s run playsound entity.wither_skeleton.hurt master @s
+    execute if score .afk _var matches 0 at @s run playsound entity.player.hurt master @s ~ ~ ~ 4
+    execute if score .afk _var matches 1 at @s run playsound entity.zombie.hurt master @s ~ ~ ~ 4
+    execute if score .afk _var matches 2 at @s run playsound entity.skeleton.hurt master @s ~ ~ ~ 4
+    execute if score .afk _var matches 3 at @s run playsound entity.wither_skeleton.hurt master @s ~ ~ ~ 4
 
 # Store data and apply changes to menu
     function ult:data/player/save_nbt

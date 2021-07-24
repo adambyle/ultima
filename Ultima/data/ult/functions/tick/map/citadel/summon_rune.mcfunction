@@ -10,4 +10,4 @@
     execute store result entity @e[tag=temp, limit=1] Item.tag.CitadelRune int 1 run scoreboard players get .map_rune _var
 
 particle poof 77 24 15 0 0 0 0.1 12 force
-playsound block.beacon.power_select master @a 77 23 15 16 2
+playsound block.beacon.power_select master @a[tag=watching] 77 23 15 4 2

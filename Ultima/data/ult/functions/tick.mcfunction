@@ -1,3 +1,8 @@
+# Use shorthand tags
+    tag @a remove watching
+    tag @a[tag=player] add watching
+    tag @a[tag=spectator, gamemode=spectator] add watching
+
 # Run respective functions for whether the game is running
     execute if score .game_state flag = flag.game_state.inactive const run function ult:tick/inactive
     execute if score .game_state flag = flag.game_state.active const run function ult:tick/active
@@ -79,7 +84,7 @@
     # Handle AFK timers
     execute as @a[tag=player, scores={afk=1..}] run function ult:tech/afk/handler
     # Show AFK warnings
-    execute as @a[tag=player, tag=alive] run function ult:tech/afk/warning
+    execute as @a[tag=alive] run function ult:tech/afk/warning
 
 # Send command feedback
     execute if score .debug_mode flag = flag.debug_mode.on const run gamerule sendCommandFeedback true
@@ -97,7 +102,7 @@
     execute as @a[scores={crouch=1..}] if score @s crouch_mode = crouch_mode.not_crouching const run scoreboard players operation @s crouch_mode = crouch_mode.crouch_pressed const
     scoreboard players set @a crouch 0
     # Set health displays
-    execute as @a[tag=player, tag=alive] if score @s health matches 0.. run scoreboard players operation @s health_display = @s health
+    execute as @a[tag=alive] if score @s health matches 0.. run scoreboard players operation @s health_display = @s health
 
 # Update player positions
     execute as @a run function ult:data/player/update_pos

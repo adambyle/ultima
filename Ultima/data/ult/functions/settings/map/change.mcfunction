@@ -1,5 +1,5 @@
 # Notify the players of the change
-    execute as @a at @s run playsound entity.item_frame.break master @s
+    execute as @a at @s run playsound entity.item_frame.break master @s ~ ~ ~ 4
     # Display new map in chat
     execute if score .map_mode flag = flag.map_mode.cycle const run tellraw @a [{"text": "Selected: ", "color": "dark_gray"}, {"text": "[Cycle Map]", "color": "light_purple"}]
     execute if score .map_mode flag = flag.map_mode.random const run tellraw @a [{"text": "Selected: ", "color": "dark_gray"}, {"text": "[Random Map]", "color": "dark_aqua"}]

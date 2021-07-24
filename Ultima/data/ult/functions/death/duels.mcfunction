@@ -5,7 +5,7 @@
     execute as @a[tag=killer, scores={death=1..}] run function ult:death/exit
 
 # If no player left living
-    execute unless entity @a[tag=player, tag=alive] run tellraw @a {"text": "Tie!", "color": "gold"}
+    execute unless entity @a[tag=alive] run tellraw @a {"text": "Tie!", "color": "gold"}
 
 # Otherwise
     execute if entity @a[tag=alive] run tellraw @a [{"selector": "@a[tag=killer]", "color": "green"}, {"text": " wins! ", "color": "green"}, {"text": "[Details]", "color": "dark_gray", "hoverEvent": {"action": "show_text", "contents": [{"selector": "@a[tag=alive]"}, {"text": " was at ", "color": "gray"}, {"score": {"name": "@r[tag=alive]", "objective": "health"}, "color": "dark_red"}, {"text": " HP.", "color": "dark_red"}]}}]

@@ -1,5 +1,5 @@
 # Test for ownership of a trident, and, if none exist, replace lost trident
-    execute as @a[tag=player, tag=alive] run function ult:tick/map/marooned/trident_ownership
+    execute as @a[tag=alive] run function ult:tick/map/marooned/trident_ownership
     loot give @a[scores={_var=0}, nbt=!{Inventory: [{id: "minecraft:trident"}]}] loot ult:map_items/marooned/trident
 
 # Prevent interacting with blocks
@@ -34,9 +34,9 @@
 
 # Dolphin charm
     # Mainhand
-    execute as @a[tag=player, tag=alive, nbt={SelectedItem: {id: "minecraft:heart_of_the_sea"}}] run function ult:tick/map/marooned/charm/apply
+    execute as @a[tag=alive, nbt={SelectedItem: {id: "minecraft:heart_of_the_sea"}}] run function ult:tick/map/marooned/charm/apply
     # Offhand
-    execute as @a[tag=player, tag=alive, nbt={Inventory: [{id: "minecraft:heart_of_the_sea", Slot: -106b}]}] run function ult:tick/map/marooned/charm/apply
+    execute as @a[tag=alive, nbt={Inventory: [{id: "minecraft:heart_of_the_sea", Slot: -106b}]}] run function ult:tick/map/marooned/charm/apply
     # Neither
     execute as @a[nbt=!{SelectedItem: {id: "minecraft:heart_of_the_sea"}}, nbt=!{Inventory: [{id: "minecraft:heart_of_the_sea", Slot: -106b}]}] run function ult:tick/map/marooned/charm/remove
 

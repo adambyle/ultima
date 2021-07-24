@@ -1,4 +1,4 @@
-execute at @s run playsound item.trident.thunder master @s ~ ~ ~ 32 2
+execute at @s run playsound item.trident.thunder master @s ~ ~ ~ 4 2
 
 # Reset attributes
     attribute @s generic.armor base set 3
