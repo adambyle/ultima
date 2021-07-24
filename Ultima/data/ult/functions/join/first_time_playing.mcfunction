@@ -1,5 +1,5 @@
 tag @s add played_ultima
 
-tellraw @s {"text": "== Welcome to Ultima! ==\n", "color": "gold", "bold": true}
-tellraw @s "Grab a couple friends and step on the pressure plate to start a game. If you don't want to play, you can 'Opt Out' in the ender chest. The game will walk you through all of its various mechanics as you play. Enjoy!\n"
-tellraw @s [{"text": "For a more in-depth explanation of the way Ultima works, check out the Wiki on ", "color": "gray"}, {"text": "GitHub.", "underlined": true, "clickEvent": {"action": "open_url", "value": "https://github.com/beegyfleeg/ultima/wiki"}}]
+tellraw @s {"text": "\n== Welcome to Ultima! ==\n", "color": "#43AA8B", "bold": true}
+tellraw @s {"text": "Grab a couple friends and step on the pressure plate to start a game. If you don't want to play, you can 'Opt Out' in the ender chest. Enjoy!\n", "color": "gray"}
+tellraw @s [{"text": "For a more in-depth explanation of the way Ultima works, see the lecterns in the lobby!\n", "color": "#577590"}]

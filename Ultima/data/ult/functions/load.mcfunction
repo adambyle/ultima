@@ -36,10 +36,10 @@
     scoreboard objectives add wins dummy
 
 # Modify scoreboard renders
-    scoreboard objectives modify wins displayname {"text": "Wins", "color": "dark_green"}
-    scoreboard objectives modify health_display displayname {"text": "HP", "color": "dark_red"}
+    scoreboard objectives modify wins displayname {"text": "Wins", "color": "#90BE6D"}
+    scoreboard objectives modify health_display displayname {"text": "HP", "color": "#F3722C"}
     scoreboard objectives modify health_display rendertype hearts
-    scoreboard objectives modify score displayname {"text": "Score", "color": "blue"}
+    scoreboard objectives modify score displayname {"text": "Score", "color": "#43AA8B"}
 
 # Set defaults for brand new worlds
     execute unless score .game_state flag matches 0.. run scoreboard players set .game_state flag 0
@@ -164,3 +164,25 @@
 
 # Prepare the world if nobody is online yet
     execute unless entity @a run function ult:load/first
+
+# Colors used in chat output:
+    # CHANNEL NAME: dark_gray
+    # GENERAL TEXT: gray
+    # PLAYER NAMES: white
+    # DEATH: #F94144
+    # FAILURE: #F3722C
+    # WARNING: #F8961E
+    # NOTICE: #F9C74F
+    # SUCCESS: #43AA8B
+    # VICTORY: #90BE6D
+    # IMPORTANT: #577590
+
+# Text channels:
+    # N: Notice
+    # D: Debug
+    # G: Game
+    # L: Lobby
+    # S: Settings
+    # {"text": "N: ", "color": "dark_gray"}, 
+
+# Do other "text" objects

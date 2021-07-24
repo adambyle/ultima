@@ -18,5 +18,5 @@
     item replace entity @s enderchest.6 from block 0 0 0 container.0
 
 # Set other icons
-    item replace entity @s enderchest.21 with structure_void{GUI: true, display: {Lore: ['{"text": "Click if you are not ready to play.", "color": "gray"}'], Name: '{"text": "Cancel", "color": "dark_aqua", "bold": true, "italic":false}'}}
-    item replace entity @s enderchest.23 with lava_bucket{GUI: true, display: {Lore: ['{"text": "Choose this to skip adding your vote to the pool.", "color": "gray"}'], Name: '{"text": "Don\'t Vote", "color": "red", "bold": true, "italic":false}'}}
+    item replace entity @s enderchest.21 with structure_void{GUI: true, display: {Lore: ['{"text": "Click if you are not ready to play.", "color": "gray"}'], Name: '{"text": "Cancel", "color": "#43AA8B", "bold": true, "italic": false}'}}
+    item replace entity @s enderchest.23 with lava_bucket{GUI: true, display: {Lore: ['{"text": "Choose this to skip adding your vote to the pool.", "color": "gray"}'], Name: '{"text": "Don\'t Vote", "color": "#F3722C", "bold": true, "italic": false}'}}

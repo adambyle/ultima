@@ -7,8 +7,8 @@
 
 title @a[tag=alive] reset
 title @a[tag=alive] times 0 13 2
-title @a[tag=alive, tag=hill_king] title {"text": "Beatdown Phase!", "color": "green"}
-title @a[tag=alive, tag=!hill_king] title {"text": "Beatdown Phase!", "color": "red"}
+title @a[tag=alive, tag=hill_king] title {"text": "Beatdown Phase!", "color": "#43AA8B"}
+title @a[tag=alive, tag=!hill_king] title {"text": "Beatdown Phase!", "color": "#F3722C"}
 
 execute as @a[tag=watching] at @s run playsound entity.ender_dragon.growl master @s ~ ~ ~ 4 1.4
 execute at @a[tag=hill_king] run particle flame ~ ~1 ~ 0 0 0 0.2 100

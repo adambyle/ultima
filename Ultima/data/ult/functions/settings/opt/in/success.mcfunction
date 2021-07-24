@@ -1,5 +1,5 @@
 # Announce opt
-    tellraw @a [{"selector": "@s", "color": "dark_green"}, " has opted in."]
+    tellraw @a [{"text": "L: ", "color": "dark_gray"}, {"selector": "@s", "color": "white"}, {"text": " has opted in.", "color": "#43AA8B"}]
     execute at @s run playsound block.note_block.xylophone master @s ~ ~ ~ 4
 
 # Opt in

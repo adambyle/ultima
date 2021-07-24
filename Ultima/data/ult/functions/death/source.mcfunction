@@ -23,6 +23,8 @@ function ult:data/root
     execute if score @s death_cause = death_cause.shot const if data entity @s ActiveEffects[{Id: 25b}] run scoreboard players operation @a[tag=root] death_cause = death_cause.shot_aerial const
     # Shot in citadel
     execute if score @s death_cause = death_cause.shot const if score .map flag = flag.map.citadel const run scoreboard players operation @a[tag=root] death_cause = death_cause.shot_hard const
+    # Shot by rocket
+    execute as @e[sort=nearest, limit=1, tag=!temp] if entity @s[type=firework_rocket, distance=..10] run scoreboard players operation @r[tag=root] death_cause = death_cause.rocket const
     # Exploded in wasteland or ancient mines
     execute if score @s death_cause = death_cause.harming_potion const if score .map flag = flag.map.wasteland const run scoreboard players operation @a[tag=root] death_cause = death_cause.exploded const
     execute if score @s death_cause = death_cause.harming_potion const if score .map flag = flag.map.ancient const run scoreboard players operation @a[tag=root] death_cause = death_cause.exploded const

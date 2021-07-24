@@ -24,11 +24,11 @@
     execute as @a[tag=alive] if score @s crouch_mode = crouch_mode.crouch_pressed const at @s at @e[tag=last_stand_skill, distance=..3] if block ~ ~-1 ~ lectern unless score @s event.skill = @e[sort=nearest, limit=1, tag=last_stand_skill] event.skill run function ult:tick/map/last_stand/skill/apply
 
 # Active skill hotbar display
-    execute as @a[tag=alive] if score @s event.skill = event.skill.none const run title @s actionbar [{"text": "Active skill: "}, {"text": "None", "color": "dark_red", "bold": true}]
-    execute as @a[tag=alive] if score @s event.skill = event.skill.flurry_rush const run title @s actionbar [{"text": "Active skill: "}, {"text": "Flurry Rush", "color": "blue", "bold": true}]
-    execute as @a[tag=alive] if score @s event.skill = event.skill.hot_pursuit const run title @s actionbar [{"text": "Active skill: "}, {"text": "Hot Pursuit", "color": "blue", "bold": true}]
-    execute as @a[tag=alive] if score @s event.skill = event.skill.combonatrix const run title @s actionbar [{"text": "Active skill: "}, {"text": "Combonatrix", "color": "blue", "bold": true}]
-    execute as @a[tag=alive] if score @s event.skill = event.skill.backstabbing const run title @s actionbar [{"text": "Active skill: "}, {"text": "Backstabbing", "color": "blue", "bold": true}]
+    execute as @a[tag=alive] if score @s event.skill = event.skill.none const run title @s actionbar [{"text": "Active skill: "}, {"text": "None", "color": "#F3722C", "bold": true}]
+    execute as @a[tag=alive] if score @s event.skill = event.skill.flurry_rush const run title @s actionbar [{"text": "Active skill: "}, {"text": "Flurry Rush", "color": "#577590", "bold": true}]
+    execute as @a[tag=alive] if score @s event.skill = event.skill.hot_pursuit const run title @s actionbar [{"text": "Active skill: "}, {"text": "Hot Pursuit", "color": "#577590", "bold": true}]
+    execute as @a[tag=alive] if score @s event.skill = event.skill.combonatrix const run title @s actionbar [{"text": "Active skill: "}, {"text": "Combonatrix", "color": "#577590", "bold": true}]
+    execute as @a[tag=alive] if score @s event.skill = event.skill.backstabbing const run title @s actionbar [{"text": "Active skill: "}, {"text": "Backstabbing", "color": "#577590", "bold": true}]
 
 # Skill specific functions
     # If damage was dealt, do flurry rush (flurry rush)

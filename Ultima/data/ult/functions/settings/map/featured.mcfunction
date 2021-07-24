@@ -26,7 +26,7 @@
     loot replace block 43 31 -12 container.24 loot ult:map_icon/coming_soon/featured
     loot replace block 43 31 -12 container.25 loot ult:map_icon/coming_soon/featured
     loot replace block 43 31 -12 container.26 loot ult:map_icon/coming_soon/featured
-    item replace block 43 31 -12 container.10 with structure_void{GUI: true, display: {Lore: ['{"text": "Back to Map Selection...", "color": "gray"}'], Name: '{"text": "Back", "color": "dark_aqua", "italic":false, "bold": true}'}}
+    item replace block 43 31 -12 container.10 with structure_void{GUI: true, display: {Lore: ['{"text": "Back to Map Selection...", "color": "gray"}'], Name: '{"text": "Back", "color": "#43AA8B", "italic": false, "bold": true}'}}
     # Mark selected item
     execute if score .map_mode flag = flag.map_mode.selected const if score .map flag = flag.map.reflection const run item modify block 43 31 -12 container.3 ult:tech/item_selected
     execute if score .map_mode flag = flag.map_mode.selected const if score .map flag = flag.map.dracula const run item modify block 43 31 -12 container.4 ult:tech/item_selected

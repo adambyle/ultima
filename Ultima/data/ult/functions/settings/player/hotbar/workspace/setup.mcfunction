@@ -32,6 +32,6 @@
     function ult:settings/player/hotbar/workspace/gray_out
 
 # Control icons
-    item replace entity @s enderchest.2 with emerald{GUI: true, display: {Name: '{"text": "Confirm", "color": "green", "bold": true, "italic": false}'}}
-    item replace entity @s enderchest.3 with structure_void{GUI: true, display: {Name: '{"text": "Back", "color": "dark_aqua", "bold": true, "italic": false}'}}
-    item replace entity @s enderchest.4 with lava_bucket{GUI: true, display: {Name: '{"text": "Reset Icons", "color": "red", "bold": true, "italic": false}'}}
+    item replace entity @s enderchest.2 with emerald{GUI: true, display: {Name: '{"text": "Confirm", "color": "#90BE6D", "bold": true, "italic": false}'}}
+    item replace entity @s enderchest.3 with structure_void{GUI: true, display: {Name: '{"text": "Back", "color": "#43AA8B", "bold": true, "italic": false}'}}
+    item replace entity @s enderchest.4 with lava_bucket{GUI: true, display: {Name: '{"text": "Reset Icons", "color": "#F94144", "bold": true, "italic": false}'}}

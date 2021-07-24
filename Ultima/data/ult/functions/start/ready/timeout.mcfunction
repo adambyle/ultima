@@ -8,5 +8,4 @@
     tag @a remove ready
 
 # Start the game
-    tellraw @a {"text": "The game is starting!", "color": "green"}
     function ult:start

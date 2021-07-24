@@ -13,6 +13,6 @@
     execute if score .debug_mode flag = flag.debug_mode.on const run scoreboard players set .valid _var 1
 
 # Start the game if everyone is ready; prepare to start if enough are
-execute if score .valid _var matches 1 unless score .starting_soon control matches 1 if entity @a[tag=player, tag=!ready] run tellraw @a {"text": "Enough players are ready! The game starts soon.", "color": "blue"}
+execute if score .valid _var matches 1 unless score .starting_soon control matches 1 if entity @a[tag=player, tag=!ready] run tellraw @a [{"text": "L: ", "color": "dark_gray"}, {"text": "Enough players are ready! The game starts soon.", "color": "#577590"}]
 scoreboard players operation .starting_soon control = .valid _var
 execute if score .valid _var matches 1 unless entity @a[tag=player, tag=!ready] run function ult:start/ready/timeout

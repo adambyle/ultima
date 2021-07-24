@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {"text": "???", "color": "dark_red", "bold": true}
+                            "name": {"text": "???", "color": "#F9C74F", "bold": true}
                         },
                         {
                             "function": "set_lore",

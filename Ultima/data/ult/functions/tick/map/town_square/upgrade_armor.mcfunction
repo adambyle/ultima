@@ -13,4 +13,4 @@ scoreboard players set .armor _var 0
     execute if score .armor _var matches 4 run function ult:tick/map/town_square/upgrade_armor/chestplate
 
 # If all fully upgraded
-    execute if score .armor _var matches 0 run title @s actionbar {"text": "Your armor is already fully upgraded!", "color": "red"}
+    execute if score .armor _var matches 0 run title @s actionbar {"text": "Your armor is already fully upgraded!", "color": "#F8961E"}

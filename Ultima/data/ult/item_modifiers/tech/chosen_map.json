@@ -2,7 +2,7 @@
     "function": "set_lore",
     "entity": "this",
     "lore": [
-        [{"text": "Selected: ", "color": "white", "italic": false}, {"storage": "ult:temp", "nbt": "Map", "color": "green", "italic": false}]
+        [{"text": "Selected: ", "color": "white", "italic": false}, {"storage": "ult:temp", "nbt": "Map", "color": "#90BE6D", "italic": false}]
     ],
     "replace": true
 }

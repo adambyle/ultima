@@ -1,7 +1,7 @@
 # Check for missing ender chest items and react accordingly
     # Terracotta: opt in/out
-    execute as @s[tag=player] unless data entity @s EnderItems[{id: "minecraft:lime_terracotta"}] run function ult:settings/opt/out
-    execute as @s[tag=spectator] unless data entity @s EnderItems[{id: "minecraft:gray_terracotta"}] run function ult:settings/opt/in
+    execute as @s[tag=player] unless data entity @s EnderItems[{id: "minecraft:oxidized_copper"}] run function ult:settings/opt/out
+    execute as @s[tag=spectator] unless data entity @s EnderItems[{id: "minecraft:polished_deepslate"}] run function ult:settings/opt/in
     # Swords: auto ready settings
     execute if data storage ult:temp Player{autoReady: 0b} unless data entity @s EnderItems[{id: "minecraft:stone_sword"}] run function ult:settings/player/auto_ready
     execute if data storage ult:temp Player{autoReady: 1b} unless data entity @s EnderItems[{id: "minecraft:golden_sword"}] run function ult:settings/player/auto_ready

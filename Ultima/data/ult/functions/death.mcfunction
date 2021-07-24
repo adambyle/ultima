@@ -27,6 +27,7 @@ function ult:data/player/get_nbt
     execute if score @s death_cause = death_cause.fire const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was cooked by"'
     execute if score @s death_cause = death_cause.lava const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was submerged in lava by"'
     execute if score @s death_cause = death_cause.shot_aerial const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was shot out of the sky by"'
+    execute if score @s death_cause = death_cause.rocket const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was snapped and crackled by"'
     # If there was no killer
     execute if score @s death_cause = death_cause.normal const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"died"'
     execute if score @s death_cause = death_cause.abyss_fall const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"leapt into the Abyss"'
@@ -38,6 +39,7 @@ function ult:data/player/get_nbt
     execute if score @s death_cause = death_cause.fire const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"couldn\'t take the heat"'
     execute if score @s death_cause = death_cause.lava const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"took too hot of a bath"'
     execute if score @s death_cause = death_cause.shot_aerial const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"had a skydiving accident"'
+    execute if score @s death_cause = death_cause.rocket const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"went out with a bang"'
     # Second portion of death message
     data modify storage ult:temp Death2 set value '""'
 

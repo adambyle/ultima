@@ -21,11 +21,8 @@
     execute as @e[tag=choose_map] run function ult:data/map/choose_map/count_vote
 
 # If anybody voted, determine the vote winner
-    scoreboard players set .count_votes _var 0
-    # Only announce votes if voting has occured
-    execute as @a if score @s vote matches -2147483648..2147483647 run scoreboard players set .count_votes _var 1
     # Proceed to announce and apply votes if on vote mode
-    execute if score .count_votes _var matches 1 if score .map_mode flag = flag.map_mode.vote const run function ult:data/map/choose_map/voting_done
+    execute if score .count_votes control matches 1 if score .map_mode flag = flag.map_mode.vote const run function ult:data/map/choose_map/voting_done
 
 # Clean up
     kill @e[tag=choose_map]

@@ -1,4 +1,5 @@
 # Have the game choose which map comes next
+    scoreboard players set .count_votes control 0
     function ult:data/map/choose_map
 
 # Generate markers for each map

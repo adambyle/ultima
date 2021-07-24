@@ -17,6 +17,6 @@
 # Use chestplate to show opt status
     execute as @a store result score @s _var run clear @s leather_chestplate 0
     item replace entity @a[tag=spectator, nbt=!{Inventory: [{id: "minecraft:leather_chestplate", Slot: 102b, tag: {display: {color: 3881787}}}]}] armor.chest with leather_chestplate{display: {color: 3881787}}
-    item replace entity @a[tag=player, tag=!ready, nbt=!{Inventory: [{id: "minecraft:leather_chestplate", Slot: 102b, tag: {display: {color: 1557856}}}]}] armor.chest with leather_chestplate{display: {color: 1557856}}
-    item replace entity @a[tag=player, tag=ready, nbt=!{Inventory: [{id: "minecraft:leather_chestplate", Slot: 102b, tag: {display: {color: 2040492}}}]}] armor.chest with leather_chestplate{display: {color: 2040492}}
+    item replace entity @a[tag=player, tag=!ready, nbt=!{Inventory: [{id: "minecraft:leather_chestplate", Slot: 102b, tag: {display: {color: 40559}}}]}] armor.chest with leather_chestplate{display: {color: 40559}}
+    item replace entity @a[tag=player, tag=ready, nbt=!{Inventory: [{id: "minecraft:leather_chestplate", Slot: 102b, tag: {display: {color: 3750526}}}]}] armor.chest with leather_chestplate{display: {color: 3750526}}
     clear @a[scores={_var=2..}] leather_chestplate

@@ -97,5 +97,6 @@
     execute as @e[tag=vote_station] at @s as @a[distance=..2] run function ult:settings/player/vote/exit
 
 # Debug
-    tellraw @a [{"text": "If you run into any bugs, report them "}, {"text": "on GitHub.", "underlined": true, "clickEvent": {"action": "open_url", "value": "https://github.com/beegyfleeg/ultima/issues"}}]
-    execute if score .debug_mode flag = flag.debug_mode.on const run tellraw @a[tag=operator] [{"text": "DEBUG MODE IS ON!\n", "color": "yellow"}, {"text": "Click to turn it off.", "underlined": true, "clickEvent": {"action": "run_command", "value": "/scoreboard players operation .debug_mode flag = flag.debug_mode.off const"}}]
+    tellraw @a ""
+    tellraw @a [{"text": "N: ", "color": "dark_gray"}, [{"text": "If you run into any bugs, report them ", "color": "#577590"}, {"text": "on GitHub.", "underlined": true, "clickEvent": {"action": "open_url", "value": "https://github.com/beegyfleeg/ultima/issues"}}]]
+    execute if score .debug_mode flag = flag.debug_mode.on const run tellraw @a[tag=operator] [{"text": "D: ", "color": "dark_gray"}, [{"text": "DEBUG MODE IS ON! ", "color": "#F9C74F"}, {"text": "Click to turn it off.", "underlined": true, "clickEvent": {"action": "run_command", "value": "/scoreboard players operation .debug_mode flag = flag.debug_mode.off const"}}]]

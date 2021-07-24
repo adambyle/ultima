@@ -13,9 +13,9 @@
     execute if score .phase event matches 2 unless entity @a[tag=hill_king, tag=alive] run function ult:tick/map/hill/phase/capture
 
 # Phase notification
-    execute if score .phase event matches 1 run title @a[tag=alive] actionbar {"text": "Fight for the center!", "color": "aqua"}
-    execute if score .phase event matches 2 run title @a[tag=hill_king, tag=alive] actionbar {"text": "Shoot your opponents!", "color": "green"}
-    execute if score .phase event matches 2 run title @a[tag=!hill_king, tag=alive] actionbar {"text": "Run from the King!", "color": "red"}
+    execute if score .phase event matches 1 run title @a[tag=alive] actionbar {"text": "Fight for the center!", "color": "#577590"}
+    execute if score .phase event matches 2 run title @a[tag=hill_king, tag=alive] actionbar {"text": "Shoot your opponents!", "color": "#43AA8B"}
+    execute if score .phase event matches 2 run title @a[tag=!hill_king, tag=alive] actionbar {"text": "Run from the King!", "color": "#F8961E"}
 
 # Give the king a particle effect
     execute at @a[tag=hill_king] run particle flame ~ ~1 ~ 0.5 0.5 0.5 0.2 1

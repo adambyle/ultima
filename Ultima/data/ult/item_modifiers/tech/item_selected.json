@@ -1,6 +1,6 @@
 {
     "function": "set_lore",
     "entity": "this",
-    "lore": [{"text": "Selected.", "color": "green", "italic": true}],
+    "lore": [{"text": "Selected.", "color": "#90BE6D", "italic": true}],
     "replace": true
 }

@@ -1,12 +1,12 @@
 # Notify the players of the change
     execute as @a at @s run playsound entity.item_frame.break master @s ~ ~ ~ 4
     # Display new map in chat
-    execute if score .map_mode flag = flag.map_mode.cycle const run tellraw @a [{"text": "Selected: ", "color": "dark_gray"}, {"text": "[Cycle Map]", "color": "light_purple"}]
-    execute if score .map_mode flag = flag.map_mode.random const run tellraw @a [{"text": "Selected: ", "color": "dark_gray"}, {"text": "[Random Map]", "color": "dark_aqua"}]
-    execute if score .map_mode flag = flag.map_mode.vote const run tellraw @a [{"text": "Selected: ", "color": "dark_gray"}, {"text": "[Vote Map]", "color": "dark_red"}]
+    execute if score .map_mode flag = flag.map_mode.cycle const run tellraw @a [{"text": "L: ", "color": "dark_gray"}, {"text": "Selected: ", "color": "#577590"}, {"text": "[Cycle Map]", "color": "#43AA8B"}]
+    execute if score .map_mode flag = flag.map_mode.random const run tellraw @a [{"text": "L: ", "color": "dark_gray"}, {"text": "Selected: ", "color": "#577590"}, {"text": "[Random Map]", "color": "#43AA8B"}]
+    execute if score .map_mode flag = flag.map_mode.vote const run tellraw @a [{"text": "L: ", "color": "dark_gray"}, {"text": "Selected: ", "color": "#577590"}, {"text": "[Vote Map]", "color": "#43AA8B"}]
     scoreboard players operation .temp_map _var = .map flag
     function ult:data/map/get_details
-    execute if score .map_mode flag = flag.map_mode.selected const run tellraw @a [{"text": "Selected: ", "color": "dark_gray"}, {"storage": "ult:temp", "nbt": "Map", "color": "gold"}]
+    execute if score .map_mode flag = flag.map_mode.selected const run tellraw @a [{"text": "L: ", "color": "dark_gray"}, {"text": "Selected: ", "color": "#577590"}, {"storage": "ult:temp", "nbt": "Map", "color": "gray"}]
 
 # Update the lobby display
     function ult:data/map/display
