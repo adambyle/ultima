@@ -1,6 +1,6 @@
 # Respawn players with no tether
     tag @a remove temp
-    execute if score .game_state flag = flag.game_state.active const as @a[tag=!alive, scores={tether=-1}] run tag @s add temp
+    execute if score .game_state flag = flag.game_state.active const as @a[tag=!alive, scores={tether=-1, respawn=-1}] run tag @s add temp
     # Only allow one respawn at a time
     execute as @r[tag=temp] run function ult:respawn
 

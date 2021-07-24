@@ -7,10 +7,7 @@ scoreboard players reset @s queue
 title @s actionbar ""
 
 # Announce respawn
-    execute unless score .game_mode flag = flag.game_mode.brawl const run tellraw @a [{"text": "G: ", "color": "dark_gray"}, {"selector": "@s", "color": "white"}, {"text": " will respawn.", "color": "#90BE6D"}]
-
-# Reset tether if royale mode
-    execute unless score .game_mode flag = flag.game_mode.royale const run scoreboard players set @s tether -1
+    execute unless score .game_mode flag = flag.game_mode.brawl const run tellraw @a [{"text": "G: ", "color": "dark_gray"}, {"selector": "@s", "color": "#90BE6D"}, {"text": " will respawn.", "color": "gray"}]
 
 # Reserve spot in arena
     function ult:spawn/assign_pn

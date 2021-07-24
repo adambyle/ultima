@@ -146,7 +146,7 @@
     team modify lobby friendlyFire false
     # For colored respawn marker villager outlines
     team add respawn_marker
-    team modify respawn_marker color dark_red
+    team modify respawn_marker color dark_aqua
 
 # Load chunks
     forceload remove all

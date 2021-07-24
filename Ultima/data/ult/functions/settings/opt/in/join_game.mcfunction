@@ -7,6 +7,8 @@
 # Queue to play
     scoreboard players reset @s queue
     function ult:spawn/assign_queue
+    scoreboard players set @s respawn -1
+    scoreboard players set @s tether -1
 
 # Tell player when they should expect to play
     execute if score .game_mode flag = flag.game_mode.brawl const if score .total_players control matches 5.. run tellraw @s [{"text": "S: ", "color": "dark_gray"}, {"text": "You will spawn where there is room in the arena! Just hang on.", "bold": false, "color": "#43AA8B"}]

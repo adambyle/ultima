@@ -17,6 +17,7 @@ execute unless score .game_mode flag = flag.game_mode.duels const run effect giv
     scoreboard players reset @s health
     scoreboard players set @s health_display 20
     scoreboard players set @s respawn -1
+    execute unless score .game_mode flag = flag.game_mode.brawl const run scoreboard players set @s tether -1
 
 # Teleport into the arena
     function ult:tp
