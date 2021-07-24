@@ -1,9 +1,9 @@
 function ult:data/root
-function ult:data/player/get_nbt
 
 # Special effects at player death position
     tag @e remove temp
     summon marker ~ ~ ~ {Tags: ["temp"]}
+    function ult:data/player/get_nbt
     data modify entity @e[limit=1, tag=temp] Pos set from storage ult:temp Player.Pos
     execute at @e[tag=temp] run function ult:death/fx
     kill @e[tag=temp]
@@ -42,6 +42,19 @@ function ult:data/player/get_nbt
     execute if score @s death_cause = death_cause.rocket const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"went out with a bang"'
     # Second portion of death message
     data modify storage ult:temp Death2 set value '""'
+
+# Update statistics
+    execute if entity @a[tag=killer] run scoreboard players remove @s death_cause 100
+    execute store result storage ult:temp DeathCause int 1 run scoreboard players get @s death_cause
+    # Update killer
+    execute as @a[tag=killer] run function ult:data/player/get_nbt
+    data modify storage ult:temp Player.Game.deaths append from storage ult:temp DeathCause
+    execute as @a[tag=killer] run function ult:data/player/save_nbt
+    # Update self
+    function ult:data/player/get_nbt
+    data modify storage ult:temp Player.Game.deaths append from storage ult:temp DeathCause
+    # Currently, simultaneous kills prevent stat changes
+    execute unless entity @a[tag=killer, tag=!alive] run function ult:data/player/save_nbt
 
 # Mode specifics
     tag @s remove alive

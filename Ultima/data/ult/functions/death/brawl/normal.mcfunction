@@ -10,6 +10,26 @@
     # Point loss cannot be greater than existing score
     scoreboard players operation .dec _var < @s score
 
+# Update stats
+    # Self
+    function ult:data/player/get_nbt
+    execute store result score .minus _var run data get storage ult:temp Player.Game.minus
+    execute store result storage ult:temp Player.Game.minus int 1 run scoreboard players operation .minus _var += .dec _var
+    execute store result score .freshdeaths _var run data get storage ult:temp Player.Game.freshdeaths
+    execute as @s[tag=fresh] store result storage ult:temp Player.Game.freshdeaths int 1 run scoreboard players add .freshdeaths _var 1
+    function ult:data/player/save_nbt
+    # Killer
+    execute as @a[tag=killer] run function ult:data/player/get_nbt
+    execute store result score .plus _var run data get storage ult:temp Player.Game.plus
+    execute store result storage ult:temp Player.Game.plus int 1 run scoreboard players operation .plus _var += .inc _var
+    execute store result score .normkills _var run data get storage ult:temp Player.Game.normkills
+    execute store result score .freshkills _var run data get storage ult:temp Player.Game.freshkills
+    execute store result score .revenge _var run data get storage ult:temp Player.Game.revenge
+    execute as @s[tag=!fresh] unless score @s pn = @r[tag=killer] tether store result storage ult:temp Player.Game.normkills int 1 run scoreboard players add .normkills _var 1
+    execute as @s[tag=fresh] store result storage ult:temp Player.Game.freshkills int 1 run scoreboard players add .freshkills _var 1
+    execute if score @s pn = @r[tag=killer] tether store result storage ult:temp Player.Game.revenge int 1 run scoreboard players add .revenge _var 1
+    execute as @a[tag=killer] run function ult:data/player/save_nbt
+
 function ult:data/root
 
 # Handle scores

@@ -25,6 +25,25 @@ The NBT field `ult:players` contains all essential player data for settings and 
                 byte optOut : boolean; spectate when opting out,
                 byte death : boolean; spectate when dying
             },
+            Games[] { a game
+                byte mode : enumerator for game mode,
+                byte players : number of players,
+                int map: map id,
+                byte win: boolean; whether the player won
+                int[] kills : array of death cause ids,
+                int[] deaths : array of death cause ids,
+                brawl { only found in brawl mode
+                    int plus,
+                    int minus,
+                    int normkills,
+                    int freshkills,
+                    int freshdeaths,
+                    int revenge
+                }
+            },
+            Game { active game
+                ... see above format
+            }
             int[] UUID : UUID of player
         },
         int[] Votes : the ids of the maps a player can choose from when voting
@@ -32,7 +51,11 @@ The NBT field `ult:players` contains all essential player data for settings and 
 
 ## Enumerators
 
-There are a few `byte` enumerators within this structure.
+There are a few enumerators within this structure.
+
+### `Players[].Games[].mode`
+
+See the `flag.game_mode` enumerator for the scoreboard.
 
 ### `Players[].afkTime`
 

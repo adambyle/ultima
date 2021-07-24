@@ -17,9 +17,16 @@
     execute if score .game_mode flag = flag.game_mode.duels const run function ult:start/mode/duels
     execute if score .game_mode flag matches 1..2 run function ult:start/mode/multi
 
-# Count the total players4
+# Count the total players
     scoreboard players set .total_players control 0
     execute as @a[tag=player] run scoreboard players add .total_players control 1
+
+# Setup game stats storage
+    data modify storage ult:players Players[].Game set value {win: 0b, kills: [], deaths: []}
+    execute if score .game_mode flag = flag.game_mode.brawl const run data modify storage ult:players Players[].Game.brawl set value {plus: 0, minus: 0, normkills: 0, freshkills: 0, freshdeaths: 0, revenge: 0}
+    execute store result storage ult:players Players[].Game.map int 1 run scoreboard players get .map flag
+    execute store result storage ult:players Players[].Game.players int 1 run scoreboard players get .total_players control
+    execute store result storage ult:players Players[].Game.mode int 1 run scoreboard players get .game_mode flag
 
 # Announce the map (in certain cases)
     scoreboard players operation .temp_map _var = .map flag
