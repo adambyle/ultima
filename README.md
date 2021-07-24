@@ -4,6 +4,12 @@ Ultima is a PvP minigame designed for from 2 to around 8 players. It offers fast
 
 You can play Ultima by downloading the map [here](https://github.com/beegyfleeg/ultima/releases/latest). It is free to play and distribute. You will need a server (and other players) to enjoy Ultima. If something seems to be going wrong, be sure to report the bug on the Issues page. Redownloading and installing the data pack (also in Releases), if you know how to do that, may solve the problem. You can always message me on Discord (`beegyfleeg#6616`) or Reddit ([`u/beegyfleeg`](https://www.reddit.com/user/beegyfleeg)) with any questions you have.
 
+**Some important details on each version**:
+
+- **v1.0.0 through v1.1.1** were not packaged properly, and their downloads will not work. I will not go back and provide functional downloads, in favor of newer versions.
+- **v1.1.2** is for **Java 1.16.5**
+- **v2.0.0** is in development for **Java 1.17.1**
+
 ## The Game Modes
 
 Ultima offers game modes for different sizes and playstyles of groups.
