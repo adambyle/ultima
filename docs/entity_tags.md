@@ -16,6 +16,7 @@ Tag|Purpose
 `ready`|Players who are ready to start the game.
 `root`|The entity that had context at the beginning of the function's execution.
 `spectator`|Players who do not wish to participate in a round.
+`watching`|Players who are either participating, or a spectator in spectator mode watching the game.
 `static`|Prevents entity deletion in some contexts. Items with this are not deleted every tick like they normally would.
 `text_display` / `text_display.*`|An armor stand used to display text.
 `temp`/ `temp*`|A very short-lived tag that should be cleared before every use.
