@@ -1,5 +1,6 @@
 # The killer is now worth 2 points
     tag @a[tag=killer] remove fresh
+    effect give @a[tag=killer] instant_health 1 1 true
 
 # If the killer is still alive...
     execute unless entity @a[tag=killer, scores={death=1..}] run function ult:death/brawl/normal

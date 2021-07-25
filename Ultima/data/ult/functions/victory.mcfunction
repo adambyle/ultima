@@ -7,6 +7,8 @@
 
 # Credit the winner(s)
     scoreboard players add @a[tag=alive] wins 1
+    execute as @a[tag=alive] run function ult:victory/winstat
+    execute as @a[tag=player] run function ult:victory/update_stat
 
 # No more players can die after victory
     scoreboard players reset * death
@@ -21,3 +23,6 @@
     execute at @a[tag=alive] run summon firework_rocket ~ ~4 ~ {FireworksItem: {Count: 1b, id: "firework_rocket", tag: {Fireworks: {Explosions: [{Colors: [I; 4312372], Flicker: false, Trail: false, Type: 0b}], Flight: 2b}}}, LifeTime: 5}
     execute at @a[tag=alive] run summon firework_rocket ~ ~4 ~ {FireworksItem: {Count: 1b, id: "firework_rocket", tag: {Fireworks: {Explosions: [{Colors: [I; 4312372], Flicker: false, Trail: false, Type: 0b}], Flight: 2b}}}, LifeTime: 10}
     execute at @a[tag=alive] run summon firework_rocket ~ ~4 ~ {FireworksItem: {Count: 1b, id: "firework_rocket", tag: {Fireworks: {Explosions: [{Colors: [I; 4312372], Flicker: false, Trail: false, Type: 0b}], Flight: 2b}}}, LifeTime: 15}
+
+##
+execute as @a run function ult:debug

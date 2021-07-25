@@ -44,7 +44,7 @@ function ult:data/root
     data modify storage ult:temp Death2 set value '""'
 
 # Update statistics
-    execute if entity @a[tag=killer] run scoreboard players remove @s death_cause 100
+    execute unless entity @a[tag=killer] run scoreboard players remove @s death_cause 100
     execute store result storage ult:temp DeathCause int 1 run scoreboard players get @s death_cause
     # Update killer
     execute as @a[tag=killer] run function ult:data/player/get_nbt

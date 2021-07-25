@@ -139,6 +139,9 @@
     scoreboard players set menu.hotbar_workspace const 12
     scoreboard players set menu.spectate const 20
     scoreboard players set menu.vote const 30
+    scoreboard players set menu.stats const 40
+    scoreboard players set menu.stats_map const 41
+    scoreboard players set menu.stats_display const 42
 
 # Prepare teams
     # For players in lobby

@@ -1,0 +1,2 @@
+vote map unready
+avanto potion disappear

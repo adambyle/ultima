@@ -5,3 +5,4 @@
     execute if score @s menu = menu.hotbar_workspace const run function ult:settings/player/hotbar/workspace/driver
     execute if score @s menu = menu.spectate const run function ult:settings/player/spectate/driver
     execute if score @s menu = menu.vote const run function ult:settings/player/vote/driver
+    execute if score @s menu = menu.stats const run function ult:settings/player/statistics/driver
