@@ -2,7 +2,7 @@
 
 ---
 
-## Release v2.0.0 -- *FILL IN*
+## Release v2.0.0 -- *COMING SOON*
 
 **General**:
 
@@ -31,7 +31,7 @@
 - Dungeon: Potion of Healing now appears almost immediately after game start, and time between refills decreased to 15s from 30s.
 - The Hill: NEW MAP by Jonathan Deiss!
 - Town Square: Iron Axe now costs 10 emeralds (was 12) and is now unenchanted (was Sharpness I). Splash Potion of Harming now costs 12 emeralds.
-- Wasteland: Another smoke bomb rework: smoke bombs first try to find a landing zone with no nearby players, and if that fails, that a random landing zone (except the nearest) is selected.
+- Wasteland: Another smoke bomb rework: smoke bombs first try to find a landing zone with no nearby players, and if that fails, then a random landing zone (except the nearest) is selected.
 
 **Bug fixes**:
 
