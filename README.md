@@ -16,22 +16,22 @@ Ultima offers game modes for different sizes and playstyles of groups.
 
 **Duels** 2+ players
 
-* A sequence of 1v1 battles between two players
-* When multiple players are present, players will take turns participating in the duel
-* Quick and seamless games, no delay times
+- A sequence of 1v1 battles between two players
+- When multiple players are present, players will take turns participating in the duel
+- Quick and seamless games, no delay times
 
 **Royale** 3 or 4 players
 
-* Last man standing wins
-* Similar to "Ultimate Tag", if the player who killed you gets killed themself, you get to respawn
-* Not very play-time friendly, but more strategic and organized
+- Last man standing wins
+- Similar to "Ultimate Tag", if the player who killed you gets killed themself, you get to respawn
+- Not very play-time friendly, but more strategic and organized
 
 **Brawl** 3+ players
 
-* First person to a certain score wins
-* Points are earned by defeating your opponents, you earn more or less points for different types of kills
-* You respawn whenever there is an open spot in the game (up to four players at once)
-* Very chaotic, but keeps as many players in the game having fun as possible
+- First person to a certain score wins
+- Points are earned by defeating your opponents, you earn more or less points for different types of kills
+- You respawn whenever there is an open spot in the game (up to four players at once)
+- Very chaotic, but keeps as many players in the game having fun as possible
 
 ## Content
 

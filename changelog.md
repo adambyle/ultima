@@ -17,7 +17,7 @@
 - Tutorials/explanations of the game modes and maps were added to lecterns in the lobby.
 - Removed "key points".
 - Player statistics can be viewed in the ender chest.
-- Added death messages for being shot in midair and being killed by a firework rocket.
+- Brawl mode revenge kills are now worth 2 (was 3)
 - Projectiles no longer reflect if they have a downward trajectory; now players can shoot their bow correctly in Avanto while being above the map ceiling.
 - Better spectator settings interface.
 
