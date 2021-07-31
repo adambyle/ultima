@@ -2,7 +2,7 @@
 
 ---
 
-## Release v2.0.0 -- *COMING SOON*
+## Release v2.0.0 -- *July 31, 2021*
 
 **General**:
 
