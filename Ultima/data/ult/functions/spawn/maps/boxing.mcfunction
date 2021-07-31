@@ -1,4 +1,4 @@
-function ult:data/player/get_nbt
+function ult:data/player/get
 
 item replace entity @s armor.head with leather_helmet{Unbreakable: true, display: {color: 16711680}}
 

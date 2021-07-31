@@ -1,4 +1,4 @@
-function ult:data/player/get_nbt
+function ult:data/player/get
 
 # Ready when not AFK
     execute if data storage ult:temp Player{autoReady: 1b} as @s[tag=!afk] unless score .map_mode flag = flag.map_mode.vote const run function ult:start/ready

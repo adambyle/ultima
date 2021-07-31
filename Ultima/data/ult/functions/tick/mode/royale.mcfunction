@@ -1,11 +1,11 @@
 # Respawn players with no tether
     tag @a remove temp
-    execute if score .game_state flag = flag.game_state.active const as @a[tag=!alive, scores={tether=-1, respawn=-1}] run tag @s add temp
+    execute if score .game_state flag = flag.game_state.active const as @a[tag=player, tag=!alive, scores={tether=-1, respawn=-1}] run tag @s add temp
     # Only allow one respawn at a time
     execute as @r[tag=temp] run function ult:respawn
 
 # Tell dead players who they're tethered to
-    execute as @a[tag=!alive] run function ult:tech/tether_notif
+    execute as @a[tag=player, tag=!alive] run function ult:tech/tether_notif
 
 # Tell the players who is in the lead
     execute as @a[tag=alive] run scoreboard players operation @s _var = @s score

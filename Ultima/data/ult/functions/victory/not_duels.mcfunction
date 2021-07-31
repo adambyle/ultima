@@ -6,5 +6,5 @@
     execute unless entity @a[tag=alive] run title @a title {"text": "Nobody wins!", "color": "#F3722C", "bold": true}
     execute unless entity @a[tag=alive] run tellraw @a [{"text": "G: ", "color": "dark_gray"}, {"text": "Nobody wins!", "color": "#F3722C", "bold": true}]
     execute as @a[tag=alive] at @s run playsound entity.wither.spawn master @s ~ ~ ~ 8
-    execute as @a[tag=!alive] at @s run playsound entity.wither.hurt master @s ~ ~ ~ 8
+    execute as @a[tag=player, tag=!alive] at @s run playsound entity.wither.hurt master @s ~ ~ ~ 8
     schedule function ult:reset 3s

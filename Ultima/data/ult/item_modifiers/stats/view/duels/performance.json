@@ -1,0 +1,9 @@
+{
+    "function": "set_lore",
+    "lore": [
+        [{"text": "Games played: ", "italic": false, "color": "gray"}, {"score": {"name": ".games", "objective": "_var"}, "color": "#F9C74F", "bold": true}],
+        [{"text": "Wins: ", "italic": false, "color": "gray"}, {"score": {"name": ".wins", "objective": "_var"}, "color": "#90BE6D", "bold": true}],
+        [{"text": "Winrate: ", "italic": false, "color": "#577590"}, [{"storage": "ult:temp", "nbt": "WR", "interpret": true, "color": "#43AA8B", "bold": true}, "%"]]
+    ],
+    "entity": "this"
+}

@@ -4,4 +4,4 @@
 
 # Test to keep going
     scoreboard players add .len _var 1
-    execute if score .len _var < .len control run function ult:data/nbt/splice/loop
+    execute if score .len _var < .len control if data storage ult:temp Array[0] run function ult:data/nbt/splice/loop

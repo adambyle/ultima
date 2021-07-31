@@ -1,0 +1,5 @@
+{
+    "function": "set_name",
+    "name": {"storage": "ult:temp", "nbt": "Decimal", "interpret": true},
+    "entity": "this"
+}

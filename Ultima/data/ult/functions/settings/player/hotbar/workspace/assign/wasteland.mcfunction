@@ -1,4 +1,4 @@
-function ult:data/player/get_nbt
+function ult:data/player/get
 
 execute store result score .slot _var run data get entity @s EnderItems[{id: "minecraft:wooden_sword"}].Slot
 function ult:settings/player/hotbar/workspace/assign
@@ -20,7 +20,7 @@ execute store result score .slot _var run data get entity @s EnderItems[{id: "mi
 function ult:settings/player/hotbar/workspace/assign
 execute store result storage ult:temp Player.Hotbar.wasteland.meat int 1.0 run scoreboard players get .slot _var
 
-function ult:data/player/save_nbt
+function ult:data/player/save
 
 tellraw @s [{"text": "S: ", "color": "dark_gray"}, {"text": "Saved your hotbar settings!", "color": "#43AA8B"}]
 execute at @s run playsound block.smithing_table.use master @s ~ ~ ~ 4

@@ -8,4 +8,4 @@
 
 # Continue looping while there are elements left
     data remove storage ult:temp Players[0]
-    execute unless data storage ult:temp Player if data storage ult:temp Players[0] run function ult:data/player/get_nbt/loop
+    execute unless data storage ult:temp Player if data storage ult:temp Players[0] run function ult:data/player/get/loop

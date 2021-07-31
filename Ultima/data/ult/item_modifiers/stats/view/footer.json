@@ -1,0 +1,9 @@
+{
+    "function": "set_lore",
+    "lore": [
+        "",
+        [{"text": "Mode: ", "color": "dark_gray", "italic": false}, {"storage": "ult:temp", "nbt": "Player.StatMenu.modeName", "color": "#577590", "italic": true}],
+        [{"text": "Map: ", "color": "dark_gray", "italic": false}, {"storage": "ult:temp", "nbt": "Player.StatMenu.mapName", "color": "#577590", "italic": true}]
+    ],
+    "entity": "this"
+}

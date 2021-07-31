@@ -1,4 +1,4 @@
-function ult:data/player/get_nbt
+function ult:data/player/get
 
 clear @s golden_apple
 execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.woodlands.gapple

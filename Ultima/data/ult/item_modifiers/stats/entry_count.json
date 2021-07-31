@@ -1,0 +1,8 @@
+{
+    "function": "minecraft:set_lore",
+    "lore": [
+        [{"score": {"name": ".entries", "objective": "_var"}, "color": "#F9C74F", "italic": false}, {"text": " recorded games"}],
+        [{"text": "Over past ", "color": "dark_gray", "italic": false}, {"score": {"name": ".sample", "objective": "_var"}}, {"text": " games "}, [{"text": "(", "color": "gray"}, {"score": {"name": ".num", "objective": "_var"}}, {"text": "%)"}]]
+    ],
+    "entity": "this"
+}

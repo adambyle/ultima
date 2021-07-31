@@ -1,4 +1,4 @@
-function ult:data/player/get_nbt
+function ult:data/player/get
 
 clear @s arrow
 execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.bathhouse.arrows

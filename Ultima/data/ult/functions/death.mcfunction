@@ -3,7 +3,7 @@ function ult:data/root
 # Special effects at player death position
     tag @e remove temp
     summon marker ~ ~ ~ {Tags: ["temp"]}
-    function ult:data/player/get_nbt
+    function ult:data/player/get
     data modify entity @e[limit=1, tag=temp] Pos set from storage ult:temp Player.Pos
     execute at @e[tag=temp] run function ult:death/fx
     kill @e[tag=temp]
@@ -18,28 +18,36 @@ function ult:data/root
 # Death message
     # If there was a killer
     execute if score @s death_cause = death_cause.normal const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was killed by"'
-    execute if score @s death_cause = death_cause.abyss_fall const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was knocked into the Abyss by"'
-    execute if score @s death_cause = death_cause.abyss_fished const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was fished into the Abyss by"'
+    execute if score @s death_cause = death_cause.abyss_fall const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was knocked into the abyss by"'
+    execute if score @s death_cause = death_cause.abyss_fished const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was fished into the abyss by"'
     execute if score @s death_cause = death_cause.shot const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was shot by"'
     execute if score @s death_cause = death_cause.harming_potion const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"got splashed by"'
     execute if score @s death_cause = death_cause.shot_hard const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"got pummeled by"'
-    execute if score @s death_cause = death_cause.exploded const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was blown to bits while fighting"'
+    execute if score @s death_cause = death_cause.exploded const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was blown to bits by"'
     execute if score @s death_cause = death_cause.fire const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was cooked by"'
     execute if score @s death_cause = death_cause.lava const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was submerged in lava by"'
     execute if score @s death_cause = death_cause.shot_aerial const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was shot out of the sky by"'
     execute if score @s death_cause = death_cause.rocket const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was snapped and crackled by"'
+    execute if score @s death_cause = death_cause.hill_pitfall const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was knocked off the hill by"'
+    execute if score @s death_cause = death_cause.hill_pitfall_king const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was overthrown by"'
+    execute if score @s death_cause = death_cause.hill_shot const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was royally executed by"'
+    execute if score @s death_cause = death_cause.glitch const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"found a way to forever escape"'
     # If there was no killer
     execute if score @s death_cause = death_cause.normal const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"died"'
-    execute if score @s death_cause = death_cause.abyss_fall const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"leapt into the Abyss"'
+    execute if score @s death_cause = death_cause.abyss_fall const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"leapt into the abyss"'
     execute if score @s death_cause = death_cause.abyss_fished const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"dove into the fishing hole"'
     execute if score @s death_cause = death_cause.shot const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"shot themself"'
     execute if score @s death_cause = death_cause.harming_potion const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"made a swift exit"'
     execute if score @s death_cause = death_cause.shot_hard const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"fired a bolt through their chest"'
-    execute if score @s death_cause = death_cause.exploded const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was blown to bits"'
+    execute if score @s death_cause = death_cause.exploded const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"blew themself to bits"'
     execute if score @s death_cause = death_cause.fire const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"couldn\'t take the heat"'
     execute if score @s death_cause = death_cause.lava const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"took too hot of a bath"'
     execute if score @s death_cause = death_cause.shot_aerial const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"had a skydiving accident"'
     execute if score @s death_cause = death_cause.rocket const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"went out with a bang"'
+    execute if score @s death_cause = death_cause.hill_pitfall const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"fell off the hill"'
+    execute if score @s death_cause = death_cause.hill_pitfall_king const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"fell down and broke their crown"'
+    execute if score @s death_cause = death_cause.hill_shot const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"took the royal crossbow and gave up the throne"'
+    execute if score @s death_cause = death_cause.glitch const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"tried to be clever"'
     # Second portion of death message
     data modify storage ult:temp Death2 set value '""'
 
@@ -47,14 +55,14 @@ function ult:data/root
     execute unless entity @a[tag=killer] run scoreboard players remove @s death_cause 100
     execute store result storage ult:temp DeathCause int 1 run scoreboard players get @s death_cause
     # Update killer
-    execute as @a[tag=killer] run function ult:data/player/get_nbt
-    data modify storage ult:temp Player.Game.deaths append from storage ult:temp DeathCause
-    execute as @a[tag=killer] run function ult:data/player/save_nbt
+    execute as @a[tag=killer] run function ult:data/player/get
+    data modify storage ult:temp Player.Game.kills append from storage ult:temp DeathCause
+    execute as @a[tag=killer] run function ult:data/player/save
     # Update self
-    function ult:data/player/get_nbt
+    function ult:data/player/get
     data modify storage ult:temp Player.Game.deaths append from storage ult:temp DeathCause
     # Currently, simultaneous kills prevent stat changes
-    execute unless entity @a[tag=killer, tag=!alive] run function ult:data/player/save_nbt
+    execute unless entity @a[tag=killer, tag=player, tag=!alive] run function ult:data/player/save
 
 # Mode specifics
     tag @s remove alive
@@ -73,7 +81,7 @@ function ult:data/root
 function ult:death/exit
 
 # Spectate or lobby
-    function ult:data/player/get_nbt
+    function ult:data/player/get
     execute store result score .spect_mode _var run data get storage ult:temp Player.Spectate.death
     function ult:exit
     

@@ -11,5 +11,5 @@
     execute if score .afk _var matches 3 at @s run playsound entity.wither_skeleton.hurt master @s ~ ~ ~ 4
 
 # Store data and apply changes to menu
-    function ult:data/player/save_nbt
+    function ult:data/player/save
     function ult:settings/player/main

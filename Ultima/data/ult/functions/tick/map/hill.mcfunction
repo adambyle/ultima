@@ -27,3 +27,9 @@
 
 # Players should take less damage even without armor
     effect give @a resistance 99999 2 true
+
+# Playes who are crouching will levitate
+    execute positioned 163 23 172 run effect give @a[scores={crouch=1.., altitude=..33}, tag=player, tag=alive, distance=..12] levitation 99999 0 true
+    execute positioned 163 23 172 run effect clear @a[distance=12.01..] levitation
+    execute as @a unless score @s crouch matches 1.. run effect clear @s levitation
+    effect clear @a[scores={altitude=34..}] levitation

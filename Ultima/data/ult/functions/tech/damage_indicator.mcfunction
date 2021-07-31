@@ -7,7 +7,7 @@
     scoreboard players operation .temp _var -= .health _var
 
 # Summon marker
-    function ult:data/player/get_nbt
+    function ult:data/player/get
     tag @e remove temp
     execute at @s rotated ~ 0 positioned ^ ^ ^1 run summon area_effect_cloud ~ ~1 ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["temp", "dmg_indicator"]}
     data modify entity @e[limit=1, tag=temp] Pos set from storage ult:temp Player.Pos

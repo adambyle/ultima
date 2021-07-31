@@ -2,6 +2,7 @@
     data modify storage ult:temp Object set from storage ult:temp Array[0]
     # Test for merge and append if matches
     function ult:data/nbt/subset
+    execute if score .subset control matches 0 run data modify storage ult:temp Rejects append from storage ult:temp Array[0]
     execute if score .subset control matches 1 run data modify storage ult:temp SubArray append from storage ult:temp Array[0]
     # Continue looping
     data remove storage ult:temp Array[0]

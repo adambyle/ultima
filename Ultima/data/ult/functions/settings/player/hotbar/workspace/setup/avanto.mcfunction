@@ -1,4 +1,4 @@
-function ult:data/player/get_nbt
+function ult:data/player/get
 clear @s #ult:map_items/avanto
 
 execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.avanto.sword
@@ -9,7 +9,7 @@ execute store result score .hotbar _var run data get storage ult:temp Player.Hot
 loot replace block 0 0 0 container.0 loot ult:map_items/avanto/bow
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.dracula.potion
+execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.avanto.potion
 loot replace block 0 0 0 container.0 loot ult:map_items/avanto/jump_pot
 function ult:settings/player/hotbar/workspace/hotbar_settings
 

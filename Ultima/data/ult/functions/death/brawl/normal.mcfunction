@@ -3,8 +3,6 @@
     scoreboard players set .inc _var 2
     # 1 if just spawned
     execute as @s[tag=fresh] run scoreboard players set .inc _var 1
-    # 3 if a vengeance kill
-    execute if score @s pn = @r[tag=killer] tether run scoreboard players set .inc _var 3
     # 1 point loss
     scoreboard players set .dec _var 1
     # Point loss cannot be greater than existing score
@@ -12,23 +10,23 @@
 
 # Update stats
     # Self
-    function ult:data/player/get_nbt
-    execute store result score .minus _var run data get storage ult:temp Player.Game.minus
-    execute store result storage ult:temp Player.Game.minus int 1 run scoreboard players operation .minus _var += .dec _var
-    execute store result score .freshdeaths _var run data get storage ult:temp Player.Game.freshdeaths
-    execute as @s[tag=fresh] store result storage ult:temp Player.Game.freshdeaths int 1 run scoreboard players add .freshdeaths _var 1
-    function ult:data/player/save_nbt
+    function ult:data/player/get
+    execute store result score .minus _var run data get storage ult:temp Player.Game.brawl.minus
+    execute store result storage ult:temp Player.Game.brawl.minus int 1 run scoreboard players operation .minus _var += .dec _var
+    execute store result score .freshdeaths _var run data get storage ult:temp Player.Game.brawl.freshdeaths
+    execute as @s[tag=fresh] store result storage ult:temp Player.Game.brawl.freshdeaths int 1 run scoreboard players add .freshdeaths _var 1
+    function ult:data/player/save
     # Killer
-    execute as @a[tag=killer] run function ult:data/player/get_nbt
-    execute store result score .plus _var run data get storage ult:temp Player.Game.plus
-    execute store result storage ult:temp Player.Game.plus int 1 run scoreboard players operation .plus _var += .inc _var
-    execute store result score .normkills _var run data get storage ult:temp Player.Game.normkills
-    execute store result score .freshkills _var run data get storage ult:temp Player.Game.freshkills
-    execute store result score .revenge _var run data get storage ult:temp Player.Game.revenge
-    execute as @s[tag=!fresh] unless score @s pn = @r[tag=killer] tether store result storage ult:temp Player.Game.normkills int 1 run scoreboard players add .normkills _var 1
-    execute as @s[tag=fresh] store result storage ult:temp Player.Game.freshkills int 1 run scoreboard players add .freshkills _var 1
-    execute if score @s pn = @r[tag=killer] tether store result storage ult:temp Player.Game.revenge int 1 run scoreboard players add .revenge _var 1
-    execute as @a[tag=killer] run function ult:data/player/save_nbt
+    execute as @a[tag=killer] run function ult:data/player/get
+    execute store result score .plus _var run data get storage ult:temp Player.Game.brawl.plus
+    execute store result storage ult:temp Player.Game.brawl.plus int 1 run scoreboard players operation .plus _var += .inc _var
+    execute store result score .normkills _var run data get storage ult:temp Player.Game.brawl.normkills
+    execute store result score .freshkills _var run data get storage ult:temp Player.Game.brawl.freshkills
+    execute store result score .revenge _var run data get storage ult:temp Player.Game.brawl.revenge
+    execute as @s[tag=!fresh] unless score @s pn = @r[tag=killer] tether store result storage ult:temp Player.Game.brawl.normkills int 1 run scoreboard players add .normkills _var 1
+    execute as @s[tag=fresh] store result storage ult:temp Player.Game.brawl.freshkills int 1 run scoreboard players add .freshkills _var 1
+    execute if score @s pn = @r[tag=killer] tether store result storage ult:temp Player.Game.brawl.revenge int 1 run scoreboard players add .revenge _var 1
+    execute as @a[tag=killer] run function ult:data/player/save
 
 function ult:data/root
 

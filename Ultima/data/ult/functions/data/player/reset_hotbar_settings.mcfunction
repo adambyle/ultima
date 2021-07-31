@@ -1,5 +1,0 @@
-function ult:data/player/get_nbt
-
-data modify storage ult:temp Player.Hotbar merge value {manor: {arrows: 10, axe: 1, bow: 3, crossbow: 2, potion: 8, shield: -1, sword: 0}, woodlands: {arrows: 10, bow: 1, gapple: 8, sword: 0}, dungeon: {axe: 0, frenzy_pot: 8, harm_pot: 6, shield: -1, stealth_pot: 7}, abyss: {arrows: 10, bow: 1, fishing_rod: 2, ingot: 7, potion: 2, sword: 0}, citadel: {arrows: 10, axe: 1, crossbow: 2, pearls: 8, shield: -1, sword: 0}, reflection: {crossbow: 1, pearls: 8, rocket: -1, sword: 0}, dracula: {arrows: 10, crossbow: 1, harm_pot: 7, sword: 0, weak_pot: 8}, avanto: {arrows: 10, bow: 1, potion: 8, sword: 0}, boxing: {potion: 8, powerball: 1}, wasteland: {arrows: 10, bomb: 2, crossbow: 1, meat: 8, sword: 0}, town_square: {axe: 1, bow: 2, shield: -1, sword: 0}, ancient: {axe: 0, fireball: 3, hoe: 1, ingot: -1, pickaxe: 2}, last_stand: {arrows: 10, axe: 1, bow: 2, cannonball: 7, potion: 8, shield: -1, sword: 0}, marooned: {arrows: -1, crossbow: 2, fish: 7, heart: 8, sword: 0, trident: 1}, hill: {}, bathhouse: {sword: 0, blocks: 1, shears: 2, bow: 3, arrows: 10}}
-
-function ult:data/player/save_nbt

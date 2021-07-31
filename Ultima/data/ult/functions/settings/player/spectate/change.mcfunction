@@ -1,4 +1,4 @@
-function ult:data/player/get_nbt
+function ult:data/player/get
 
 data modify storage ult:temp PlayerSpectate set from storage ult:temp Player.Spectate
 
@@ -11,5 +11,5 @@ execute if score .selected _var matches 3 if data storage ult:temp PlayerSpectat
 execute if score .selected _var matches 4 if data storage ult:temp PlayerSpectate{startGame: false} run data modify storage ult:temp Player.Spectate.startGame set value true
 execute if score .selected _var matches 4 if data storage ult:temp PlayerSpectate{startGame: true} run data modify storage ult:temp Player.Spectate.startGame set value false
 
-function ult:data/player/save_nbt
+function ult:data/player/save
 function ult:settings/player/spectate

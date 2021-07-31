@@ -1,6 +1,5 @@
 # Don't allow these players to leave and then join back into the game
     tag @a remove participating
-    tag @a[tag=player] add participating
 
 # Reset any remaining items/entities from the map (with continuous play)
     kill @e[type=item, tag=static]
@@ -17,6 +16,13 @@
     gamerule naturalRegeneration false
     gamerule fallDamage false
     gamerule drowningDamage false
+
+# Setup game stats storage
+    data modify storage ult:players Players[].Game set value {win: 0b, kills: [], deaths: []}
+    execute if score .game_mode flag = flag.game_mode.brawl const run data modify storage ult:players Players[].Game.brawl set value {plus: 0, minus: 0, normkills: 0, freshkills: 0, freshdeaths: 0, revenge: 0}
+    execute store result storage ult:players Players[].Game.map int 1 run scoreboard players get .map flag
+    execute store result storage ult:players Players[].Game.players int 1 run scoreboard players get .total_players control
+    execute store result storage ult:players Players[].Game.mode byte 1 run scoreboard players get .game_mode flag
 
 # Map specific start functions
     execute if score .map flag = flag.map.woodlands const run function ult:start/map/woodlands
@@ -39,3 +45,6 @@
     execute if score .game_mode flag = flag.game_mode.duels const run scoreboard objectives setdisplay sidebar health_display
     execute if score .game_mode flag = flag.game_mode.royale const run scoreboard objectives setdisplay sidebar score
     execute if score .game_mode flag = flag.game_mode.brawl const run scoreboard objectives setdisplay sidebar score
+
+# Duels opponent records
+    execute as @a[tag=alive] run function ult:start/opp_stat

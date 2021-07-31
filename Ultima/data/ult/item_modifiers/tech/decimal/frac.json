@@ -1,0 +1,5 @@
+{
+    "function": "set_name",
+    "name": {"score": {"name": ".num", "objective": "_var"}},
+    "entity": "this"
+}

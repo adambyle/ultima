@@ -1,4 +1,4 @@
-function ult:data/player/get_nbt
+function ult:data/player/get
 execute if score .map flag = flag.map.manor const run function ult:spawn/items/refills/manor
 execute if score .map flag = flag.map.woodlands const run function ult:spawn/items/refills/woodlands
 execute if score .map flag = flag.map.dungeon const run function ult:spawn/items/refills/dungeon

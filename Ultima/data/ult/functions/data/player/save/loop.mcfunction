@@ -11,4 +11,4 @@
 
 # Continue looping while there are elements left
     data remove storage ult:temp Players[0]
-    execute if data storage ult:temp Players[0] run function ult:data/player/save_nbt/loop
+    execute if data storage ult:temp Players[0] run function ult:data/player/save/loop

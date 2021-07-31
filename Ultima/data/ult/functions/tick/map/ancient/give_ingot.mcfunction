@@ -1,4 +1,4 @@
-function ult:data/player/get_nbt
+function ult:data/player/get
 
 execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.ancient.ingot
 execute if data entity @s Inventory[{id: "minecraft:netherite_ingot"}] run scoreboard players reset .hotbar _var

@@ -4,7 +4,7 @@
     # Change GUI flag
     scoreboard players operation @s menu = menu.spectate const
     # Get player data
-    function ult:data/player/get_nbt
+    function ult:data/player/get
     # Clear inventory of GUI items
     clear @s #ult:all{GUI: true}
 

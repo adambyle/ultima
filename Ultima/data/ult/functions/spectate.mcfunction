@@ -4,5 +4,4 @@
     function ult:tp
 
 # Give link to teleport back to lobby
-    function ult:settings/opt/prompt
-
+    execute as @s[tag=spectator] run function ult:settings/opt/prompt

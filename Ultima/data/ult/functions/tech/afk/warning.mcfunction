@@ -1,5 +1,5 @@
 # Get AFK settings and display warning based on setting and the AFK timer
-    function ult:data/player/get_nbt
+    function ult:data/player/get
     scoreboard players set .show_afk _var 0
     execute unless score .show_afk _var matches 1 store success score .show_afk _var if data storage ult:temp Player{afkTime: 0b} if score @s afk matches 100..
     execute unless score .show_afk _var matches 1 store success score .show_afk _var if data storage ult:temp Player{afkTime: 1b} if score @s afk matches 200..

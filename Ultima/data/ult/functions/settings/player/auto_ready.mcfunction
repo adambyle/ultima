@@ -10,5 +10,5 @@
     execute if score .auto_ready _var matches 2 at @s run playsound entity.player.attack.crit master @s ~ ~ ~ 4
 
 # Store data and apply changes to menu
-    function ult:data/player/save_nbt
+    function ult:data/player/save
     function ult:settings/player/main

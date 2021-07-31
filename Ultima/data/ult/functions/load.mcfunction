@@ -37,7 +37,7 @@
 
 # Modify scoreboard renders
     scoreboard objectives modify wins displayname {"text": "Wins", "color": "#90BE6D"}
-    scoreboard objectives modify health_display displayname {"text": "HP", "color": "#F3722C"}
+    scoreboard objectives modify health_display displayname {"text": "HP", "color": "#F94144"}
     scoreboard objectives modify health_display rendertype hearts
     scoreboard objectives modify score displayname {"text": "Score", "color": "#43AA8B"}
 
@@ -71,6 +71,10 @@
     scoreboard players set death_cause.lava const 8
     scoreboard players set death_cause.shot_aerial const 9
     scoreboard players set death_cause.rocket const 10
+    scoreboard players set death_cause.hill_pitfall const 11
+    scoreboard players set death_cause.hill_pitfall_king const 12
+    scoreboard players set death_cause.hill_shot const 13
+    scoreboard players set death_cause.glitch const 14
     # For `event.rune`
     scoreboard players set event.rune.none const 0
     scoreboard players set event.rune.health const 1
@@ -139,9 +143,10 @@
     scoreboard players set menu.hotbar_workspace const 12
     scoreboard players set menu.spectate const 20
     scoreboard players set menu.vote const 30
-    scoreboard players set menu.stats const 40
-    scoreboard players set menu.stats_map const 41
-    scoreboard players set menu.stats_display const 42
+    scoreboard players set menu.statistics const 40
+    scoreboard players set menu.statistics_default const 41
+    scoreboard players set menu.statistics_featured const 42
+    scoreboard players set menu.statistics_display const 43
 
 # Prepare teams
     # For players in lobby

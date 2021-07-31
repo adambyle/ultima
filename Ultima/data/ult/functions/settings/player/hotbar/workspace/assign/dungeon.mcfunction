@@ -1,4 +1,4 @@
-function ult:data/player/get_nbt
+function ult:data/player/get
 
 execute store result score .slot _var run data get entity @s EnderItems[{id: "minecraft:stone_axe"}].Slot
 function ult:settings/player/hotbar/workspace/assign
@@ -10,7 +10,7 @@ execute store result storage ult:temp Player.Hotbar.dungeon.shield int 1.0 run s
 
 execute store result score .slot _var run data get entity @s EnderItems[{id: "minecraft:splash_potion"}].Slot
 function ult:settings/player/hotbar/workspace/assign
-execute store result storage ult:temp Player.Hotbar.dungeon.harm int 1.0 run scoreboard players get .slot _var
+execute store result storage ult:temp Player.Hotbar.dungeon.harm_pot int 1.0 run scoreboard players get .slot _var
 
 execute store result score .slot _var run data get entity @s EnderItems[{id: "minecraft:potion", tag: {CustomPotionEffects: [{Id: 1b}]}}].Slot
 function ult:settings/player/hotbar/workspace/assign
@@ -20,7 +20,7 @@ execute store result score .slot _var run data get entity @s EnderItems[{id: "mi
 function ult:settings/player/hotbar/workspace/assign
 execute store result storage ult:temp Player.Hotbar.dungeon.frenzy_pot int 1.0 run scoreboard players get .slot _var
 
-function ult:data/player/save_nbt
+function ult:data/player/save
 
 tellraw @s [{"text": "S: ", "color": "dark_gray"}, {"text": "Saved your hotbar settings!", "color": "#43AA8B"}]
 execute at @s run playsound block.smithing_table.use master @s ~ ~ ~ 4

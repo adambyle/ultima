@@ -1,4 +1,4 @@
-function ult:data/player/get_nbt
+function ult:data/player/get
 clear @s #ult:map_items/last_stand
 
 execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.sword

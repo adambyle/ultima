@@ -10,6 +10,7 @@
     execute if score .temp_map _var = flag.map.bathhouse const run data modify storage ult:temp Author set value "Jonathan Deiss"
 
 # Get the map name
+    execute if score .temp_map _var = flag.map.none const run data modify storage ult:temp Map set value "All Maps"
     execute if score .temp_map _var = flag.map.manor const run data modify storage ult:temp Map set value "Manor"
     execute if score .temp_map _var = flag.map.woodlands const run data modify storage ult:temp Map set value "Woodlands"
     execute if score .temp_map _var = flag.map.dungeon const run data modify storage ult:temp Map set value "Dungeon"

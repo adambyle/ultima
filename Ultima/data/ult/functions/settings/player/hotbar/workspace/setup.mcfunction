@@ -5,7 +5,7 @@
     clear @s #ult:map_items/all
 
 # Set up items
-    function ult:data/player/get_nbt
+    function ult:data/player/get
     execute if score @s hotbar_map = flag.map.manor const run function ult:settings/player/hotbar/workspace/setup/manor
     execute if score @s hotbar_map = flag.map.woodlands const run function ult:settings/player/hotbar/workspace/setup/woodlands
     execute if score @s hotbar_map = flag.map.dungeon const run function ult:settings/player/hotbar/workspace/setup/dungeon

@@ -42,3 +42,9 @@ function ult:data/root
 # Reset everybody's wins
     scoreboard players reset * wins
     scoreboard players set @a wins 0
+
+# Update name
+    function ult:data/player/get
+    item modify block 0 0 0 container.0 ult:tech/name
+    data modify storage ult:temp Player.Name set from block 0 0 0 Items[0].tag.display.Name
+    function ult:data/player/save
