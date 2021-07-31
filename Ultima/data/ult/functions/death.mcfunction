@@ -94,4 +94,4 @@ function ult:death/exit
     scoreboard players set .temp_pn _var 0
     execute as @a[tag=player] run scoreboard players add .temp_pn _var 1
     scoreboard players remove .temp_pn _var 1
-    execute if score .game_mode flag = flag.game_mode.royale const as @a[tag=killer] if score @s score >= .temp_pn _var run function ult:victory
+    execute if score .game_mode flag = flag.game_mode.royale const as @a[tag=player, tag=alive] if score @s score >= .temp_pn _var run function ult:victory

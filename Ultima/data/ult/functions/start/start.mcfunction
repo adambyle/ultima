@@ -1,6 +1,3 @@
-# Give the players a way to leave the game
-    execute as @a[tag=alive, tag=player] run function ult:settings/opt/prompt
-
 # Round-specific commands
     function ult:start/round
 

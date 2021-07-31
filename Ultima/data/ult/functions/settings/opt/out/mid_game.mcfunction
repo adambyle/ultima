@@ -9,4 +9,4 @@
 # Spectate or lobby
     function ult:data/player/get
     execute store result score .spect_mode _var run data get storage ult:temp Player.Spectate.optOut
-    execute unless score @s online matches 1 run function ult:exit
+    function ult:exit

@@ -1,7 +1,7 @@
 # Standard game-start setup
     scoreboard players operation .game_state flag = flag.game_state.active const
     function ult:start/round
-
+    
 # The winning player spawns again
     execute as @a[tag=alive] run function ult:spawn
 

@@ -1,3 +1,6 @@
+# Give the players a way to leave the game
+    execute as @a[tag=player] run function ult:settings/opt/prompt
+
 # Don't allow these players to leave and then join back into the game
     tag @a remove participating
 
