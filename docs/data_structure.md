@@ -39,12 +39,20 @@ The NBT field `ult:players` contains all essential player data for settings and 
                     int freshkills,
                     int freshdeaths,
                     int revenge
-                }
+                },
+                int[] Opponent : UUID of opponent in duels mode
             },
             Game { active game
                 ... see above format
             }
-            int[] UUID : UUID of player
+            int[] UUID : UUID of player,
+            string Name : JSON text component for the player,
+            StatMenu {
+                byte timespan : enumerator for the timespan to report stats on,
+                byte mode : game mode id,
+                int map : map id (see flag.map scoreboard enumerator),
+                string mapName : name of the map id
+            }
         },
         int[] Votes : the ids of the maps a player can choose from when voting
     }
@@ -56,6 +64,20 @@ There are a few enumerators within this structure.
 ### `Players[].Games[].mode`
 
 See the `flag.game_mode` enumerator for the scoreboard.
+
+### `Players[].StatMenu.timespan`
+
+    0: past 20 games
+    1: past 100 games
+    2: past 500 games
+
+### `Players[].StatMenu.mode`
+
+    0: combined
+    1: duels
+    2: group combined
+    3: royale
+    4: brawl
 
 ### `Players[].afkTime`
 

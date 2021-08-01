@@ -42,7 +42,6 @@ Declaration|Criterion|Description
 `rotation`|`dummy`|Equal to the player's horizontal rotation.
 `score`|`dummy`|Player score.
 `tether`|`dummy`|Equal to the player id of the player who killed you.
-`timer`|`dummy`|Parkour timer.
 `vote`|`dummy`|Tracks the map votes for each player.
 `wins`|`dummy`|Tracks number of games won for each player.
 
@@ -90,6 +89,10 @@ This is a list of easy access constant flags that act as a kind of enumerator to
     8: lava
     9: shot_aerial
     10: rocket
+    11: hill_pitfall
+    12: hill_pitfall_king
+    13: hill_shot
+    14: glitch
 
 ### `event.rune`
 
@@ -120,6 +123,7 @@ This is a list of easy access constant flags that act as a kind of enumerator to
 
 ### `flag.map`
 
+    -1: none
     0: manor
     1: woodlands
     2: dungeon
@@ -143,7 +147,6 @@ This is a list of easy access constant flags that act as a kind of enumerator to
     53: marooned
     54: hill
     55: bathhouse
-    96: ultimate
 
 ### `flag.map_menu`
 
@@ -172,3 +175,7 @@ This is a list of easy access constant flags that act as a kind of enumerator to
     12: hotbar_workspace
     20: spectate
     30: vote
+    40: statistics
+    41: statistics_default
+    42: statistics_featured
+    43: statistics_display
