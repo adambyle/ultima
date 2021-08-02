@@ -9,3 +9,4 @@
     execute if score @s menu = menu.statistics_display const run function ult:settings/player/statistics/view/driver
     execute if score @s menu = menu.statistics_default const run function ult:settings/player/statistics/default/driver
     execute if score @s menu = menu.statistics_featured const run function ult:settings/player/statistics/featured/driver
+    execute if score @s menu = menu.chat const run function ult:settings/player/chat/driver

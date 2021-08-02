@@ -147,6 +147,7 @@
     scoreboard players set menu.statistics_default const 41
     scoreboard players set menu.statistics_featured const 42
     scoreboard players set menu.statistics_display const 43
+    scoreboard players set menu.chat const 50
 
 # Prepare teams
     # For players in lobby

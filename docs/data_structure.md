@@ -44,15 +44,21 @@ The NBT field `ult:players` contains all essential player data for settings and 
             },
             Game { active game
                 ... see above format
-            }
-            int[] UUID : UUID of player,
+            },
             string Name : JSON text component for the player,
             StatMenu {
                 byte timespan : enumerator for the timespan to report stats on,
                 byte mode : game mode id,
                 int map : map id (see flag.map scoreboard enumerator),
                 string mapName : name of the map id
-            }
+            },
+            Chat {
+                byte pronouns : enumerator for player's chat pronouns,
+                channel {
+                    byte game
+                }
+            },
+            int[] UUID : UUID of player
         },
         int[] Votes : the ids of the maps a player can choose from when voting
     }
@@ -60,6 +66,18 @@ The NBT field `ult:players` contains all essential player data for settings and 
 ## Enumerators
 
 There are a few enumerators within this structure.
+
+### `Players[].Chat.pronouns`
+
+    0: They/Them
+    1: He/Him
+    2: She/Her
+
+### `Players[].Chat.channel.*`
+
+    0: shown
+    1: simplified
+    2: hidden
 
 ### `Players[].Games[].mode`
 

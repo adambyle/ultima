@@ -1,7 +1,7 @@
 # Get the value from player data, increment, and store
     execute store result score .auto_ready _var run data get storage ult:temp Player.skipVote
     scoreboard players add .auto_ready _var 1
-    execute if score .auto_ready _var matches 3.. run scoreboard players set .auto_ready _var 0
+    execute if score .skip_vote _var matches 3.. run scoreboard players set .auto_ready _var 0
     execute store result storage ult:temp Player.skipVote byte 1 run scoreboard players get .auto_ready _var
 
 # Play a sound effect
