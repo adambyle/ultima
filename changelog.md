@@ -16,6 +16,21 @@
 - Vote Map is now compatible with Continuous Play, and, by extension, Duels mode.
 - Extra players are no longer opted out in Royale mode, and will instead just sit out that one game (but remain opted in for next game).
 
+**Maps**:
+
+- Dungeon: Potion of Resilience now gives Resistance IV (was Resistance III)
+- Marooned: Sword is now Sharpness V (was Sharpness IV)
+
+**Bug Fixes**:
+
+- FIXED: Obnoxious noises in the Marooned map.
+- FIXED: Last Stand's Backstabbing skill's strength criterion is broken.
+- FIXED: Reflection's rockets reflect with odd roatations.
+- FIXED: The game thinks the player died to fire unusually often.
+- FIXED: The game runs too many commands per tick when retrieiving large samples of statistics.
+- FIXED: Players upgrading/equipping tools/armor can be heard from anywhere in the arena.
+- FIXED: The Performance statistics panel cannot be seen on larger GUIs.
+
 ---
 
 ## Release v2.0.0 -- *July 31, 2021*
