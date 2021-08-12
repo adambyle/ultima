@@ -2,6 +2,22 @@
 
 ---
 
+## Release v2.1.0 -- *August 11, 2021*
+
+**General**:
+
+- New chat settings:
+  - Players can choose their preferred pronouns.
+  - Chat output has been divided into channels.
+  - Players can reduce or omit certain channels to reduce chat clutter.
+- New "Continuous Play" game option:
+  - A new game starts immediately after the previous one.
+  - This feature was ported from Duels to other game modes.
+- Vote Map is now compatible with Continuous Play, and, by extension, Duels mode.
+- Extra players are no longer opted out in Royale mode, and will instead just sit out that one game (but remain opted in for next game).
+
+---
+
 ## Release v2.0.0 -- *July 31, 2021*
 
 **General**:

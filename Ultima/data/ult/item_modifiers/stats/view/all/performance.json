@@ -12,7 +12,8 @@
         {"text": "    When you win a game, this goes up", "color": "dark_gray", "italic": false},
         {"text": "    by the number of other players.", "color": "dark_gray", "italic": false},
         [{"text": "Performance Score: ", "italic": false, "color": "#577590"}, [{"storage": "ult:temp", "nbt": "PS", "interpret": true, "color": "#43AA8B", "bold": true}, "%"]],
-        {"text": "    Equal to (players defeated / (players defeated + losses))", "color": "dark_gray", "italic": false},
+        {"text": "    Equal to players defeated", "color": "dark_gray", "italic": false},
+        {"text": "    / (players defeated + losses)", "color": "dark_gray", "italic": false},
         [{"text": "Kills: ", "italic": false, "color": "gray"}, {"score": {"name": ".kills", "objective": "_var"}, "color": "#90BE6D", "bold": true}],
         [{"text": "Deaths: ", "italic": false, "color": "gray"}, {"score": {"name": ".deaths", "objective": "_var"}, "color": "#F94144", "bold": true}],
         [{"text": "Kill-death Ratio: ", "italic": false, "color": "gray"}, {"storage": "ult:temp", "nbt": "KDR", "interpret": true, "color": "#43AA8B", "bold": true}]

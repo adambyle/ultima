@@ -1,3 +1,5 @@
+gamerule maxCommandChainLength 2000000
+
 # Clear schedules
     schedule clear ult:reset
     schedule clear ult:start/start

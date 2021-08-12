@@ -163,7 +163,10 @@
 
 # Load chunks
     forceload remove all
-    forceload add 0 -30 230 200
+    forceload add -128 -128 127 127
+    forceload add 128 -128 383 127
+    forceload add -128 128 127 383
+    forceload add 128 128 383 383
 
 # Prepare bossbar
     bossbar add ult:game_start ""

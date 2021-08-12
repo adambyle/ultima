@@ -11,6 +11,12 @@ function ult:data/root
 # Determine cause
     # Default
     scoreboard players operation @s death_cause = death_cause.normal const
+    # Died while on fire
+    execute store result score .fire _var run data get entity @s Fire
+    execute if score .fire _var matches 1.. run scoreboard players operation @s death_cause = death_cause.fire const
+    execute at @s if block ~ ~ ~ #fire run scoreboard players operation @s death_cause = death_cause.fire const
+    # Died in lava
+    execute at @s if block ~ ~ ~ lava run scoreboard players operation @s death_cause = death_cause.lava const
     # Fall in abyss
     execute if score .map flag = flag.map.abyss const if score @s altitude matches ..12 run scoreboard players operation @s death_cause = death_cause.abyss_fall const
     # Fall in the hill
@@ -33,11 +39,5 @@ function ult:data/root
     # Exploded in wasteland or ancient mines
     execute if score @s death_cause = death_cause.harming_potion const if score .map flag = flag.map.wasteland const run scoreboard players operation @a[tag=root] death_cause = death_cause.exploded const
     execute if score @s death_cause = death_cause.harming_potion const if score .map flag = flag.map.ancient const run scoreboard players operation @a[tag=root] death_cause = death_cause.exploded const
-    # Died while on fire
-    execute store result score .fire _var run data get entity @s Fire
-    execute if score .fire _var matches 1.. run scoreboard players operation @s death_cause = death_cause.fire const
-    execute at @s if block ~ ~ ~ #fire run scoreboard players operation @s death_cause = death_cause.fire const
-    # Died in lava
-    execute at @s if block ~ ~ ~ lava run scoreboard players operation @s death_cause = death_cause.lava const
     # Fell in the void
     execute if score @s altitude matches ..0 run scoreboard players operation @s death_cause = death_cause.glitch const

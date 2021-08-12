@@ -4,5 +4,5 @@ execute store result score .hotbar _var run data get storage ult:temp Player.Hot
 loot replace block 0 0 0 container.0 loot ult:map_items/ancient/netherite_pickaxe
 function ult:items/give
 
-execute at @s run playsound block.smithing_table.use master @s ~ ~ ~ 4
+execute at @s run playsound block.smithing_table.use master @s ~ ~ ~
 title @s actionbar {"text": "Upgraded your pickaxe!"}
