@@ -40,4 +40,4 @@ function ult:data/root
     # Died in lava
     execute at @s if block ~ ~ ~ lava run scoreboard players operation @s death_cause = death_cause.lava const
     # Fell in the void
-    execute if score @s altitude matches ..10 unless score .map flag = flag.map.woodlands const run scoreboard players operation @s death_cause = death_cause.glitch const
+    execute if score @s altitude matches ..0 run scoreboard players operation @s death_cause = death_cause.glitch const

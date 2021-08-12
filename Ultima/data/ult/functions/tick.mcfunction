@@ -6,7 +6,7 @@
 # Run respective functions for whether the game is running
     execute if score .game_state flag = flag.game_state.inactive const run function ult:tick/inactive
     execute if score .game_state flag = flag.game_state.active const run function ult:tick/active
-
+    execute if score .game_state flag = flag.game_state.voting const unless entity @a[tag=voting, tag=!ready] run function ult:start/continuous/vote_finished
 # Manage player menus
     execute as @a run function ult:settings/player/driver
     
@@ -61,6 +61,8 @@
     execute as @a[gamemode=spectator] if score @s action = action.tp_lobby const run function ult:lobby
     # Players can unready
     execute if score .game_state flag = flag.game_state.inactive const as @a[tag=player, tag=ready] if score @s action = action.unready const run function ult:start/ready/unready
+    # Reset game
+    execute unless score .game_state flag = flag.game_state.inactive const as @a if score @s action = action.reset const run function ult:reset
     # Reset and enable action triggers
     scoreboard players reset * action
     scoreboard players enable @a action

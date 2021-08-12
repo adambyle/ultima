@@ -47,6 +47,8 @@
     execute unless score .map_menu flag matches 0.. run scoreboard players set .map_menu flag 0
     execute unless score .map_mode flag matches 0.. run scoreboard players set .map_mode flag 0
     execute unless score .game_mode flag matches 0.. run scoreboard players set .game_mode flag 0
+    execute unless score .continuous flag matches 0.. run setblock 42 31 -3 lever[powered=false, face=wall, facing=north]
+    execute unless score .continuous flag matches 0.. run scoreboard players set .continuous flag 0
 
 # Set constant enumerators
     # For `action`
@@ -55,6 +57,7 @@
     scoreboard players set action.opt_out const 2
     scoreboard players set action.tp_lobby const 3
     scoreboard players set action.unready const 4
+    scoreboard players set action.reset const 8
     # For `crouch_mode`
     scoreboard players set crouch_mode.not_crouching const 0
     scoreboard players set crouch_mode.crouch_pressed const 1
@@ -94,6 +97,7 @@
     scoreboard players set flag.game_state.inactive const 0
     scoreboard players set flag.game_state.active const 1
     scoreboard players set flag.game_state.transition const 2
+    scoreboard players set flag.game_state.voting const 3
     # For `.map flag` and `hotbar_map`
     scoreboard players set flag.map.none const -1
     scoreboard players set flag.map.manor const 0
@@ -187,11 +191,7 @@
     # IMPORTANT: #577590
 
 # Text channels:
-    # N: Notice
     # D: Debug
     # G: Game
     # L: Lobby
     # S: Settings
-    # {"text": "N: ", "color": "dark_gray"}, 
-
-# Do other "text" objects

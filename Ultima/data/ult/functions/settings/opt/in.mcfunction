@@ -10,7 +10,8 @@
     execute as @s[tag=participating] run scoreboard players set .temp _var 0
 
 # Warn if unsuccessful, let player in otherwise
-    execute if score .temp _var matches 0 run tellraw @s [{"text": "S: ", "color": "dark_gray"}, {"text": "You can't opt into this game! Wait until afterwards.", "color": "#F3722C"}]
+    execute if score .temp _var matches 0 run tellraw @s[tag=chat.s.e] [{"text": "S: ", "color": "dark_gray"}, {"text": "You can't opt into this game! Wait until afterwards.", "color": "#F3722C"}]
+    execute if score .temp _var matches 0 run tellraw @s[tag=chat.s.l] [{"text": "S: ", "color": "dark_gray"}, {"text": "Wait until next game.", "color": "#F3722C"}]
     execute if score .temp _var matches 1 run function ult:settings/opt/in/success
 
 # Clean up

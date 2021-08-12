@@ -6,7 +6,7 @@ effect clear @s
 effect give @s instant_health 1 3 true
 
 # Give a bit of spawn resistance (unless duels mode)
-execute unless score .game_mode flag = flag.game_mode.duels const run effect give @s resistance 4 1
+    execute unless score .game_mode flag = flag.game_mode.duels const run effect give @s resistance 4 1
 
 # Reset crucial objectives; assign unique player id
     scoreboard players reset @s queue

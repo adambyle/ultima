@@ -15,3 +15,5 @@
 # Players who have opted to spectate games when they just start are teleported to watch
     execute as @a run function ult:start/spectate
 
+# Clean up remaining royale mode players
+    execute if score .game_mode flag = flag.game_mode.royale const as @a[tag=player, tag=!alive] run function ult:start/mode/multi/kick

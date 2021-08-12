@@ -1,5 +1,6 @@
 # Announce opt
-    tellraw @a [{"text": "L: ", "color": "dark_gray"}, {"selector": "@s", "color": "white"}, {"text": " has opted in.", "color": "#43AA8B"}]
+    tellraw @a[tag=chat.n.e] [{"text": "N: ", "color": "dark_gray"}, {"selector": "@s", "color": "white"}, {"text": " has opted in.", "color": "#43AA8B"}]
+    tellraw @a[tag=chat.n.l] [{"text": "N: ", "color": "dark_gray"}, {"selector": "@s", "color": "gray"}, " <-"]
     execute at @s run playsound block.note_block.xylophone master @s ~ ~ ~ 4
 
 # Opt in

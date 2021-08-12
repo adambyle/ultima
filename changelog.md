@@ -7,7 +7,7 @@
 **General**:
 
 - Code completely refactored for a less laggy and less buggy experience.
-- Data pack updated to 1.17 format
+- Data pack updated to 1.17 format.
   - Some commands were changed (notably with the `replaceitem` to `item` change)
   - Armor stands and area effect clouds replaced with area effect clouds and markers (new 1.17 entity), respectively.
   - Item modifiers used instead of the shulker box loot table exploit method.

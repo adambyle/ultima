@@ -1,6 +1,6 @@
 # Check for missing chest items and react accordingly
     # Structure Void: back
-    execute if score @s menu = menu.vote const unless data entity @s EnderItems[{id: "minecraft:structure_void"}] run function ult:settings/player/vote/exit
+    execute if score .mandatory control matches 0 if score @s menu = menu.vote const unless data entity @s EnderItems[{id: "minecraft:structure_void"}] run function ult:settings/player/vote/exit
     # Lava Bucket: don't vote
     execute if score @s menu = menu.vote const unless data entity @s EnderItems[{id: "minecraft:lava_bucket"}] run function ult:settings/player/vote/skip
     # Test for vote selections
