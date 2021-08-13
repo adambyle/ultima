@@ -57,6 +57,7 @@
     scoreboard players set action.opt_out const 2
     scoreboard players set action.tp_lobby const 3
     scoreboard players set action.unready const 4
+    scoreboard players set action.change_vote const 5
     scoreboard players set action.reset const 8
     # For `crouch_mode`
     scoreboard players set crouch_mode.not_crouching const 0

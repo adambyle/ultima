@@ -25,7 +25,6 @@
 
 - FIXED: Obnoxious noises in the Marooned map.
 - FIXED: Last Stand's Backstabbing skill's strength criterion is broken.
-- FIXED: Reflection's rockets reflect with odd roatations.
 - FIXED: The game thinks the player died to fire unusually often.
 - FIXED: The game runs too many commands per tick when retrieiving large samples of statistics.
 - FIXED: Players upgrading/equipping tools/armor can be heard from anywhere in the arena.

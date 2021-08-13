@@ -5,8 +5,10 @@ function ult:data/root
     function ult:start/ready/update_notice
     tellraw @a[tag=!root, tag=chat.n.e] [{"text": "N: ", "color": "dark_gray"}, {"selector": "@s", "color": "white"}, {"text": " is ready.", "color": "#577590"}]
     tellraw @a[tag=!root, tag=chat.n.l] [{"text": "N: ", "color": "dark_gray"}, {"selector": "@s", "color": "#577590"}, " +"]
-    tellraw @s[tag=chat.n.e] [{"text": "N: ", "color": "dark_gray"}, {"selector": "@s", "color": "white"}, {"text": " is ready. ", "color": "#577590"}, {"text": "Mistake? Click to unready.", "color": "#F9C74F", "underlined": true, "clickEvent": {"action": "run_command", "value": "/trigger action set 4"}}]
-    tellraw @s[tag=chat.n.l] [{"text": "N: ", "color": "dark_gray"}, {"text": "Unready.", "underlined": true, "clickEvent": {"action": "run_command", "value": "/trigger action set 4"}}]
+    execute if score .map_mode flag = flag.map_mode.vote const run tellraw @s[tag=chat.n.e] [{"text": "N: ", "color": "dark_gray"}, {"selector": "@s", "color": "white"}, {"text": " is ready. ", "color": "#577590"}, {"text": "Mistake? Click to unready.", "color": "#F9C74F", "underlined": true, "clickEvent": {"action": "run_command", "value": "/trigger action set 4"}}, " ", {"text": "Misclick? Click to change your vote.", "color": "#F9C74F", "underlined": true, "clickEvent": {"action": "run_command", "value": "/trigger action set 5"}}]
+    execute unless score .map_mode flag = flag.map_mode.vote const run tellraw @s[tag=chat.n.e] [{"text": "N: ", "color": "dark_gray"}, {"selector": "@s", "color": "white"}, {"text": " is ready. ", "color": "#577590"}, {"text": "Mistake? Click to unready.", "color": "#F9C74F", "underlined": true, "clickEvent": {"action": "run_command", "value": "/trigger action set 4"}}]
+    execute if score .map_mode flag = flag.map_mode.vote const run tellraw @s[tag=chat.n.l] [{"text": "N: ", "color": "dark_gray"}, {"text": "Unready.", "underlined": true, "clickEvent": {"action": "run_command", "value": "/trigger action set 4"}}, " ", {"text": "Change Vote.", "underlined": true, "clickEvent": {"action": "run_command", "value": "/trigger action set 5"}}]
+    execute unless score .map_mode flag = flag.map_mode.vote const run tellraw @s[tag=chat.n.l] [{"text": "N: ", "color": "dark_gray"}, {"text": "Unready.", "underlined": true, "clickEvent": {"action": "run_command", "value": "/trigger action set 4"}}]
     execute as @a at @s run playsound block.note_block.snare master @s ~ ~ ~ 4 1
 
 # If the first player to be ready...

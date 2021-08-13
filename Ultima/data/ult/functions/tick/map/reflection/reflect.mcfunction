@@ -22,7 +22,7 @@
 
 # Transfer nbt (with Rotation and Motion inverted)
     data modify entity @e[limit=1, tag=temp] Rotation set from entity @s Rotation
-    execute store result entity @e[limit=1, tag=temp] Rotation[0] float -0.0001 run data get entity @s Rotation[0] 10000
+    execute store result entity @e[limit=1, tag=temp] Rotation[1] float -0.0001 run data get entity @s Rotation[1] 10000
     data modify entity @e[limit=1, tag=temp] Motion set from entity @s Motion
     execute store result entity @e[limit=1, tag=temp] Motion[1] double -0.0001 run data get entity @s Motion[1] 10000
     data modify entity @e[limit=1, tag=temp] Life set from entity @s Life

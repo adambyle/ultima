@@ -63,6 +63,8 @@
     execute if score .game_state flag = flag.game_state.inactive const as @a[tag=player, tag=ready] if score @s action = action.unready const run function ult:start/ready/unready
     # Reset game
     execute unless score .game_state flag = flag.game_state.inactive const as @a if score @s action = action.reset const run function ult:reset
+    # Change vote
+    execute if score .map_mode flag = flag.map_mode.vote const unless score .game_state flag = flag.game_state.active const as @a[tag=player] if score @s action = action.change_vote const run function ult:settings/player/vote
     # Reset and enable action triggers
     scoreboard players reset * action
     scoreboard players enable @a action
@@ -87,6 +89,8 @@
     execute as @a[tag=player, scores={afk=1..}] run function ult:tech/afk/handler
     # Show AFK warnings
     execute as @a[tag=alive] run function ult:tech/afk/warning
+    # Update rotation
+    execute as @a run scoreboard players operation @s rotation = @s _var
 
 # Send command feedback
     execute if score .debug_mode flag = flag.debug_mode.on const run gamerule sendCommandFeedback true
