@@ -2,12 +2,43 @@
 
 ---
 
+## Release v2.1.0 -- *August 17, 2021*
+
+**General**:
+
+- New chat settings:
+  - Players can choose their preferred pronouns.
+  - Chat output has been divided into channels.
+  - Players can reduce or omit certain channels to reduce chat clutter.
+- New "Continuous Play" game option:
+  - A new game starts immediately after the previous one.
+  - This feature was ported from Duels to other game modes.
+- Vote Map is now compatible with Continuous Play, and, by extension, Duels mode.
+- Extra players are no longer opted out in Royale mode, and will instead just sit out that one game (but remain opted in for next game).
+
+**Maps**:
+
+- Dungeon: Potion of Resilience now gives Resistance IV (was Resistance III)
+- Marooned: Sword is now Sharpness V (was Sharpness IV)
+
+**Bug Fixes**:
+
+- FIXED: Obnoxious noises in the Marooned map.
+- FIXED: Last Stand's Backstabbing skill's strength criterion is broken.
+- FIXED: The game thinks the player died to fire unusually often.
+- FIXED: The game runs too many commands per tick when retrieiving large samples of statistics.
+- FIXED: Players upgrading/equipping tools/armor can be heard from anywhere in the arena.
+- FIXED: The Performance statistics panel cannot be seen on larger GUIs.
+- FIXED: The villagers in Last Stand can be killed, forcing users to redownload the map.
+
+---
+
 ## Release v2.0.0 -- *July 31, 2021*
 
 **General**:
 
 - Code completely refactored for a less laggy and less buggy experience.
-- Data pack updated to 1.17 format
+- Data pack updated to 1.17 format.
   - Some commands were changed (notably with the `replaceitem` to `item` change)
   - Armor stands and area effect clouds replaced with area effect clouds and markers (new 1.17 entity), respectively.
   - Item modifiers used instead of the shulker box loot table exploit method.

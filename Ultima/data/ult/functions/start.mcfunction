@@ -11,8 +11,6 @@
 
 # Determine players, setup game
     scoreboard players operation .game_state flag = flag.game_state.transition const
-    # Reset scores
-    scoreboard players set @a[tag=player] score 0
     # Mode specific preparations
     execute if score .game_mode flag = flag.game_mode.duels const run function ult:start/mode/duels
     execute if score .game_mode flag matches 1..2 run function ult:start/mode/multi
@@ -31,7 +29,7 @@
     execute unless score .map_mode flag = flag.map_mode.selected const run title @a[tag=player] title {"storage": "ult:temp", "nbt": "Map", "color": "#577590", "bold": true}
 
 # Timeout for actual game start
-    tellraw @a [{"text": "\nN: ", "color": "dark_gray"}, {"text": "The game is starting!", "color": "#577590", "bold": true}]
+    tellraw @a[tag=chat.g.e] [{"text": "\nG: ", "color": "dark_gray"}, {"text": "The game is starting!", "color": "#577590", "bold": true}]
     execute as @a at @s run playsound block.note_block.pling master @s ~ ~ ~ 4 0.75
     execute as @a at @s run playsound block.note_block.pling master @s ~ ~ ~ 4 1
     schedule function ult:start/start 1s

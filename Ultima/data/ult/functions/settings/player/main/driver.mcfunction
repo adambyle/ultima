@@ -15,3 +15,5 @@
     execute if score @s menu = menu.main const unless data entity @s EnderItems[{id: "minecraft:golden_apple"}] run function ult:settings/player/hotbar/default
     # Book: statistics
     execute if score @s menu = menu.main const unless data entity @s EnderItems[{id: "minecraft:book"}] run function ult:settings/player/statistics
+    # Command block: chat settings
+    execute if score @s menu = menu.main const unless data entity @s EnderItems[{id: "minecraft:command_block"}] run function ult:settings/player/chat

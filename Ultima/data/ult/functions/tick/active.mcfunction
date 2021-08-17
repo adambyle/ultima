@@ -24,7 +24,7 @@
     kill @e[type=arrow, nbt={inGround: true}]
 
 # Players may sometimes lose their items
-    execute as @a[tag=alive] run function ult:spawn/items/lost
+    execute as @a[tag=alive] run function ult:items/lost
 
 # Map specific functions
     execute if score .map flag = flag.map.woodlands const run function ult:tick/map/woodlands

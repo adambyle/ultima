@@ -179,3 +179,4 @@ This is a list of easy access constant flags that act as a kind of enumerator to
     41: statistics_default
     42: statistics_featured
     43: statistics_display
+    50: chat

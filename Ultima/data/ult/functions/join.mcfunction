@@ -26,6 +26,9 @@ function ult:data/root
     tag @s remove change_modes
     tag @s remove fresh
     tag @s remove participating
+    tag @s[tag=!chat.g.e, tag=!chat.g.l, tag=!chat.g.d] add chat.g.e
+    tag @s[tag=!chat.n.e, tag=!chat.n.l, tag=!chat.n.d] add chat.n.e
+    tag @s[tag=!chat.s.e, tag=!chat.s.l, tag=!chat.s.d] add chat.s.e
 
 # Setup player menu
     function ult:settings/player/main

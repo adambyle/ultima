@@ -1,7 +1,9 @@
+gamerule maxCommandChainLength 2000000
+
 # Clear schedules
     schedule clear ult:reset
     schedule clear ult:start/start
-    schedule clear ult:spawn/duels
+    schedule clear ult:start/continuous
     schedule clear ult:start/lighting
     schedule clear ult:start/ready/timer
 
@@ -97,6 +99,7 @@
     execute as @e[tag=vote_station] at @s as @a[distance=..2] run function ult:settings/player/vote/exit
 
 # Debug
-    tellraw @a ""
-    tellraw @a [{"text": "N: ", "color": "dark_gray"}, [{"text": "If you run into any bugs, report them ", "color": "#577590"}, {"text": "on GitHub.", "underlined": true, "clickEvent": {"action": "open_url", "value": "https://github.com/beegyfleeg/ultima/issues"}}]]
+    tellraw @a[tag=chat.n.e] ""
+    tellraw @a[tag=chat.n.e] [{"text": "N: ", "color": "dark_gray"}, [{"text": "If you run into any bugs, report them ", "color": "#577590"}, {"text": "on GitHub.", "underlined": true, "clickEvent": {"action": "open_url", "value": "https://github.com/beegyfleeg/ultima/issues"}}]]
+    tellraw @a[tag=chat.n.l] [{"text": "N: ", "color": "dark_gray"}, {"text": "Report bugs.", "underlined": true, "clickEvent": {"action": "open_url", "value": "https://github.com/beegyfleeg/ultima/issues"}}]
     execute if score .debug_mode flag = flag.debug_mode.on const run tellraw @a[tag=operator] [{"text": "D: ", "color": "dark_gray"}, [{"text": "DEBUG MODE IS ON! ", "color": "#F9C74F"}, {"text": "Click to turn it off.", "underlined": true, "clickEvent": {"action": "run_command", "value": "/scoreboard players operation .debug_mode flag = flag.debug_mode.off const"}}]]

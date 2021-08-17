@@ -1,1 +1,2 @@
-tellraw @s[gamemode=spectator] [{"text": "N: ", "color": "dark_gray"}, {"text": "You can adjust your settings ", "color": "#F9C74F"}, {"text": "in the lobby while you wait.", "underlined": true, "clickEvent": {"action": "run_command", "value": "/trigger action set 3"}}]
+tellraw @s[gamemode=spectator, tag=chat.n.e] [{"text": "N: ", "color": "dark_gray"}, {"text": "You can adjust your settings ", "color": "#F9C74F"}, {"text": "in the lobby while you wait.", "underlined": true, "clickEvent": {"action": "run_command", "value": "/trigger action set 3"}}]
+tellraw @s[gamemode=spectator, tag=!chat.n.e] [{"text": "N: ", "color": "dark_gray"}, {"text": "Lobby.", "underlined": true, "clickEvent": {"action": "run_command", "value": "/trigger action set 3"}}]

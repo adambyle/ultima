@@ -18,5 +18,13 @@
     item replace entity @s enderchest.6 from block 0 0 0 container.0
 
 # Set other icons
-    item replace entity @s enderchest.21 with structure_void{GUI: true, display: {Lore: ['{"text": "Click if you are not ready to play.", "color": "gray"}'], Name: '{"text": "Cancel", "color": "#43AA8B", "bold": true, "italic": false}'}}
-    item replace entity @s enderchest.23 with lava_bucket{GUI: true, display: {Lore: ['{"text": "Choose this to skip adding your vote to the pool.", "color": "gray"}'], Name: '{"text": "Don\'t Vote", "color": "#F3722C", "bold": true, "italic": false}'}}
+    execute if score .mandatory control matches 0 run item replace entity @s enderchest.21 with structure_void{GUI: true, display: {Lore: ['{"text": "Click if you are not ready to play.", "color": "gray"}'], Name: '{"text": "Cancel", "color": "#43AA8B", "bold": true, "italic": false}'}}
+    execute if score .mandatory control matches 0 run item replace entity @s enderchest.23 with lava_bucket{GUI: true, display: {Lore: ['{"text": "Choose this to skip adding your vote to the pool.", "color": "gray"}'], Name: '{"text": "Don\'t Vote", "color": "#F3722C", "bold": true, "italic": false}'}}
+    execute if score .mandatory control matches 1 run item replace entity @s enderchest.22 with lava_bucket{GUI: true, display: {Lore: ['{"text": "Choose this to skip adding your vote to the pool.", "color": "gray"}'], Name: '{"text": "Don\'t Vote", "color": "#F3722C", "bold": true, "italic": false}'}}
+
+# Go to station
+    gamemode adventure
+    effect clear @s night_vision
+    execute as @e[tag=vote_station] store result score @s control at @s if entity @a[distance=..2]
+    tp @s @e[limit=1, tag=vote_station, scores={control=0}]
+    execute unless entity @e[scores={control=0}, tag=vote_station] run tp @s @e[limit=1, tag=vote_station]
