@@ -4,6 +4,8 @@
 # Spawn all the starting players in a random order
     execute as @a[sort=random, tag=alive, tag=player] run function ult:spawn
     tag @a remove fresh
+    # Reset scores
+    scoreboard players set @a[tag=player] score 0
 
 # Final lobby clean up
     execute as @e[tag=text_display] run data modify entity @s CustomNameVisible set value false

@@ -11,8 +11,6 @@
 
 # Determine players, setup game
     scoreboard players operation .game_state flag = flag.game_state.transition const
-    # Reset scores
-    scoreboard players set @a[tag=player] score 0
     # Mode specific preparations
     execute if score .game_mode flag = flag.game_mode.duels const run function ult:start/mode/duels
     execute if score .game_mode flag matches 1..2 run function ult:start/mode/multi

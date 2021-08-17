@@ -5,4 +5,4 @@
     execute if data storage ult:temp Player{afkTime: 2b} if score @s afk matches 300.. run tag @s add afk
 
 # Automatically opt out if AFK
-    execute as @s[tag=player, tag=afk] run function ult:settings/opt/out
+    execute if score .game_state flag = flag.game_state.active const as @s[tag=player, tag=afk] run function ult:settings/opt/out

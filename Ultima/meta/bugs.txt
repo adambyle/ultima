@@ -1,1 +1,4 @@
 change vote button
+afk bug
+opt in voting bug
+kill villager

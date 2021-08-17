@@ -2,7 +2,7 @@
 
 ---
 
-## Release v2.1.0 -- *August 11, 2021*
+## Release v2.1.0 -- *August 17, 2021*
 
 **General**:
 
@@ -29,6 +29,7 @@
 - FIXED: The game runs too many commands per tick when retrieiving large samples of statistics.
 - FIXED: Players upgrading/equipping tools/armor can be heard from anywhere in the arena.
 - FIXED: The Performance statistics panel cannot be seen on larger GUIs.
+- FIXED: The villagers in Last Stand can be killed, forcing users to redownload the map.
 
 ---
 
