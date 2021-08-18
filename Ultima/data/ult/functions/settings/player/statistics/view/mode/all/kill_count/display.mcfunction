@@ -7,7 +7,8 @@ execute if score .type _var matches 3 run data modify storage ult:temp Category 
 execute if score .type _var matches 4 run data modify storage ult:temp Category set value '"Shot: "'
 execute if score .type _var matches 5 run data modify storage ult:temp Category set value '"Splashed With Potion: "'
 execute if score .type _var matches 6 run data modify storage ult:temp Category set value '"Blown Up: "'
-execute if score .type _var matches 7 run data modify storage ult:temp Category set value '"Burnt to Death: "'
+execute if score .type _var matches 7 run data modify storage ult:temp Category set value '"Slain While Burning: "'
+execute if score .type _var matches 8 run data modify storage ult:temp Category set value '"Slain While Freezing: "'
 
 scoreboard players set .const _var 100
 scoreboard players operation .num _var = .count _var

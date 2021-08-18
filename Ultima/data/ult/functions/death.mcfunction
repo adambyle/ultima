@@ -41,6 +41,8 @@ function ult:data/root
     execute if score @s death_cause = death_cause.hill_pitfall_king const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was overthrown by"'
     execute if score @s death_cause = death_cause.hill_shot const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was royally executed by"'
     execute if score @s death_cause = death_cause.glitch const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"found a way to forever escape"'
+    execute if score @s death_cause = death_cause.froze const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was sent to a warmer place by"'
+    execute if score @s death_cause = death_cause.snowballed const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was snowballed by"'
     # If there was no killer
     execute if score @s death_cause = death_cause.normal const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"died"'
     execute if score @s death_cause = death_cause.abyss_fall const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"leapt into the abyss"'
@@ -57,6 +59,8 @@ function ult:data/root
     execute if score @s death_cause = death_cause.hill_pitfall_king const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '["fell down and broke ", {"storage": "ult:temp", "nbt": "Possessive"}, " crown"]'
     execute if score @s death_cause = death_cause.hill_shot const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"took the royal crossbow and gave up the throne"'
     execute if score @s death_cause = death_cause.glitch const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"tried to be clever"'
+    execute if score @s death_cause = death_cause.froze const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"froze to death"'
+    execute if score @s death_cause = death_cause.snowballed const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '["snowballed ", {"storage": "ult:temp", "nbt": "Object"}, "self"]'
     # Second portion of death message
     data modify storage ult:temp Death2 set value '""'
 

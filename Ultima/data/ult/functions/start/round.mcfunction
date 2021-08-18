@@ -33,6 +33,7 @@
     execute if score .map flag = flag.map.citadel const run function ult:start/map/citadel
     execute if score .map flag = flag.map.town_square const run function ult:start/map/town_square
     execute if score .map flag = flag.map.last_stand const run function ult:start/map/last_stand
+    execute if score .map flag = flag.map.permafrost const run function ult:start/map/permafrost
     execute if score .map flag = flag.map.reflection const run function ult:start/map/reflection
     execute if score .map flag = flag.map.dracula const run function ult:start/map/dracula
     execute if score .map flag = flag.map.ancient const run function ult:start/map/ancient

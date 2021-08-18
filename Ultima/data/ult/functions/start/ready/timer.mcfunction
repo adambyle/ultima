@@ -3,9 +3,9 @@
 
 # Move timer down
     # Slower for vote mode
-    execute if score .temp _var matches 1 if score .map_mode flag = flag.map_mode.vote const store result bossbar ult:game_start value run scoreboard players remove .ready_timeout _var 1
+    execute if score .valid _var matches 1 if score .map_mode flag = flag.map_mode.vote const store result bossbar ult:game_start value run scoreboard players remove .ready_timeout _var 1
     # Faster otherwise
-    execute if score .temp _var matches 1 unless score .map_mode flag = flag.map_mode.vote const store result bossbar ult:game_start value run scoreboard players remove .ready_timeout _var 2
+    execute if score .valid _var matches 1 unless score .map_mode flag = flag.map_mode.vote const store result bossbar ult:game_start value run scoreboard players remove .ready_timeout _var 2
 
 # Final coutndown noises
     execute if score .ready_timeout _var matches 1..8 as @a at @s run playsound block.note_block.snare master @s ~ ~ ~ 1 2

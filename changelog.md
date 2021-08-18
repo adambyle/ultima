@@ -2,6 +2,20 @@
 
 ---
 
+## Release v2.1.1 -- *August 18, 2021*
+
+---
+
+**Maps**:
+
+- Permafrost: NEW DEFAULT MAP!
+
+**Bug Fixes**:
+
+- FIXED: The death message is odd when players die in Duels mode.
+- FIXED: Only the winner of a duel gets to vote.
+- FIXED: The game start timer does not go down, even when the game is able to begin (i.e. when a fourth player hasn't readied yet).
+
 ## Release v2.1.0 -- *August 17, 2021*
 
 **General**:

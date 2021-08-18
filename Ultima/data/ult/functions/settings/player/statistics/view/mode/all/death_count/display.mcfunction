@@ -9,7 +9,8 @@ execute if score .type _var matches 3 run data modify storage ult:temp Category 
 execute if score .type _var matches 4 run data modify storage ult:temp Category set value '"Shot by Player: "'
 execute if score .type _var matches 5 run data modify storage ult:temp Category set value '"Splashed With Potion by Player: "'
 execute if score .type _var matches 6 run data modify storage ult:temp Category set value '"Blown Up by Player: "'
-execute if score .type _var matches 7 run data modify storage ult:temp Category set value '"Burnt to Death by Player: "'
+execute if score .type _var matches 7 run data modify storage ult:temp Category set value '"Slain by Player While Burning: "'
+execute if score .type _var matches 8 run data modify storage ult:temp Category set value '"Slain by Player While Freezing: "'
 
 execute if score .type _var matches -1 run data modify storage ult:temp Category set value '"Self-Destruct by Unknown Cause: "'
 execute if score .type _var matches -2 run data modify storage ult:temp Category set value '"Self-Destruct by Pitfall: "'
@@ -17,7 +18,8 @@ execute if score .type _var matches -3 run data modify storage ult:temp Category
 execute if score .type _var matches -4 run data modify storage ult:temp Category set value '"Self-Destruct by Shooting: "'
 execute if score .type _var matches -5 run data modify storage ult:temp Category set value '"Self-Destruct by Splash Potion: "'
 execute if score .type _var matches -6 run data modify storage ult:temp Category set value '"Self-Destruct by Explosion: "'
-execute if score .type _var matches -7 run data modify storage ult:temp Category set value '"Self-Destruct by Extreme Heat: "'
+execute if score .type _var matches -7 run data modify storage ult:temp Category set value '"Self-Destruct by Burning: "'
+execute if score .type _var matches -8 run data modify storage ult:temp Category set value '"Self-Destruct by Freezing: "'
 
 scoreboard players set .const _var 100
 scoreboard players operation .num _var = .count _var

@@ -87,3 +87,10 @@ execute unless data storage ult:temp Player.Hotbar.bathhouse.shears run data mod
 execute unless data storage ult:temp Player.Hotbar.bathhouse.bow run data modify storage ult:temp Player.Hotbar.bathhouse.bow set value 2
 execute unless data storage ult:temp Player.Hotbar.bathhouse.arrows run data modify storage ult:temp Player.Hotbar.bathhouse.arrows set value 10
 execute unless data storage ult:temp Player.Hotbar.bathhouse.blocks run data modify storage ult:temp Player.Hotbar.bathhouse.blocks set value 1
+
+execute unless data storage ult:temp Player.Hotbar.permafrost.axe run data modify storage ult:temp Player.Hotbar.permafrost.axe set value 0
+execute unless data storage ult:temp Player.Hotbar.permafrost.pickaxe run data modify storage ult:temp Player.Hotbar.permafrost.pickaxe set value 1
+execute unless data storage ult:temp Player.Hotbar.permafrost.snowball run data modify storage ult:temp Player.Hotbar.permafrost.snowball set value 7
+execute unless data storage ult:temp Player.Hotbar.permafrost.fishing_rod run data modify storage ult:temp Player.Hotbar.permafrost.fishing_rod set value 2
+execute unless data storage ult:temp Player.Hotbar.permafrost.diamond run data modify storage ult:temp Player.Hotbar.permafrost.diamond set value 6
+execute unless data storage ult:temp Player.Hotbar.permafrost.milk run data modify storage ult:temp Player.Hotbar.permafrost.milk set value 8

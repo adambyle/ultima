@@ -13,6 +13,7 @@
     scoreboard objectives add death_cause dummy
     scoreboard objectives add event dummy
     scoreboard objectives add event.debris mined:ancient_debris
+    scoreboard objectives add event.diamond mined:diamond_ore
     scoreboard objectives add event.rabbit killed:rabbit
     scoreboard objectives add event.rune dummy
     scoreboard objectives add event.salmon killed:salmon
@@ -79,6 +80,8 @@
     scoreboard players set death_cause.hill_pitfall_king const 12
     scoreboard players set death_cause.hill_shot const 13
     scoreboard players set death_cause.glitch const 14
+    scoreboard players set death_cause.froze const 15
+    scoreboard players set death_cause.snowballed const 16
     # For `event.rune`
     scoreboard players set event.rune.none const 0
     scoreboard players set event.rune.health const 1
@@ -125,7 +128,7 @@
     scoreboard players set flag.map.hill const 54
     scoreboard players set flag.map.bathhouse const 55
     scoreboard players operation flag.map.start_default const = flag.map.manor const
-    scoreboard players operation flag.map.end_default const = flag.map.last_stand const
+    scoreboard players operation flag.map.end_default const = flag.map.permafrost const
     scoreboard players operation flag.map.start_featured const = flag.map.reflection const
     scoreboard players operation flag.map.end_featured const = flag.map.bathhouse const
     # For `.map_menu flag`

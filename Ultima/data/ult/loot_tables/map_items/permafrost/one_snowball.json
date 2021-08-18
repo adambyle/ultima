@@ -1,0 +1,23 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "snowball",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": 1
+                        },
+                        {
+                            "function": "set_name",
+                            "name": {"text": "Frigid Slushballs (x3)", "italic": false}
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

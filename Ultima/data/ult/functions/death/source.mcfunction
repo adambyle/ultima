@@ -4,6 +4,7 @@ function ult:data/root
     tag @e remove temp
     tag @a remove temp
     tag @a[gamemode=spectator] add temp
+    tag @e[type=snowball] add temp
     tag @e[type=marker] add temp
     tag @e[type=area_effect_cloud] add temp
     tag @s add temp
@@ -11,6 +12,9 @@ function ult:data/root
 # Determine cause
     # Default
     scoreboard players operation @s death_cause = death_cause.normal const
+    # Froze
+    execute if score .map flag = flag.map.avanto const if data entity @s ActiveEffects[{Id: 20b}] run scoreboard players operation @s death_cause = death_cause.froze const
+    execute if score .map flag = flag.map.permafrost const if data entity @s ActiveEffects[{Id: 20b}] run scoreboard players operation @s death_cause = death_cause.froze const
     # Died while on fire
     execute store result score .fire _var run data get entity @s Fire
     execute if score .fire _var matches 1.. run scoreboard players operation @s death_cause = death_cause.fire const
@@ -38,6 +42,8 @@ function ult:data/root
     execute as @e[sort=nearest, limit=1, tag=!temp] if entity @s[type=firework_rocket, distance=..10] run scoreboard players operation @r[tag=root] death_cause = death_cause.rocket const
     # Exploded in wasteland or ancient mines
     execute if score @s death_cause = death_cause.harming_potion const if score .map flag = flag.map.wasteland const run scoreboard players operation @a[tag=root] death_cause = death_cause.exploded const
-    execute if score @s death_cause = death_cause.harming_potion const if score .map flag = flag.map.ancient const run scoreboard players operation @a[tag=root] death_cause = death_cause.exploded const
+    execute if score @s death_cause = death_cause.harming_potion const if score .map flag = flag.map.ancient const run scoreboard players operation @s death_cause = death_cause.exploded const
+    # Snowballed
+    execute if score @s death_cause = death_cause.harming_potion const if score .map flag = flag.map.permafrost const run scoreboard players operation @s death_cause = death_cause.snowballed const
     # Fell in the void
     execute if score @s altitude matches ..0 run scoreboard players operation @s death_cause = death_cause.glitch const

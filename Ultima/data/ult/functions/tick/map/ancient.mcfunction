@@ -1,6 +1,5 @@
 # Give ingots to players who mine ancient debris
     execute as @a[scores={event.debris=1..}] run function ult:tick/map/ancient/give_ingot
-    scoreboard players reset * event.debris
 
 # Detect selecting ingot while crouching (the hand matters)
     scoreboard players set @a _var 0

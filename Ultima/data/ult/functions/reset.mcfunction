@@ -21,6 +21,7 @@ gamerule maxCommandChainLength 2000000
     scoreboard players reset * death_cause
     scoreboard players reset * event
     scoreboard players reset * event.debris
+    scoreboard players reset * event.diamond
     scoreboard players reset * event.rabbit
     scoreboard players reset * event.rune
     scoreboard players reset * event.salmon

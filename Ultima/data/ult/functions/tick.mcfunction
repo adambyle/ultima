@@ -101,6 +101,8 @@
     scoreboard players reset * damage_taken
     scoreboard players reset * event.rabbit
     scoreboard players reset * event.salmon
+    scoreboard players reset * event.debris
+    scoreboard players reset * event.diamond
     scoreboard players reset * jump
     # Deal with crouch stages
     execute as @a[scores={crouch=0}] run scoreboard players operation @s crouch_mode = crouch_mode.not_crouching const

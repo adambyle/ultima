@@ -21,6 +21,7 @@
 # Clear unnecessary items
     kill @e[type=item, tag=!static]
     clear @a[gamemode=!creative] glass_bottle
+    clear @a[gamemode=!creative] bucket
     kill @e[type=arrow, nbt={inGround: true}]
 
 # Players may sometimes lose their items

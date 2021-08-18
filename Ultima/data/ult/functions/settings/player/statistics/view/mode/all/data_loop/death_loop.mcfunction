@@ -12,10 +12,12 @@ execute if score .did _var = death_cause.hill_shot const run scoreboard players 
 execute if score .did _var = death_cause.shot_hard const run scoreboard players set .type _var 4
 execute if score .did _var = death_cause.shot_aerial const run scoreboard players set .type _var 4
 execute if score .did _var = death_cause.harming_potion const run scoreboard players set .type _var 5
+execute if score .did _var = death_cause.snowballed const run scoreboard players set .type _var 5
 execute if score .did _var = death_cause.exploded const run scoreboard players set .type _var 6
 execute if score .did _var = death_cause.rocket const run scoreboard players set .type _var 6
 execute if score .did _var = death_cause.fire const run scoreboard players set .type _var 7
 execute if score .did _var = death_cause.lava const run scoreboard players set .type _var 7
+execute if score .did _var = death_cause.froze const run scoreboard players set .type _var 8
 scoreboard players add .did _var 100
 execute if score .did _var = death_cause.normal const run scoreboard players set .type _var -1
 execute if score .did _var = death_cause.abyss_fall const run scoreboard players set .type _var -2
@@ -28,10 +30,12 @@ execute if score .did _var = death_cause.hill_shot const run scoreboard players 
 execute if score .did _var = death_cause.shot_hard const run scoreboard players set .type _var -4
 execute if score .did _var = death_cause.shot_aerial const run scoreboard players set .type _var -4
 execute if score .did _var = death_cause.harming_potion const run scoreboard players set .type _var -5
+execute if score .did _var = death_cause.snowballed const run scoreboard players set .type _var -5
 execute if score .did _var = death_cause.exploded const run scoreboard players set .type _var -6
 execute if score .did _var = death_cause.rocket const run scoreboard players set .type _var -6
 execute if score .did _var = death_cause.fire const run scoreboard players set .type _var -7
 execute if score .did _var = death_cause.lava const run scoreboard players set .type _var -7
+execute if score .did _var = death_cause.froze const run scoreboard players set .type _var -8
 execute if score .type _var matches ..-1 run scoreboard players add .suicide _var 1
 execute store result storage ult:temp Merge.id byte 1 run scoreboard players get .type _var
 function ult:data/nbt/filter
