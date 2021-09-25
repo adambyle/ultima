@@ -17,6 +17,7 @@ copy Ultima_Source\data\chunks.dat Ultima\data\
 xcopy /E /I Ultima_Source\datapacks\Ultima .\
 rmdir /S /Q data\ult\functions\util
 rmdir /S /Q meta\
+rmdir /S /Q docs\
 
 del Ultima-Datapack.zip
 7-Zip\7z a Ultima-Datapack.zip data\

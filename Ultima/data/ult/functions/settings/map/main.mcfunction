@@ -12,7 +12,7 @@
     # Crafting Table: featured maps
     item replace block 43 31 -12 container.5 with crafting_table{GUI: true, display: {Lore: ['{"text": "Maps designed by players like you!", "color": "gray"}'], Name: '{"text": "Featured Maps", "color": "#F3722C", "italic": false, "bold": true}'}}
     # Jukebox: vote mode
-    item replace block 43 31 -12 container.20 with jukebox{GUI: true, display: {Lore: ['{"text": "Vote between three different maps before the game.", "color": "gray"}'], Name: '{"text": "Vote Map", "color": "#43AA8B", "italic": false, "bold": true}'}}
+    item replace block 43 31 -12 container.20 with jukebox{GUI: true, display: {Lore: ['{"text": "Vote between three different maps before each game.", "color": "gray"}'], Name: '{"text": "Vote Map", "color": "#43AA8B", "italic": false, "bold": true}'}}
     # Player Head: random mode
     item replace block 43 31 -12 container.22 with player_head{GUI: true, display: {Lore: ['{"text": "Play a completely random map each game.", "color": "gray"}'], Name: '{"text": "Random Map", "color": "#43AA8B", "italic": false, "bold": true}'}, SkullOwner: {Id: [I; 747841846,649743677, -1669641069, -1832488580], Properties: {textures: [{Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjg4ZmE5NzNlYTQ0NGNjODA4NzY4ZWE0OGJmMjY1N2FlOWE1NmMwYWY2MDI3NWU4NDQ2M2IxOTU2MjliY2UifX19"}]}}}
     # Magenta Glazed Terracotta: cycle mode
