@@ -10,7 +10,7 @@
 
 **Bug Fixes**:
 
-- FIXED: Iron Axe from the Weaponsmith in Last Stand is breakable.
+- FIXED: Iron Axe from the Weaponsmith in Town Square is breakable.
 - FIXED: Permafrost map has a missing wall.
 - FIXED: Vote Map does not work.
 - FIXED: Players are not warned when they are about to be opted out for being AFK.
