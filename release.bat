@@ -12,6 +12,8 @@ copy Ultima_Source\region\r.0.0.mca Ultima\region\
 copy Ultima_Source\region\r.0.1.mca Ultima\region\
 copy Ultima_Source\region\r.0.-1.mca Ultima\region\
 copy Ultima_Source\region\r.0.-2.mca Ultima\region\
+copy Ultima_Source\region\r.-1.0.mca Ultima\region\
+copy Ultima_Source\region\r.-1.-1.mca Ultima\region\
 xcopy /E /I Ultima_Source\entities\ Ultima\entities\
 copy Ultima_Source\data\chunks.dat Ultima\data\
 xcopy /E /I Ultima_Source\datapacks\Ultima .\

@@ -2,7 +2,22 @@
 
 ---
 
-## Release v2.1.1 -- *August 18, 2021*
+## Release v2.1.2 -- *August 26, 2021*
+
+**General**:
+
+- Changed default AFK time to 10s (from 5).
+
+**Bug Fixes**:
+
+- FIXED: Iron Axe from the Weaponsmith in Last Stand is breakable.
+- FIXED: Permafrost map has a missing wall.
+- FIXED: Vote Map does not work.
+- FIXED: Players are not warned when they are about to be opted out for being AFK.
+
+---
+
+## Release v2.1.1 -- *August 25, 2021*
 
 **Maps**:
 
@@ -62,7 +77,7 @@
 - Tutorials/explanations of the game modes and maps were added to lecterns in the lobby.
 - Removed "key points".
 - Player statistics can be viewed in the ender chest.
-- Brawl mode revenge kills are now worth 2 (was 3)
+- Brawl mode revenge kills are now worth 2 (was 3).
 - Projectiles no longer reflect if they have a downward trajectory; now players can shoot their bow correctly in Avanto while being above the map ceiling.
 - Better spectator settings interface.
 
