@@ -5,11 +5,11 @@
             "entries": [
                 {
                     "type": "item",
-                    "name": "netherrack",
+                    "name": "sand",
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {"text": "Hellscape", "bold": true, "italic": false}
+                            "name": {"text": "Haven", "bold": true, "italic": false}
                         },
                         {
                             "function": "set_lore",

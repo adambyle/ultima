@@ -12,7 +12,7 @@
     execute if score .map flag = flag.map.last_stand const run function ult:tp/last_stand
     execute if score .map flag = flag.map.permafrost const run function ult:tp/permafrost
     execute if score .map flag = flag.map.shroom const run function ult:tp/shroom
-    execute if score .map flag = flag.map.hellscape const run function ult:tp/hellscape
+    execute if score .map flag = flag.map.haven const run function ult:tp/haven
     execute if score .map flag = flag.map.frontier const run function ult:tp/frontier
     execute if score .map flag = flag.map.reflection const run function ult:tp/reflection
     execute if score .map flag = flag.map.dracula const run function ult:tp/dracula

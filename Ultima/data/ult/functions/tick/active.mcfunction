@@ -1,3 +1,7 @@
+# Handle death sources
+    scoreboard players reset * death_cause
+    execute as @a[tag=alive] at @s run function ult:death/source
+
 # Handle players who join mid-game
     execute as @a unless score @s online matches 1 run function ult:join/wrong_session
 
@@ -37,7 +41,7 @@
     execute if score .map flag = flag.map.last_stand const run function ult:tick/map/last_stand
     execute if score .map flag = flag.map.permafrost const run function ult:tick/map/permafrost
     execute if score .map flag = flag.map.shroom const run function ult:tick/map/shroom
-    execute if score .map flag = flag.map.hellscape const run function ult:tick/map/hellscape
+    execute if score .map flag = flag.map.haven const run function ult:tick/map/haven
     execute if score .map flag = flag.map.frontier const run function ult:tick/map/frontier
     execute if score .map flag = flag.map.reflection const run function ult:tick/map/reflection
     execute if score .map flag = flag.map.dracula const run function ult:tick/map/dracula
@@ -64,7 +68,3 @@
     scoreboard players set .temp_pn _var 0
     execute as @a[tag=player] run scoreboard players add .temp_pn _var 1
     execute unless score .temp_pn _var = .total_players control run function ult:load/player_left
-
-# Handle death sources
-    scoreboard players reset * death_cause
-    execute as @a[tag=alive] at @s run function ult:death/source

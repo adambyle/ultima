@@ -21,7 +21,7 @@
     execute if score .temp_map _var = flag.map.last_stand const run data modify storage ult:temp Map set value "Last Stand"
     execute if score .temp_map _var = flag.map.permafrost const run data modify storage ult:temp Map set value "Permafrost"
     execute if score .temp_map _var = flag.map.shroom const run data modify storage ult:temp Map set value "Shroom"
-    execute if score .temp_map _var = flag.map.hellscape const run data modify storage ult:temp Map set value "Hellscape"
+    execute if score .temp_map _var = flag.map.haven const run data modify storage ult:temp Map set value "Haven"
     execute if score .temp_map _var = flag.map.frontier const run data modify storage ult:temp Map set value "Frontier"
     execute if score .temp_map _var = flag.map.facility const run data modify storage ult:temp Map set value "Facility"
     execute if score .temp_map _var = flag.map.meadow const run data modify storage ult:temp Map set value "Meadow"

@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "death": {
+            "trigger": "entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "is_magic": true
+                    }
+                }
+            }
+        }
+    },
+    "parent": "ult:damage"
+}

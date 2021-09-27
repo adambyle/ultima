@@ -8,7 +8,7 @@ loot replace entity @s enderchest.12 loot ult:map_icon/town_square
 loot replace entity @s enderchest.13 loot ult:map_icon/last_stand
 loot replace entity @s enderchest.14 loot ult:map_icon/permafrost
 loot replace entity @s enderchest.15 loot ult:map_icon/shroom
-loot replace entity @s enderchest.16 loot ult:map_icon/hellscape
+loot replace entity @s enderchest.16 loot ult:map_icon/haven
 loot replace entity @s enderchest.17 loot ult:map_icon/frontier
 loot replace entity @s enderchest.21 loot ult:map_icon/facility
 loot replace entity @s enderchest.22 loot ult:map_icon/meadow

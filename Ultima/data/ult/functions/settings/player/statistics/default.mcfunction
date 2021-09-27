@@ -59,7 +59,7 @@ function ult:settings/player/statistics/get_sample
     function ult:settings/player/statistics/map_footer
     #item modify entity @s enderchest.15 ult:stats/entry_count
     
-    execute store result storage ult:temp Merge.map int 1 run scoreboard players get flag.map.hellscape const
+    execute store result storage ult:temp Merge.map int 1 run scoreboard players get flag.map.haven const
     function ult:settings/player/statistics/map_footer
     #item modify entity @s enderchest.3 ult:stats/entry_count
     

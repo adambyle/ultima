@@ -114,7 +114,7 @@
     scoreboard players set flag.map.last_stand const 7
     scoreboard players set flag.map.permafrost const 8
     scoreboard players set flag.map.shroom const 9
-    scoreboard players set flag.map.hellscape const 10
+    scoreboard players set flag.map.haven const 10
     scoreboard players set flag.map.frontier const 11
     scoreboard players set flag.map.facility const 12
     scoreboard players set flag.map.meadow const 13

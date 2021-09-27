@@ -18,7 +18,7 @@
     loot replace block 43 31 -12 container.13 loot ult:map_icon/last_stand
     loot replace block 43 31 -12 container.14 loot ult:map_icon/permafrost
     loot replace block 43 31 -12 container.15 loot ult:map_icon/shroom
-    loot replace block 43 31 -12 container.16 loot ult:map_icon/hellscape
+    loot replace block 43 31 -12 container.16 loot ult:map_icon/haven
     loot replace block 43 31 -12 container.17 loot ult:map_icon/frontier
     loot replace block 43 31 -12 container.21 loot ult:map_icon/facility
     loot replace block 43 31 -12 container.22 loot ult:map_icon/meadow
@@ -38,5 +38,5 @@
     execute if score .map_mode flag = flag.map_mode.selected const if score .map flag = flag.map.last_stand const run item modify block 43 31 -12 container.13 ult:tech/item_selected
     execute if score .map_mode flag = flag.map_mode.selected const if score .map flag = flag.map.permafrost const run item modify block 43 31 -12 container.14 ult:tech/item_selected
     execute if score .map_mode flag = flag.map_mode.selected const if score .map flag = flag.map.shroom const run item modify block 43 31 -12 container.15 ult:tech/item_selected
-    execute if score .map_mode flag = flag.map_mode.selected const if score .map flag = flag.map.hellscape const run item modify block 43 31 -12 container.16 ult:tech/item_selected
+    execute if score .map_mode flag = flag.map_mode.selected const if score .map flag = flag.map.haven const run item modify block 43 31 -12 container.16 ult:tech/item_selected
     execute if score .map_mode flag = flag.map_mode.selected const if score .map flag = flag.map.frontier const run item modify block 43 31 -12 container.17 ult:tech/item_selected

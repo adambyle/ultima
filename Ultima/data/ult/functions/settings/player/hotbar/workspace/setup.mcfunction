@@ -16,7 +16,7 @@
     execute if score @s hotbar_map = flag.map.last_stand const run function ult:settings/player/hotbar/workspace/setup/last_stand
     execute if score @s hotbar_map = flag.map.permafrost const run function ult:settings/player/hotbar/workspace/setup/permafrost
     execute if score @s hotbar_map = flag.map.shroom const run function ult:settings/player/hotbar/workspace/setup/shroom
-    execute if score @s hotbar_map = flag.map.hellscape const run function ult:settings/player/hotbar/workspace/setup/hellscape
+    execute if score @s hotbar_map = flag.map.haven const run function ult:settings/player/hotbar/workspace/setup/haven
     execute if score @s hotbar_map = flag.map.frontier const run function ult:settings/player/hotbar/workspace/setup/frontier
     execute if score @s hotbar_map = flag.map.facility const run function ult:settings/player/hotbar/workspace/setup/facility
     execute if score @s hotbar_map = flag.map.meadow const run function ult:settings/player/hotbar/workspace/setup/meadow

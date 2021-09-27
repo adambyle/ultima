@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "death": {
+            "trigger": "entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "direct_entity": {
+                            "type": "firework_rocket"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "parent": "ult:damage"
+}

@@ -8,13 +8,13 @@
     execute unless data block 43 31 -12 Items[{id: "minecraft:chiseled_stone_bricks"}] run scoreboard players operation .selected_map _var = flag.map.dungeon const
     execute unless data block 43 31 -12 Items[{id: "minecraft:blackstone"}] run scoreboard players operation .selected_map _var = flag.map.abyss const
     execute unless data block 43 31 -12 Items[{id: "minecraft:gold_block"}] run scoreboard players operation .selected_map _var = flag.map.citadel const
-    execute unless data block 43 31 -12 Items[{id: "minecraft:red_sand"}] run scoreboard players operation .selected_map _var = flag.map.wasteland const
+    execute unless data block 43 31 -12 Items[{id: "minecraft:orange_terracotta"}] run scoreboard players operation .selected_map _var = flag.map.wasteland const
     execute unless data block 43 31 -12 Items[{id: "minecraft:emerald_block"}] run scoreboard players operation .selected_map _var = flag.map.town_square const
     execute unless data block 43 31 -12 Items[{id: "minecraft:cracked_deepslate_bricks"}] run scoreboard players operation .selected_map _var = flag.map.last_stand const
     execute unless data block 43 31 -12 Items[{id: "minecraft:packed_ice"}] run scoreboard players operation .selected_map _var = flag.map.permafrost const
     execute unless data block 43 31 -12 Items[{id: "minecraft:red_mushroom_block"}] run scoreboard players operation .selected_map _var = flag.map.shroom const
-    execute unless data block 43 31 -12 Items[{id: "minecraft:netherrack"}] run scoreboard players operation .selected_map _var = flag.map.hellscape const
-    execute unless data block 43 31 -12 Items[{id: "minecraft:end_stone"}] run scoreboard players operation .selected_map _var = flag.map.frontier const
+    execute unless data block 43 31 -12 Items[{id: "minecraft:sand"}] run scoreboard players operation .selected_map _var = flag.map.haven const
+    execute unless data block 43 31 -12 Items[{id: "minecraft:purpur_block"}] run scoreboard players operation .selected_map _var = flag.map.frontier const
     execute unless data block 43 31 -12 Items[{id: "minecraft:exposed_cut_copper"}] run scoreboard players operation .selected_map _var = flag.map.facility const
     execute unless data block 43 31 -12 Items[{id: "minecraft:flowering_azalea_leaves"}] run scoreboard players operation .selected_map _var = flag.map.meadow const
     execute unless data block 43 31 -12 Items[{id: "minecraft:dark_prismarine"}] run scoreboard players operation .selected_map _var = flag.map.leagues const

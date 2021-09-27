@@ -34,7 +34,7 @@ effect give @s instant_health 1 3 true
     execute if score .map flag = flag.map.last_stand const run function ult:spawn/maps/last_stand
     execute if score .map flag = flag.map.permafrost const run function ult:spawn/maps/permafrost
     execute if score .map flag = flag.map.shroom const run function ult:spawn/maps/shroom
-    execute if score .map flag = flag.map.hellscape const run function ult:spawn/maps/hellscape
+    execute if score .map flag = flag.map.haven const run function ult:spawn/maps/haven
     execute if score .map flag = flag.map.frontier const run function ult:spawn/maps/frontier
     execute if score .map flag = flag.map.reflection const run function ult:spawn/maps/reflection
     execute if score .map flag = flag.map.dracula const run function ult:spawn/maps/dracula

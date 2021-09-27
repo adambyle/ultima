@@ -5,7 +5,7 @@
             "entries": [
                 {
                     "type": "item",
-                    "name": "red_sand",
+                    "name": "orange_terracotta",
                     "functions": [
                         {
                             "function": "set_name",
