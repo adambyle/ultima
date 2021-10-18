@@ -1,23 +1,23 @@
 function ult:data/player/get
 clear @s #ult:map_items/ancient
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.ancient.axe
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.ancient.axe
 loot replace block 0 0 0 container.0 loot ult:map_items/ancient/axe
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.ancient.pickaxe
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.ancient.pickaxe
 loot replace block 0 0 0 container.0 loot ult:map_items/ancient/pickaxe
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.ancient.fireball
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.ancient.fireball
 loot replace block 0 0 0 container.0 loot ult:map_items/ancient/fireball
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.ancient.ingot
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.ancient.ingot
 loot replace block 0 0 0 container.0 loot ult:map_items/ancient/ingot
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.ancient.hoe
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.ancient.hoe
 loot replace block 0 0 0 container.0 loot ult:map_items/ancient/hoe
 function ult:settings/player/hotbar/workspace/hotbar_settings
 

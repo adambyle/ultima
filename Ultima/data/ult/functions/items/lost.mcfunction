@@ -19,3 +19,4 @@ execute if score .map flag = flag.map.ancient const run function ult:items/lost/
 execute if score .map flag = flag.map.marooned const run function ult:items/lost/marooned
 execute if score .map flag = flag.map.hill const run function ult:items/lost/hill
 execute if score .map flag = flag.map.bathhouse const run function ult:items/lost/bathhouse
+execute if score .map flag = flag.map.chasm const run function ult:items/lost/chasm

@@ -1,10 +1,10 @@
 function ult:data/player/get
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.avanto.sword
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.avanto.sword
 loot replace block 0 0 0 container.0 loot ult:map_items/avanto/sword
 function ult:items/give
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.avanto.bow
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.avanto.bow
 loot replace block 0 0 0 container.0 loot ult:map_items/avanto/bow
 function ult:items/give
 

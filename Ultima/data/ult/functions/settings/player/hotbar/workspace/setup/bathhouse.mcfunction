@@ -1,23 +1,23 @@
 function ult:data/player/get
 clear @s #ult:map_items/bathhouse
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.bathhouse.sword
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.bathhouse.sword
 loot replace block 0 0 0 container.0 loot ult:map_items/bathhouse/sword
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.bathhouse.shears
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.bathhouse.shears
 loot replace block 0 0 0 container.0 loot ult:map_items/bathhouse/shears
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.bathhouse.bow
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.bathhouse.bow
 loot replace block 0 0 0 container.0 loot ult:map_items/bathhouse/bow
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.bathhouse.arrows
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.bathhouse.arrows
 loot replace block 0 0 0 container.0 loot ult:map_items/bathhouse/one_arrow
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.bathhouse.blocks
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.bathhouse.blocks
 loot replace block 0 0 0 container.0 loot ult:map_items/bathhouse/block
 function ult:settings/player/hotbar/workspace/hotbar_settings
 

@@ -1,0 +1,67 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "diamond_sword",
+                    "functions": [
+                        {
+                            "function": "set_enchantments",
+                            "enchantments": {
+                                "sharpness": 1
+                            }
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{Unbreakable: true, bonus: true}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "bow",
+                    "functions": [
+                        {
+                            "function": "set_enchantments",
+                            "enchantments": {
+                                "power": 1
+                            }
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{Unbreakable: true, bonus: true}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "crossbow",
+                    "functions": [
+                        {
+                            "function": "set_enchantments",
+                            "enchantments": {
+                                "quick_charge": 1
+                            }
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{Unbreakable: true, bonus: true}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "potion",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{Potion: \"minecraft:healing\", bonus: true}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

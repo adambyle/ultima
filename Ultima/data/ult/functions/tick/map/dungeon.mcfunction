@@ -15,3 +15,11 @@
 # Players can only drink one of their two spawn potions
     clear @a[nbt={ActiveEffects: [{Id: 1b}]}] potion
     clear @a[nbt={ActiveEffects: [{Id: 3b}]}] potion
+
+# ...But can refill their potion with a cauldron
+    execute as @a[tag=player, tag=alive] if score @s crouch_mode = crouch_mode.crouch_pressed const if data entity @s SelectedItem{id: "minecraft:cauldron"} run function ult:tick/map/dungeon/cauldron
+    execute as @a[tag=player, tag=alive] if score @s crouch_mode = crouch_mode.crouch_pressed const if data entity @s Inventory[{id: "minecraft:cauldron", Slot: -106b}] run function ult:tick/map/dungeon/cauldron
+
+# Crossbows are one-use-only
+    execute as @a[tag=player, tag=alive] store result score @s var run clear @s arrow 0
+    clear @a[tag=player, tag=alive, scores={var=0}, nbt=!{Inventory: [{tag: {ChargedProjectiles: [{id: "minecraft:arrow"}]}}]}] crossbow

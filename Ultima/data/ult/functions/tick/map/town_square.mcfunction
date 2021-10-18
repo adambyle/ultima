@@ -8,6 +8,7 @@
 
 # Crouch to upgrade with netherite
     execute as @a[nbt={SelectedItem: {id: "minecraft:netherite_ingot"}}] if score @s crouch_mode = crouch_mode.crouch_pressed const run function ult:tick/map/town_square/upgrade_armor
+    execute as @a[nbt={Inventory: [{id: "minecraft:netherite_ingot", Slot: -106b}]}] if score @s crouch_mode = crouch_mode.crouch_pressed const run function ult:tick/map/town_square/upgrade_armor
 
 # Prevent insertion of items into container blocks by players
     data remove block 79 21 78 Items

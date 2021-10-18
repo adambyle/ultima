@@ -1,0 +1,80 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "netherite_sword",
+                    "functions": [
+                        {
+                            "function": "set_enchantments",
+                            "enchantments": {
+                                "sharpness": 2,
+                                "knockback": 2
+                            }
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{Unbreakable: true, bonus: true}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "spawner",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{bonus: true}"
+                        },
+                        {
+                            "function": "set_name",
+                            "name": {"text": "Soul Spawner (Crouch)", "italic": false}
+                        },
+                        {
+                            "function": "set_lore",
+                            "lore": [{"text": "Crouch to teleport the nearest player", "italic": false, "color": "gray"}, {"text": "to your location.", "italic": false, "color": "gray"}]
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "snowball",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{bonus: true}"
+                        },
+                        {
+                            "function": "set_name",
+                            "name": {"text": "Orb of Confusion", "italic": false}
+                        },
+                        {
+                            "function": "set_lore",
+                            "lore": [{"text": "Throw at target to make them turn around", "italic": false, "color": "gray"}, {"text": "and give them blindness.", "italic": false, "color": "gray"}]
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "end_rod",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{bonus: true}"
+                        },
+                        {
+                            "function": "set_name",
+                            "name": {"text": "Totem of Elevation", "italic": false}
+                        },
+                        {
+                            "function": "set_lore",
+                            "lore": [{"text": "Hold to prevent falling into the abyss.", "italic": false, "color": "gray"}]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

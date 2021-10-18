@@ -19,3 +19,4 @@ execute if score .map flag = flag.map.ancient const run function ult:items/refil
 execute if score .map flag = flag.map.marooned const run function ult:items/refills/marooned
 execute if score .map flag = flag.map.hill const run function ult:items/refills/hill
 execute if score .map flag = flag.map.bathhouse const run function ult:items/refills/bathhouse
+execute if score .map flag = flag.map.chasm const run function ult:items/refills/chasm

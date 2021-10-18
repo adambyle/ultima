@@ -1,8 +1,8 @@
 {
     "function": "set_lore",
     "lore": [
-        [{"text": "Total Deaths: ", "italic": false, "color": "gray"}, {"score": {"name": ".deaths", "objective": "_var"}, "color": "#F94144", "bold": true}],
-        [{"text": "Self-Destructs: ", "italic": false, "color": "gray"}, {"score": {"name": ".suicide", "objective": "_var"}, "color": "#F94144", "bold": true}, " ", [{"text": "(", "color": "dark_gray"}, {"score": {"name": ".num", "objective": "_var"}}, "%)"]],
+        [{"text": "Total Deaths: ", "italic": false, "color": "gray"}, {"score": {"name": ".deaths", "objective": "var"}, "color": "#F94144", "bold": true}],
+        [{"text": "Self-Destructs: ", "italic": false, "color": "gray"}, {"score": {"name": ".suicide", "objective": "var"}, "color": "#F94144", "bold": true}, " ", [{"text": "(", "color": "dark_gray"}, {"score": {"name": ".num", "objective": "var"}}, "%)"]],
         {"text": "--------------------", "color": "dark_gray"}
     ],
     "entity": "this"

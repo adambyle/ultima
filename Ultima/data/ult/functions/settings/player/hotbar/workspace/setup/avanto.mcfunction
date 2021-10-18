@@ -1,19 +1,19 @@
 function ult:data/player/get
 clear @s #ult:map_items/avanto
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.avanto.sword
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.avanto.sword
 loot replace block 0 0 0 container.0 loot ult:map_items/avanto/sword
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.avanto.bow
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.avanto.bow
 loot replace block 0 0 0 container.0 loot ult:map_items/avanto/bow
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.avanto.potion
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.avanto.potion
 loot replace block 0 0 0 container.0 loot ult:map_items/avanto/jump_pot
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.avanto.arrows
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.avanto.arrows
 loot replace block 0 0 0 container.0 loot ult:map_items/avanto/one_arrow
 function ult:settings/player/hotbar/workspace/hotbar_settings
 

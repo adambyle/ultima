@@ -32,4 +32,4 @@ execute if data storage ult:temp Player.StatMenu{mode: 0b} run data modify stora
 execute if data storage ult:temp Player.StatMenu{mode: 2b} run data modify storage ult:temp Sample append from storage ult:temp SubArray[]
 execute if data storage ult:temp Player.StatMenu{mode: 4b} run data modify storage ult:temp Sample append from storage ult:temp SubArray[]
 # Sample size
-execute store result score .sample _var run data get storage ult:temp Sample
+execute store result score .sample var run data get storage ult:temp Sample

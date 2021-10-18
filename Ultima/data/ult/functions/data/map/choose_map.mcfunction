@@ -7,7 +7,7 @@
     execute if score .map flag > flag.map.end_featured const run scoreboard players operation .map flag = flag.map.start_default const
 
 # Generate markers for each map
-    scoreboard players operation .temp _var = flag.map.start_default const
+    scoreboard players operation .temp var = flag.map.start_default const
     function ult:data/map/choose_map/marker_assign_map
 
 # Generate the random selection of a map
@@ -17,7 +17,7 @@
     scoreboard players operation .random_map control = @e[sort=random, limit=1, tag=choose_map] control
 
 # Count the votes for each map
-    scoreboard players set @e[tag=choose_map] _var 0
+    scoreboard players set @e[tag=choose_map] var 0
     execute as @e[tag=choose_map] run function ult:data/map/choose_map/count_vote
 
 # If anybody voted, determine the vote winner

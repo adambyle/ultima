@@ -1,23 +1,23 @@
 function ult:data/player/get
 clear @s #ult:map_items/dracula
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.dracula.sword
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.dracula.sword
 loot replace block 0 0 0 container.0 loot ult:map_items/dracula/sword
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.dracula.weak_pot
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.dracula.weak_pot
 loot replace block 0 0 0 container.0 loot ult:map_items/dracula/weak_pot
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.dracula.harm_pot
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.dracula.harm_pot
 loot replace block 0 0 0 container.0 loot ult:map_items/dracula/harm_pot
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.dracula.crossbow
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.dracula.crossbow
 loot replace block 0 0 0 container.0 loot ult:map_items/dracula/crossbow
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.dracula.arrows
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.dracula.arrows
 loot replace block 0 0 0 container.0 loot ult:map_items/dracula/one_arrow
 function ult:settings/player/hotbar/workspace/hotbar_settings
 

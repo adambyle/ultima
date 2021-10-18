@@ -31,6 +31,12 @@
 # Players may sometimes lose their items
     execute as @a[tag=alive] run function ult:items/lost
 
+# Handle bonus item barrels
+    execute if score .bonus_item flag matches 1 if score .bonus_item control matches 0 at @e[tag=bonus_item] run function ult:tech/bonus_item
+    execute as @a[tag=player, tag=alive] store result score @s var run clear @s #ult:all{bonus: true} 0
+    execute as @a[tag=player, tag=alive, scores={var=1..}] run function ult:items/bonus
+    execute at @e[tag=bonus_item] if block ~ ~ ~ barrel unless data block ~ ~ ~ Items[0] run function ult:tech/bonus_item/refresh
+
 # Map specific functions
     execute if score .map flag = flag.map.woodlands const run function ult:tick/map/woodlands
     execute if score .map flag = flag.map.dungeon const run function ult:tick/map/dungeon
@@ -51,6 +57,7 @@
     execute if score .map flag = flag.map.marooned const run function ult:tick/map/marooned
     execute if score .map flag = flag.map.hill const run function ult:tick/map/hill
     execute if score .map flag = flag.map.bathhouse const run function ult:tick/map/bathhouse
+    execute if score .map flag = flag.map.chasm const run function ult:tick/map/chasm
 
 # Mode specific functions
     execute if score .game_mode flag = flag.game_mode.royale const run function ult:tick/mode/royale
@@ -65,6 +72,6 @@
     execute as @a[sort=random, tag=player] run function ult:death/test
 
 # Reload if a player has left the server
-    scoreboard players set .temp_pn _var 0
-    execute as @a[tag=player] run scoreboard players add .temp_pn _var 1
-    execute unless score .temp_pn _var = .total_players control run function ult:load/player_left
+    scoreboard players set .temp_pn var 0
+    execute as @a[tag=player] run scoreboard players add .temp_pn var 1
+    execute unless score .temp_pn var = .total_players control run function ult:load/player_left

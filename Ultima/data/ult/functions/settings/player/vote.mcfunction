@@ -7,13 +7,13 @@
     clear @s #ult:all{GUI: true}
 
 # Set voting icons
-    execute store result score .temp_map _var run data get storage ult:data Votes[0]
+    execute store result score .temp_map var run data get storage ult:data Votes[0]
     function ult:settings/player/vote/set_loot_table
     item replace entity @s enderchest.2 from block 0 0 0 container.0
-    execute store result score .temp_map _var run data get storage ult:data Votes[1]
+    execute store result score .temp_map var run data get storage ult:data Votes[1]
     function ult:settings/player/vote/set_loot_table
     item replace entity @s enderchest.4 from block 0 0 0 container.0
-    execute store result score .temp_map _var run data get storage ult:data Votes[2]
+    execute store result score .temp_map var run data get storage ult:data Votes[2]
     function ult:settings/player/vote/set_loot_table
     item replace entity @s enderchest.6 from block 0 0 0 container.0
 

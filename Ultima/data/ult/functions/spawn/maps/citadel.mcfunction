@@ -1,18 +1,18 @@
 function ult:data/player/get
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.citadel.sword
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.citadel.sword
 loot replace block 0 0 0 container.0 loot ult:map_items/citadel/sword
 function ult:items/give
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.citadel.axe
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.citadel.axe
 loot replace block 0 0 0 container.0 loot ult:map_items/citadel/axe
 function ult:items/give
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.citadel.crossbow
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.citadel.crossbow
 loot replace block 0 0 0 container.0 loot ult:map_items/citadel/crossbow
 function ult:items/give
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.citadel.shield
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.citadel.shield
 loot replace block 0 0 0 container.0 loot ult:map_items/citadel/shield
 function ult:items/give
 

@@ -16,15 +16,15 @@ function ult:data/root
 
 # Test if the game can't start in these conditions
     # Test for inadequate player counts
-    scoreboard players set .temp_pn _var 0
-    scoreboard players set .temp _var 0
-    execute as @a[tag=player] run scoreboard players add .temp_pn _var 1
+    scoreboard players set .temp_pn var 0
+    scoreboard players set .temp var 0
+    execute as @a[tag=player] run scoreboard players add .temp_pn var 1
     # Valid if...
-    execute if score .game_mode flag = flag.game_mode.duels const if score .temp_pn _var matches 2.. run scoreboard players set .temp _var 1
-    execute if score .game_mode flag = flag.game_mode.royale const if score .temp_pn _var matches 3.. run scoreboard players set .temp _var 1
-    execute if score .game_mode flag = flag.game_mode.brawl const if score .temp_pn _var matches 3.. run scoreboard players set .temp _var 1
+    execute if score .game_mode flag = flag.game_mode.duels const if score .temp_pn var matches 2.. run scoreboard players set .temp var 1
+    execute if score .game_mode flag = flag.game_mode.royale const if score .temp_pn var matches 3.. run scoreboard players set .temp var 1
+    execute if score .game_mode flag = flag.game_mode.brawl const if score .temp_pn var matches 3.. run scoreboard players set .temp var 1
     # Warn if invalid
-    execute if score .temp _var matches 0 run tellraw @a[tag=chat.n.e] [{"text": "N: ", "color": "dark_gray"}, {"text": "You need more players opted in to play this mode.", "color": "#F8961E"}]
+    execute if score .temp var matches 0 run tellraw @a[tag=chat.n.e] [{"text": "N: ", "color": "dark_gray"}, {"text": "You need more players opted in to play this mode.", "color": "#F8961E"}]
 
 # See if the game is ready to start
     function ult:start/ready/valid_start

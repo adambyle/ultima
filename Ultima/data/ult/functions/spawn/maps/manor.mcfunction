@@ -1,22 +1,22 @@
 function ult:data/player/get
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.manor.sword
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.manor.sword
 loot replace block 0 0 0 container.0 loot ult:map_items/manor/sword
 function ult:items/give
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.manor.axe
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.manor.axe
 loot replace block 0 0 0 container.0 loot ult:map_items/manor/axe
 function ult:items/give
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.manor.bow
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.manor.bow
 loot replace block 0 0 0 container.0 loot ult:map_items/manor/bow
 function ult:items/give
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.manor.crossbow
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.manor.crossbow
 loot replace block 0 0 0 container.0 loot ult:map_items/manor/crossbow
 function ult:items/give
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.manor.shield
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.manor.shield
 loot replace block 0 0 0 container.0 loot ult:map_items/manor/shield
 function ult:items/give
 

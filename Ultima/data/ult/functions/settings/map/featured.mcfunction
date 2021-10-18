@@ -16,7 +16,7 @@
     loot replace block 43 31 -12 container.8 loot ult:map_icon/marooned
     loot replace block 43 31 -12 container.12 loot ult:map_icon/hill
     loot replace block 43 31 -12 container.13 loot ult:map_icon/bathhouse
-    loot replace block 43 31 -12 container.14 loot ult:map_icon/coming_soon/featured
+    loot replace block 43 31 -12 container.14 loot ult:map_icon/chasm
     loot replace block 43 31 -12 container.15 loot ult:map_icon/coming_soon/featured
     loot replace block 43 31 -12 container.16 loot ult:map_icon/coming_soon/featured
     loot replace block 43 31 -12 container.17 loot ult:map_icon/coming_soon/featured
@@ -36,3 +36,4 @@
     execute if score .map_mode flag = flag.map_mode.selected const if score .map flag = flag.map.marooned const run item modify block 43 31 -12 container.8 ult:tech/item_selected
     execute if score .map_mode flag = flag.map_mode.selected const if score .map flag = flag.map.hill const run item modify block 43 31 -12 container.12 ult:tech/item_selected
     execute if score .map_mode flag = flag.map_mode.selected const if score .map flag = flag.map.bathhouse const run item modify block 43 31 -12 container.13 ult:tech/item_selected
+    execute if score .map_mode flag = flag.map_mode.selected const if score .map flag = flag.map.chasm const run item modify block 43 31 -12 container.14 ult:tech/item_selected

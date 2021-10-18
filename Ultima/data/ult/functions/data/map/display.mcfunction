@@ -1,4 +1,4 @@
-scoreboard players operation .temp_map _var = .map flag
+scoreboard players operation .temp_map var = .map flag
 function ult:data/map/get_details
 execute as @r run item modify block 0 0 0 container.0 ult:tech/map_name
 execute if score .map_mode flag = flag.map_mode.selected const run data modify entity @e[limit=1, tag=text_display.map_name] CustomName set from block 0 0 0 Items[0].tag.display.Name

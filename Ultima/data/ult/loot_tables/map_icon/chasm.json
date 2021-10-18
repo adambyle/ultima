@@ -1,0 +1,23 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "amethyst_block",
+                    "functions": [
+                        {
+                            "function": "set_name",
+                            "name": {"text": "Chasm", "bold": true, "italic": false}
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{GUI: true}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

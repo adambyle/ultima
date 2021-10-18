@@ -1,10 +1,10 @@
 function ult:data/player/get
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.dracula.sword
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.dracula.sword
 loot replace block 0 0 0 container.0 loot ult:map_items/dracula/sword
 function ult:items/give
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.dracula.crossbow
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.dracula.crossbow
 loot replace block 0 0 0 container.0 loot ult:map_items/dracula/crossbow
 function ult:items/give
 

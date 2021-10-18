@@ -8,9 +8,11 @@ function ult:data/root
 
 # Untether players from self
     execute as @a[tag=player] if score @s tether = @r[tag=root] pn run scoreboard players set @s tether -1
+    execute as @a[tag=player] if score @s event.soul = @r[tag=root] pn run scoreboard players set @s event.soul 0
 
 # Destroy owned projectiles
     execute as @e[type=#ult:projectiles] run function ult:death/kill_projectiles
+    execute as @e[tag=prism] if score @s pn = @r[tag=root] pn run kill @s
 
 # Reset properties of living players
     tag @s remove alive

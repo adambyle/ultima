@@ -2,77 +2,77 @@ function ult:settings/player/statistics/view
 
 # Collect data
     # Performance
-    execute store result score .games _var run data get storage ult:temp Sample
-    scoreboard players set .wins _var 0
-    scoreboard players set .faces _var 0
-    scoreboard players set .defeats _var 0
-    scoreboard players set .kills _var 0
-    scoreboard players set .deaths _var 0
-    scoreboard players set .duels _var 0
-    scoreboard players set .royale _var 0
-    scoreboard players set .brawl _var 0
-    scoreboard players set .suicide _var 0
+    execute store result score .games var run data get storage ult:temp Sample
+    scoreboard players set .wins var 0
+    scoreboard players set .faces var 0
+    scoreboard players set .defeats var 0
+    scoreboard players set .kills var 0
+    scoreboard players set .deaths var 0
+    scoreboard players set .duels var 0
+    scoreboard players set .royale var 0
+    scoreboard players set .brawl var 0
+    scoreboard players set .suicide var 0
     data modify storage ult:temp Deaths set value []
-    scoreboard players set .max_death _var 0
+    scoreboard players set .max_death var 0
     data modify storage ult:temp Kills set value []
-    scoreboard players set .max_kill _var 0
+    scoreboard players set .max_kill var 0
     data modify storage ult:temp Maps set value []
-    scoreboard players set .max_map _var 0
+    scoreboard players set .max_map var 0
     execute if data storage ult:temp Sample[0] run function ult:settings/player/statistics/view/mode/all/data_loop
 
     # Wins
-    scoreboard players operation .num control = .wins _var
-    scoreboard players set .const _var 100
-    scoreboard players operation .num control *= .const _var
-    scoreboard players operation .den control = .games _var
+    scoreboard players operation .num control = .wins var
+    scoreboard players set .const var 100
+    scoreboard players operation .num control *= .const var
+    scoreboard players operation .den control = .games var
     scoreboard players set .places control 1
     function ult:data/decimal
     item modify block 0 0 0 container.0 ult:tech/decimal/dec
     data modify storage ult:temp WR set from block 0 0 0 Items[0].tag.display.Name
     # Performance Score
-    scoreboard players operation .num control = .defeats _var
-    scoreboard players operation .num control *= .const _var
-    scoreboard players operation .den control = .defeats _var
-    scoreboard players operation .den control += .games _var
-    scoreboard players operation .den control -= .wins _var
+    scoreboard players operation .num control = .defeats var
+    scoreboard players operation .num control *= .const var
+    scoreboard players operation .den control = .defeats var
+    scoreboard players operation .den control += .games var
+    scoreboard players operation .den control -= .wins var
     function ult:data/decimal
     item modify block 0 0 0 container.0 ult:tech/decimal/dec
     data modify storage ult:temp PS set from block 0 0 0 Items[0].tag.display.Name
     # Players Faced
     scoreboard players set .places control 2
-    scoreboard players operation .num control = .faces _var
-    scoreboard players operation .den control = .games _var
+    scoreboard players operation .num control = .faces var
+    scoreboard players operation .den control = .games var
     function ult:data/decimal
     item modify block 0 0 0 container.0 ult:tech/decimal/dec
     data modify storage ult:temp PF set from block 0 0 0 Items[0].tag.display.Name
     # Players Defeated
-    scoreboard players operation .num control = .defeats _var
-    scoreboard players operation .den control = .games _var
+    scoreboard players operation .num control = .defeats var
+    scoreboard players operation .den control = .games var
     function ult:data/decimal
     item modify block 0 0 0 container.0 ult:tech/decimal/dec
     data modify storage ult:temp PD set from block 0 0 0 Items[0].tag.display.Name
     # Kill-death Ratio
-    scoreboard players operation .num control = .kills _var
-    scoreboard players operation .den control = .deaths _var
+    scoreboard players operation .num control = .kills var
+    scoreboard players operation .den control = .deaths var
     function ult:data/decimal
     item modify block 0 0 0 container.0 ult:tech/decimal/dec
     data modify storage ult:temp KDR set from block 0 0 0 Items[0].tag.display.Name
     # Duels ratio
-    scoreboard players operation .num _var = .duels _var
-    scoreboard players operation .num _var *= .const _var
-    scoreboard players operation .num _var /= .games _var
+    scoreboard players operation .num var = .duels var
+    scoreboard players operation .num var *= .const var
+    scoreboard players operation .num var /= .games var
     item modify block 0 0 0 container.0 ult:tech/decimal/frac
     data modify storage ult:temp DuelsR set from block 0 0 0 Items[0].tag.display.Name
     # Royale ratio
-    scoreboard players operation .num _var = .royale _var
-    scoreboard players operation .num _var *= .const _var
-    scoreboard players operation .num _var /= .games _var
+    scoreboard players operation .num var = .royale var
+    scoreboard players operation .num var *= .const var
+    scoreboard players operation .num var /= .games var
     item modify block 0 0 0 container.0 ult:tech/decimal/frac
     data modify storage ult:temp RoyaleR set from block 0 0 0 Items[0].tag.display.Name
     # Brawl ratio
-    scoreboard players operation .num _var = .brawl _var
-    scoreboard players operation .num _var *= .const _var
-    scoreboard players operation .num _var /= .games _var
+    scoreboard players operation .num var = .brawl var
+    scoreboard players operation .num var *= .const var
+    scoreboard players operation .num var /= .games var
     item modify block 0 0 0 container.0 ult:tech/decimal/frac
     data modify storage ult:temp BrawlR set from block 0 0 0 Items[0].tag.display.Name
 
@@ -85,9 +85,9 @@ function ult:settings/player/statistics/view
     item modify entity @s enderchest.13 ult:stats/view/all/performance
     item modify entity @s enderchest.14 ult:stats/view/all/kill_count
     function ult:settings/player/statistics/view/mode/all/kill_count
-    scoreboard players operation .num _var = .suicide _var
-    scoreboard players operation .num _var *= .const _var
-    scoreboard players operation .num _var /= .deaths _var
+    scoreboard players operation .num var = .suicide var
+    scoreboard players operation .num var *= .const var
+    scoreboard players operation .num var /= .deaths var
     item modify entity @s enderchest.15 ult:stats/view/all/death_count
     function ult:settings/player/statistics/view/mode/all/death_count
     item modify entity @s enderchest.16 ult:stats/view/all/game_modes

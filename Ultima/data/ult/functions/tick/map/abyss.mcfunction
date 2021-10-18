@@ -15,3 +15,16 @@
 # Deal with fishing rod bobbers
     scoreboard players add @e[type=fishing_bobber] event 1
     kill @e[type=fishing_bobber, scores={event=100..}]
+
+# Snowball handler
+    execute as @e[type=snowball] at @s run function ult:tick/map/abyss/snowball
+
+# Totem handler
+    execute as @a[scores={altitude=..15}, nbt={SelectedItem: {id: "minecraft:end_rod"}}] at @s run function ult:tick/map/abyss/totem
+    execute as @a[scores={altitude=..15}, nbt={Inventory: [{id: "minecraft:end_rod", Slot: -106b}]}] at @s run function ult:tick/map/abyss/totem
+
+# Spawner handler
+    execute as @a[tag=player, tag=alive, nbt={SelectedItem: {id: "minecraft:spawner"}}] if score @s crouch_mode = crouch_mode.crouch_pressed const run function ult:tick/map/abyss/spawner
+    execute as @a[tag=player, tag=alive, nbt={Inventory: [{id: "minecraft:spawner", Slot: -106b}]}] if score @s crouch_mode = crouch_mode.crouch_pressed const run function ult:tick/map/abyss/spawner
+
+kill @a[scores={altitude=..8}, tag=player, tag=alive]

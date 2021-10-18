@@ -1,21 +1,21 @@
 {
     "function": "set_lore",
     "lore": [
-        [{"text": "Games played: ", "italic": false, "color": "gray"}, {"score": {"name": ".games", "objective": "_var"}, "color": "#F9C74F", "bold": true}],
-        [{"text": "Wins: ", "italic": false, "color": "gray"}, {"score": {"name": ".wins", "objective": "_var"}, "color": "#90BE6D", "bold": true}, [{"text": " (", "color": "#43AA8B"}, {"storage": "ult:temp", "nbt": "WR", "interpret": true}, "% winrate)"]],
+        [{"text": "Games played: ", "italic": false, "color": "gray"}, {"score": {"name": ".games", "objective": "var"}, "color": "#F9C74F", "bold": true}],
+        [{"text": "Wins: ", "italic": false, "color": "gray"}, {"score": {"name": ".wins", "objective": "var"}, "color": "#90BE6D", "bold": true}, [{"text": " (", "color": "#43AA8B"}, {"storage": "ult:temp", "nbt": "WR", "interpret": true}, "% winrate)"]],
         {"text": "    Wins are an inaccurate", "color": "dark_gray", "italic": false},
         {"text": "    representation of your skill!", "color": "dark_gray", "italic": false},
         {"text": "    See Performance Score.", "color": "dark_gray", "italic": false},
-        [{"text": "Players Faced: ", "italic": false, "color": "gray"}, {"score": {"name": ".faces", "objective": "_var"}, "color": "#F9C74F", "bold": true}, [{"text": " (average ", "color": "#F8961E"}, {"storage": "ult:temp", "nbt": "PF", "interpret": true}, " per game)"]],
-        [{"text": "Players Defeated: ", "italic": false, "color": "gray"}, {"score": {"name": ".defeats", "objective": "_var"}, "color": "#90BE6D", "bold": true}, [{"text": " (average ", "color": "#43AA8B"}, {"storage": "ult:temp", "nbt": "PD", "interpret": true}, " per game)"]],
+        [{"text": "Players Faced: ", "italic": false, "color": "gray"}, {"score": {"name": ".faces", "objective": "var"}, "color": "#F9C74F", "bold": true}, [{"text": " (average ", "color": "#F8961E"}, {"storage": "ult:temp", "nbt": "PF", "interpret": true}, " per game)"]],
+        [{"text": "Players Defeated: ", "italic": false, "color": "gray"}, {"score": {"name": ".defeats", "objective": "var"}, "color": "#90BE6D", "bold": true}, [{"text": " (average ", "color": "#43AA8B"}, {"storage": "ult:temp", "nbt": "PD", "interpret": true}, " per game)"]],
         {"text": "    This is not your kill count!", "color": "dark_gray", "italic": false},
         {"text": "    When you win a game, this goes up", "color": "dark_gray", "italic": false},
         {"text": "    by the number of other players.", "color": "dark_gray", "italic": false},
         [{"text": "Performance Score: ", "italic": false, "color": "#577590"}, [{"storage": "ult:temp", "nbt": "PS", "interpret": true, "color": "#43AA8B", "bold": true}, "%"]],
         {"text": "    Equal to players defeated", "color": "dark_gray", "italic": false},
         {"text": "    / (players defeated + losses)", "color": "dark_gray", "italic": false},
-        [{"text": "Kills: ", "italic": false, "color": "gray"}, {"score": {"name": ".kills", "objective": "_var"}, "color": "#90BE6D", "bold": true}],
-        [{"text": "Deaths: ", "italic": false, "color": "gray"}, {"score": {"name": ".deaths", "objective": "_var"}, "color": "#F94144", "bold": true}],
+        [{"text": "Kills: ", "italic": false, "color": "gray"}, {"score": {"name": ".kills", "objective": "var"}, "color": "#90BE6D", "bold": true}],
+        [{"text": "Deaths: ", "italic": false, "color": "gray"}, {"score": {"name": ".deaths", "objective": "var"}, "color": "#F94144", "bold": true}],
         [{"text": "Kill-death Ratio: ", "italic": false, "color": "gray"}, {"storage": "ult:temp", "nbt": "KDR", "interpret": true, "color": "#43AA8B", "bold": true}]
     ],
     "entity": "this"

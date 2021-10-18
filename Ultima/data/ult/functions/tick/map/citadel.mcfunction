@@ -8,9 +8,9 @@
     execute positioned 70 28 22 run effect give @a[tag=alive, nbt=!{ActiveEffects: [{Id: 10b}]}, distance=..2] regeneration 2 1 true
 
 # Rune randomization
-    scoreboard players add .map_rune _var 1
-    execute if predicate ult:coin_flip run scoreboard players add .map_rune _var 1
-    execute if score .map_rune _var matches 5.. run scoreboard players remove .map_rune _var 4
+    scoreboard players add .map_rune var 1
+    execute if predicate ult:coin_flip run scoreboard players add .map_rune var 1
+    execute if score .map_rune var matches 5.. run scoreboard players remove .map_rune var 4
 
 # Decrease timer and summon rune at 0
     execute unless entity @e[tag=citadel_rune] if predicate ult:coin_flip run scoreboard players remove .map event 1

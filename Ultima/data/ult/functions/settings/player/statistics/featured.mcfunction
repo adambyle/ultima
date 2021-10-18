@@ -50,3 +50,7 @@ function ult:settings/player/statistics/get_sample
     execute store result storage ult:temp Merge.map int 1 run scoreboard players get flag.map.bathhouse const
     function ult:settings/player/statistics/map_footer
     item modify entity @s enderchest.13 ult:stats/entry_count
+
+    execute store result storage ult:temp Merge.map int 1 run scoreboard players get flag.map.chasm const
+    function ult:settings/player/statistics/map_footer
+    item modify entity @s enderchest.13 ult:stats/entry_count

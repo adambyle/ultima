@@ -1,5 +1,5 @@
 {
     "function": "set_name",
     "entity": "this",
-    "name": {"score": {"name": ".temp", "objective": "_var"}}
+    "name": {"score": {"name": ".temp", "objective": "var"}}
 }

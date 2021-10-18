@@ -1,10 +1,10 @@
 function ult:data/player/get
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.reflection.sword
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.reflection.sword
 loot replace block 0 0 0 container.0 loot ult:map_items/reflection/sword
 function ult:items/give
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.reflection.crossbow
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.reflection.crossbow
 loot replace block 0 0 0 container.0 loot ult:map_items/reflection/crossbow
 function ult:items/give
 

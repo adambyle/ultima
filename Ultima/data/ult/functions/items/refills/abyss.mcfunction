@@ -1,17 +1,17 @@
 function ult:data/player/get
 
 clear @s netherite_ingot
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.abyss.ingot
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.abyss.ingot
 loot replace block 0 0 0 container.0 loot ult:map_items/abyss/ingot
 function ult:items/give
 
 clear @s splash_potion
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.abyss.potion
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.abyss.potion
 loot replace block 0 0 0 container.0 loot ult:map_items/abyss/lev_pot
 function ult:items/give
 
 clear @s arrow
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.abyss.arrows
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.abyss.arrows
 loot replace block 0 0 0 container.0 loot ult:map_items/abyss/arrows
 function ult:items/give
 

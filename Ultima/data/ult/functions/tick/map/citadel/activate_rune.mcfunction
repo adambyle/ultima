@@ -6,11 +6,11 @@ execute at @s run playsound item.trident.thunder master @s ~ ~ ~ 4 2
     attribute @s generic.attack_speed base set 4
     attribute @s generic.attack_damage base set 1
     attribute @s generic.max_health base set 20
-    execute store result score .health _var run data get entity @s Health 10
+    execute store result score .health var run data get entity @s Health 10
 
 # Give health for health rune unless health rune was already applied
-    execute store result score .rune _var run data get entity @s SelectedItem.tag.CitadelRune
-    execute unless score @s event.rune = event.rune.health const if score .rune _var = event.rune.health const run effect give @s instant_health 1 1 true
+    execute store result score .rune var run data get entity @s SelectedItem.tag.CitadelRune
+    execute unless score @s event.rune = event.rune.health const if score .rune var = event.rune.health const run effect give @s instant_health 1 1 true
 
 # Get the rune value from the item NBT
     scoreboard players operation @s event.rune = event.rune.none const
@@ -25,7 +25,7 @@ execute at @s run playsound item.trident.thunder master @s ~ ~ ~ 4 2
     execute if score @s event.rune = event.rune.defense const run attribute @s generic.armor base set 9
     execute if score @s event.rune = event.rune.defense const run attribute @s generic.armor_toughness base set 4
     # Revert health to normal if attribute condition earlier succeeded
-    execute unless score @s event.rune = event.rune.health const if score .health _var matches 201.. run effect give @s instant_health
+    execute unless score @s event.rune = event.rune.health const if score .health var matches 201.. run effect give @s instant_health
 
 # Remove the rune in question
     item replace entity @s[nbt={SelectedItem: {id: "minecraft:globe_banner_pattern"}}] weapon.mainhand with air

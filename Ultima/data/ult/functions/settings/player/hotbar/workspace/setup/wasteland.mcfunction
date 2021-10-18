@@ -1,23 +1,23 @@
 function ult:data/player/get
 clear @s #ult:map_items/wasteland
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.wasteland.sword
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.wasteland.sword
 loot replace block 0 0 0 container.0 loot ult:map_items/wasteland/sword
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.wasteland.bomb
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.wasteland.bomb
 loot replace block 0 0 0 container.0 loot ult:map_items/wasteland/smoke_bomb
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.wasteland.crossbow
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.wasteland.crossbow
 loot replace block 0 0 0 container.0 loot ult:map_items/wasteland/bow
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.wasteland.arrows
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.wasteland.arrows
 loot replace block 0 0 0 container.0 loot ult:map_items/wasteland/one_arrow
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.wasteland.meat
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.wasteland.meat
 loot replace block 0 0 0 container.0 loot ult:map_items/wasteland/rabbit
 function ult:settings/player/hotbar/workspace/hotbar_settings
 

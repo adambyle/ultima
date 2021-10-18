@@ -8,5 +8,5 @@ execute if data storage ult:temp Player.StatMenu{timespan: 1b} run scoreboard pl
 execute if data storage ult:temp Player.StatMenu{timespan: 2b} run scoreboard players set .len control 500
 execute if data storage ult:temp Player.StatMenu{timespan: 3b} run scoreboard players set .len control 2500
 
-execute store result score .sample _var run data get storage ult:temp Player.Games
-execute if score .sample _var < .len control run item modify entity @s enderchest.11 ult:stats/timespan_notif
+execute store result score .sample var run data get storage ult:temp Player.Games
+execute if score .sample var < .len control run item modify entity @s enderchest.11 ult:stats/timespan_notif

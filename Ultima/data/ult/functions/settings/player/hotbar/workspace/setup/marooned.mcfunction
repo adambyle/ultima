@@ -1,27 +1,27 @@
 function ult:data/player/get
 clear @s #ult:map_items/marooned
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.marooned.sword
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.marooned.sword
 loot replace block 0 0 0 container.0 loot ult:map_items/marooned/sword
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.marooned.crossbow
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.marooned.crossbow
 loot replace block 0 0 0 container.0 loot ult:map_items/marooned/crossbow
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.marooned.heart
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.marooned.heart
 loot replace block 0 0 0 container.0 loot ult:map_items/marooned/heart
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.marooned.arrows
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.marooned.arrows
 loot replace block 0 0 0 container.0 loot ult:map_items/marooned/one_arrow
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.marooned.trident
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.marooned.trident
 loot replace block 0 0 0 container.0 loot ult:map_items/marooned/trident
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.marooned.fish
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.marooned.fish
 loot replace block 0 0 0 container.0 loot ult:map_items/marooned/fish
 function ult:settings/player/hotbar/workspace/hotbar_settings
 

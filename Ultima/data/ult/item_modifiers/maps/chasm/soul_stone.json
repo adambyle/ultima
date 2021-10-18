@@ -1,0 +1,12 @@
+[
+    {
+        "function": "set_name",
+        "entity": "this",
+        "name": [
+            {"text": "Soul Stone ", "italic": false},
+            {"text": "(", "color": "white"},
+            {"selector": "@s", "color": "white"},
+            {"text": ")", "color": "white"}
+        ]
+    }
+]

@@ -44,6 +44,7 @@ effect give @s instant_health 1 3 true
     execute if score .map flag = flag.map.marooned const run function ult:spawn/maps/marooned
     execute if score .map flag = flag.map.hill const run function ult:spawn/maps/hill
     execute if score .map flag = flag.map.bathhouse const run function ult:spawn/maps/bathhouse
+    execute if score .map flag = flag.map.chasm const run function ult:spawn/maps/chasm
 
 # Spec fx
     execute at @s run playsound item.totem.use master @a[tag=watching] ~ ~ ~ 1 0.7

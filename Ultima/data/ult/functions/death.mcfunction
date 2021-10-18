@@ -43,6 +43,7 @@ function ult:data/root
     execute if score @s death_cause = death_cause.glitch const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"found a way to forever escape"'
     execute if score @s death_cause = death_cause.froze const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was sent to a warmer place by"'
     execute if score @s death_cause = death_cause.snowballed const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was snowballed by"'
+    execute if score @s death_cause = death_cause.laser const if entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"was disintegrated by"'
     # If there was no killer
     execute if score @s death_cause = death_cause.normal const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"died"'
     execute if score @s death_cause = death_cause.abyss_fall const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"leapt into the abyss"'
@@ -61,6 +62,7 @@ function ult:data/root
     execute if score @s death_cause = death_cause.glitch const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"tried to be clever"'
     execute if score @s death_cause = death_cause.froze const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '"froze to death"'
     execute if score @s death_cause = death_cause.snowballed const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '["snowballed ", {"storage": "ult:temp", "nbt": "Object"}, "self"]'
+    execute if score @s death_cause = death_cause.laser const unless entity @a[tag=killer] run data modify storage ult:temp Death1 set value '["ran into ", {"storage": "ult:temp", "nbt": "Possessive"}, " own laser"]'
     # Second portion of death message
     data modify storage ult:temp Death2 set value '""'
 
@@ -95,7 +97,7 @@ function ult:death/exit
 
 # Spectate or lobby
     function ult:data/player/get
-    execute store result score .spect_mode _var run data get storage ult:temp Player.Spectate.death
+    execute store result score .spect_mode var run data get storage ult:temp Player.Spectate.death
     function ult:exit
     
 # Test for victory
@@ -104,7 +106,7 @@ function ult:death/exit
     # If the killer has a high enough score in brawl mode, they win
     execute if score .game_mode flag = flag.game_mode.brawl const as @a[tag=killer, tag=alive] if score @s score >= .goal_score control run function ult:victory/brawl
     # If all the players are dead in royale
-    scoreboard players set .temp_pn _var 0
-    execute as @a[tag=player] run scoreboard players add .temp_pn _var 1
-    scoreboard players remove .temp_pn _var 1
-    execute if score .game_mode flag = flag.game_mode.royale const as @a[tag=player, tag=alive] if score @s score >= .temp_pn _var run function ult:victory
+    scoreboard players set .temp_pn var 0
+    execute as @a[tag=player] run scoreboard players add .temp_pn var 1
+    scoreboard players remove .temp_pn var 1
+    execute if score .game_mode flag = flag.game_mode.royale const as @a[tag=player, tag=alive] if score @s score >= .temp_pn var run function ult:victory

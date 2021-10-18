@@ -1,31 +1,31 @@
 function ult:data/player/get
 clear @s #ult:map_items/last_stand
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.sword
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.lastStand.sword
 loot replace block 0 0 0 container.0 loot ult:map_items/last_stand/sword
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.axe
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.lastStand.axe
 loot replace block 0 0 0 container.0 loot ult:map_items/last_stand/axe
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.bow
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.lastStand.bow
 loot replace block 0 0 0 container.0 loot ult:map_items/last_stand/bow
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.shield
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.lastStand.shield
 loot replace block 0 0 0 container.0 loot ult:map_items/last_stand/shield
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.cannonball
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.lastStand.cannonball
 loot replace block 0 0 0 container.0 loot ult:map_items/last_stand/cannonball
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.arrows
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.lastStand.arrows
 loot replace block 0 0 0 container.0 loot ult:map_items/last_stand/one_arrow
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.lastStand.potion
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.lastStand.potion
 loot replace block 0 0 0 container.0 loot ult:map_items/last_stand/potion
 function ult:settings/player/hotbar/workspace/hotbar_settings
 

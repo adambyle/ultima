@@ -3,7 +3,7 @@
     function ult:data/map/choose_map
 
 # Generate markers for each map
-    scoreboard players operation .temp _var = flag.map.start_default const
+    scoreboard players operation .temp var = flag.map.start_default const
     function ult:data/map/choose_map/marker_assign_map
 
 # Choose three new distinct maps for voting

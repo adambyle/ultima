@@ -28,20 +28,20 @@
     data modify storage ult:temp Array set from storage ult:temp Player.Games
     function ult:data/nbt/splice
     # Get total games recorded
-    scoreboard players operation .sample _var < .len control
-    scoreboard players set .const _var 100
+    scoreboard players operation .sample var < .len control
+    scoreboard players set .const var 100
     # Data for all games
     data modify storage ult:temp Games set from storage ult:temp SubArray
-    execute store result score .entries _var run data get storage ult:temp Games
+    execute store result score .entries var run data get storage ult:temp Games
     # Data for duels
     data modify storage ult:temp Array set from storage ult:temp Games
     data remove storage ult:temp Merge
     execute store result storage ult:temp Merge.mode byte 1 run scoreboard players get flag.game_mode.duels const
     function ult:data/nbt/filter
-    execute store result score .entries _var run data get storage ult:temp SubArray
-    scoreboard players operation .num _var = .entries _var
-    scoreboard players operation .num _var *= .const _var
-    scoreboard players operation .num _var /= .sample _var
+    execute store result score .entries var run data get storage ult:temp SubArray
+    scoreboard players operation .num var = .entries var
+    scoreboard players operation .num var *= .const var
+    scoreboard players operation .num var /= .sample var
     item modify entity @s enderchest.14 ult:stats/entry_count
     item modify entity @s enderchest.23 ult:stats/entry_count
     # Data for royale
@@ -49,11 +49,11 @@
     data remove storage ult:temp Merge
     execute store result storage ult:temp Merge.mode byte 1 run scoreboard players get flag.game_mode.royale const
     function ult:data/nbt/filter
-    execute store result score .royale _var run data get storage ult:temp SubArray
-    scoreboard players operation .entries _var = .royale _var
-    scoreboard players operation .num _var = .royale _var
-    scoreboard players operation .num _var *= .const _var
-    scoreboard players operation .num _var /= .sample _var
+    execute store result score .royale var run data get storage ult:temp SubArray
+    scoreboard players operation .entries var = .royale var
+    scoreboard players operation .num var = .royale var
+    scoreboard players operation .num var *= .const var
+    scoreboard players operation .num var /= .sample var
     item modify entity @s enderchest.16 ult:stats/entry_count
     item modify entity @s enderchest.25 ult:stats/entry_count
     # Data for brawl
@@ -61,16 +61,16 @@
     data remove storage ult:temp Merge
     execute store result storage ult:temp Merge.mode byte 1 run scoreboard players get flag.game_mode.brawl const
     function ult:data/nbt/filter
-    execute store result score .entries _var run data get storage ult:temp SubArray
-    scoreboard players operation .num _var = .entries _var
-    scoreboard players operation .num _var *= .const _var
-    scoreboard players operation .num _var /= .sample _var
+    execute store result score .entries var run data get storage ult:temp SubArray
+    scoreboard players operation .num var = .entries var
+    scoreboard players operation .num var *= .const var
+    scoreboard players operation .num var /= .sample var
     item modify entity @s enderchest.17 ult:stats/entry_count
     item modify entity @s enderchest.26 ult:stats/entry_count
     # Data for combined multiplayer
-    scoreboard players operation .entries _var += .royale _var
-    scoreboard players operation .num _var = .entries _var
-    scoreboard players operation .num _var *= .const _var
-    scoreboard players operation .num _var /= .sample _var
+    scoreboard players operation .entries var += .royale var
+    scoreboard players operation .num var = .entries var
+    scoreboard players operation .num var *= .const var
+    scoreboard players operation .num var /= .sample var
     item modify entity @s enderchest.15 ult:stats/entry_count
     item modify entity @s enderchest.24 ult:stats/entry_count

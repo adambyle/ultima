@@ -1,0 +1,23 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "slime_ball",
+                    "functions": [
+                        {
+                            "function": "set_name",
+                            "name": {"text": "Launch Charm", "italic": false}
+                        },
+                        {
+                            "function": "set_count",
+                            "count": 4
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

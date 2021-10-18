@@ -1,7 +1,7 @@
 {
     "function": "set_lore",
     "lore": [
-        [{"storage": "ult:temp", "nbt": "Category", "italic": false, "color": "gray", "interpret": true}, [{"score": {"name": ".count", "objective": "_var"}, "bold": true, "color": "#F9C74F"}, {"text": " games", "bold": false}], " ", [{"text": "(", "color": "dark_gray"}, {"score": {"name": ".num", "objective": "_var"}}, "%) "], {"text": "Performance: ", "color": "#577590"}, [{"storage": "ult:temp", "nbt": "Decimal", "interpret": true, "color": "#43AA8B"}, "%"]]
+        [{"storage": "ult:temp", "nbt": "Category", "italic": false, "color": "gray", "interpret": true}, [{"score": {"name": ".count", "objective": "var"}, "bold": true, "color": "#F9C74F"}, {"text": " games", "bold": false}], " ", [{"text": "(", "color": "dark_gray"}, {"score": {"name": ".num", "objective": "var"}}, "%) "], {"text": "Performance: ", "color": "#577590"}, [{"storage": "ult:temp", "nbt": "Decimal", "interpret": true, "color": "#43AA8B"}, "%"]]
     ],
     "entity": "this"
 }

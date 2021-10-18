@@ -1,8 +1,8 @@
 {
     "function": "set_lore",
     "lore": [
-        [{"text": "Players Faced (Games Played): ", "italic": false, "color": "gray"}, {"score": {"name": ".games", "objective": "_var"}, "color": "#F9C74F", "bold": true}],
-        [{"text": "Total Unique Opponents: ", "italic": false, "color": "gray"}, {"score": {"name": ".opp", "objective": "_var"}, "color": "#F8961E", "bold": true}],
+        [{"text": "Players Faced (Games Played): ", "italic": false, "color": "gray"}, {"score": {"name": ".games", "objective": "var"}, "color": "#F9C74F", "bold": true}],
+        [{"text": "Total Unique Opponents: ", "italic": false, "color": "gray"}, {"score": {"name": ".opp", "objective": "var"}, "color": "#F8961E", "bold": true}],
         {"text": "--------------------", "color": "dark_gray"}
     ],
     "entity": "this"

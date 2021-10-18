@@ -9,8 +9,8 @@
 
 # Tally diamonds
     execute as @a[scores={event.diamond=1..}] run function ult:tick/map/permafrost/mine_diamonds
-    execute as @a[tag=player, tag=alive] store result score @s _var run clear @s diamond 0
-    execute as @a[scores={_var=4..}, tag=player, tag=alive] run function ult:tick/map/permafrost/diamond_boots
+    execute as @a[tag=player, tag=alive] store result score @s var run clear @s diamond 0
+    execute as @a[scores={var=4..}, tag=player, tag=alive] run function ult:tick/map/permafrost/diamond_boots
 
 # Spawn new diamonds
     execute if predicate ult:maps/permafrost/generate_diamond run setblock 2 22 17 diamond_ore

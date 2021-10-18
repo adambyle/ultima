@@ -4,7 +4,7 @@
 # Close down the timer; it has ended
     bossbar set ult:game_start visible false
     schedule clear ult:start/ready/timer
-    scoreboard players set .ready_timeout _var -1
+    scoreboard players set .ready_timeout var -1
     tag @a remove ready
 
 # Start the game

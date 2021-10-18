@@ -45,6 +45,8 @@ function ult:data/root
     # Exploded in wasteland or ancient mines
     execute if score @s death_cause = death_cause.harming_potion const if score .map flag = flag.map.wasteland const run scoreboard players operation @a[tag=root] death_cause = death_cause.exploded const
     execute if score @s death_cause = death_cause.harming_potion const if score .map flag = flag.map.ancient const run scoreboard players operation @s death_cause = death_cause.exploded const
+    # Laser'd in chasm
+    execute if score @s death_cause = death_cause.harming_potion const if score .map flag = flag.map.chasm const run scoreboard players operation @a[tag=root] death_cause = death_cause.laser const
     # Snowballed
     execute if score @s death_cause = death_cause.harming_potion const if score .map flag = flag.map.permafrost const run scoreboard players operation @s death_cause = death_cause.snowballed const
     # Fell in the void

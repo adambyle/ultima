@@ -1,5 +1,5 @@
 # Declare scoreboard objectives
-    scoreboard objectives add _var dummy
+    scoreboard objectives add var dummy
     scoreboard objectives add action trigger
     scoreboard objectives add afk dummy
     scoreboard objectives add altitude dummy
@@ -14,11 +14,17 @@
     scoreboard objectives add event dummy
     scoreboard objectives add event.debris mined:ancient_debris
     scoreboard objectives add event.diamond mined:diamond_ore
+    scoreboard objectives add event.prism dummy
     scoreboard objectives add event.rabbit killed:rabbit
     scoreboard objectives add event.rune dummy
     scoreboard objectives add event.salmon killed:salmon
+    scoreboard objectives add event.sh.red mined:red_mushroom
+    scoreboard objectives add event.sh.brown mined:brown_mushroom
+    scoreboard objectives add event.sh.crimson mined:crimson_fungus
+    scoreboard objectives add event.sh.warped mined:warped_fungus
     scoreboard objectives add event.skill dummy
     scoreboard objectives add event.skill_inc dummy
+    scoreboard objectives add event.soul dummy
     scoreboard objectives add flag dummy
     scoreboard objectives add health health
     scoreboard objectives add health_display dummy
@@ -50,8 +56,12 @@
     execute unless score .game_mode flag matches 0.. run scoreboard players set .game_mode flag 0
     execute unless score .continuous flag matches 0.. run setblock 42 31 -3 lever[powered=false, face=wall, facing=north]
     execute unless score .continuous flag matches 0.. run scoreboard players set .continuous flag 0
+    execute unless score .bonus_item flag matches 0.. run scoreboard players set .bonus_item flag 1
 
 # Set constant enumerators
+    # For all booleans
+    scoreboard players set bool.false const 0
+    scoreboard players set bool.true const 1
     # For `action`
     scoreboard players set action.none const 0
     scoreboard players set action.change_modes const 1
@@ -82,6 +92,7 @@
     scoreboard players set death_cause.glitch const 14
     scoreboard players set death_cause.froze const 15
     scoreboard players set death_cause.snowballed const 16
+    scoreboard players set death_cause.laser const 17
     # For `event.rune`
     scoreboard players set event.rune.none const 0
     scoreboard players set event.rune.health const 1
@@ -94,9 +105,6 @@
     scoreboard players set event.skill.flurry_rush const 2
     scoreboard players set event.skill.backstabbing const 3
     scoreboard players set event.skill.hot_pursuit const 4
-    # For `.debug_mode flag`
-    scoreboard players set flag.debug_mode.off const 0
-    scoreboard players set flag.debug_mode.on const 1
     # For `.game_state flag`
     scoreboard players set flag.game_state.inactive const 0
     scoreboard players set flag.game_state.active const 1
@@ -127,10 +135,11 @@
     scoreboard players set flag.map.marooned const 53
     scoreboard players set flag.map.hill const 54
     scoreboard players set flag.map.bathhouse const 55
+    scoreboard players set flag.map.chasm const 56
     scoreboard players operation flag.map.start_default const = flag.map.manor const
-    scoreboard players operation flag.map.end_default const = flag.map.permafrost const
+    scoreboard players operation flag.map.end_default const = flag.map.shroom const
     scoreboard players operation flag.map.start_featured const = flag.map.reflection const
-    scoreboard players operation flag.map.end_featured const = flag.map.bathhouse const
+    scoreboard players operation flag.map.end_featured const = flag.map.chasm const
     # For `.map_menu flag`
     scoreboard players set flag.map_menu.main const 0
     scoreboard players set flag.map_menu.default const 1

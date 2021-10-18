@@ -1,18 +1,18 @@
 function ult:data/player/get
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.townSquare.sword
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.townSquare.sword
 loot replace block 0 0 0 container.0 loot ult:map_items/town_square/sword
 function ult:items/give
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.townSquare.axe
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.townSquare.axe
 loot replace block 0 0 0 container.0 loot ult:map_items/town_square/axe
 function ult:items/give
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.townSquare.bow
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.townSquare.bow
 loot replace block 0 0 0 container.0 loot ult:map_items/town_square/bow
 function ult:items/give
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.townSquare.shield
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.townSquare.shield
 loot replace block 0 0 0 container.0 loot ult:map_items/town_square/shield
 function ult:items/give
 

@@ -6,7 +6,7 @@ loot replace entity @s enderchest.7 loot ult:map_icon/ancient
 loot replace entity @s enderchest.8 loot ult:map_icon/marooned
 loot replace entity @s enderchest.12 loot ult:map_icon/hill
 loot replace entity @s enderchest.13 loot ult:map_icon/bathhouse
-loot replace entity @s enderchest.14 loot ult:map_icon/coming_soon/featured
+loot replace entity @s enderchest.14 loot ult:map_icon/chasm
 loot replace entity @s enderchest.15 loot ult:map_icon/coming_soon/featured
 loot replace entity @s enderchest.16 loot ult:map_icon/coming_soon/featured
 loot replace entity @s enderchest.17 loot ult:map_icon/coming_soon/featured

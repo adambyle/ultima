@@ -1,6 +1,6 @@
 # Test for ownership of a trident, and, if none exist, replace lost trident
     execute as @a[tag=alive] run function ult:tick/map/marooned/trident_ownership
-    loot give @a[scores={_var=0}, nbt=!{Inventory: [{id: "minecraft:trident"}]}] loot ult:map_items/marooned/trident
+    loot give @a[scores={var=0}, nbt=!{Inventory: [{id: "minecraft:trident"}]}] loot ult:map_items/marooned/trident
 
 # Prevent interacting with blocks
     fill 131 13 186 95 25 124 spruce_fence_gate[facing=east, open=false] replace spruce_fence_gate[facing=east, open=true]

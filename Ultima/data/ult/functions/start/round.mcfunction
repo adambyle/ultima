@@ -34,12 +34,31 @@
     execute if score .map flag = flag.map.town_square const run function ult:start/map/town_square
     execute if score .map flag = flag.map.last_stand const run function ult:start/map/last_stand
     execute if score .map flag = flag.map.permafrost const run function ult:start/map/permafrost
+    execute if score .map flag = flag.map.shroom const run function ult:start/map/shroom
     execute if score .map flag = flag.map.reflection const run function ult:start/map/reflection
     execute if score .map flag = flag.map.dracula const run function ult:start/map/dracula
     execute if score .map flag = flag.map.ancient const run function ult:start/map/ancient
     execute if score .map flag = flag.map.marooned const run function ult:start/map/marooned
     execute if score .map flag = flag.map.hill const run function ult:start/map/hill
     function ult:start/map/reset
+
+# Setup item barrel
+    kill @e[tag=bonus_item]
+    execute if score .map flag = flag.map.manor const run summon marker 45 22 15 {Tags: ["bonus_item"]}
+    execute if score .map flag = flag.map.woodlands const run summon marker 45 9 47 {Tags: ["bonus_item"]}
+    execute if score .map flag = flag.map.dungeon const run summon marker 45 21 79 {Tags: ["bonus_item"]}
+    execute if score .map flag = flag.map.abyss const run summon marker 45 18 111 {Tags: ["bonus_item"]}
+    execute if score .map flag = flag.map.citadel const run summon marker 77 26 15 {Tags: ["bonus_item"]}
+    execute if score .map flag = flag.map.wasteland const run summon marker 77 25 47 {Tags: ["bonus_item"]}
+    execute if score .map flag = flag.map.town_square const run summon marker 79 26 79 {Tags: ["bonus_item"]}
+    execute if score .map flag = flag.map.last_stand const run summon marker 77 31 111 {Tags: ["bonus_item"]}
+    execute if score .map flag = flag.map.permafrost const run summon marker 13 31 15 {Tags: ["bonus_item"]}
+    execute if score .map flag = flag.map.shroom const run summon marker 13 25 47 {Tags: ["bonus_item"]}
+    execute if score .map flag = flag.map.haven const run summon marker 0 2 0 {Tags: ["bonus_item"]}
+    execute if score .map flag = flag.map.frontier const run summon marker 0 2 0 {Tags: ["bonus_item"]}
+    execute at @e[tag=bonus_item] run setblock ~ ~ ~ air
+    scoreboard players set .bonus_item control 0
+    scoreboard players set .bonus_countdown control 20
 
 # Set displays
     # Health initialization

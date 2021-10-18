@@ -10,7 +10,7 @@
     particle explosion_emitter ~ ~ ~ 0 0 0 0 0 force
 
 # Get fireball altitude on explosion & destroy
-    execute store result score .alt _var run data get entity @s Pos[1]
+    execute store result score .alt var run data get entity @s Pos[1]
     kill @s
 
 # Summon markers for spreading
@@ -27,9 +27,9 @@
     summon marker ~ ~ ~ {Tags: ["temp"]}
 
 # Spready markers space on altitude
-    execute if score .alt _var matches 26.. run spreadplayers ~ ~ 0 3 under 34 false @e[tag=temp]
-    execute if score .alt _var matches 21..25 run spreadplayers ~ ~ 0 3 under 25 false @e[tag=temp]
-    execute if score .alt _var matches ..20 run spreadplayers ~ ~ 0 3 under 18 false @e[tag=temp]
+    execute if score .alt var matches 26.. run spreadplayers ~ ~ 0 3 under 34 false @e[tag=temp]
+    execute if score .alt var matches 21..25 run spreadplayers ~ ~ 0 3 under 25 false @e[tag=temp]
+    execute if score .alt var matches ..20 run spreadplayers ~ ~ 0 3 under 18 false @e[tag=temp]
 
 # Summon fire at each marker
     execute at @e[tag=temp] unless block ~ ~-1 ~ air unless block ~ ~-1 ~ lava unless block ~ ~-1 ~ #fire run setblock ~ ~ ~ fire

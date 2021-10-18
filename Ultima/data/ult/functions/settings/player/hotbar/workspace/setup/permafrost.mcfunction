@@ -1,27 +1,27 @@
 function ult:data/player/get
 clear @s #ult:map_items/permafrost
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.permafrost.axe
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.permafrost.axe
 loot replace block 0 0 0 container.0 loot ult:map_items/permafrost/axe
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.permafrost.pickaxe
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.permafrost.pickaxe
 loot replace block 0 0 0 container.0 loot ult:map_items/permafrost/pickaxe
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.permafrost.snowball
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.permafrost.snowball
 loot replace block 0 0 0 container.0 loot ult:map_items/permafrost/one_snowball
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.permafrost.milk
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.permafrost.milk
 loot replace block 0 0 0 container.0 loot ult:map_items/permafrost/milk
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.permafrost.diamond
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.permafrost.diamond
 loot replace block 0 0 0 container.0 loot ult:map_items/permafrost/one_diamond
 function ult:settings/player/hotbar/workspace/hotbar_settings
 
-execute store result score .hotbar _var run data get storage ult:temp Player.Hotbar.permafrost.fishing_rod
+execute store result score .hotbar var run data get storage ult:temp Player.Hotbar.permafrost.fishing_rod
 loot replace block 0 0 0 container.0 loot ult:map_items/permafrost/fishing_rod
 function ult:settings/player/hotbar/workspace/hotbar_settings
 

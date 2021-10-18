@@ -2,10 +2,10 @@
     scoreboard players set .count_votes control 1
     execute if score .map_mode flag = flag.map_mode.vote const run function ult:data/map/choose_map
     # Determine if a new random map is needed
-    scoreboard players set .new_random _var 1
-    execute if score .map flag >= flag.map.start_default const if score .map flag <= flag.map.end_default const run scoreboard players set .new_random _var 0
-    execute if score .map flag >= flag.map.start_fandom const if score .map flag <= flag.map.end_fandom const run scoreboard players set .new_random _var 0
-    execute if score .new_random _var matches 1 if score .map_mode flag = flag.map_mode.random const run function ult:data/map/choose_map
+    scoreboard players set .new_random var 1
+    execute if score .map flag >= flag.map.start_default const if score .map flag <= flag.map.end_default const run scoreboard players set .new_random var 0
+    execute if score .map flag >= flag.map.start_fandom const if score .map flag <= flag.map.end_fandom const run scoreboard players set .new_random var 0
+    execute if score .new_random var matches 1 if score .map_mode flag = flag.map_mode.random const run function ult:data/map/choose_map
     # Change day time
     function ult:start/lighting
 
@@ -20,7 +20,7 @@
     execute as @a[tag=player] run scoreboard players add .total_players control 1
 
 # Announce the map (in certain cases)
-    scoreboard players operation .temp_map _var = .map flag
+    scoreboard players operation .temp_map var = .map flag
     function ult:data/map/get_details
     title @a reset
     title @a times 0 16 4

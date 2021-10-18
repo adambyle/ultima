@@ -1,10 +1,10 @@
 {
     "function": "set_lore",
     "lore": [
-        [{"text": "Total Kills: ", "italic": false, "color": "gray"}, {"score": {"name": ".kills", "objective": "_var"}, "color": "#90BE6D", "bold": true}],
-        [{"text": "Normal Kills: ", "italic": false, "color": "gray"}, {"score": {"name": ".normkills", "objective": "_var"}, "color": "#90BE6D", "bold": true}],
-        [{"text": "Spawn Kills: ", "italic": false, "color": "gray"}, {"score": {"name": ".freshkills", "objective": "_var"}, "color": "#90BE6D", "bold": true}],
-        [{"text": "Revenge Kills: ", "italic": false, "color": "gray"}, {"score": {"name": ".revenge", "objective": "_var"}, "color": "#90BE6D", "bold": true}],
+        [{"text": "Total Kills: ", "italic": false, "color": "gray"}, {"score": {"name": ".kills", "objective": "var"}, "color": "#90BE6D", "bold": true}],
+        [{"text": "Normal Kills: ", "italic": false, "color": "gray"}, {"score": {"name": ".normkills", "objective": "var"}, "color": "#90BE6D", "bold": true}],
+        [{"text": "Spawn Kills: ", "italic": false, "color": "gray"}, {"score": {"name": ".freshkills", "objective": "var"}, "color": "#90BE6D", "bold": true}],
+        [{"text": "Revenge Kills: ", "italic": false, "color": "gray"}, {"score": {"name": ".revenge", "objective": "var"}, "color": "#90BE6D", "bold": true}],
         {"text": "--------------------", "color": "dark_gray"}
     ],
     "entity": "this"

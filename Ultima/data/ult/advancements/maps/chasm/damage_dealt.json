@@ -1,0 +1,7 @@
+{
+    "criteria": {
+        "damage": {
+            "trigger": "player_hurt_entity"
+        }
+    }
+}

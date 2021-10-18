@@ -1,9 +1,9 @@
 {
     "function": "set_lore",
     "lore": [
-        [{"text": "Duels: ", "italic": false, "color": "gray"}, [{"score": {"name": ".duels", "objective": "_var"}, "color": "#F9C74F", "bold": true}, {"text": " games", "bold": false}], [{"text": " (", "color": "dark_gray"}, {"storage": "ult:temp", "nbt": "DuelsR", "interpret": true}, "%)"]],
-        [{"text": "Royale: ", "italic": false, "color": "gray"}, [{"score": {"name": ".royale", "objective": "_var"}, "color": "#F9C74F", "bold": true}, {"text": " games", "bold": false}], [{"text": " (", "color": "dark_gray"}, {"storage": "ult:temp", "nbt": "RoyaleR", "interpret": true}, "%)"]],
-        [{"text": "Brawl: ", "italic": false, "color": "gray"}, [{"score": {"name": ".brawl", "objective": "_var"}, "color": "#F9C74F", "bold": true}, {"text": " games", "bold": false}], [{"text": " (", "color": "dark_gray"}, {"storage": "ult:temp", "nbt": "BrawlR", "interpret": true}, "%)"]]
+        [{"text": "Duels: ", "italic": false, "color": "gray"}, [{"score": {"name": ".duels", "objective": "var"}, "color": "#F9C74F", "bold": true}, {"text": " games", "bold": false}], [{"text": " (", "color": "dark_gray"}, {"storage": "ult:temp", "nbt": "DuelsR", "interpret": true}, "%)"]],
+        [{"text": "Royale: ", "italic": false, "color": "gray"}, [{"score": {"name": ".royale", "objective": "var"}, "color": "#F9C74F", "bold": true}, {"text": " games", "bold": false}], [{"text": " (", "color": "dark_gray"}, {"storage": "ult:temp", "nbt": "RoyaleR", "interpret": true}, "%)"]],
+        [{"text": "Brawl: ", "italic": false, "color": "gray"}, [{"score": {"name": ".brawl", "objective": "var"}, "color": "#F9C74F", "bold": true}, {"text": " games", "bold": false}], [{"text": " (", "color": "dark_gray"}, {"storage": "ult:temp", "nbt": "BrawlR", "interpret": true}, "%)"]]
     ],
     "entity": "this"
 }

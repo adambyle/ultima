@@ -22,3 +22,4 @@
     execute if score .map flag = flag.map.marooned const run function ult:tp/marooned
     execute if score .map flag = flag.map.hill const run function ult:tp/hill
     execute if score .map flag = flag.map.bathhouse const run function ult:tp/bathhouse
+    execute if score .map flag = flag.map.chasm const run function ult:tp/chasm

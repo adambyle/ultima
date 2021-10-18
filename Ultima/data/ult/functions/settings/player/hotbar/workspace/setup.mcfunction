@@ -29,6 +29,7 @@
     execute if score @s hotbar_map = flag.map.marooned const run function ult:settings/player/hotbar/workspace/setup/marooned
     execute if score @s hotbar_map = flag.map.hill const run function ult:settings/player/hotbar/workspace/setup/hill
     execute if score @s hotbar_map = flag.map.bathhouse const run function ult:settings/player/hotbar/workspace/setup/bathhouse
+    execute if score @s hotbar_map = flag.map.chasm const run function ult:settings/player/hotbar/workspace/setup/chasm
     function ult:settings/player/hotbar/workspace/gray_out
 
 # Control icons

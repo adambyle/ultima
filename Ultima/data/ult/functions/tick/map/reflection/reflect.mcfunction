@@ -7,15 +7,15 @@
 
 # Process Y position
     # Get Y
-    execute store result score .y _var run data get entity @s Pos[1] 10000
+    execute store result score .y var run data get entity @s Pos[1] 10000
     # Center at Y=31.5
-    scoreboard players set .new_y _var 315000
+    scoreboard players set .new_y var 315000
     # Get the distance from the center to the Y pos
-    scoreboard players operation .new_y _var -= .y _var
+    scoreboard players operation .new_y var -= .y var
     # Invert by recentering
-    scoreboard players add .new_y _var 315000
+    scoreboard players add .new_y var 315000
     # Store new Y into marker
-    execute store result entity @e[limit=1, tag=temp2] Pos[1] double 0.0001 run scoreboard players get .new_y _var
+    execute store result entity @e[limit=1, tag=temp2] Pos[1] double 0.0001 run scoreboard players get .new_y var
     # Summon new rocket at marker
     tag @e remove temp
     execute at @e[tag=temp2] run summon firework_rocket ~ ~ ~ {ShotAtAngle: true, Tags: ["reflection_rocket", "temp"]}

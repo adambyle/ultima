@@ -9,7 +9,7 @@ gamerule maxCommandChainLength 2000000
 
 # Reset scoreboard
     # Clear entire objectives
-    scoreboard players reset * _var
+    scoreboard players reset * var
     scoreboard players reset * action
     scoreboard players reset * afk
     scoreboard players reset * altitude
@@ -103,4 +103,4 @@ gamerule maxCommandChainLength 2000000
     tellraw @a[tag=chat.n.e] ""
     tellraw @a[tag=chat.n.e] [{"text": "N: ", "color": "dark_gray"}, [{"text": "If you run into any bugs, report them ", "color": "#577590"}, {"text": "on GitHub.", "underlined": true, "clickEvent": {"action": "open_url", "value": "https://github.com/beegyfleeg/ultima/issues"}}]]
     tellraw @a[tag=chat.n.l] [{"text": "N: ", "color": "dark_gray"}, {"text": "Report bugs.", "underlined": true, "clickEvent": {"action": "open_url", "value": "https://github.com/beegyfleeg/ultima/issues"}}]
-    execute if score .debug_mode flag = flag.debug_mode.on const run tellraw @a[tag=operator] [{"text": "D: ", "color": "dark_gray"}, [{"text": "DEBUG MODE IS ON! ", "color": "#F9C74F"}, {"text": "Click to turn it off.", "underlined": true, "clickEvent": {"action": "run_command", "value": "/scoreboard players operation .debug_mode flag = flag.debug_mode.off const"}}]]
+    execute if score .debug_mode flag = bool.true const run tellraw @a[tag=operator] [{"text": "D: ", "color": "dark_gray"}, [{"text": "DEBUG MODE IS ON! ", "color": "#F9C74F"}, {"text": "Click to turn it off.", "underlined": true, "clickEvent": {"action": "run_command", "value": "/scoreboard players operation .debug_mode flag = bool.false const"}}]]

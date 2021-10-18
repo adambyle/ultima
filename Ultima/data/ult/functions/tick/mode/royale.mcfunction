@@ -8,8 +8,8 @@
     execute as @a[tag=player, tag=!alive] run function ult:tech/tether_notif
 
 # Tell the players who is in the lead
-    execute as @a[tag=alive] run scoreboard players operation @s _var = @s score
-    scoreboard players operation @a[tag=alive] _var -= .total_players control
-    # _var is the number of points the player is away from the total player count (negative) in order to win
-    effect give @a[tag=alive, scores={_var=-1..}] glowing 999999 0 true
-    effect clear @a[tag=alive, scores={_var=..-2}] glowing
+    execute as @a[tag=alive] run scoreboard players operation @s var = @s score
+    scoreboard players operation @a[tag=alive] var -= .total_players control
+    # var is the number of points the player is away from the total player count (negative) in order to win
+    effect give @a[tag=alive, scores={var=-1..}] glowing 999999 0 true
+    effect clear @a[tag=alive, scores={var=..-2}] glowing

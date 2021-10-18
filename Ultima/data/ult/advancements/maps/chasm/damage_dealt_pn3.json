@@ -1,0 +1,18 @@
+{
+    "criteria": {
+        "damage": {
+            "trigger": "player_hurt_entity",
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "entity_scores",
+                        "scores": {
+                            "pn": 3
+                        },
+                        "entity": "this"
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -8,4 +8,4 @@
     scoreboard players remove .temp3 rotation 360
     scoreboard players add .temp4 rotation 360
 
-    execute unless score .temp2 rotation matches -60..60 unless score .temp3 rotation matches -60..60 unless score .temp4 rotation matches -60..60 run scoreboard players set .test _var 0
+    execute unless score .temp2 rotation matches -60..60 unless score .temp3 rotation matches -60..60 unless score .temp4 rotation matches -60..60 run scoreboard players set .test var 0

@@ -1,5 +1,5 @@
 {
     "function": "set_name",
     "entity": "this",
-    "name": ["", {"selector": "@a[tag=temp]", "color": "white", "bold": true}, {"text": " is respawning in ", "color": "#43AA8B"}, {"score": {"name": ".time", "objective": "_var"}, "bold": true, "color": "gray", "extra": ["..."]}]
+    "name": ["", {"selector": "@a[tag=temp]", "color": "white", "bold": true}, {"text": " is respawning in ", "color": "#43AA8B"}, {"score": {"name": ".time", "objective": "var"}, "bold": true, "color": "gray", "extra": ["..."]}]
 }

@@ -8,5 +8,5 @@
 
 # Spectate or lobby
     function ult:data/player/get
-    execute store result score .spect_mode _var run data get storage ult:temp Player.Spectate.optOut
+    execute store result score .spect_mode var run data get storage ult:temp Player.Spectate.optOut
     function ult:exit

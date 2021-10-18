@@ -16,7 +16,7 @@
     function ult:settings/player/statistics/get_sample
 
 # Get footer data
-    execute store result score .temp_map _var run data get storage ult:temp Player.StatMenu.map
+    execute store result score .temp_map var run data get storage ult:temp Player.StatMenu.map
     function ult:data/map/get_details
     data modify storage ult:temp Player.StatMenu.mapName set from storage ult:temp Map
     execute if data storage ult:temp Player.StatMenu{mode: 0b} run data modify storage ult:temp Player.StatMenu.modeName set value "All Modes"

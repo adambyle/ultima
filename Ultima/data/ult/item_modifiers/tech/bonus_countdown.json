@@ -1,0 +1,9 @@
+{
+    "function": "set_name",
+    "name": [
+        "Bonus item spawns in ",
+        {"score": {"name": ".seconds", "objective": "var"}},
+        "..."
+    ],
+    "entity": "this"
+}

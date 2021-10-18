@@ -2,12 +2,12 @@
     execute as @a[scores={event.debris=1..}] run function ult:tick/map/ancient/give_ingot
 
 # Detect selecting ingot while crouching (the hand matters)
-    scoreboard players set @a _var 0
-    execute as @a if score @s crouch_mode = crouch_mode.crouch_pressed const if data entity @s {SelectedItem: {id: "minecraft:netherite_ingot"}} run scoreboard players set @s _var 1
-    execute as @a if score @s crouch_mode = crouch_mode.crouch_pressed const if data entity @s {Inventory: [{id: "minecraft:netherite_ingot", Slot: -106b}]} run scoreboard players set @s _var 2
+    scoreboard players set @a var 0
+    execute as @a if score @s crouch_mode = crouch_mode.crouch_pressed const if data entity @s {SelectedItem: {id: "minecraft:netherite_ingot"}} run scoreboard players set @s var 1
+    execute as @a if score @s crouch_mode = crouch_mode.crouch_pressed const if data entity @s {Inventory: [{id: "minecraft:netherite_ingot", Slot: -106b}]} run scoreboard players set @s var 2
 
 # If it was held and crouched in either hand, apply the ingot
-    execute as @a[scores={_var=1..}] run function ult:tick/map/ancient/upgrade
+    execute as @a[scores={var=1..}] run function ult:tick/map/ancient/upgrade
 
 # Shoot a fireball
     execute as @a[nbt={SelectedItem: {id: "minecraft:fire_charge"}}] if score @s crouch_mode = crouch_mode.crouch_pressed const at @s anchored eyes run function ult:tick/map/ancient/fireball

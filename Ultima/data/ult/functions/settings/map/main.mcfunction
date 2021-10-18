@@ -18,7 +18,7 @@
     # Magenta Glazed Terracotta: cycle mode
     item replace block 43 31 -12 container.24 with magenta_glazed_terracotta{GUI: true, display: {Lore: ['{"text": "Go through every map in order.", "color": "gray"}'], Name: '{"text": "Cycle Map", "color": "#43AA8B", "italic": false, "bold": true}'}}
     # Mark selected specific map
-    scoreboard players operation .temp_map _var = .map flag
+    scoreboard players operation .temp_map var = .map flag
     function ult:data/map/get_details
     execute as @r run item modify block 0 0 0 container.0 ult:tech/chosen_map
     execute if score .map_mode flag = flag.map_mode.selected const if score .map flag >= flag.map.start_default const if score .map flag <= flag.map.end_default const run data modify block 43 31 -12 Items[{Slot: 3b}].tag.display.Lore append from block 0 0 0 Items[0].tag.display.Lore[0]

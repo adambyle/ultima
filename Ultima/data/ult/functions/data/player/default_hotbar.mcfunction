@@ -94,3 +94,15 @@ execute unless data storage ult:temp Player.Hotbar.permafrost.snowball run data 
 execute unless data storage ult:temp Player.Hotbar.permafrost.fishing_rod run data modify storage ult:temp Player.Hotbar.permafrost.fishing_rod set value 2
 execute unless data storage ult:temp Player.Hotbar.permafrost.diamond run data modify storage ult:temp Player.Hotbar.permafrost.diamond set value 6
 execute unless data storage ult:temp Player.Hotbar.permafrost.milk run data modify storage ult:temp Player.Hotbar.permafrost.milk set value 8
+
+execute unless data storage ult:temp Player.Hotbar.shroom.sword run data modify storage ult:temp Player.Hotbar.shroom.sword set value 0
+execute unless data storage ult:temp Player.Hotbar.shroom.bow run data modify storage ult:temp Player.Hotbar.shroom.bow set value 1
+execute unless data storage ult:temp Player.Hotbar.shroom.shears run data modify storage ult:temp Player.Hotbar.shroom.shears set value 2
+execute unless data storage ult:temp Player.Hotbar.shroom.arrows run data modify storage ult:temp Player.Hotbar.shroom.arrows set value 10
+
+execute unless data storage ult:temp Player.Hotbar.chasm.sword run data modify storage ult:temp Player.Hotbar.chasm.sword set value 0
+execute unless data storage ult:temp Player.Hotbar.chasm.axe run data modify storage ult:temp Player.Hotbar.chasm.axe set value 1
+execute unless data storage ult:temp Player.Hotbar.chasm.gun run data modify storage ult:temp Player.Hotbar.chasm.gun set value 2
+execute unless data storage ult:temp Player.Hotbar.chasm.pearl run data modify storage ult:temp Player.Hotbar.chasm.pearl set value 8
+execute unless data storage ult:temp Player.Hotbar.chasm.charm run data modify storage ult:temp Player.Hotbar.chasm.charm set value 7
+execute unless data storage ult:temp Player.Hotbar.chasm.shield run data modify storage ult:temp Player.Hotbar.chasm.shield set value -1

@@ -1,4 +1,4 @@
-scoreboard players set .verify _var 1
+scoreboard players set .verify var 1
 function ult:settings/player/hotbar/workspace/clear_unused_slots
 execute if score @s hotbar_map = flag.map.manor const run function ult:settings/player/hotbar/workspace/verify/manor
 execute if score @s hotbar_map = flag.map.woodlands const run function ult:settings/player/hotbar/workspace/verify/woodlands
@@ -20,3 +20,4 @@ execute if score @s hotbar_map = flag.map.ancient const run function ult:setting
 execute if score @s hotbar_map = flag.map.marooned const run function ult:settings/player/hotbar/workspace/verify/marooned
 execute if score @s hotbar_map = flag.map.hill const run function ult:settings/player/hotbar/workspace/verify/hill
 execute if score @s hotbar_map = flag.map.bathhouse const run function ult:settings/player/hotbar/workspace/verify/bathhouse
+execute if score @s hotbar_map = flag.map.chasm const run function ult:settings/player/hotbar/workspace/verify/chasm

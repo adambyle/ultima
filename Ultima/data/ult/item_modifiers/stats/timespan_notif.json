@@ -2,7 +2,7 @@
     "function": "set_lore",
     "lore": [
         "",
-        [{"text": "(You've only played ", "color": "dark_gray", "italic": false}, {"score": {"name": ".sample", "objective": "_var"}}, {"text": " games)"}]
+        [{"text": "(You've only played ", "color": "dark_gray", "italic": false}, {"score": {"name": ".sample", "objective": "var"}}, {"text": " games)"}]
     ],
     "entity": "this"
 }

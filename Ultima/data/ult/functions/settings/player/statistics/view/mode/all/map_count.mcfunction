@@ -1,2 +1,2 @@
-scoreboard players operation .iter _var = .max_map _var
-execute if score .iter _var matches 1.. run function ult:settings/player/statistics/view/mode/all/map_count/loop
+scoreboard players operation .iter var = .max_map var
+execute if score .iter var matches 1.. run function ult:settings/player/statistics/view/mode/all/map_count/loop

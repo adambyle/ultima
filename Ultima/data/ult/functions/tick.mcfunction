@@ -48,9 +48,9 @@
     # Get NBT data and store
     execute as @a store result score @s altitude run data get entity @s Pos[1]
     execute as @e[type=#ult:projectiles] store result score @s altitude run data get entity @s Pos[1]
-    execute as @e[type=#ult:projectiles] store result score @s _var run data get entity @s Motion[1]
+    execute as @e[type=#ult:projectiles] store result score @s var run data get entity @s Motion[1]
     # Reflect projectiles that are at Y=35 and above, that have not already been reflected, that are traveling upward
-    execute as @e[type=#ult:projectiles, tag=!deflected, scores={altitude=35.., _var=0..}] at @s run function ult:tech/projectile_deflect
+    execute as @e[type=#ult:projectiles, tag=!deflected, scores={altitude=35.., var=0..}] at @s run function ult:tech/projectile_deflect
 
 # Dynamic opting with actions
     # Players can exit their game mode
@@ -75,10 +75,10 @@
 
 # AFK handler
     # Get rotation, then see if the rotation matches value from previous tick
-    execute as @a store result score @s _var run data get entity @s Rotation[0]
+    execute as @a store result score @s var run data get entity @s Rotation[0]
     # If the values match, then player has not moved, and is a candidate for being AFK
     tag @a remove temp
-    execute as @a[gamemode=adventure] if score @s _var = @s rotation run tag @s add temp
+    execute as @a[gamemode=adventure] if score @s var = @s rotation run tag @s add temp
     # Reset the AFK timer of non-AFK players
     scoreboard players set @a[tag=!temp] afk 0
     # Players who just moved this tick should no longer be AFK-tagged
@@ -90,11 +90,11 @@
     # Show AFK warnings
     execute as @a[tag=alive] run function ult:tech/afk/warning
     # Update rotation
-    execute as @a run scoreboard players operation @s rotation = @s _var
+    execute as @a run scoreboard players operation @s rotation = @s var
 
 # Send command feedback
-    execute if score .debug_mode flag = flag.debug_mode.on const run gamerule sendCommandFeedback true
-    execute unless score .debug_mode flag = flag.debug_mode.on const run gamerule sendCommandFeedback false
+    execute if score .debug_mode flag = bool.true const run gamerule sendCommandFeedback true
+    execute unless score .debug_mode flag = bool.true const run gamerule sendCommandFeedback false
 
 # Reset event-detection objectives
     scoreboard players reset * damage_dealt
@@ -103,6 +103,10 @@
     scoreboard players reset * event.salmon
     scoreboard players reset * event.debris
     scoreboard players reset * event.diamond
+    scoreboard players reset * event.sh.brown
+    scoreboard players reset * event.sh.red
+    scoreboard players reset * event.sh.crimson
+    scoreboard players reset * event.sh.warped
     scoreboard players reset * jump
     # Deal with crouch stages
     execute as @a[scores={crouch=0}] run scoreboard players operation @s crouch_mode = crouch_mode.not_crouching const
@@ -111,20 +115,26 @@
     scoreboard players set @a crouch 0
     # Set health displays
     execute as @a[tag=alive] if score @s health matches 0.. run scoreboard players operation @s health_display = @s health
+    # Remove event-detection advancements
+    advancement revoke @a only ult:maps/chasm/damage_dealt
+    advancement revoke @a only ult:maps/chasm/damage_dealt_pn1
+    advancement revoke @a only ult:maps/chasm/damage_dealt_pn2
+    advancement revoke @a only ult:maps/chasm/damage_dealt_pn3
+    advancement revoke @a only ult:maps/chasm/damage_dealt_pn4
 
 # Update player positions
     execute as @a run function ult:data/player/update_pos
 
 # Marker debugging
     # Show marker locations
-    execute if score .debug_mode flag = flag.debug_mode.on const at @e[type=marker] run particle composter ~ ~ ~ 0 0 0 0 0 force
-    execute if score .debug_mode flag = flag.debug_mode.on const at @e[type=area_effect_cloud] run particle enchanted_hit ~ ~ ~ 0 0 0 0 0 force
+    execute if score .debug_mode flag = bool.true const at @e[type=marker] run particle composter ~ ~ ~ 0 0 0 0 0 force
+    execute if score .debug_mode flag = bool.true const at @e[type=area_effect_cloud] run particle enchanted_hit ~ ~ ~ 0 0 0 0 0 force
     # Count number of stray untagged markers
-    execute store result score .temp _var if entity @e[type=marker, tag=]
+    execute store result score .temp var if entity @e[type=marker, tag=]
     # Display number if greater than 1
-    execute if score .temp _var matches 2.. run tellraw @a[tag=operator] {"score": {"name": ".temp", "objective": "_var"}}
+    execute if score .temp var matches 2.. run tellraw @a[tag=operator] {"score": {"name": ".temp", "objective": "var"}}
     # Display NBT if number is 1
-    execute if score .temp _var matches 1 run tellraw @a[tag=operator] {"entity": "@e[type=marker, limit=1, tag=]", "nbt": "{}"}
+    execute if score .temp var matches 1 run tellraw @a[tag=operator] {"entity": "@e[type=marker, limit=1, tag=]", "nbt": "{}"}
     # Kill strays
     kill @e[type=marker, tag=]
     # Fix respawn marker glitch
