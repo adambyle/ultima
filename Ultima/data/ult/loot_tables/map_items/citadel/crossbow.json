@@ -9,7 +9,13 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{Unbreakable: true, Enchantments: [{id: \"minecraft:quick_charge\", lvl: 5s}], ChargedProjectiles: [{id: \"minecraft:arrow\", Count: 1b}], Charged: true}"
+                            "tag": "{Unbreakable: true, ChargedProjectiles: [{id: \"minecraft:arrow\", Count: 1b}], Charged: true}"
+                        },
+                        {
+                            "function": "set_enchantments",
+                            "enchantments": {
+                                "quick_charge": 5
+                            }
                         }
                     ]
                 }

@@ -1,3 +1,5 @@
+function ult:data/player/get
+
 # Get the value from player data, increment, and store
     execute store result score .pronouns var run data get storage ult:temp Player.Chat.pronouns
     scoreboard players add .pronouns var 1

@@ -1,0 +1,76 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "diamond",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{bonus: true}"
+                        },
+                        {
+                            "function": "set_name",
+                            "name": {"text": "Rune Charm", "italic": false}
+                        },
+                        {
+                            "function": "set_lore",
+                            "lore": [{"text": "Hold and crouch to summon a rune.", "italic": false, "color": "gray"}]
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "poppy",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{bonus: true}"
+                        },
+                        {
+                            "function": "set_lore",
+                            "lore": [{"text": "Hold to heal.", "italic": false, "color": "gray"}]
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "trident",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{bonus: true, Unbreakable: true}"
+                        },
+                        {
+                            "function": "set_name",
+                            "name": {"text": "Rune Disruptor", "italic": false}
+                        },
+                        {
+                            "function": "set_lore",
+                            "lore": [{"text": "Victim has their rune inverted.", "italic": false, "color": "gray"}]
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "crossbow",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{Unbreakable: true}"
+                        },
+                        {
+                            "function": "set_enchantments",
+                            "enchantments": {
+                                "quick_charge": 5,
+                                "multishot": 1
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

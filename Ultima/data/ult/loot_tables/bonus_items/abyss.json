@@ -34,7 +34,7 @@
                         },
                         {
                             "function": "set_lore",
-                            "lore": [{"text": "Crouch to teleport the nearest player", "italic": false, "color": "gray"}, {"text": "to your location.", "italic": false, "color": "gray"}]
+                            "lore": [{"text": "Crouch to teleport the random player", "italic": false, "color": "gray"}, {"text": "to your location.", "italic": false, "color": "gray"}]
                         }
                     ]
                 },

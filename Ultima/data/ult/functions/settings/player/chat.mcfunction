@@ -18,15 +18,16 @@
     item replace entity @s enderchest.3 with diamond_sword{GUI: true, display: {Name: '{"text": "Game Channel (G)", "italic": false}', Lore: ['{"text": "Configure below.", "color": "gray", "italic": false}']}, HideFlags: 63}
     item replace entity @s enderchest.4 with grass_block{GUI: true, display: {Name: '{"text": "Notices Channel (N)", "italic": false}', Lore: ['{"text": "Configure below.", "color": "gray", "italic": false}']}}
     item replace entity @s enderchest.5 with ender_chest{GUI: true, display: {Name: '{"text": "Settings Channel (S)", "italic": false}', Lore: ['{"text": "Configure below.", "color": "gray", "italic": false}']}}
+    data remove block 0 0 0 Items[].tag.display.Lore
     item replace block 0 0 0 container.0 with lime_terracotta{GUI: true, display: {Name: '{"text": "Enabled", "italic": false, "color": "#90BE6D"}', Lore: ['{"text": "All messages will show.", "color": "gray", "italic": false}']}}
-    item replace block 0 0 0 container.1 with orange_terracotta{GUI: true, display: {Name: '{"text": "Limited", "italic": false, "color": "#F8961E"}', Lore: ['{"text": "Messages are less verbose.", "color": "gray", "italic": false}']}}
-    item replace block 0 0 0 container.2 with red_terracotta{GUI: true, display: {Name: '{"text": "Disabled", "italic": false, "color": "#F94144"}', Lore: ['{"text": "Only essential messages will show.", "color": "gray", "italic": false}']}}
     item replace entity @s[tag=chat.g.e] enderchest.12 from block 0 0 0 container.0
-    item replace entity @s[tag=chat.g.l] enderchest.12 from block 0 0 0 container.1
-    item replace entity @s[tag=chat.g.d] enderchest.12 from block 0 0 0 container.2
     item replace entity @s[tag=chat.n.e] enderchest.13 from block 0 0 0 container.0
-    item replace entity @s[tag=chat.n.l] enderchest.13 from block 0 0 0 container.1
-    item replace entity @s[tag=chat.n.d] enderchest.13 from block 0 0 0 container.2
     item replace entity @s[tag=chat.s.e] enderchest.14 from block 0 0 0 container.0
-    item replace entity @s[tag=chat.s.l] enderchest.14 from block 0 0 0 container.1
-    item replace entity @s[tag=chat.s.d] enderchest.14 from block 0 0 0 container.2
+    item replace block 0 0 0 container.0 with orange_terracotta{GUI: true, display: {Name: '{"text": "Limited", "italic": false, "color": "#F8961E"}', Lore: ['{"text": "Messages are less verbose.", "color": "gray", "italic": false}']}}
+    item replace entity @s[tag=chat.g.l] enderchest.12 from block 0 0 0 container.0
+    item replace entity @s[tag=chat.n.l] enderchest.13 from block 0 0 0 container.0
+    item replace entity @s[tag=chat.s.l] enderchest.14 from block 0 0 0 container.0
+    item replace block 0 0 0 container.0 with red_terracotta{GUI: true, display: {Name: '{"text": "Disabled", "italic": false, "color": "#F94144"}', Lore: ['{"text": "Only essential messages will show.", "color": "gray", "italic": false}']}}
+    item replace entity @s[tag=chat.g.d] enderchest.12 from block 0 0 0 container.0
+    item replace entity @s[tag=chat.n.d] enderchest.13 from block 0 0 0 container.0
+    item replace entity @s[tag=chat.s.d] enderchest.14 from block 0 0 0 container.0
