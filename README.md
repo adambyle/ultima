@@ -35,4 +35,4 @@ Ultima offers game modes for different sizes and playstyles of groups.
 
 ## Content
 
-Ultima comes with a total of 17 maps, 9 default maps and 8 featured maps made by other players, with more to come. You can [submit maps to Ultima](Development-Guide/Contributin.md).
+Ultima comes with a total of 17 maps, 9 default maps and 8 featured maps made by other players, with more to come. You can [submit maps to Ultima](Development-Guide/Contributing.md).
