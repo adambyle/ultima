@@ -20,7 +20,7 @@ You can submit maps to be added to the Featured Maps in Ultima, in addition to a
 - Create the map in a void preset superflat world. It is easiest to transfer from there.
 - The theme should not reference popular culture.
 - The map should be a location or environment, as opposed to an abstract or art-like build.
-- Clearly mark four locations for player spawning, preferably near the corners. No player should have an advantage from where the spawn.
+- Clearly mark four locations for player spawning, preferably near the corners. No player should have an advantage from where they spawn.
 - Limit your use of blocks that can be interacted with (containers, doors, switches).
 
 You must submit the following to me over Discord:
