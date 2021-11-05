@@ -103,6 +103,5 @@ execute unless data storage ult:temp Player.Hotbar.shroom.arrows run data modify
 execute unless data storage ult:temp Player.Hotbar.chasm.sword run data modify storage ult:temp Player.Hotbar.chasm.sword set value 0
 execute unless data storage ult:temp Player.Hotbar.chasm.axe run data modify storage ult:temp Player.Hotbar.chasm.axe set value 1
 execute unless data storage ult:temp Player.Hotbar.chasm.gun run data modify storage ult:temp Player.Hotbar.chasm.gun set value 2
-execute unless data storage ult:temp Player.Hotbar.chasm.pearl run data modify storage ult:temp Player.Hotbar.chasm.pearl set value 8
-execute unless data storage ult:temp Player.Hotbar.chasm.charm run data modify storage ult:temp Player.Hotbar.chasm.charm set value 7
+execute unless data storage ult:temp Player.Hotbar.chasm.charm run data modify storage ult:temp Player.Hotbar.chasm.charm set value 8
 execute unless data storage ult:temp Player.Hotbar.chasm.shield run data modify storage ult:temp Player.Hotbar.chasm.shield set value -1

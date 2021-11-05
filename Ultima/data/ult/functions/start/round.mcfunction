@@ -49,7 +49,7 @@
     execute if score .map flag = flag.map.dungeon const run summon marker 45 21 79 {Tags: ["bonus_item"]}
     execute if score .map flag = flag.map.abyss const run summon marker 45 18 111 {Tags: ["bonus_item"]}
     execute if score .map flag = flag.map.citadel const run summon marker 77 26 15 {Tags: ["bonus_item"]}
-    execute if score .map flag = flag.map.wasteland const run summon marker 77 25 47 {Tags: ["bonus_item"]}
+    execute if score .map flag = flag.map.wasteland const run summon marker 77 26 47 {Tags: ["bonus_item"]}
     execute if score .map flag = flag.map.town_square const run summon marker 79 26 79 {Tags: ["bonus_item"]}
     execute if score .map flag = flag.map.last_stand const run summon marker 77 31 111 {Tags: ["bonus_item"]}
     execute if score .map flag = flag.map.permafrost const run summon marker 13 31 15 {Tags: ["bonus_item"]}

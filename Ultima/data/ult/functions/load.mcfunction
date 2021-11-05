@@ -24,7 +24,6 @@
     scoreboard objectives add event.sh.warped mined:warped_fungus
     scoreboard objectives add event.skill dummy
     scoreboard objectives add event.skill_inc dummy
-    scoreboard objectives add event.soul dummy
     scoreboard objectives add flag dummy
     scoreboard objectives add health health
     scoreboard objectives add health_display dummy

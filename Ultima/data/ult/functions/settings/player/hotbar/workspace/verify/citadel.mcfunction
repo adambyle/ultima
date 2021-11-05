@@ -1,6 +1,6 @@
 execute unless data entity @s EnderItems[{id: "minecraft:golden_sword"}] run scoreboard players set .verify var 0
+execute unless data entity @s EnderItems[{id: "minecraft:golden_axe"}] run scoreboard players set .verify var 0
 execute unless data entity @s EnderItems[{id: "minecraft:crossbow"}] run scoreboard players set .verify var 0
-execute unless data entity @s EnderItems[{id: "minecraft:golden_sword"}] run scoreboard players set .verify var 0
 execute unless data entity @s EnderItems[{id: "minecraft:shield"}] run scoreboard players set .verify var 0
 execute unless data entity @s EnderItems[{id: "minecraft:arrow"}] run scoreboard players set .verify var 0
 execute unless data entity @s EnderItems[{id: "minecraft:ender_pearl"}] run scoreboard players set .verify var 0
