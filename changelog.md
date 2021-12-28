@@ -2,6 +2,29 @@
 
 ---
 
+## Release v3.0.0 -- *FILL IN FIELD*
+
+**General**:
+
+- Data pack update to 1.18 format.
+- Death detection is now done with advancements for a less laggy experience and more accurate death detection.
+
+**Maps**:
+
+- Chasm: NEW MAP by Reed Aldridge!
+- Last Stand: Players now get 16 arrows (was 32).
+- Shroom: NEW DEFAULT MAP!
+
+**Bug Fixes**:
+
+- FIXED: Some items cannot be used from the offhand when it comes to crouch-activation, unlike other items.
+- FIXED: Players cannot change their perferred pronouns.
+- FIXED: Players cannot use the chat channel settings.
+- FIXED: In some cases, spectators do not move maps when appropriate, but are left in the map of the last match.
+- FIXED: Bug with Citadel hotbar settings.
+
+---
+
 ## Release v2.1.2 -- *August 26, 2021*
 
 **General**:
