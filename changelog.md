@@ -8,6 +8,7 @@
 
 - Data pack update to 1.18 format.
 - Death detection is now done with advancements for a less laggy experience and more accurate death detection.
+- Toasts for advancements and recipe unlocks are now suppressed.
 
 **Maps**:
 

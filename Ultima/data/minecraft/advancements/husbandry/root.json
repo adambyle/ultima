@@ -1,0 +1,8 @@
+{
+    "parent": "ult:nonexistant",
+    "criteria": {
+        "impossible": {
+            "trigger": "impossible"
+        }
+    }
+}

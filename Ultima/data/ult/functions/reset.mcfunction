@@ -54,6 +54,7 @@ gamerule maxCommandChainLength 2000000
     execute as @a run attribute @s generic.attack_speed base set 4
     execute as @a run attribute @s generic.attack_damage base set 1
     execute as @a run attribute @s generic.movement_speed base set 0.1
+    recipe take @a *
     spawnpoint @a 45 30 -12 0
     # Reset tags
     tag @a remove ready

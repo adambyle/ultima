@@ -87,7 +87,6 @@ execute store result score .hotbar var run data get storage ult:temp Player.Hotb
 execute store success score .bonus var if score .map flag = flag.map.manor const run clear @s potion{bonus: true}
 execute if score .bonus var matches 1 run function ult:items/give
 
-#
 
 execute at @e[tag=bonus_item] run setblock ~ ~ ~ air
 scoreboard players set .bonus_item control 0

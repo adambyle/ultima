@@ -19,9 +19,6 @@
     setblock 43 31 -8 potted_cactus
     setblock 47 31 -13 potted_cactus
     clear @a[team=lobby] cactus
-    setblock 59 12 -54 potted_cornflower
-    setblock 59 12 -49 potted_cornflower
-    clear @a[team=lobby] cornflower
     # Prevent accidental explosions (for development)
     kill @e[type=tnt]
     kill @e[type=tnt_minecart]
@@ -115,12 +112,6 @@
     scoreboard players set @a crouch 0
     # Set health displays
     execute as @a[tag=alive] if score @s health matches 0.. run scoreboard players operation @s health_display = @s health
-    # Remove event-detection advancements
-    advancement revoke @a only ult:maps/chasm/damage_dealt
-    advancement revoke @a only ult:maps/chasm/damage_dealt_pn1
-    advancement revoke @a only ult:maps/chasm/damage_dealt_pn2
-    advancement revoke @a only ult:maps/chasm/damage_dealt_pn3
-    advancement revoke @a only ult:maps/chasm/damage_dealt_pn4
 
 # Update player positions
     execute as @a run function ult:data/player/update_pos

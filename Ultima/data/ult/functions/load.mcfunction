@@ -55,7 +55,7 @@
     execute unless score .game_mode flag matches 0.. run scoreboard players set .game_mode flag 0
     execute unless score .continuous flag matches 0.. run setblock 42 31 -3 lever[powered=false, face=wall, facing=north]
     execute unless score .continuous flag matches 0.. run scoreboard players set .continuous flag 0
-    execute unless score .bonus_item flag matches 0.. run scoreboard players set .bonus_item flag 1
+    execute unless score .bonus_item flag matches 0.. run scoreboard players set .bonus_item flag 0
 
 # Set constant enumerators
     # For all booleans
@@ -189,6 +189,9 @@
     #declare storage ult:players
     #declare storage ult:temp
     item replace block 0 0 0 container.0 with stone
+
+# Suppress error messages for vanilla advancement disabling method
+    #declare advancement ult:nonexistant
 
 # Prepare the world if nobody is online yet
     execute unless entity @a run function ult:load/first
