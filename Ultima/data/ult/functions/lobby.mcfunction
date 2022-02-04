@@ -6,3 +6,4 @@
     effect clear @s night_vision
     team join lobby
     function ult:settings/player/main
+    effect give @s instant_health 1 2 true

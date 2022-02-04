@@ -7,6 +7,7 @@
     execute if score .game_state flag = flag.game_state.inactive const run function ult:tick/inactive
     execute if score .game_state flag = flag.game_state.active const run function ult:tick/active
     execute if score .game_state flag = flag.game_state.voting const run function ult:tick/voting
+
 # Manage player menus
     execute as @a run function ult:settings/player/driver
     

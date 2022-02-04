@@ -3,7 +3,7 @@
 
 # Handle the rest
     # If brawl, queue them
-    execute if score .game_mode flag = flag.game_mode.brawl const as @a[tag=player, tag=!alive] run function ult:spawn/assign_queue
+    execute if score .game_mode flag = flag.game_mode.brawl const as @a[tag=player, tag=!alive] run function ult:start/mode/brawl_extra
 
 # Set the displays
     scoreboard objectives setdisplay belowName health_display

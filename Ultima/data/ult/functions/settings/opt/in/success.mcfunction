@@ -7,6 +7,8 @@
     tag @s remove spectator
     tag @s add player
 
+execute if score .game_state flag = flag.game_state.voting const run function ult:settings/opt/in/voting
+
 # Determine if the player can join the game
     scoreboard players set .temp var 0
     # Can if brawl or duels mode

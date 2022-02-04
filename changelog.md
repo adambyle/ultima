@@ -2,13 +2,12 @@
 
 ---
 
-## Release v3.0.0 -- *FILL IN FIELD*
+## Release v3.0.0 -- *4 February 2022*
 
 **General**:
 
 - Data pack update to 1.18 format.
 - Death detection is now done with advancements for a less laggy experience and more accurate death detection.
-- Toasts for advancements and recipe unlocks are now suppressed.
 
 **Maps**:
 
@@ -23,6 +22,8 @@
 - FIXED: Players cannot use the chat channel settings.
 - FIXED: In some cases, spectators do not move maps when appropriate, but are left in the map of the last match.
 - FIXED: Bug with Citadel hotbar settings.
+- FIXED: Players joining in between games causes issues.
+- FIXED: Players opting out while voting causes issues.
 
 ---
 

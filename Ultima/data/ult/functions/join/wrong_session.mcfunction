@@ -8,4 +8,3 @@ execute as @s[tag=!spectator] run function ult:settings/opt/out
     function ult:exit
 
 tellraw @s[tag=chat.g.e] [{"text": "G: ", "color": "dark_gray"}, {"text": "A game is currently in progress.", "color": "#F9C74F"}]
-function ult:settings/opt/prompt

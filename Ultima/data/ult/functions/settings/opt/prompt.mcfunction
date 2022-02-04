@@ -8,4 +8,4 @@ execute if score .temp var matches 1 run tellraw @s[gamemode=spectator, tag=spec
 execute if score .temp var matches 0 run tellraw @s[gamemode=spectator, tag=spectator, tag=chat.n.e] [{"text": "N: ", "color": "dark_gray"}, {"text": "If you need, you can ", "color": "#F9C74F"}, {"text": "click here to go to the lobby.", "underlined": true, "color": "#F9C74F", "clickEvent": {"action": "run_command", "value": "/trigger action set 3"}}]
 
 tellraw @s[tag=player, tag=!chat.n.e] [{"text": "N: ", "color": "dark_gray"}, {"text": "Opt out.", "underlined": true, "clickEvent": {"action": "run_command", "value": "/trigger action set 2"}}]
-tellraw @s[gamemode=spectator, tag=spectator, tag=!chat.n.e] [{"text": "Lobby.", "underlined": true, "clickEvent": {"action": "run_command", "value": "/trigger action set 3"}}]
+tellraw @s[gamemode=spectator, tag=spectator, tag=!chat.n.e] [{"text": "N: ", "color": "dark_gray"}, {"text": "Lobby.", "underlined": true, "clickEvent": {"action": "run_command", "value": "/trigger action set 3"}}]
