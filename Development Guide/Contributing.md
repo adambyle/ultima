@@ -10,7 +10,7 @@ Ultima is a partially community project. You are always welcome to help develop 
 
 Builders are always welcome to submit maps. Build the map in an empty world and share the `zip` file with me over Discord. I will review the map and add it as soon as possible if it gets approved! Read below on the details of map creation.
 
-Developers should use their skills to investigate any errors. The source code is available on GitHub! I am currently not looking for direct collaboration on any part of development, but reporting issues and proposing changes is always a big help. Additionally, a modding API may be released in the near future to make adding non-map content much easier.
+Developers should use their skills to investigate any errors. The source code is available on GitHub! I am currently not looking for direct collaboration on any part of development, but reporting issues and proposing changes is always a big help. Additionally, a modding API may be released in the far future to make adding non-map content much easier.
 
 ## Creating a Map
 
