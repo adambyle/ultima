@@ -2,11 +2,30 @@
 
 ---
 
-## Release v3.0.0 -- *4 February 2022*
+## Release v3.0.1 -- *January 30, 2023*
 
 **General**:
 
-- Data pack update to 1.18 format.
+- Data pack updated to 1.19 format.
+- Changed default AFK time to 15s (from 10).
+
+**Maps**:
+
+- Chasm: A notice about the mushrooms' functions appears when trying to combine incompatible enchantments.
+
+**Bug Fixes**:
+
+- FIXED: Player cannot choose to join an ongoing game when logging into the server.
+- FIXED: The "auto-ready" function does not work.
+- FIXED: Possibility of initiating a launch in Chasm without depleting a Launch Charm.
+
+---
+
+## Release v3.0.0 -- *February 4, 2022*
+
+**General**:
+
+- Data pack updated to 1.18 format.
 - Death detection is now done with advancements for a less laggy experience and more accurate death detection.
 
 **Maps**:
