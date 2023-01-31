@@ -10,6 +10,7 @@ You can play Ultima by downloading the map [here](https://github.com/beegyfleeg/
 
 - **v1.1.2** is the latest for **Java 1.16.5**
 - **v2.1.2** is the latest for **Java 1.17.1**
+- **v3.0.0** is the latest for **Java 1.18.2**
 - v1.0.0 through v1.1.1 were not packaged properly, and their downloads will not work. I will not go back and provide functional downloads, in favor of newer versions.
 
 ## The Game Modes
