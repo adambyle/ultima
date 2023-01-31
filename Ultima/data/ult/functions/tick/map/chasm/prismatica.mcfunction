@@ -7,3 +7,4 @@ scoreboard players operation @e[tag=temp] pn = @s pn
 scoreboard players operation @e[tag=temp] event.prism /= .const var
 data modify entity @e[tag=temp, limit=1] Rotation set from entity @s Rotation
 scoreboard players set @s event.prism -40
+playsound block.conduit.activate master @a ~ ~ ~ 2 2

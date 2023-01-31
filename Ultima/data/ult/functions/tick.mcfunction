@@ -10,7 +10,7 @@
 
 # Manage player menus
     execute as @a run function ult:settings/player/driver
-    
+
 # Reset blocks and prevent griefing
     # Reset the pressure plate for when players step on it
     setblock 45 31 -3 polished_blackstone_pressure_plate[powered=false]

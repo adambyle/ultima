@@ -40,6 +40,7 @@
     execute if score .map flag = flag.map.ancient const run function ult:start/map/ancient
     execute if score .map flag = flag.map.marooned const run function ult:start/map/marooned
     execute if score .map flag = flag.map.hill const run function ult:start/map/hill
+    execute if score .map flag = flag.map.chasm const run function ult:start/map/chasm
     function ult:start/map/reset
 
 # Setup item barrel

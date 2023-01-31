@@ -7,3 +7,9 @@
     team join lobby
     function ult:settings/player/main
     effect give @s instant_health 1 2 true
+
+# Tip generation
+    execute positioned 47 30 -16 run function ult:lobby/tip
+    execute positioned 43 30 -16 run function ult:lobby/tip
+    execute positioned 47 30 -6 run function ult:lobby/tip
+    execute positioned 43 30 -6 run function ult:lobby/tip

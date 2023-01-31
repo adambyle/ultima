@@ -22,3 +22,5 @@ item replace entity @s armor.chest with diamond_chestplate{Unbreakable: true}
 item replace entity @s armor.head with diamond_helmet{Unbreakable: true}
 
 function ult:items/refills/town_square
+
+tag @s remove iron_axe

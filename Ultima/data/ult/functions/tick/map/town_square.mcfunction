@@ -24,3 +24,5 @@
 
 # Villagers face nearest player
     execute as @e[type=villager] at @s run tp @s ~ ~ ~ facing entity @p[gamemode=!spectator]
+
+    execute as @a[tag=player, tag=alive, tag=!iron_axe, nbt={Inventory: [{id: "minecraft:iron_axe"}]}] run function ult:tick/map/town_square/upgrade_axe

@@ -6,8 +6,8 @@
 
 # Allow players to equip
     # Players can use the netherite from either hand
-    execute as @a[tag=alive, nbt={SelectedItem: {id: "minecraft:netherite_ingot"}}] if score @s crouch_mode = crouch_mode.crouch_pressed const run function ult:tick/map/abyss/trigger
-    execute as @a[tag=alive, nbt={Inventory: [{id: "minecraft:netherite_ingot", Slot: -106b}]}] if score @s crouch_mode = crouch_mode.crouch_pressed const run function ult:tick/map/abyss/trigger
+    execute as @a[tag=alive, nbt={SelectedItem: {id: "minecraft:netherite_ingot"}}] if score @s crouch_mode = crouch_mode.crouch_pressed const run function ult:tick/map/abyss/netherite
+    execute as @a[tag=alive, nbt={Inventory: [{id: "minecraft:netherite_ingot", Slot: -106b}]}] if score @s crouch_mode = crouch_mode.crouch_pressed const run function ult:tick/map/abyss/netherite
 
 # Clear levitation from high players
     effect clear @a[tag=alive, scores={altitude=34..}] levitation

@@ -2,22 +2,33 @@
 
 ---
 
-## Release v3.0.1 -- *January 30, 2023*
+## Release v3.0.1 -- *----- ---, 2023*
 
 **General**:
 
 - Data pack updated to 1.19 format.
 - Changed default AFK time to 15s (from 10).
+- Check for game tips in the lobby.
 
 **Maps**:
 
-- Chasm: A notice about the mushrooms' functions appears when trying to combine incompatible enchantments.
+- Abyss: Bow is now strengthened with Power I.
+- Town Square: Iron axes are moved automatically to the right hotbar slot.
+- Permafrost: Armor strengthened to Protection III (was Protection II).
+- Shroom: A notice about the mushrooms' functions appears when trying to combine incompatible enchantments.
+- Shroom: The frequency of mushroom spawning has been balanced between varieties.
+- Chasm: The frozen Lake of Souls slows players who cross it.
+- Chasm: Likelihood of Prismatica hitting has been increased.
+- Chasm: Players only get 3 Launch Charms (from 4).
 
 **Bug Fixes**:
 
 - FIXED: Player cannot choose to join an ongoing game when logging into the server.
 - FIXED: The "auto-ready" function does not work.
 - FIXED: Possibility of initiating a launch in Chasm without depleting a Launch Charm.
+- FIXED: There's no delay in between voting and the game starting with Continuous Play enabled.
+- FIXED: Players can hear netherite upgrades in Abyss from anywhere in the map.
+- FIXED: Chasm's Prismatica has no effect on flying players.
 
 ---
 
@@ -184,7 +195,7 @@
 
 - Abyss: Potion of Levitation is now a Splash Potion.
 - Dungeon: Potion of Resilience: Resistance lowered from level IV to level III.
-- Last Stand: *Flurry Rush* and *Hot Pursuit* no longer have trade-offs, to match the other two skills.
+- Last Stand: Flurry Rush and Hot Pursuit no longer have trade-offs, to match the other two skills.
 - Marooned: NEW MAP by Reed Aldridge!
 
 **Bug fixes**:
