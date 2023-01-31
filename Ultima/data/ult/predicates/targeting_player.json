@@ -2,7 +2,8 @@
     "condition": "entity_properties",
     "entity": "this",
     "predicate": {
-        "player": {
+        "type_specific": {
+            "type": "player",
             "looking_at": {
                 "type": "player"
             }

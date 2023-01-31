@@ -47,16 +47,6 @@
     scoreboard objectives modify health_display rendertype hearts
     scoreboard objectives modify score displayname {"text": "Score", "color": "#43AA8B"}
 
-# Set defaults for brand new worlds
-    execute unless score .game_state flag matches 0.. run scoreboard players set .game_state flag 0
-    execute unless score .map flag matches 0.. run scoreboard players set .map flag 0
-    execute unless score .map_menu flag matches 0.. run scoreboard players set .map_menu flag 0
-    execute unless score .map_mode flag matches 0.. run scoreboard players set .map_mode flag 0
-    execute unless score .game_mode flag matches 0.. run scoreboard players set .game_mode flag 0
-    execute unless score .continuous flag matches 0.. run setblock 42 31 -3 lever[powered=false, face=wall, facing=north]
-    execute unless score .continuous flag matches 0.. run scoreboard players set .continuous flag 0
-    execute unless score .bonus_item flag matches 0.. run scoreboard players set .bonus_item flag 0
-
 # Set constant enumerators
     # For all booleans
     scoreboard players set bool.false const 0
@@ -152,6 +142,7 @@
     scoreboard players set flag.game_mode.duels const 0
     scoreboard players set flag.game_mode.royale const 1
     scoreboard players set flag.game_mode.brawl const 2
+    scoreboard players set flag.game_mode.guerilla const 3
     # For `menu`
     scoreboard players set menu.main const 0
     scoreboard players set menu.hotbar_default const 10
@@ -164,6 +155,16 @@
     scoreboard players set menu.statistics_featured const 42
     scoreboard players set menu.statistics_display const 43
     scoreboard players set menu.chat const 50
+
+# Set defaults for brand new worlds
+    execute unless score .game_state flag matches 0.. run scoreboard players operation .game_state flag = flag.game_state.inactive const
+    execute unless score .map flag matches 0.. run scoreboard players operation .map flag = flag.map.manor const
+    execute unless score .map_menu flag matches 0.. run scoreboard players operation .map_menu flag = flag.map_menu.main const
+    execute unless score .map_mode flag matches 0.. run scoreboard players operation .map_mode flag = flag.map_mode.selected const
+    execute unless score .game_mode flag matches 0.. run scoreboard players operation .game_mode flag = flag.game_mode.brawl const
+    execute unless score .continuous flag matches 0.. run setblock 42 31 -3 lever[powered=false, face=wall, facing=north]
+    execute unless score .continuous flag matches 0.. run scoreboard players operation .continuous flag = bool.false const
+    execute unless score .bonus_item flag matches 0.. run scoreboard players operation .bonus_item flag = bool.false const
 
 # Prepare teams
     # For players in lobby
@@ -189,9 +190,6 @@
     #declare storage ult:players
     #declare storage ult:temp
     item replace block 0 0 0 container.0 with stone
-
-# Suppress error messages for vanilla advancement disabling method
-    #declare advancement ult:nonexistant
 
 # Prepare the world if nobody is online yet
     execute unless entity @a run function ult:load/first

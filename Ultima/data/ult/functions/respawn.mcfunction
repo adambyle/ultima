@@ -14,7 +14,7 @@ title @s actionbar ""
 
 # Summon respawn marker
     tag @e remove temp
-    summon villager 0 20 0 {Glowing: true, ActiveEffects: [{Duration: 999999999, Id: 14b, ShowParticles: false}], Tags: ["respawn_marker", "temp"], NoAI: true, Silent: true, CustomNameVisible: true, Team: "respawn_marker", Invulnerable: true}
+    summon villager 0 20 0 {Glowing: true, ActiveEffects: [{Duration: 999999999, Id: 14, ShowParticles: false}], Tags: ["respawn_marker", "temp"], NoAI: true, Silent: true, CustomNameVisible: true, Team: "respawn_marker", Invulnerable: true}
     # Mimic player teleportation
     scoreboard players operation @e[tag=temp] pn = @s pn
     execute as @e[tag=temp] run function ult:tp

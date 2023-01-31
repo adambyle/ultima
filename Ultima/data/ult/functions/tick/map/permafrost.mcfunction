@@ -33,5 +33,5 @@
     scoreboard players set @a[tag=player, tag=alive, scores={event=..-1}] event 0
     execute as @a[tag=player, tag=alive] at @s if block ~ ~ ~ water run scoreboard players add @s event 4
     execute as @a[tag=player, tag=alive, scores={event=1..}] at @s unless block ~ ~ ~ water run scoreboard players remove @s event 1
-    execute as @a[tag=player, tag=alive, nbt=!{ActiveEffects: [{Id: 20b}]}] at @s if block ~ ~ ~ water run effect give @s wither 99999 1 true
+    execute as @a[tag=player, tag=alive, nbt=!{ActiveEffects: [{Id: 20}]}] at @s if block ~ ~ ~ water run effect give @s wither 99999 1 true
     effect clear @a[tag=player, tag=alive, scores={event=0}] wither

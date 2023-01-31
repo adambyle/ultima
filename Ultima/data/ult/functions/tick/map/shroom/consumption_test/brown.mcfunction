@@ -4,6 +4,8 @@
     execute if score .count var matches ..2 run scoreboard players set .enchant var 0
     execute if data entity @s Inventory[{id: "minecraft:iron_sword", tag: {Enchantments: [{lvl: 3s}]}}] run scoreboard players set .enchant var 0
     execute if data entity @s Inventory[{id: "minecraft:bow"}].tag.Enchantments run scoreboard players set .enchant var 0
+    execute if data entity @s Inventory[{id: "minecraft:iron_sword", tag: {Enchantments: [{lvl: 3s}]}}] run title @s actionbar {"text": "Your sword is maxed.", "color": "gray"}
+    execute if data entity @s Inventory[{id: "minecraft:bow"}].tag.Enchantments run title @s actionbar {"text": "You already have Power; you cannot get Sharpness.", "color": "gray"}
 
 # If can enchant
     execute if score .enchant var matches 1 run clear @s brown_mushroom 3

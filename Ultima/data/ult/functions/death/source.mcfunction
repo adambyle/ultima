@@ -17,8 +17,8 @@ function ult:data/root
     # Default
     scoreboard players operation @s death_cause = death_cause.normal const
     # Froze
-    execute if score .map flag = flag.map.avanto const if data entity @s ActiveEffects[{Id: 20b}] run scoreboard players operation @s death_cause = death_cause.froze const
-    execute if score .map flag = flag.map.permafrost const if data entity @s ActiveEffects[{Id: 20b}] run scoreboard players operation @s death_cause = death_cause.froze const
+    execute if score .map flag = flag.map.avanto const if data entity @s ActiveEffects[{Id: 20}] run scoreboard players operation @s death_cause = death_cause.froze const
+    execute if score .map flag = flag.map.permafrost const if data entity @s ActiveEffects[{Id: 20}] run scoreboard players operation @s death_cause = death_cause.froze const
     # Died while on fire
     execute if entity @s[advancements={ult:damage/fire=true}] run scoreboard players operation @s death_cause = death_cause.fire const
     # Died in lava
@@ -35,7 +35,7 @@ function ult:data/root
     # Splashed with harming potion
     execute if entity @s[advancements={ult:damage/magic=true}] run scoreboard players operation @s death_cause = death_cause.harming_potion const
     # Shot in mid-air
-    execute if score @s death_cause = death_cause.shot const if data entity @s ActiveEffects[{Id: 25b}] run scoreboard players operation @a[tag=root] death_cause = death_cause.shot_aerial const
+    execute if score @s death_cause = death_cause.shot const if data entity @s ActiveEffects[{Id: 25}] run scoreboard players operation @a[tag=root] death_cause = death_cause.shot_aerial const
     # Shot in citadel
     execute if score @s death_cause = death_cause.shot const if score .map flag = flag.map.citadel const run scoreboard players operation @a[tag=root] death_cause = death_cause.shot_hard const
     # Shot in the hill

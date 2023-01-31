@@ -6,8 +6,9 @@
 # Opt in
     tag @s remove spectator
     tag @s add player
-
-execute if score .game_state flag = flag.game_state.voting const run function ult:settings/opt/in/voting
+    execute if score .game_state flag = flag.game_state.voting const run tag @s add voting
+    execute if score .game_state flag = flag.game_state.voting const run scoreboard players add .total_players control 1
+    execute if score .game_state flag = flag.game_state.transition const run scoreboard players add .total_players control 1
 
 # Determine if the player can join the game
     scoreboard players set .temp var 0

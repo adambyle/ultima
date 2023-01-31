@@ -23,4 +23,3 @@ item replace entity @s armor.head with netherite_helmet{Unbreakable: true, Encha
 
 function ult:items/refills/chasm
 scoreboard players set @s event.prism 0
-scoreboard players set @s event.soul 0

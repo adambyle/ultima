@@ -13,8 +13,8 @@
     execute at @e[tag=dungeon_potion] if data block ~ ~ ~ Items[{Slot: 2b}] run data remove block ~ ~ ~ Items
 
 # Players can only drink one of their two spawn potions
-    clear @a[nbt={ActiveEffects: [{Id: 1b}]}] potion
-    clear @a[nbt={ActiveEffects: [{Id: 3b}]}] potion
+    clear @a[nbt={ActiveEffects: [{Id: 1}]}] potion
+    clear @a[nbt={ActiveEffects: [{Id: 3}]}] potion
 
 # ...But can refill their potion with a cauldron
     execute as @a[tag=player, tag=alive] if score @s crouch_mode = crouch_mode.crouch_pressed const if data entity @s SelectedItem{id: "minecraft:cauldron"} run function ult:tick/map/dungeon/cauldron

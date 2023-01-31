@@ -1,5 +1,5 @@
 # Launch Charm
-    execute as @a[tag=player, tag=alive, scores={jump=1}, nbt={ActiveEffects: [{Id: 8b}]}] at @s run function ult:tick/map/chasm/launch
+    execute as @a[tag=player, tag=alive, nbt={ActiveEffects: [{Id: 8}], SelectedItem: {id: "minecraft:slime_ball"}}] run function ult:tick/map/chasm/launch_check
     effect give @a[tag=player, tag=alive, nbt={SelectedItem: {id: "minecraft:slime_ball"}, OnGround: true}] jump_boost 99999 9
     effect clear @a[tag=player, tag=alive, nbt=!{SelectedItem: {id: "minecraft:slime_ball"}, OnGround: true}]
     execute at @a[tag=player, tag=alive, scores={event=1..}] run particle item_slime ~ ~ ~ 0 0 0 0 0

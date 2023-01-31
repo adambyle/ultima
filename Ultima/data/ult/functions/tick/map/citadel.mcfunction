@@ -2,10 +2,10 @@
     execute as @a[tag=alive, nbt=!{Inventory: [{id: "minecraft:ender_pearl"}]}] run function ult:tick/map/citadel/pearl
 
 # Regen poppy patches
-    execute positioned 70 28 8 run effect give @a[tag=alive, nbt=!{ActiveEffects: [{Id: 10b}]}, distance=..2] regeneration 2 1 true
-    execute positioned 84 28 22 run effect give @a[tag=alive, nbt=!{ActiveEffects: [{Id: 10b}]}, distance=..2] regeneration 2 1 true
-    execute positioned 84 28 8 run effect give @a[tag=alive, nbt=!{ActiveEffects: [{Id: 10b}]}, distance=..2] regeneration 2 1 true
-    execute positioned 70 28 22 run effect give @a[tag=alive, nbt=!{ActiveEffects: [{Id: 10b}]}, distance=..2] regeneration 2 1 true
+    execute positioned 70 28 8 run effect give @a[tag=alive, nbt=!{ActiveEffects: [{Id: 10}]}, distance=..2] regeneration 2 1 true
+    execute positioned 84 28 22 run effect give @a[tag=alive, nbt=!{ActiveEffects: [{Id: 10}]}, distance=..2] regeneration 2 1 true
+    execute positioned 84 28 8 run effect give @a[tag=alive, nbt=!{ActiveEffects: [{Id: 10}]}, distance=..2] regeneration 2 1 true
+    execute positioned 70 28 22 run effect give @a[tag=alive, nbt=!{ActiveEffects: [{Id: 10}]}, distance=..2] regeneration 2 1 true
 
 # Rune randomization
     scoreboard players add .map_rune var 1

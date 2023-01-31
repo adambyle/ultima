@@ -4,6 +4,8 @@
     execute if score .count var matches ..2 run scoreboard players set .enchant var 0
     execute if data entity @s Inventory[{id: "minecraft:chainmail_chestplate", tag: {Enchantments: [{id: "minecraft:projectile_protection", lvl: 3s}]}}] run scoreboard players set .enchant var 0
     execute if data entity @s Inventory[].tag.Enchantments[{id: "minecraft:protection"}] run scoreboard players set .enchant var 0
+    execute if data entity @s Inventory[{id: "minecraft:chainmail_chestplate", tag: {Enchantments: [{id: "minecraft:projectile_protection", lvl: 3s}]}}] run title @s actionbar {"text": "Your armor is maxed.", "color": "gray"}
+    execute if data entity @s Inventory[].tag.Enchantments[{id: "minecraft:protection"}] run title @s actionbar {"text": "You already have Protection; you cannot get Projectile Protection.", "color": "gray"}
 
 # If can enchant
     execute if score .enchant var matches 1 run clear @s warped_fungus 3

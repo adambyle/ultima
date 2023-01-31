@@ -25,6 +25,8 @@ function ult:data/root
     execute if score .game_mode flag = flag.game_mode.brawl const if score .temp_pn var matches 3.. run scoreboard players set .temp var 1
     # Warn if invalid
     execute if score .temp var matches 0 run tellraw @a[tag=chat.n.e] [{"text": "N: ", "color": "dark_gray"}, {"text": "You need more players opted in to play this mode.", "color": "#F8961E"}]
+    execute if score .game_mode flag = flag.game_mode.royale const if score .temp_pn var matches ..2 run tellraw @a[tag=chat.n.e] [{"text": "N: ", "color": "dark_gray"}, {"text": "Consider switching to Duels mode, which you can play with just 2 people.", "color": "gray"}]
+    execute if score .game_mode flag = flag.game_mode.brawl const if score .temp_pn var matches ..2 run tellraw @a[tag=chat.n.e] [{"text": "N: ", "color": "dark_gray"}, {"text": "Consider switching to Duels mode, which you can play with just 2 people.", "color": "gray"}]
 
 # See if the game is ready to start
     function ult:start/ready/valid_start
