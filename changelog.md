@@ -23,6 +23,7 @@
 
 **Bug Fixes**:
 
+- FIXED: Queue system is dysfunctional for more than 4 players in Brawl mode.
 - FIXED: Player cannot choose to join an ongoing game when logging into the server.
 - FIXED: The "auto-ready" function does not work.
 - FIXED: Possibility of initiating a launch in Chasm without depleting a Launch Charm.

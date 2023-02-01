@@ -11,6 +11,7 @@ You can play Ultima by downloading the map [here](https://github.com/beegyfleeg/
 - **v1.1.2** is the latest for **Java 1.16.5**
 - **v2.1.2** is the latest for **Java 1.17.1**
 - **v3.0.0** is the latest for **Java 1.18.2**
+- **v3.0.1** is the latest for **Java 1.19.3**
 - v1.0.0 through v1.1.1 were not packaged properly, and their downloads will not work. I will not go back and provide functional downloads, in favor of newer versions.
 
 ## The Game Modes
@@ -38,4 +39,4 @@ Ultima offers game modes for different sizes and playstyles of groups.
 
 ## Content
 
-Ultima comes with a total of 17 maps, 9 default maps and 8 featured maps made by other players, with more to come. You can [submit maps to Ultima](Development%20Guide/Contributing.md).
+Ultima comes with a total of 19 maps, 10 default maps and 9 featured maps made by other players, with more to come. You can [submit maps to Ultima](Development%20Guide/Contributing.md).
