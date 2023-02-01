@@ -2,7 +2,7 @@
 
 ---
 
-## Release v3.0.1 -- *----- ---, 2023*
+## Release v3.0.1 -- *February 1, 2023*
 
 **General**:
 
