@@ -1,7 +1,5 @@
 # Ultima
 
-**Join the Ultima Discord server:** https://discord.gg/nxcpXbjywD
-
 Ultima is a PvP minigame designed for from 2 to around 8 players. It offers fast-paced, inclusive, and balanced fun for small groups of varying ability. Games are designed to be quick, and some game modes will attempt to put as many players in as possible so that everyone gets as much time to play as possible. Ultima was designed with play-time in mind.
 
 You can play Ultima by downloading the map [here](https://github.com/beegyfleeg/ultima/releases/latest). It is free to play and distribute. You will need a server (and other players) to enjoy Ultima. If something seems to be going wrong, be sure to report the bug on the Issues page. Redownloading and installing the data pack (also in Releases), if you know how to do that, may solve the problem. You can always message me on Discord (`beegyfleeg#6616`) with any questions you have.
